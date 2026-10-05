@@ -3799,3 +3799,37 @@
 .portfolio-details {
     padding-top: 125px;
 }
+/* iPad Mini — Center Alignment */
+@media (min-width:768px) and (max-width:834px){
+    .portfolio-hero-content,
+    .selected-work-heading,
+    .featured-project-content,
+    .collection-heading,
+    .transformation-heading,
+    .details-heading,
+    .portfolio-cta-content{
+        text-align:center!important;
+        margin-left:auto!important;
+        margin-right:auto!important;
+    }
+
+    .portfolio-hero-content .lead,
+    .selected-work-heading p,
+    .featured-description,
+    .collection-heading p,
+    .transformation-heading p,
+    .details-heading p,
+    .portfolio-cta p{
+        margin-left:auto!important;
+        margin-right:auto!important;
+    }
+
+    .portfolio-btn-row,
+    .featured-actions{
+        justify-content:center!important;
+    }
+
+    .portfolio-hero-line{
+        justify-content:center!important;
+    }
+}

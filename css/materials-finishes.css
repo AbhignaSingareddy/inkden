@@ -4156,3 +4156,155 @@ main > .materials-faq {
         display: block !important;
     }
 }
+.feature-card h3,
+.mf-hardware-points article h3,
+.material-card h3{
+  font-size:1.2rem !important;
+  font-weight:600 !important;
+  line-height:1.2 !important;
+}
+
+.feature-card p,
+.mf-hardware-points article p,
+.material-card p{
+  font-size:.88rem !important;
+  font-weight:500 !important;
+  line-height:1.5 !important;
+}
+
+.feature-card .number,
+.mf-hardware-points article .number,
+.material-card .number{
+  font-size:.76rem !important;
+  font-weight:700 !important;
+}
+
+@media(max-width:600px){
+  .feature-card h3,
+  .mf-hardware-points article h3,
+  .material-card h3{
+    font-size:1.15rem !important;
+  }
+
+  .feature-card p,
+  .mf-hardware-points article p,
+  .material-card p{
+    font-size:.86rem !important;
+  }
+}
+/* MATERIALS LIST TEXT SIZE */
+
+.mf-material-item h3{
+  font-size:1.25rem !important;
+  font-weight:600 !important;
+  line-height:1.2 !important;
+}
+
+.mf-material-item p{
+  font-size:.9rem !important;
+  font-weight:500 !important;
+  line-height:1.5 !important;
+}
+
+.mf-material-item .number,
+.mf-material-item > span:first-child{
+  font-size:.76rem !important;
+  font-weight:700 !important;
+}
+
+@media(max-width:600px){
+  .mf-material-item h3{
+    font-size:1.15rem !important;
+  }
+
+  .mf-material-item p{
+    font-size:.86rem !important;
+  }
+}
+/* LIGHTING — EXISTING CLASS */
+
+.mf-light-mode h3{
+  font-size:1.3rem !important;
+  font-weight:600 !important;
+  line-height:1.2 !important;
+}
+
+.mf-light-mode p{
+  font-size:.9rem !important;
+  font-weight:500 !important;
+  line-height:1.5 !important;
+}
+
+.mf-light-mode small{
+  font-size:.72rem !important;
+  font-weight:700 !important;
+}
+
+.mf-light-mode .mf-light-icon{
+  width:48px !important;
+  height:48px !important;
+}
+/* FAQ CARDS — TEXT SIZE */
+
+.materials-faq-card h3{
+  font-size:1.25rem !important;
+  font-weight:600 !important;
+  line-height:1.25 !important;
+}
+
+.materials-faq-card p{
+  font-size:.9rem !important;
+  font-weight:500 !important;
+  line-height:1.55 !important;
+}
+
+.materials-faq-card .number,
+.materials-faq-card > span:first-child{
+  font-size:.76rem !important;
+  font-weight:700 !important;
+}
+
+@media(max-width:600px){
+  .materials-faq-card h3{
+    font-size:1.15rem !important;
+  }
+
+  .materials-faq-card p{
+    font-size:.86rem !important;
+  }
+
+  .materials-faq-card .number,
+  .materials-faq-card > span:first-child{
+    font-size:.72rem !important;
+  }
+}
+/* DARK MODE — LIGHTING ICON HOVER FIX */
+
+html[data-theme="dark"] .mf-light-icon{
+  transition:background .3s ease,color .3s ease,border-color .3s ease,transform .3s ease !important;
+}
+
+/* Layered Glow icon */
+html[data-theme="dark"] .mf-light-icon:hover{
+  background:var(--secondary) !important;
+  color:#fff !important;
+  border-color:var(--secondary) !important;
+  transform:translateY(-3px) !important;
+}
+
+/* Make the icon itself inherit hover color */
+html[data-theme="dark"] .mf-light-icon:hover svg,
+html[data-theme="dark"] .mf-light-icon:hover i{
+  color:#fff !important;
+  stroke:currentColor !important;
+}
+
+/* Fix white icon background in dark mode */
+html[data-theme="dark"] .mf-light-icon{
+  background:transparent !important;
+}
+
+/* Keep hover visible */
+html[data-theme="dark"] .mf-light-icon:hover{
+  background:var(--secondary) !important;
+}

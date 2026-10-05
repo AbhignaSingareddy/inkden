@@ -2269,3 +2269,285 @@ html[data-theme="dark"] main li,
 html[data-theme="dark"] main span {
     color: #d8cbc5;
 }
+/* RTL: NAME FIRST, LOGO NEXT */
+html[dir="rtl"] .site-header .brand-logo,
+html[dir="rtl"] .footer-brand .brand-logo{
+  display:inline-flex !important;
+  flex-direction:row !important;
+  direction:ltr !important;
+  align-items:center !important;
+  gap:7px !important;
+}
+
+html[dir="rtl"] .site-header .brand-logo .brand-name,
+html[dir="rtl"] .footer-brand .brand-logo .brand-name{
+  order:1 !important;
+  margin:0 !important;
+  padding:0 !important;
+}
+
+html[dir="rtl"] .site-header .brand-logo img,
+html[dir="rtl"] .footer-brand .brand-logo img{
+  order:2 !important;
+  transform:none !important;
+  -webkit-transform:none !important;
+  margin:0 !important;
+}
+
+/* Keep logo image orientation unchanged */
+.site-header .brand-logo img,
+.footer-brand .brand-logo img{
+  transform:none !important;
+  -webkit-transform:none !important;
+}
+/* RTL BRAND - NAME FIRST, ORIGINAL LOGO NEXT */
+
+html[dir="rtl"] .site-header .brand-logo,
+html[dir="rtl"] .footer-brand .brand-logo{
+  display:inline-flex !important;
+  align-items:center !important;
+  direction:ltr !important;
+  flex-direction:row-reverse !important;
+  gap:7px !important;
+}
+
+html[dir="rtl"] .site-header .brand-logo img,
+html[dir="rtl"] .footer-brand .brand-logo img{
+  transform:none !important;
+  -webkit-transform:none !important;
+  content:normal !important;
+  object-fit:contain !important;
+}
+
+html[dir="rtl"] .site-header .brand-logo .brand-name,
+html[dir="rtl"] .footer-brand .brand-logo .brand-name{
+  margin:0 !important;
+  padding:0 !important;
+  direction:ltr !important;
+}
+/* =========================================================
+   RTL BRAND — FINAL SPACING
+   ========================================================= */
+
+html[dir="rtl"] .site-header .brand-logo,
+html.rtl-mode .site-header .brand-logo,
+body.rtl-mode .site-header .brand-logo,
+html[dir="rtl"] .footer-brand .brand-logo,
+html.rtl-mode .footer-brand .brand-logo,
+body.rtl-mode .footer-brand .brand-logo{
+  gap:2px !important;
+  direction:ltr !important;
+  flex-direction:row !important;
+}
+
+/* Keep InkDen and logo at the same position/alignment */
+html[dir="rtl"] .site-header .brand-name,
+html.rtl-mode .site-header .brand-name,
+body.rtl-mode .site-header .brand-name,
+html[dir="rtl"] .footer-brand .brand-name,
+html.rtl-mode .footer-brand .brand-name,
+body.rtl-mode .footer-brand .brand-name{
+  order:1 !important;
+  margin:0 !important;
+  padding:0 !important;
+}
+
+/* Same original logo — only spacing changes */
+html[dir="rtl"] .site-header .brand-logo img,
+html.rtl-mode .site-header .brand-logo img,
+body.rtl-mode .site-header .brand-logo img,
+html[dir="rtl"] .footer-brand .brand-logo img,
+html.rtl-mode .footer-brand .brand-logo img,
+body.rtl-mode .footer-brand .brand-logo img{
+  order:2 !important;
+  width:44px !important;
+  height:44px !important;
+  flex:0 0 44px !important;
+  transform:none !important;
+  -webkit-transform:none !important;
+  object-fit:contain !important;
+  margin:0 !important;
+}
+/* =========================================
+   RTL HEADER + FOOTER — SAME START POINT
+   ========================================= */
+
+html[dir="rtl"] .footer-brand .brand-logo,
+html.rtl-mode .footer-brand .brand-logo,
+body.rtl-mode .footer-brand .brand-logo{
+  position:relative !important;
+  right:12px !important;
+}
+
+/* Keep the existing logo gap exactly as it is */
+html[dir="rtl"] .footer-brand .brand-logo{
+  gap:inherit !important;
+}
+
+/* Original logo — no flip, no resize, no replacement */
+html[dir="rtl"] .footer-brand .brand-logo img,
+html.rtl-mode .footer-brand .brand-logo img,
+body.rtl-mode .footer-brand .brand-logo img{
+  transform:none !important;
+  -webkit-transform:none !important;
+}
+@media (min-width:1051px){
+  .site-header .nav-menu{
+    transform:translateX(25px) !important;
+  }
+}
+/* RTL DESKTOP — MOVE NAV LINKS LEFT */
+
+@media(min-width:1025px){
+  html[dir="rtl"] .site-header .nav-menu{
+    position:relative !important;
+    left:-35px !important;
+  }
+}
+/* =========================================================
+   GLOBAL MOBILE HAMBURGER MENU — FINAL
+   ========================================================= */
+
+@media (max-width:850px){
+
+  .site-header .nav-menu{
+    align-items:stretch !important;
+    text-align:center !important;
+  }
+
+  /* MAIN NAV LINKS */
+  .site-header .nav-menu > a,
+  .site-header .nav-menu > .nav-item > .nav-trigger{
+    width:100% !important;
+    min-height:44px !important;
+    display:flex !important;
+    align-items:center !important;
+    justify-content:center !important;
+    text-align:center !important;
+    padding:12px 8px !important;
+    font-size:1rem !important;
+    font-weight:700 !important;
+    line-height:1.4 !important;
+  }
+
+  /* HOME ITEM */
+  .site-header .nav-menu .nav-item{
+    width:100% !important;
+    display:block !important;
+    position:relative !important;
+  }
+
+  .site-header .nav-menu .nav-item > .nav-trigger{
+    width:100% !important;
+  }
+
+  /* HOME DROPDOWN */
+  .site-header .nav-menu .nav-item .dropdown{
+    position:static !important;
+    width:100% !important;
+    display:none !important;
+    margin:0 !important;
+    padding:0 !important;
+    transform:none !important;
+    opacity:1 !important;
+    visibility:visible !important;
+    box-shadow:none !important;
+    border:0 !important;
+    background:transparent !important;
+  }
+
+  .site-header .nav-menu .nav-item.open .dropdown{
+    display:block !important;
+  }
+
+  /* HOME 1 / HOME 2 */
+  .site-header .nav-menu .dropdown a{
+    width:100% !important;
+    min-height:40px !important;
+    display:flex !important;
+    align-items:center !important;
+    justify-content:center !important;
+    text-align:center !important;
+    padding:9px 8px !important;
+    margin:0 !important;
+    font-size:.92rem !important;
+    font-weight:600 !important;
+    line-height:1.4 !important;
+  }
+
+  /* REMOVE DESKTOP UNDERLINE */
+  .site-header .nav-menu a::after,
+  .site-header .nav-menu .nav-trigger::after{
+    display:none !important;
+  }
+
+  /* ENQUIRE BUTTON */
+  .site-header .nav-menu .mobile-enquire,
+  .site-header .nav-menu .header-cta{
+    width:100% !important;
+    min-height:42px !important;
+    display:flex !important;
+    align-items:center !important;
+    justify-content:center !important;
+    text-align:center !important;
+    font-size:.92rem !important;
+    font-weight:700 !important;
+  }
+}
+
+/* SMALL PHONES */
+@media (max-width:600px){
+
+  .site-header .nav-menu > a,
+  .site-header .nav-menu > .nav-item > .nav-trigger{
+    font-size:.95rem !important;
+  }
+
+  .site-header .nav-menu .dropdown a{
+    font-size:.88rem !important;
+  }
+}
+@media (max-width:600px){
+  html[dir="rtl"] .site-footer .footer-brand .brand-logo{
+    transform:translateX(17px) !important;
+  }
+}
+@media (max-width:600px){
+  html[dir="ltr"] .site-footer .footer-brand .brand-logo{
+    transform:translateX(-6px) !important;
+  }
+}
+/* HEADER + FOOTER LOGO — SAME LIGHTING */
+
+.site-header .brand-logo img,
+.site-footer .footer-brand .brand-logo img{
+  object-fit:contain !important;
+  filter:drop-shadow(0 8px 15px rgba(74,38,63,.15)) !important;
+}
+/* TABLET FOOTER BRAND — CENTER */
+
+@media (min-width:601px) and (max-width:850px){
+  .site-footer .footer-brand{
+    display:flex !important;
+    flex-direction:column !important;
+    align-items:center !important;
+    text-align:center !important;
+    width:100% !important;
+  }
+
+  .site-footer .footer-brand .brand-logo{
+    justify-content:center !important;
+    align-items:center !important;
+    margin-inline:auto !important;
+  }
+
+  .site-footer .footer-brand > p{
+    text-align:center !important;
+    margin-inline:auto !important;
+    max-width:520px !important;
+  }
+
+  .site-footer .footer-brand .footer-icons{
+    justify-content:center !important;
+  }
+}

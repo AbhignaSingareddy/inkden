@@ -2988,3 +2988,46 @@ section.section.section-tight:has(.home2-cta) {
         line-height: 1.75 !important;
     }
 }
+/* HOME 2 — FEATURE CARD IMAGES */
+.feature-card .feature-image{
+  width:100%;
+  height:190px;
+  margin-bottom:24px;
+  overflow:hidden;
+  border-radius:14px;
+  background:var(--surface);
+}
+.feature-card .feature-image img{
+  width:100%;
+  height:100%;
+  display:block;
+  object-fit:cover;
+  transition:transform .7s cubic-bezier(.22,1,.36,1),filter .5s ease;
+}
+.feature-card:hover .feature-image img{
+  transform:scale(1.06);
+  filter:saturate(1.05);
+}
+.feature-card h3{
+  margin-bottom:9px;
+}
+.feature-card p{
+  line-height:1.65;
+}
+@media(max-width:768px){
+  .feature-card .feature-image{
+    height:180px;
+  }
+}
+@media(max-width:600px){
+  .feature-card .feature-image{
+    height:210px;
+    margin-bottom:20px;
+    border-radius:12px;
+  }
+}
+@media(max-width:360px){
+  .feature-card .feature-image{
+    height:190px;
+  }
+}
