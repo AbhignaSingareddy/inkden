@@ -1,0 +1,4408 @@
+/* =========================================================
+   INKDEN CONTACT PAGE
+   ========================================================= */
+
+
+/* =========================================================
+   HERO ANIMATIONS
+   ========================================================= */
+
+@keyframes heroImageIn {
+
+    0% {
+        opacity: 0;
+        transform: scale(1.16);
+    }
+
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+
+}
+
+
+@keyframes heroImageFloat {
+
+    0%,
+    100% {
+        transform: scale(1.01);
+    }
+
+    50% {
+        transform: scale(1.055);
+    }
+
+}
+
+
+@keyframes heroTextIn {
+
+    0% {
+        opacity: 0;
+        transform:
+            translateY(45px);
+        filter: blur(7px);
+    }
+
+    100% {
+        opacity: 1;
+        transform:
+            translateY(0);
+        filter: blur(0);
+    }
+
+}
+
+
+@keyframes heroKickerIn {
+
+    0% {
+        opacity: 0;
+        transform:
+            translateY(20px);
+        letter-spacing: .5em;
+    }
+
+    100% {
+        opacity: 1;
+        transform:
+            translateY(0);
+        letter-spacing: .25em;
+    }
+
+}
+
+
+@keyframes heroLineIn {
+
+    0% {
+        opacity: 0;
+        transform: scaleX(0);
+    }
+
+    100% {
+        opacity: 1;
+        transform: scaleX(1);
+    }
+
+}
+
+
+@keyframes heroGlowMove {
+
+    0%,
+    100% {
+        transform:
+            translate3d(0,0,0)
+            scale(1);
+    }
+
+    50% {
+        transform:
+            translate3d(35px,-25px,0)
+            scale(1.16);
+    }
+
+}
+
+
+@keyframes ringOne {
+
+    from {
+        transform:
+            translate(-50%,-50%)
+            rotate(0deg);
+    }
+
+    to {
+        transform:
+            translate(-50%,-50%)
+            rotate(360deg);
+    }
+
+}
+
+
+@keyframes ringTwo {
+
+    from {
+        transform:
+            translate(-50%,-50%)
+            rotate(360deg);
+    }
+
+    to {
+        transform:
+            translate(-50%,-50%)
+            rotate(0deg);
+    }
+
+}
+
+
+@keyframes dotFloat {
+
+    0%,
+    100% {
+        transform:
+            translateY(0);
+    }
+
+    50% {
+        transform:
+            translateY(-18px);
+    }
+
+}
+
+
+@keyframes scrollBounce {
+
+    0%,
+    100% {
+        transform:
+            translateY(0);
+        opacity: .4;
+    }
+
+    50% {
+        transform:
+            translateY(7px);
+        opacity: 1;
+    }
+
+}
+
+
+/* =========================================================
+   PAGE SCROLL ANIMATIONS
+   ========================================================= */
+
+@keyframes revealUp {
+
+    from {
+        opacity: 0;
+        transform:
+            translateY(65px);
+    }
+
+    to {
+        opacity: 1;
+        transform:
+            translateY(0);
+    }
+
+}
+
+
+@keyframes revealLeft {
+
+    from {
+        opacity: 0;
+        transform:
+            translateX(-70px);
+    }
+
+    to {
+        opacity: 1;
+        transform:
+            translateX(0);
+    }
+
+}
+
+
+@keyframes revealRight {
+
+    from {
+        opacity: 0;
+        transform:
+            translateX(70px);
+    }
+
+    to {
+        opacity: 1;
+        transform:
+            translateX(0);
+    }
+
+}
+
+
+@keyframes revealScale {
+
+    from {
+        opacity: 0;
+        transform:
+            scale(.88);
+    }
+
+    to {
+        opacity: 1;
+        transform:
+            scale(1);
+    }
+
+}
+
+
+@keyframes revealFaq {
+
+    from {
+        opacity: 0;
+        transform:
+            perspective(800px)
+            rotateX(12deg)
+            translateY(35px);
+    }
+
+    to {
+        opacity: 1;
+        transform:
+            perspective(800px)
+            rotateX(0)
+            translateY(0);
+    }
+
+}
+
+
+/* =========================================================
+   HERO
+   ========================================================= */
+
+.contact-hero {
+
+    position: relative;
+
+    min-height: 720px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    overflow: hidden;
+
+    isolation: isolate;
+
+    background:
+        #21151c;
+
+}
+
+
+.contact-hero-image {
+
+    position: absolute;
+
+    inset: 0;
+
+    z-index: -6;
+
+}
+
+
+.contact-hero-image img {
+
+    width: 100%;
+
+    height: 100%;
+
+    object-fit: cover;
+
+    object-position: center;
+
+    animation:
+        heroImageIn
+        1.8s
+        cubic-bezier(.18,.72,.2,1)
+        both,
+        heroImageFloat
+        16s
+        ease-in-out
+        1.8s
+        infinite;
+
+}
+
+
+.contact-hero-overlay {
+
+    position: absolute;
+
+    inset: 0;
+
+    z-index: -5;
+
+    background:
+        linear-gradient(
+            180deg,
+            rgba(26,15,22,.35),
+            rgba(26,15,22,.58) 42%,
+            rgba(26,15,22,.9) 100%
+        );
+
+}
+
+
+.hero-gradient {
+
+    position: absolute;
+
+    inset: 0;
+
+    z-index: -4;
+
+    background:
+        radial-gradient(
+            circle at center,
+            transparent 0%,
+            rgba(20,10,17,.08) 35%,
+            rgba(20,10,17,.45) 100%
+        );
+
+}
+
+
+.hero-glow {
+
+    position: absolute;
+
+    width: 430px;
+
+    height: 430px;
+
+    border-radius: 50%;
+
+    background:
+        rgba(190,133,42,.13);
+
+    filter:
+        blur(90px);
+
+    z-index: -3;
+
+    pointer-events: none;
+
+    animation:
+        heroGlowMove
+        9s
+        ease-in-out
+        infinite;
+
+}
+
+
+.hero-glow-one {
+
+    left: 5%;
+
+    top: 5%;
+
+}
+
+
+.hero-glow-two {
+
+    right: 5%;
+
+    bottom: -10%;
+
+    animation-delay:
+        -4s;
+
+}
+
+
+/* =========================================================
+   HERO FRAME
+   ========================================================= */
+
+.hero-frame {
+
+    position: absolute;
+
+    inset:
+        35px;
+
+    border:
+        1px solid
+        rgba(212,154,57,.2);
+
+    pointer-events: none;
+
+    z-index: -1;
+
+    animation:
+        heroLineIn
+        1.5s
+        1.2s
+        ease
+        both;
+
+}
+
+
+/* =========================================================
+   HERO RINGS
+   ========================================================= */
+
+.hero-ring {
+
+    position: absolute;
+
+    left: 50%;
+
+    top: 50%;
+
+    border-radius: 50%;
+
+    pointer-events: none;
+
+    z-index: -2;
+
+}
+
+
+.hero-ring-one {
+
+    width: 500px;
+
+    height: 500px;
+
+    border:
+        1px solid
+        rgba(212,154,57,.16);
+
+    animation:
+        ringOne
+        30s
+        linear
+        infinite;
+
+}
+
+
+.hero-ring-two {
+
+    width: 750px;
+
+    height: 750px;
+
+    border:
+        1px solid
+        rgba(255,255,255,.08);
+
+    animation:
+        ringTwo
+        42s
+        linear
+        infinite;
+
+}
+
+
+/* =========================================================
+   HERO DOTS
+   ========================================================= */
+
+.hero-dot {
+
+    position: absolute;
+
+    width: 7px;
+
+    height: 7px;
+
+    border-radius: 50%;
+
+    background:
+        #d49a39;
+
+    box-shadow:
+        0 0 18px
+        rgba(212,154,57,.8);
+
+    animation:
+        dotFloat
+        4s
+        ease-in-out
+        infinite;
+
+    z-index: -1;
+
+}
+
+
+.hero-dot-one {
+
+    left: 18%;
+
+    top: 30%;
+
+}
+
+
+.hero-dot-two {
+
+    right: 17%;
+
+    top: 35%;
+
+    animation-delay:
+        -1.2s;
+
+}
+
+
+.hero-dot-three {
+
+    right: 27%;
+
+    bottom: 18%;
+
+    animation-delay:
+        -2.1s;
+
+}
+
+
+/* =========================================================
+   HERO LIGHT LINES
+   ========================================================= */
+
+.hero-light-line {
+
+    position: absolute;
+
+    width: 1px;
+
+    height: 180px;
+
+    background:
+        linear-gradient(
+            transparent,
+            rgba(212,154,57,.55),
+            transparent
+        );
+
+}
+
+
+.hero-light-line-one {
+
+    left: 9%;
+
+    top: 0;
+
+}
+
+
+.hero-light-line-two {
+
+    right: 9%;
+
+    bottom: 0;
+
+}
+
+
+/* =========================================================
+   HERO CONTENT
+   ========================================================= */
+
+.contact-hero-content {
+
+    position: relative;
+
+    z-index: 5;
+
+    max-width: 900px;
+
+    margin:
+        0 auto;
+
+    padding:
+        130px
+        0
+        105px;
+
+    text-align: center;
+
+}
+
+
+/* =========================================================
+   EYEBROW
+   ========================================================= */
+
+.hero-eyebrow {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 14px;
+
+    margin-bottom: 28px;
+
+    color:
+        #d49a39;
+
+    font-size:
+        10px;
+
+    font-weight:
+        800;
+
+    letter-spacing:
+        .25em;
+
+    opacity: 0;
+
+    animation:
+        heroKickerIn
+        .9s
+        .3s
+        ease
+        forwards;
+
+}
+
+
+.hero-eyebrow span {
+
+    width: 34px;
+
+    height: 1px;
+
+    background:
+        #d49a39;
+
+    transform-origin:
+        center;
+
+    animation:
+        heroLineIn
+        .8s
+        .65s
+        ease
+        forwards;
+
+}
+
+
+/* =========================================================
+   HERO HEADING
+   ========================================================= */
+
+.contact-hero h1 {
+
+    margin:
+        0 auto;
+
+    color:
+        #ffffff;
+
+    font-size:
+        clamp(58px,8.2vw,112px);
+
+    line-height:
+        .9;
+
+    letter-spacing:
+        -.06em;
+
+    font-weight:
+        500;
+
+    opacity: 0;
+
+    animation:
+        heroTextIn
+        1s
+        .5s
+        cubic-bezier(.18,.7,.2,1)
+        forwards;
+
+}
+
+
+.contact-hero h1 em {
+
+    display: block;
+
+    margin-top:
+        8px;
+
+    color:
+        #d49a39;
+
+    font-weight:
+        400;
+
+    font-style:
+        italic;
+
+}
+
+
+/* =========================================================
+   HERO PARAGRAPH
+   ========================================================= */
+
+.contact-hero-content > p {
+
+    max-width:
+        620px;
+
+    margin:
+        32px auto 0;
+
+    color:
+        rgba(255,255,255,.82);
+
+    font-size:
+        15px;
+
+    line-height:
+        1.85;
+
+    opacity: 0;
+
+    animation:
+        heroTextIn
+        .9s
+        .8s
+        ease
+        forwards;
+
+}
+
+
+/* =========================================================
+   HERO DIVIDER
+   ========================================================= */
+
+.hero-divider {
+
+    width:
+        80px;
+
+    height:
+        1px;
+
+    margin:
+        32px auto 0;
+
+    background:
+        #d49a39;
+
+    transform-origin:
+        center;
+
+    opacity:
+        0;
+
+    animation:
+        heroLineIn
+        .8s
+        1s
+        ease
+        forwards;
+
+}
+
+
+/* =========================================================
+   HERO SCROLL
+   ========================================================= */
+
+.hero-scroll {
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    justify-content:
+        center;
+
+    gap:
+        10px;
+
+    margin-top:
+        48px;
+
+    color:
+        rgba(255,255,255,.52);
+
+    font-size:
+        9px;
+
+    font-weight:
+        800;
+
+    letter-spacing:
+        .2em;
+
+    opacity:
+        0;
+
+    animation:
+        heroTextIn
+        .8s
+        1.15s
+        ease
+        forwards;
+
+}
+
+
+.hero-scroll-icon {
+
+    width:
+        29px;
+
+    height:
+        29px;
+
+    display:
+        grid;
+
+    place-items:
+        center;
+
+    border:
+        1px solid
+        rgba(212,154,57,.55);
+
+    border-radius:
+        50%;
+
+    color:
+        #d49a39;
+
+    animation:
+        scrollBounce
+        1.8s
+        ease-in-out
+        infinite;
+
+}
+
+
+.hero-scroll-icon i {
+
+    font-size:
+        9px;
+
+}
+
+
+/* =========================================================
+   HERO BOTTOM LINE
+   ========================================================= */
+
+.hero-bottom-line {
+
+    position:
+        absolute;
+
+    left:
+        10%;
+
+    right:
+        10%;
+
+    bottom:
+        0;
+
+    height:
+        1px;
+
+    background:
+        linear-gradient(
+            90deg,
+            transparent,
+            rgba(212,154,57,.65),
+            transparent
+        );
+
+}
+
+
+/* =========================================================
+   SCROLL REVEAL INITIAL
+   ========================================================= */
+
+.reveal-item,
+.reveal-card,
+.reveal-left,
+.reveal-right,
+.reveal-map,
+.reveal-faq {
+
+    opacity:
+        0;
+
+}
+
+
+.reveal-item {
+
+    transform:
+        translateY(55px);
+
+}
+
+
+.reveal-card {
+
+    transform:
+        translateY(65px)
+        scale(.96);
+
+}
+
+
+.reveal-left {
+
+    transform:
+        translateX(-70px);
+
+}
+
+
+.reveal-right {
+
+    transform:
+        translateX(70px);
+
+}
+
+
+.reveal-map {
+
+    transform:
+        scale(.88);
+
+}
+
+
+.reveal-faq {
+
+    transform:
+        translateY(35px);
+
+}
+
+
+/* =========================================================
+   SCROLL REVEAL VISIBLE
+   ========================================================= */
+
+.reveal-item.is-visible {
+
+    animation:
+        revealUp
+        .85s
+        cubic-bezier(.18,.7,.2,1)
+        forwards;
+
+}
+
+
+.reveal-left.is-visible {
+
+    animation:
+        revealLeft
+        .9s
+        cubic-bezier(.18,.7,.2,1)
+        forwards;
+
+}
+
+
+.reveal-right.is-visible {
+
+    animation:
+        revealRight
+        .9s
+        cubic-bezier(.18,.7,.2,1)
+        forwards;
+
+}
+
+
+.reveal-map.is-visible {
+
+    animation:
+        revealScale
+        1s
+        cubic-bezier(.18,.7,.2,1)
+        forwards;
+
+}
+
+
+.reveal-faq.is-visible {
+
+    animation:
+        revealFaq
+        .7s
+        cubic-bezier(.18,.7,.2,1)
+        var(--faq-delay,0ms)
+        forwards;
+
+}
+
+
+/* =========================================================
+   GET IN TOUCH
+   ========================================================= */
+
+.contact-touch {
+
+    padding-top:
+        105px;
+
+    padding-bottom:
+        105px;
+
+}
+
+
+.contact-touch .section-header {
+
+    max-width:
+        730px;
+
+    margin:
+        0 auto 55px;
+
+}
+
+
+/* =========================================================
+   CARDS
+   ========================================================= */
+
+.contact-touch-grid {
+
+    display:
+        grid;
+
+    grid-template-columns:
+        repeat(4,minmax(0,1fr));
+
+    gap:
+        17px;
+
+}
+
+
+.contact-touch-card {
+
+    min-height:
+        292px;
+
+    display:
+        flex;
+
+    flex-direction:
+        column;
+
+    padding:
+        29px;
+
+    border:
+        1px solid
+        #ddccb9;
+
+    border-radius:
+        20px;
+
+    background:
+        #fffdf9;
+
+    transition:
+        transform .35s ease,
+        border-color .35s ease,
+        box-shadow .35s ease;
+
+}
+
+
+.contact-touch-card.is-visible {
+
+    animation:
+        revealUp
+        .85s
+        cubic-bezier(.18,.7,.2,1)
+        var(--card-delay,0ms)
+        forwards;
+
+}
+
+
+.contact-touch-card:hover {
+
+    transform:
+        translateY(-9px);
+
+    border-color:
+        #b47c25;
+
+    box-shadow:
+        0 25px 50px
+        rgba(65,37,49,.12);
+
+}
+
+
+.contact-touch-icon {
+
+    width:
+        48px;
+
+    height:
+        48px;
+
+    display:
+        grid;
+
+    place-items:
+        center;
+
+    margin-bottom:
+        22px;
+
+    border:
+        1px solid
+        #b47c25;
+
+    border-radius:
+        50%;
+
+    color:
+        #b47c25;
+
+    transition:
+        transform .35s ease,
+        background .35s ease,
+        color .35s ease;
+
+}
+
+
+.contact-touch-card:hover
+.contact-touch-icon {
+
+    transform:
+        rotate(12deg)
+        scale(1.08);
+
+    background:
+        #542342;
+
+    color:
+        #ffffff;
+
+}
+
+
+.contact-card-label {
+
+    margin-bottom:
+        8px;
+
+    color:
+        #a66e20;
+
+    font-size:
+        10px;
+
+    font-weight:
+        800;
+
+    letter-spacing:
+        .2em;
+
+}
+
+
+.contact-touch-card h3 {
+
+    margin:
+        0;
+
+    color:
+        #542342;
+
+    font-size:
+        19px;
+
+    line-height:
+        1.35;
+
+}
+
+
+.contact-touch-card p {
+
+    margin:
+        12px 0 20px;
+
+    color:
+        #756c69;
+
+    font-size:
+        13px;
+
+    line-height:
+        1.75;
+
+}
+
+
+.contact-card-link {
+
+    display:
+        inline-flex;
+
+    align-items:
+        center;
+
+    gap:
+        9px;
+
+    width:
+        fit-content;
+
+    margin-top:
+        auto;
+
+    color:
+        #542342;
+
+    font-size:
+        12px;
+
+    font-weight:
+        800;
+
+    text-decoration:
+        none;
+
+}
+
+
+.contact-card-link i {
+
+    color:
+        #b47c25;
+
+    transition:
+        transform .3s ease;
+
+}
+
+
+.contact-card-link:hover {
+
+    color:
+        #b47c25;
+
+}
+
+
+.contact-card-link:hover i {
+
+    transform:
+        translateX(5px);
+
+}
+
+
+/* =========================================================
+   FORM
+   ========================================================= */
+
+.contact-form-section {
+
+    padding-top:
+        0;
+
+    padding-bottom:
+        110px;
+
+}
+
+
+.contact-form-shell {
+
+    display:
+        grid;
+
+    grid-template-columns:
+        minmax(0,1fr)
+        minmax(0,1fr);
+
+    gap:
+        65px;
+
+    padding:
+        58px;
+
+    border:
+        1px solid
+        #ddccb9;
+
+    border-radius:
+        20px;
+
+    background:
+        #f1e7db;
+
+}
+
+
+/* LEFT */
+
+.contact-form-intro {
+
+    display:
+        flex;
+
+    flex-direction:
+        column;
+
+    justify-content:
+        center;
+
+}
+
+
+.contact-form-intro h2 {
+
+    margin:
+        18px 0 20px;
+
+    color:
+        #542342;
+
+    font-size:
+        clamp(42px,4vw,58px);
+
+    line-height:
+        .98;
+
+    letter-spacing:
+        -.04em;
+
+}
+
+
+.contact-form-intro h2 em {
+
+    display:
+        block;
+
+    color:
+        #b47c25;
+
+    font-weight:
+        400;
+
+}
+
+
+.contact-form-intro > p {
+
+    max-width:
+        450px;
+
+    margin:
+        0;
+
+    color:
+        #665c58;
+
+    font-size:
+        14px;
+
+    line-height:
+        1.85;
+
+}
+
+
+/* NOTE */
+
+.contact-form-note {
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    gap:
+        16px;
+
+    max-width:
+        450px;
+
+    margin-top:
+        30px;
+
+    padding:
+        17px;
+
+    border:
+        1px solid
+        #d8c4af;
+
+    border-radius:
+        20px;
+
+    background:
+        #fffdf9;
+
+    transition:
+        transform .3s ease,
+        border-color .3s ease,
+        box-shadow .3s ease;
+
+}
+
+
+.contact-form-note:hover {
+
+    transform:
+        translateY(-5px);
+
+    border-color:
+        #b47c25;
+
+    box-shadow:
+        0 15px 30px
+        rgba(65,37,49,.08);
+
+}
+
+
+.contact-form-note-icon {
+
+    flex:
+        0 0 44px;
+
+    width:
+        44px;
+
+    height:
+        44px;
+
+    display:
+        grid;
+
+    place-items:
+        center;
+
+    border:
+        1px solid
+        #b47c25;
+
+    border-radius:
+        50%;
+
+    color:
+        #b47c25;
+
+}
+
+
+/* RIGHT */
+
+.contact-form {
+
+    display:
+        flex;
+
+    flex-direction:
+        column;
+
+    gap:
+        20px;
+
+}
+
+
+.form-row {
+
+    display:
+        grid;
+
+    grid-template-columns:
+        repeat(2,minmax(0,1fr));
+
+    gap:
+        18px;
+
+}
+
+
+.form-field {
+
+    min-width:
+        0;
+
+}
+
+
+.form-field label {
+
+    display:
+        block;
+
+    margin-bottom:
+        8px;
+
+    color:
+        #542342;
+
+    font-size:
+        12px;
+
+    font-weight:
+        800;
+
+}
+
+
+.form-input,
+.form-textarea {
+
+    position:
+        relative;
+
+    border:
+        1px solid
+        #d9c7b5;
+
+    border-radius:
+        20px;
+
+    background:
+        #fffdf9;
+
+    overflow:
+        hidden;
+
+    transition:
+        border-color .25s ease,
+        box-shadow .25s ease,
+        transform .25s ease;
+
+}
+
+
+.form-input:hover,
+.form-textarea:hover {
+
+    border-color:
+        #b47c25;
+
+}
+
+
+.form-input:focus-within,
+.form-textarea:focus-within {
+
+    border-color:
+        #b47c25;
+
+    box-shadow:
+        0 0 0 3px
+        rgba(180,124,37,.09);
+
+    transform:
+        translateY(-2px);
+
+}
+
+
+.form-input {
+
+    min-height:
+        53px;
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+}
+
+
+.form-input i,
+.form-textarea i {
+
+    flex:
+        0 0 auto;
+
+    margin-left:
+        15px;
+
+    color:
+        #b47c25;
+
+    font-size:
+        14px;
+
+}
+
+
+.form-input input,
+.form-input select {
+
+    width:
+        100%;
+
+    height:
+        51px;
+
+    padding:
+        0 14px;
+
+    border:
+        0;
+
+    outline:
+        0;
+
+    background:
+        transparent;
+
+    color:
+        #542342;
+
+    font:
+        inherit;
+
+    font-size:
+        13px;
+
+}
+
+
+.form-input input::placeholder,
+.form-textarea textarea::placeholder {
+
+    color:
+        #988e87;
+
+}
+
+
+.form-input select {
+
+    cursor:
+        pointer;
+
+}
+
+
+.form-textarea {
+
+    min-height:
+        165px;
+
+    display:
+        flex;
+
+    align-items:
+        flex-start;
+
+}
+
+
+.form-textarea i {
+
+    margin-top:
+        18px;
+
+}
+
+
+.form-textarea textarea {
+
+    width:
+        100%;
+
+    min-height:
+        160px;
+
+    padding:
+        15px;
+
+    border:
+        0;
+
+    outline:
+        0;
+
+    resize:
+        vertical;
+
+    background:
+        transparent;
+
+    color:
+        #542342;
+
+    font:
+        inherit;
+
+    font-size:
+        13px;
+
+    line-height:
+        1.7;
+
+}
+
+
+/* =========================================================
+   ALL CONTACT PAGE BUTTONS
+   SAME SIZE / RADIUS SYSTEM
+   ========================================================= */
+
+.contact-page-button,
+.contact-form .btn,
+.contact-cta .btn {
+
+    min-height:
+        52px;
+
+    padding:
+        0 24px;
+
+    border-radius:
+        20px;
+
+    font-size:
+        12px;
+
+    font-weight:
+        800;
+
+}
+
+
+/* SEND */
+
+.form-bottom {
+
+    display:
+        flex;
+
+    justify-content:
+        center;
+
+    align-items:
+        center;
+
+    margin-top:
+        3px;
+
+}
+
+
+.form-bottom .btn {
+
+    min-width:
+        155px;
+
+}
+
+
+/* =========================================================
+   MAP
+   ========================================================= */
+
+.contact-map-section {
+
+    padding-top:
+        0;
+
+    padding-bottom:
+        105px;
+
+}
+
+
+.contact-map-heading {
+
+    max-width:
+        760px;
+
+    margin:
+        0 auto 43px;
+
+    text-align:
+        center;
+
+}
+
+
+.contact-map-heading h2 {
+
+    margin:
+        15px 0;
+
+    color:
+        #542342;
+
+    font-size:
+        clamp(40px,5vw,65px);
+
+    line-height:
+        .98;
+
+    letter-spacing:
+        -.04em;
+
+}
+
+
+.contact-map-heading h2 em {
+
+    color:
+        #b47c25;
+
+    font-weight:
+        400;
+
+}
+
+
+.contact-map-heading p {
+
+    max-width:
+        600px;
+
+    margin:
+        0 auto;
+
+    color:
+        #756c69;
+
+    font-size:
+        14px;
+
+    line-height:
+        1.8;
+
+}
+
+
+.contact-map-frame {
+
+    position:
+        relative;
+
+    overflow:
+        hidden;
+
+    min-height:
+        430px;
+
+    border:
+        1px solid
+        #ddccb9;
+
+    border-radius:
+        20px;
+
+    background:
+        #e8dfd5;
+
+}
+
+
+.contact-map-frame iframe {
+
+    display:
+        block;
+
+    width:
+        100%;
+
+    height:
+        430px;
+
+    border:
+        0;
+
+    filter:
+        saturate(.72);
+
+    transition:
+        filter .5s ease;
+
+}
+
+
+.contact-map-frame:hover iframe {
+
+    filter:
+        saturate(1);
+
+}
+
+
+/* =========================================================
+   FAQ
+   ========================================================= */
+
+.contact-faq {
+
+    padding-top:
+        0;
+
+    padding-bottom:
+        105px;
+
+}
+
+
+.contact-faq .section-header {
+
+    max-width:
+        650px;
+
+    margin:
+        0 auto 43px;
+
+}
+
+
+.faq-list {
+
+    max-width:
+        950px;
+
+    margin:
+        0 auto;
+
+    border-top:
+        1px solid
+        #d9c8b7;
+
+}
+
+
+.faq-item {
+
+    border-bottom:
+        1px solid
+        #d9c8b7;
+
+}
+
+
+.faq-item summary {
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    justify-content:
+        space-between;
+
+    gap:
+        20px;
+
+    padding:
+        21px 4px;
+
+    list-style:
+        none;
+
+    cursor:
+        pointer;
+
+    color:
+        #542342;
+
+    font-family:
+        "Cormorant Garamond",
+        Georgia,
+        serif;
+
+    font-size:
+        18px;
+
+    font-weight:
+        600;
+
+    line-height:
+        1.35;
+
+    transition:
+        color .3s ease,
+        padding-left .3s ease;
+
+}
+
+
+.faq-item summary::-webkit-details-marker {
+
+    display:
+        none;
+
+}
+
+
+.faq-item summary:hover {
+
+    color:
+        #b47c25;
+
+    padding-left:
+        9px;
+
+}
+
+
+.faq-icon {
+
+    flex:
+        0 0 34px;
+
+    width:
+        34px;
+
+    height:
+        34px;
+
+    display:
+        grid;
+
+    place-items:
+        center;
+
+    border:
+        1px solid
+        #b47c25;
+
+    border-radius:
+        50%;
+
+    color:
+        #b47c25;
+
+    font-size:
+        11px;
+
+    transition:
+        transform .35s ease,
+        background .35s ease,
+        color .35s ease;
+
+}
+
+
+.faq-item[open]
+.faq-icon {
+
+    transform:
+        rotate(45deg);
+
+    background:
+        #b47c25;
+
+    color:
+        #ffffff;
+
+}
+
+
+.faq-answer {
+
+    padding:
+        0 50px 24px 4px;
+
+}
+
+
+.faq-answer p {
+
+    max-width:
+        780px;
+
+    margin:
+        0;
+
+    color:
+        #756c69;
+
+    font-size:
+        13px;
+
+    line-height:
+        1.75;
+
+}
+
+
+/* =========================================================
+   CTA
+   ========================================================= */
+
+.contact-cta {
+
+    padding-top:
+        0;
+
+    padding-bottom:
+        105px;
+
+}
+
+
+.contact-cta-panel {
+
+    position:
+        relative;
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    justify-content:
+        space-between;
+
+    gap:
+        45px;
+
+    overflow:
+        hidden;
+
+    padding:
+        58px 60px;
+
+    border:
+        1px solid
+        rgba(180,124,37,.6);
+
+    border-radius:
+        20px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #542342,
+            #432039
+        );
+
+}
+
+
+.contact-cta-panel::before {
+
+    content:
+        "";
+
+    position:
+        absolute;
+
+    width:
+        480px;
+
+    height:
+        480px;
+
+    right:
+        -240px;
+
+    top:
+        -240px;
+
+    border:
+        1px solid
+        rgba(212,154,57,.2);
+
+    border-radius:
+        50%;
+
+    animation:
+        ringOne
+        28s
+        linear
+        infinite;
+
+}
+
+
+.cta-content {
+
+    position:
+        relative;
+
+    z-index:
+        2;
+
+}
+
+
+.contact-cta-panel h2 {
+
+    max-width:
+        690px;
+
+    margin:
+        14px 0 12px;
+
+    color:
+        #ffffff;
+
+    font-size:
+        clamp(34px,4vw,53px);
+
+    line-height:
+        1;
+
+    letter-spacing:
+        -.035em;
+
+}
+
+
+.contact-cta-panel p {
+
+    max-width:
+        560px;
+
+    margin:
+        0;
+
+    color:
+        rgba(255,255,255,.76);
+
+    font-size:
+        14px;
+
+    line-height:
+        1.75;
+
+}
+
+
+/* =========================================================
+   CTA BUTTON
+   SECONDARY COLOR TEXT + BORDER
+   ========================================================= */
+
+.cta-button-wrap {
+
+    position:
+        relative;
+
+    z-index:
+        4;
+
+    flex-shrink:
+        0;
+
+}
+
+
+.cta-enquiry-button {
+
+    display:
+        inline-flex;
+
+    align-items:
+        center;
+
+    justify-content:
+        center;
+
+    gap:
+        10px;
+
+    min-height:
+        52px;
+
+    padding:
+        0 24px;
+
+    border:
+        1px solid
+        #d49a39;
+
+    border-radius:
+        20px;
+
+    color:
+        #d49a39;
+
+    background:
+        transparent;
+
+    font-size:
+        12px;
+
+    font-weight:
+        800;
+
+    text-decoration:
+        none;
+
+    transition:
+        background .35s ease,
+        color .35s ease,
+        transform .35s ease,
+        box-shadow .35s ease;
+
+}
+
+
+.cta-enquiry-button i {
+
+    color:
+        #d49a39;
+
+    transition:
+        transform .35s ease,
+        color .35s ease;
+
+}
+
+
+.cta-enquiry-button:hover {
+
+    background:
+        #d49a39;
+
+    color:
+        #542342;
+
+    transform:
+        translateY(-4px);
+
+    box-shadow:
+        0 14px 30px
+        rgba(0,0,0,.2);
+
+}
+
+
+.cta-enquiry-button:hover i {
+
+    color:
+        #542342;
+
+    transform:
+        translateX(5px);
+
+}
+
+
+/* =========================================================
+   DARK MODE
+   ========================================================= */
+
+body.dark-mode .contact-touch-card,
+body.dark .contact-touch-card,
+body[data-theme="dark"] .contact-touch-card,
+html[data-theme="dark"] .contact-touch-card,
+body.theme-dark .contact-touch-card {
+
+    background:
+        #241923;
+
+    border-color:
+        #55404c;
+
+}
+
+
+body.dark-mode .contact-touch-card h3,
+body.dark .contact-touch-card h3,
+body[data-theme="dark"] .contact-touch-card h3,
+html[data-theme="dark"] .contact-touch-card h3,
+body.theme-dark .contact-touch-card h3 {
+
+    color:
+        #ffffff;
+
+}
+
+
+body.dark-mode .contact-touch-card p,
+body.dark .contact-touch-card p,
+body[data-theme="dark"] .contact-touch-card p,
+html[data-theme="dark"] .contact-touch-card p,
+body.theme-dark .contact-touch-card p {
+
+    color:
+        #d1c5ca;
+
+}
+
+
+body.dark-mode .contact-card-link,
+body.dark .contact-card-link,
+body[data-theme="dark"] .contact-card-link,
+html[data-theme="dark"] .contact-card-link,
+body.theme-dark .contact-card-link {
+
+    color:
+        #ffffff;
+
+}
+
+
+body.dark-mode .contact-form-shell,
+body.dark .contact-form-shell,
+body[data-theme="dark"] .contact-form-shell,
+html[data-theme="dark"] .contact-form-shell,
+body.theme-dark .contact-form-shell {
+
+    background:
+        #281b24;
+
+    border-color:
+        #55404c;
+
+}
+
+
+body.dark-mode .contact-form-intro h2,
+body.dark .contact-form-intro h2,
+body[data-theme="dark"] .contact-form-intro h2,
+html[data-theme="dark"] .contact-form-intro h2,
+body.theme-dark .contact-form-intro h2 {
+
+    color:
+        #ffffff;
+
+}
+
+
+body.dark-mode .contact-form-intro > p,
+body.dark .contact-form-intro > p,
+body[data-theme="dark"] .contact-form-intro > p,
+html[data-theme="dark"] .contact-form-intro > p,
+body.theme-dark .contact-form-intro > p {
+
+    color:
+        #d7cbd0;
+
+}
+
+
+body.dark-mode .contact-form-note,
+body.dark .contact-form-note,
+body[data-theme="dark"] .contact-form-note,
+html[data-theme="dark"] .contact-form-note,
+body.theme-dark .contact-form-note {
+
+    background:
+        #20161d;
+
+    border-color:
+        #55404c;
+
+}
+
+
+body.dark-mode .contact-form-note strong,
+body.dark .contact-form-note strong,
+body[data-theme="dark"] .contact-form-note strong,
+html[data-theme="dark"] .contact-form-note strong,
+body.theme-dark .contact-form-note strong {
+
+    color:
+        #ffffff;
+
+}
+
+
+body.dark-mode .contact-form-note span,
+body.dark .contact-form-note span,
+body[data-theme="dark"] .contact-form-note span,
+html[data-theme="dark"] .contact-form-note span,
+body.theme-dark .contact-form-note span {
+
+    color:
+        #d1c5ca;
+
+}
+
+
+body.dark-mode .form-field label,
+body.dark .form-field label,
+body[data-theme="dark"] .form-field label,
+html[data-theme="dark"] .form-field label,
+body.theme-dark .form-field label {
+
+    color:
+        #ffffff;
+
+}
+
+
+body.dark-mode .form-input,
+body.dark .form-input,
+body[data-theme="dark"] .form-input,
+html[data-theme="dark"] .form-input,
+body.theme-dark .form-input,
+body.dark-mode .form-textarea,
+body.dark .form-textarea,
+body[data-theme="dark"] .form-textarea,
+html[data-theme="dark"] .form-textarea,
+body.theme-dark .form-textarea {
+
+    background:
+        #20161d;
+
+    border-color:
+        #5b4652;
+
+}
+
+
+body.dark-mode .form-input input,
+body.dark .form-input input,
+body[data-theme="dark"] .form-input input,
+html[data-theme="dark"] .form-input input,
+body.theme-dark .form-input input,
+body.dark-mode .form-input select,
+body.dark .form-input select,
+body[data-theme="dark"] .form-input select,
+html[data-theme="dark"] .form-input select,
+body.theme-dark .form-input select,
+body.dark-mode .form-textarea textarea,
+body.dark .form-textarea textarea,
+body[data-theme="dark"] .form-textarea textarea,
+html[data-theme="dark"] .form-textarea textarea,
+body.theme-dark .form-textarea textarea {
+
+    color:
+        #ffffff;
+
+}
+
+
+body.dark-mode .form-input input::placeholder,
+body.dark .form-input input::placeholder,
+body[data-theme="dark"] .form-input input::placeholder,
+html[data-theme="dark"] .form-input input::placeholder,
+body.theme-dark .form-input input::placeholder,
+body.dark-mode .form-textarea textarea::placeholder,
+body.dark .form-textarea textarea::placeholder,
+body[data-theme="dark"] .form-textarea textarea::placeholder,
+html[data-theme="dark"] .form-textarea textarea::placeholder,
+body.theme-dark .form-textarea textarea::placeholder {
+
+    color:
+        #a99aa2;
+
+}
+
+
+body.dark-mode .contact-map-heading h2,
+body.dark .contact-map-heading h2,
+body[data-theme="dark"] .contact-map-heading h2,
+html[data-theme="dark"] .contact-map-heading h2,
+body.theme-dark .contact-map-heading h2 {
+
+    color:
+        #ffffff;
+
+}
+
+
+body.dark-mode .contact-map-heading p,
+body.dark .contact-map-heading p,
+body[data-theme="dark"] .contact-map-heading p,
+html[data-theme="dark"] .contact-map-heading p,
+body.theme-dark .contact-map-heading p {
+
+    color:
+        #d1c5ca;
+
+}
+
+
+body.dark-mode .faq-item summary,
+body.dark .faq-item summary,
+body[data-theme="dark"] .faq-item summary,
+html[data-theme="dark"] .faq-item summary,
+body.theme-dark .faq-item summary {
+
+    color:
+        #ffffff;
+
+}
+
+
+body.dark-mode .faq-answer p,
+body.dark .faq-answer p,
+body[data-theme="dark"] .faq-answer p,
+html[data-theme="dark"] .faq-answer p,
+body.theme-dark .faq-answer p {
+
+    color:
+        #d1c5ca;
+
+}
+
+
+body.dark-mode .faq-list,
+body.dark .faq-list,
+body[data-theme="dark"] .faq-list,
+html[data-theme="dark"] .faq-list,
+body.theme-dark .faq-list,
+body.dark-mode .faq-item,
+body.dark .faq-item,
+body[data-theme="dark"] .faq-item,
+html[data-theme="dark"] .faq-item,
+body.theme-dark .faq-item {
+
+    border-color:
+        #55404c;
+
+}
+
+
+/* =========================================================
+   RTL
+   ========================================================= */
+
+html[dir="rtl"] .contact-hero-content {
+
+    direction:
+        rtl;
+
+}
+
+
+html[dir="rtl"] .form-input,
+html[dir="rtl"] .form-textarea {
+
+    direction:
+        rtl;
+
+}
+
+
+html[dir="rtl"] .form-input i,
+html[dir="rtl"] .form-textarea i {
+
+    margin-left:
+        0;
+
+    margin-right:
+        15px;
+
+}
+
+
+html[dir="rtl"] .faq-answer {
+
+    padding-left:
+        50px;
+
+    padding-right:
+        4px;
+
+}
+
+
+/* =========================================================
+   TABLET
+   ========================================================= */
+
+@media (max-width:1100px) {
+
+    .contact-touch-grid {
+
+        grid-template-columns:
+            repeat(2,minmax(0,1fr));
+
+    }
+
+
+    .contact-form-shell {
+
+        gap:
+            42px;
+
+        padding:
+            45px;
+
+    }
+
+
+    .hero-ring-two {
+
+        width:
+            620px;
+
+        height:
+            620px;
+
+    }
+
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width:768px) {
+
+    .contact-hero {
+
+        min-height:
+            650px;
+
+    }
+
+
+    .hero-frame {
+
+        inset:
+            18px;
+
+    }
+
+
+    .contact-hero-content {
+
+        padding:
+            105px 0 75px;
+
+    }
+
+
+    .contact-hero h1 {
+
+        font-size:
+            clamp(51px,13vw,76px);
+
+    }
+
+
+    .contact-hero-content > p {
+
+        font-size:
+            14px;
+
+    }
+
+
+    .hero-ring-one {
+
+        width:
+            400px;
+
+        height:
+            400px;
+
+    }
+
+
+    .hero-ring-two {
+
+        width:
+            560px;
+
+        height:
+            560px;
+
+    }
+
+
+    .contact-touch {
+
+        padding:
+            75px 0;
+
+    }
+
+
+    .contact-touch-grid {
+
+        grid-template-columns:
+            1fr;
+
+    }
+
+
+    .contact-touch-card {
+
+        min-height:
+            260px;
+
+    }
+
+
+    .contact-form-section {
+
+        padding-bottom:
+            75px;
+
+    }
+
+
+    .contact-form-shell {
+
+        grid-template-columns:
+            1fr;
+
+        gap:
+            45px;
+
+        padding:
+            30px 22px;
+
+        border-radius:
+            20px;
+
+    }
+
+
+    .form-row {
+
+        grid-template-columns:
+            1fr;
+
+    }
+
+
+    .form-bottom .btn {
+
+        width:
+            100%;
+
+        justify-content:
+            center;
+
+    }
+
+
+    .contact-map-frame {
+
+        min-height:
+            360px;
+
+    }
+
+
+    .contact-map-frame iframe {
+
+        height:
+            360px;
+
+    }
+
+
+    .contact-cta-panel {
+
+        flex-direction:
+            column;
+
+        align-items:
+            flex-start;
+
+        padding:
+            40px 28px;
+
+    }
+
+
+    .cta-button-wrap {
+
+        width:
+            100%;
+
+    }
+
+
+    .cta-enquiry-button {
+
+        width:
+            100%;
+
+    }
+
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+   ========================================================= */
+
+@media (max-width:480px) {
+
+    .contact-hero {
+
+        min-height:
+            610px;
+
+    }
+
+
+    .contact-hero-content {
+
+        padding:
+            95px 0 65px;
+
+    }
+
+
+    .hero-eyebrow {
+
+        font-size:
+            8px;
+
+        letter-spacing:
+            .17em;
+
+    }
+
+
+    .hero-eyebrow span {
+
+        width:
+            20px;
+
+    }
+
+
+    .contact-hero h1 {
+
+        font-size:
+            50px;
+
+    }
+
+
+    .contact-hero-content > p {
+
+        font-size:
+            13px;
+
+        line-height:
+            1.75;
+
+    }
+
+
+    .hero-scroll {
+
+        margin-top:
+            40px;
+
+    }
+
+
+    .contact-form-shell {
+
+        padding:
+            25px 17px;
+
+    }
+
+
+    .contact-form-intro h2 {
+
+        font-size:
+            41px;
+
+    }
+
+
+    .contact-form-note {
+
+        align-items:
+            flex-start;
+
+    }
+
+
+    .faq-item summary {
+
+        padding:
+            18px 2px;
+
+        font-size:
+            17px;
+
+    }
+
+
+    .faq-icon {
+
+        width:
+            31px;
+
+        height:
+            31px;
+
+        flex-basis:
+            31px;
+
+    }
+
+
+    .faq-answer {
+
+        padding-right:
+            0;
+
+    }
+
+
+    html[dir="rtl"] .faq-answer {
+
+        padding-left:
+            0;
+
+    }
+
+
+    .contact-cta-panel {
+
+        padding:
+            35px 22px;
+
+    }
+
+}
+
+
+/* =========================================================
+   REDUCED MOTION
+   ========================================================= */
+
+@media (prefers-reduced-motion:reduce) {
+
+    *,
+    *::before,
+    *::after {
+
+        animation-duration:
+            .01ms !important;
+
+        animation-iteration-count:
+            1 !important;
+
+        transition-duration:
+            .01ms !important;
+
+        scroll-behavior:
+            auto !important;
+
+    }
+
+}
+
+/* =========================================================
+   FINAL CONTACT HERO — INKDEN EDITORIAL STYLE
+========================================================= */
+
+.contact-hero {
+    position: relative;
+    min-height: 650px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    isolation: isolate;
+    background: var(--primary);
+}
+
+.contact-hero-image {
+    position: absolute;
+    inset: 0;
+    z-index: -3;
+    overflow: hidden;
+}
+
+.contact-hero-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    animation: contactHeroImage 1.5s cubic-bezier(.2,.75,.25,1) both;
+}
+
+.contact-hero-overlay {
+    position: absolute;
+    inset: 0;
+    z-index: -2;
+    background: linear-gradient(90deg, rgba(39,22,32,.82), rgba(39,22,32,.52), rgba(39,22,32,.68));
+}
+
+.contact-hero::before {
+    content: "";
+    position: absolute;
+    width: 520px;
+    height: 520px;
+    right: -120px;
+    bottom: -220px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(154,118,47,.18), transparent 68%);
+    pointer-events: none;
+    z-index: -1;
+    animation: contactHeroGlow 9s ease-in-out infinite alternate;
+}
+
+.contact-hero-content {
+    width: min(900px, calc(100% - 40px));
+    margin: 0 auto;
+    padding: 120px 0;
+    text-align: center;
+    color: #fff;
+}
+
+.contact-hero .hero-eyebrow {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 14px;
+    margin-bottom: 28px;
+    color: var(--secondary-soft);
+    font-size: .68rem;
+    font-weight: 800;
+    letter-spacing: .28em;
+    opacity: 0;
+    animation: contactHeroFade .8s ease .2s forwards;
+}
+
+.contact-hero .hero-eyebrow span {
+    width: 38px;
+    height: 1px;
+    background: var(--secondary);
+}
+
+.contact-hero h1 {
+    max-width: 850px;
+    margin: 0 auto;
+    color: #fff;
+    font-size: clamp(3.4rem, 7vw, 6.8rem);
+    line-height: .94;
+    letter-spacing: -.045em;
+    font-weight: 500;
+    opacity: 0;
+    transform: translateY(30px);
+    animation: contactHeroTitle 1s cubic-bezier(.18,.7,.2,1) .35s forwards;
+}
+
+.contact-hero h1 em {
+    display: block;
+    margin-top: 8px;
+    color: var(--secondary-soft);
+    font-family: "Cormorant Garamond", serif;
+    font-weight: 400;
+    font-style: italic;
+}
+
+.contact-hero-content > p {
+    max-width: 570px;
+    margin: 30px auto 0;
+    color: rgba(255,255,255,.78);
+    font-size: .95rem;
+    line-height: 1.8;
+    opacity: 0;
+    animation: contactHeroFade .9s ease .7s forwards;
+}
+
+.contact-hero .hero-line {
+    width: 70px;
+    height: 1px;
+    margin: 32px auto 0;
+    background: var(--secondary);
+    transform: scaleX(0);
+    transform-origin: center;
+    animation: contactHeroLine .8s ease 1s forwards;
+}
+
+.contact-hero .hero-meta {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+    margin-top: 35px;
+    color: rgba(255,255,255,.55);
+    font-size: .62rem;
+    font-weight: 700;
+    letter-spacing: .2em;
+    opacity: 0;
+    animation: contactHeroFade .8s ease 1.15s forwards;
+}
+
+.contact-hero .hero-meta-line {
+    width: 25px;
+    height: 1px;
+    background: var(--secondary);
+}
+
+.contact-hero .hero-corner {
+    position: absolute;
+    bottom: 28px;
+    color: rgba(255,255,255,.48);
+    font-size: .58rem;
+    font-weight: 800;
+    letter-spacing: .2em;
+}
+
+.contact-hero .hero-corner-left { left: 30px; }
+.contact-hero .hero-corner-right { right: 30px; }
+
+.contact-hero .hero-bottom-line {
+    position: absolute;
+    left: 9%;
+    right: 9%;
+    bottom: 0;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, var(--secondary), transparent);
+    opacity: .55;
+}
+
+@keyframes contactHeroImage {
+    from { opacity: 0; transform: scale(1.08); }
+    to { opacity: 1; transform: scale(1); }
+}
+
+@keyframes contactHeroTitle {
+    from { opacity: 0; transform: translateY(30px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes contactHeroFade {
+    from { opacity: 0; transform: translateY(15px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes contactHeroLine {
+    from { opacity: 0; transform: scaleX(0); }
+    to { opacity: 1; transform: scaleX(1); }
+}
+
+@keyframes contactHeroGlow {
+    from { transform: translate3d(0,0,0); }
+    to { transform: translate3d(-35px,-25px,0); }
+}
+
+@media (max-width: 850px) {
+    .contact-hero { min-height: 600px; }
+    .contact-hero-content { padding: 100px 0; }
+    .contact-hero h1 { font-size: clamp(3rem, 10vw, 5rem); }
+}
+
+@media (max-width: 600px) {
+    .contact-hero { min-height: 560px; }
+    .contact-hero-content { width: calc(100% - 36px); padding: 85px 0; }
+    .contact-hero h1 { font-size: clamp(2.7rem, 13vw, 4.2rem); }
+    .contact-hero-content > p { font-size: .85rem; }
+    .contact-hero .hero-meta { flex-direction: column; gap: 8px; }
+    .contact-hero .hero-meta-line { width: 35px; }
+    .contact-hero .hero-corner { display: none; }
+}
+
+/* CTA uses the existing shared .btn .btn-secondary structure. */
+.contact-cta .cta-button-wrap {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.contact-cta .cta-button-wrap .btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 9px;
+}
+
+/* =========================================================
+   FINAL CONTACT HERO — SIMPLE IMAGE + TEXT OVERLAY
+   Only the hero is overridden here.
+========================================================= */
+
+.contact-hero {
+    position: relative;
+    min-height: 680px;
+    height: calc(100vh - 78px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    isolation: isolate;
+    background: var(--primary);
+}
+
+.contact-hero-image {
+    position: absolute;
+    inset: 0;
+    z-index: -3;
+    overflow: hidden;
+}
+
+.contact-hero-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    display: block;
+    animation: contactHeroImageZoom 1.8s cubic-bezier(.22,1,.36,1) both;
+}
+
+.contact-hero-overlay {
+    position: absolute;
+    inset: 0;
+    z-index: -2;
+    background: linear-gradient(180deg, rgba(25,15,18,.28) 0%, rgba(25,15,18,.48) 48%, rgba(25,15,18,.76) 100%);
+}
+
+.contact-hero .container {
+    position: relative;
+    z-index: 2;
+    width: 100%;
+}
+
+.contact-hero-content {
+    max-width: 850px;
+    margin: 0 auto;
+    padding: 0 20px;
+    text-align: center;
+    color: #fff;
+}
+
+.contact-hero .hero-eyebrow {
+    display: inline-block;
+    margin: 0 0 22px;
+    color: var(--secondary);
+    font-size: .72rem;
+    font-weight: 700;
+    letter-spacing: .24em;
+    text-transform: uppercase;
+    opacity: 0;
+    animation: contactHeroFadeUp .9s .2s ease forwards;
+}
+
+.contact-hero .hero-eyebrow span {
+    display: none;
+}
+
+.contact-hero-content h1 {
+    margin: 0;
+    color: #fff;
+    font-size: clamp(3.2rem, 6vw, 6rem);
+    line-height: .96;
+    font-weight: 500;
+    letter-spacing: -.045em;
+    opacity: 0;
+    animation: contactHeroTitle 1.1s .35s cubic-bezier(.22,1,.36,1) forwards;
+}
+
+.contact-hero-content h1 em {
+    display: block;
+    color: var(--secondary);
+    font-style: italic;
+}
+
+.contact-hero-content > p {
+    max-width: 570px;
+    margin: 28px auto 0;
+    color: rgba(255,255,255,.84);
+    font-size: .98rem;
+    line-height: 1.8;
+    opacity: 0;
+    animation: contactHeroFadeUp 1s .65s ease forwards;
+}
+
+.contact-hero .hero-line {
+    width: 75px;
+    height: 1px;
+    margin: 30px auto 0;
+    background: var(--secondary);
+    transform-origin: center;
+    opacity: 0;
+    animation: contactHeroLine 1s .9s cubic-bezier(.22,1,.36,1) forwards;
+}
+
+@keyframes contactHeroImageZoom {
+    from { opacity: 0; transform: scale(1.10); }
+    to { opacity: 1; transform: scale(1); }
+}
+
+@keyframes contactHeroTitle {
+    from {
+        opacity: 0;
+        transform: translateY(40px) scale(.97);
+        filter: blur(6px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+        filter: blur(0);
+    }
+}
+
+@keyframes contactHeroFadeUp {
+    from { opacity: 0; transform: translateY(25px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes contactHeroLine {
+    from { opacity: 0; transform: scaleX(0); }
+    to { opacity: 1; transform: scaleX(1); }
+}
+
+/* Hide decorative elements from the previous hero version if they remain in CSS. */
+.contact-hero .hero-gradient,
+.contact-hero .hero-glow,
+.contact-hero .hero-frame,
+.contact-hero .hero-ring,
+.contact-hero .hero-light-line,
+.contact-hero .hero-dot,
+.contact-hero .hero-scroll,
+.contact-hero .hero-bottom-line {
+    display: none !important;
+}
+
+/* =========================================================
+   BEGIN YOUR ENQUIRY — OUTLINE CTA
+========================================================= */
+
+.contact-cta .cta-outline-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    min-height: 50px;
+    padding: 13px 22px;
+    background: transparent !important;
+    color: var(--secondary) !important;
+    border: 1px solid var(--secondary) !important;
+    border-radius: 999px;
+    box-shadow: none !important;
+    text-decoration: none;
+    transition: background .3s ease, color .3s ease, transform .3s ease, border-color .3s ease;
+}
+
+.contact-cta .cta-button-dot {
+    width: 9px;
+    height: 9px;
+    flex: 0 0 9px;
+    border-radius: 50%;
+    background: var(--secondary);
+    transition: transform .3s ease, background .3s ease;
+}
+
+.contact-cta .cta-outline-button:hover {
+    background: var(--secondary) !important;
+    color: var(--surface) !important;
+    border-color: var(--secondary) !important;
+    transform: translateY(-2px);
+}
+
+.contact-cta .cta-outline-button:hover .cta-button-dot {
+    background: currentColor;
+    transform: scale(1.15);
+}
+
+/* =========================================================
+   HERO RESPONSIVE
+========================================================= */
+
+@media (max-width: 768px) {
+    .contact-hero {
+        min-height: 600px;
+        height: calc(100vh - 70px);
+    }
+
+    .contact-hero-content {
+        padding: 0 20px;
+    }
+
+    .contact-hero-content h1 {
+        font-size: clamp(2.8rem, 12vw, 4.3rem);
+    }
+
+    .contact-hero-content > p {
+        max-width: 430px;
+        font-size: .88rem;
+        line-height: 1.7;
+    }
+
+    .contact-hero .hero-eyebrow {
+        font-size: .62rem;
+        letter-spacing: .18em;
+    }
+
+    .contact-cta .cta-outline-button {
+        width: auto;
+    }
+}
+
+@media (max-width: 480px) {
+    .contact-hero {
+        min-height: 570px;
+    }
+
+    .contact-hero-content h1 {
+        font-size: clamp(2.65rem, 13vw, 4rem);
+    }
+
+    .contact-hero-content > p {
+        font-size: .84rem;
+    }
+
+    .contact-cta .cta-outline-button {
+        width: 100%;
+    }
+}
+
+
+/* =========================================================
+   FINAL HERO + CTA POLISH
+   ========================================================= */
+
+.contact-hero {
+    position: relative;
+    min-height: 520px !important;
+    height: min(520px, calc(100vh - 78px));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    isolation: isolate;
+    background: var(--primary, #2b1824);
+}
+
+.contact-hero-image {
+    position: absolute;
+    inset: 0;
+    overflow: hidden;
+    z-index: -3;
+}
+
+.contact-hero-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center 48%;
+    display: block;
+    transform: scale(1.08);
+    opacity: 0;
+    animation:
+        contactHeroImageIn 1.35s cubic-bezier(.16,1,.3,1) .05s forwards,
+        contactHeroImageDrift 12s ease-in-out 1.4s infinite alternate;
+    will-change: transform, opacity;
+}
+
+.contact-hero-overlay {
+    position: absolute;
+    inset: 0;
+    z-index: -2;
+    background:
+        linear-gradient(90deg,
+            rgba(30,17,25,.78) 0%,
+            rgba(30,17,25,.48) 48%,
+            rgba(30,17,25,.62) 100%),
+        linear-gradient(180deg,
+            rgba(25,14,21,.24) 0%,
+            rgba(25,14,21,.56) 100%);
+}
+
+.contact-hero .container {
+    position: relative;
+    z-index: 3;
+    width: 100%;
+}
+
+.contact-hero-content {
+    max-width: 760px;
+    margin: 0 auto;
+    padding: 0 20px;
+    text-align: center;
+}
+
+.contact-hero .hero-eyebrow {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 18px;
+    color: var(--secondary, #d49a39);
+    font-size: .68rem;
+    font-weight: 700;
+    letter-spacing: .25em;
+    text-transform: uppercase;
+    opacity: 0;
+    transform: translateY(18px);
+    animation: contactHeroFadeUp .75s .3s cubic-bezier(.16,1,.3,1) forwards;
+}
+
+.contact-hero .hero-eyebrow span {
+    display: none;
+}
+
+.contact-hero-content h1 {
+    margin: 0;
+    color: #fff;
+    font-size: clamp(3.5rem, 7vw, 6.4rem);
+    line-height: .94;
+    letter-spacing: -.045em;
+    font-weight: 500;
+    opacity: 0;
+    transform: translateY(38px) scale(.97);
+    filter: blur(7px);
+    animation: contactHeroTitle 1s .42s cubic-bezier(.16,1,.3,1) forwards;
+}
+
+.contact-hero-content h1 em {
+    display: inline-block;
+    color: var(--secondary, #d49a39);
+    font-style: italic;
+    font-weight: 400;
+    animation: contactHeroAccent 1s .72s cubic-bezier(.16,1,.3,1) both;
+}
+
+.contact-hero-content > p {
+    max-width: 540px;
+    margin: 22px auto 0;
+    color: rgba(255,255,255,.84);
+    font-size: .92rem;
+    line-height: 1.75;
+    opacity: 0;
+    transform: translateY(24px);
+    animation: contactHeroFadeUp .8s .72s cubic-bezier(.16,1,.3,1) forwards;
+}
+
+.contact-hero .hero-line {
+    width: 64px;
+    height: 1px;
+    margin: 24px auto 0;
+    background: var(--secondary, #d49a39);
+    transform: scaleX(0);
+    transform-origin: center;
+    opacity: 0;
+    animation: contactHeroLine .8s 1s cubic-bezier(.16,1,.3,1) forwards;
+}
+
+/* Hide the old decorative hero effects so the new hero stays clean. */
+.contact-hero .hero-gradient,
+.contact-hero .hero-glow,
+.contact-hero .hero-frame,
+.contact-hero .hero-ring,
+.contact-hero .hero-light-line,
+.contact-hero .hero-dot,
+.contact-hero .hero-scroll,
+.contact-hero .hero-bottom-line,
+.contact-hero .hero-meta,
+.contact-hero .hero-corner {
+    display: none !important;
+}
+
+@keyframes contactHeroImageIn {
+    from {
+        opacity: 0;
+        transform: scale(1.14);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1.04);
+    }
+}
+
+@keyframes contactHeroImageDrift {
+    from { transform: scale(1.04) translate3d(0,0,0); }
+    to { transform: scale(1.09) translate3d(-10px,-5px,0); }
+}
+
+@keyframes contactHeroFadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(24px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes contactHeroTitle {
+    from {
+        opacity: 0;
+        transform: translateY(38px) scale(.97);
+        filter: blur(7px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+        filter: blur(0);
+    }
+}
+
+@keyframes contactHeroAccent {
+    from { transform: translateY(16px); opacity: .15; }
+    to { transform: translateY(0); opacity: 1; }
+}
+
+@keyframes contactHeroLine {
+    from { opacity: 0; transform: scaleX(0); }
+    to { opacity: 1; transform: scaleX(1); }
+}
+
+/* =========================================================
+   BEGIN YOUR ENQUIRY — FINAL BUTTON
+   ========================================================= */
+
+.contact-cta .cta-outline-button,
+.contact-cta a.cta-outline-button {
+    position: relative;
+    display: inline-flex !important;
+    align-items: center;
+    justify-content: center;
+    gap: 13px;
+    min-width: 205px;
+    min-height: 52px;
+    padding: 13px 18px 13px 22px !important;
+    background: transparent !important;
+    color: var(--secondary) !important;
+    border: 1px solid var(--secondary) !important;
+    border-radius: 999px !important;
+    box-shadow: none !important;
+    text-decoration: none;
+    transition:
+        background .35s ease,
+        color .35s ease,
+        border-color .35s ease,
+        transform .35s ease,
+        box-shadow .35s ease;
+}
+
+.contact-cta .cta-button-text {
+    color: inherit !important;
+    font-size: .86rem;
+    font-weight: 600;
+    letter-spacing: .02em;
+    white-space: nowrap;
+}
+
+.contact-cta .cta-button-dot {
+    width: 9px !important;
+    height: 9px !important;
+    min-width: 9px;
+    flex: 0 0 9px;
+    border-radius: 50%;
+    background: var(--secondary) !important;
+    display: block;
+    transition: transform .35s ease, background .35s ease;
+}
+
+.contact-cta .cta-outline-button:hover {
+    background: var(--secondary) !important;
+    color: var(--surface, #fff) !important;
+    border-color: var(--secondary) !important;
+    transform: translateY(-3px);
+    box-shadow: 0 12px 28px rgba(0,0,0,.14) !important;
+}
+
+.contact-cta .cta-outline-button:hover .cta-button-dot {
+    background: currentColor !important;
+    transform: scale(1.25);
+}
+
+@media (max-width: 768px) {
+    .contact-hero {
+        min-height: 470px !important;
+        height: 470px;
+    }
+
+    .contact-hero-content h1 {
+        font-size: clamp(2.7rem, 11vw, 4.2rem);
+    }
+
+    .contact-hero-content > p {
+        max-width: 450px;
+        font-size: .84rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .contact-hero {
+        min-height: 440px !important;
+        height: 440px;
+    }
+
+    .contact-hero-content {
+        padding: 0 16px;
+    }
+
+    .contact-hero-content h1 {
+        font-size: clamp(2.45rem, 13vw, 3.6rem);
+    }
+
+    .contact-hero-content > p {
+        margin-top: 18px;
+        font-size: .8rem;
+        line-height: 1.65;
+    }
+
+    .contact-cta .cta-outline-button {
+        width: 100%;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .contact-hero-image img,
+    .contact-hero .hero-eyebrow,
+    .contact-hero-content h1,
+    .contact-hero-content h1 em,
+    .contact-hero-content > p,
+    .contact-hero .hero-line {
+        animation: none !important;
+        opacity: 1 !important;
+        transform: none !important;
+        filter: none !important;
+    }
+}
+
+
+/* =========================================================
+   FINAL CONTACT HERO + ENQUIRY BUTTON OVERRIDE
+   ========================================================= */
+.contact-hero .hero-line {
+    width: 76px;
+    height: 1px;
+    margin: 26px auto 0;
+    background: var(--secondary, #d49a39);
+    transform: scaleX(0);
+    transform-origin: center;
+    opacity: 0;
+    animation: contactHeroLine .8s 1s cubic-bezier(.16,1,.3,1) forwards;
+}
+
+.contact-hero-content h1 {
+    font-size: clamp(3.5rem, 7vw, 6.4rem) !important;
+}
+
+.contact-cta .cta-outline-button,
+.contact-cta-panel .cta-outline-button,
+.contact-cta a.cta-outline-button {
+    min-width: 210px !important;
+    height: 52px !important;
+    min-height: 52px !important;
+    padding: 0 18px 0 22px !important;
+    border-radius: 8px !important;
+    border: 1px solid var(--secondary, #d49a39) !important;
+    background: transparent !important;
+    color: var(--secondary, #d49a39) !important;
+    box-shadow: none !important;
+}
+
+.contact-cta .cta-outline-button:hover,
+.contact-cta-panel .cta-outline-button:hover,
+.contact-cta a.cta-outline-button:hover {
+    background: var(--secondary, #d49a39) !important;
+    color: var(--surface, #fff) !important;
+    border-radius: 8px !important;
+    transform: translateY(-2px);
+    box-shadow: 0 10px 24px rgba(0,0,0,.12) !important;
+}
+
+.contact-cta .cta-button-dot,
+.contact-cta-panel .cta-button-dot {
+    width: 8px !important;
+    height: 8px !important;
+    min-width: 8px !important;
+    flex: 0 0 8px !important;
+    border-radius: 50% !important;
+    background: var(--secondary, #d49a39) !important;
+}
+
+@media (max-width: 768px) {
+    .contact-hero {
+        min-height: 470px !important;
+        height: 470px !important;
+    }
+    .contact-hero-content h1 {
+        font-size: clamp(3rem, 11vw, 4.7rem) !important;
+    }
+}
+
+@media (max-width: 480px) {
+    .contact-hero {
+        min-height: 440px !important;
+        height: 440px !important;
+    }
+    .contact-hero-content h1 {
+        font-size: clamp(2.7rem, 13vw, 4rem) !important;
+    }
+    .contact-cta .cta-outline-button,
+    .contact-cta-panel .cta-outline-button {
+        width: auto !important;
+        min-width: 190px !important;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .contact-hero .hero-line {
+        animation: none !important;
+        opacity: 1 !important;
+        transform: none !important;
+    }
+}
+
+
+/* =========================================================
+   FINAL V3 — MATCH HOME BUTTONS + VIEWPORT HERO
+   ========================================================= */
+
+/* Keep the Contact CTA visually consistent with the Home 1 buttons. */
+.contact-cta .cta-outline-button,
+.contact-cta-panel .cta-outline-button,
+.contact-cta a.cta-outline-button {
+    width: auto !important;
+    min-width: 0 !important;
+    height: 44px !important;
+    min-height: 44px !important;
+    padding: 0 16px 0 18px !important;
+    gap: 10px !important;
+    border-radius: 8px !important;
+    border: 1px solid var(--secondary, #d49a39) !important;
+    background: transparent !important;
+    color: var(--secondary, #d49a39) !important;
+    box-shadow: none !important;
+    font-size: 13px !important;
+    line-height: 1 !important;
+    font-weight: 700 !important;
+    letter-spacing: 0 !important;
+}
+
+.contact-cta .cta-button-text,
+.contact-cta-panel .cta-button-text {
+    font-size: 13px !important;
+    font-weight: 700 !important;
+    line-height: 1 !important;
+}
+
+.contact-cta .cta-button-dot,
+.contact-cta-panel .cta-button-dot {
+    width: 8px !important;
+    height: 8px !important;
+    min-width: 8px !important;
+    flex: 0 0 8px !important;
+    border-radius: 50% !important;
+    background: var(--secondary, #d49a39) !important;
+}
+
+.contact-cta .cta-outline-button:hover,
+.contact-cta-panel .cta-outline-button:hover,
+.contact-cta a.cta-outline-button:hover {
+    background: var(--secondary, #d49a39) !important;
+    color: #fff !important;
+    border-color: var(--secondary, #d49a39) !important;
+    border-radius: 8px !important;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(0,0,0,.12) !important;
+}
+
+.contact-cta .cta-outline-button:hover .cta-button-dot,
+.contact-cta-panel .cta-outline-button:hover .cta-button-dot {
+    background: currentColor !important;
+    transform: scale(1.15);
+}
+
+/* Hero fills the opening viewport below the 78px site header. */
+.contact-hero {
+    min-height: calc(100svh - 78px) !important;
+    height: calc(100svh - 78px) !important;
+    max-height: none !important;
+}
+
+.contact-hero-image img {
+    object-position: center center !important;
+    transform: scale(1.035) !important;
+    animation:
+        contactHeroImageInV3 1.15s cubic-bezier(.16,1,.3,1) .05s forwards,
+        contactHeroImageDriftV3 14s ease-in-out 1.2s infinite alternate !important;
+}
+
+.contact-hero-overlay {
+    background:
+        linear-gradient(90deg,
+            rgba(30,17,25,.72) 0%,
+            rgba(30,17,25,.40) 50%,
+            rgba(30,17,25,.62) 100%),
+        linear-gradient(180deg,
+            rgba(25,14,21,.16) 0%,
+            rgba(25,14,21,.58) 100%) !important;
+}
+
+@keyframes contactHeroImageInV3 {
+    from { opacity: 0; transform: scale(1.08); }
+    to { opacity: 1; transform: scale(1.035); }
+}
+
+@keyframes contactHeroImageDriftV3 {
+    from { transform: scale(1.035) translate3d(0,0,0); }
+    to { transform: scale(1.075) translate3d(-8px,-3px,0); }
+}
+
+.contact-hero-content h1 {
+    font-size: clamp(3.8rem, 7.2vw, 6.8rem) !important;
+}
+
+@media (max-width: 768px) {
+    .contact-hero {
+        min-height: calc(100svh - 70px) !important;
+        height: calc(100svh - 70px) !important;
+    }
+
+    .contact-hero-content h1 {
+        font-size: clamp(3rem, 11vw, 4.8rem) !important;
+    }
+}
+
+@media (max-width: 480px) {
+    .contact-hero {
+        min-height: calc(100svh - 64px) !important;
+        height: calc(100svh - 64px) !important;
+    }
+
+    .contact-hero-content h1 {
+        font-size: clamp(2.7rem, 13vw, 4rem) !important;
+    }
+
+    .contact-cta .cta-outline-button,
+    .contact-cta-panel .cta-outline-button {
+        width: auto !important;
+        min-width: 0 !important;
+    }
+}
+
+/* =========================================================
+   FINAL V4 — CONTACT EYEBROW MATCHES DESIGN PROCESS
+   ========================================================= */
+
+.contact-hero .hero-eyebrow {
+    position: relative;
+    display: inline-flex !important;
+    align-items: center;
+    justify-content: center;
+    gap: 14px;
+    margin-bottom: 22px;
+    color: #ffffff !important;
+    font-size: 0.68rem !important;
+    font-weight: 700 !important;
+    letter-spacing: 0.22em !important;
+    line-height: 1 !important;
+    text-transform: uppercase;
+    white-space: nowrap;
+    opacity: 0;
+    transform: translateY(16px);
+    animation: contactHeroEyebrowIn 0.8s 0.3s cubic-bezier(.16,1,.3,1) forwards !important;
+}
+
+.contact-hero .hero-eyebrow::before,
+.contact-hero .hero-eyebrow::after {
+    content: "";
+    display: block;
+    width: 32px;
+    height: 1px;
+    flex: 0 0 32px;
+    background: var(--secondary, #d49a39);
+}
+
+.contact-hero .hero-eyebrow::before {
+    transform-origin: right center;
+    animation: contactHeroEyebrowLineLeft 0.7s 0.45s cubic-bezier(.16,1,.3,1) both;
+}
+
+.contact-hero .hero-eyebrow::after {
+    transform-origin: left center;
+    animation: contactHeroEyebrowLineRight 0.7s 0.45s cubic-bezier(.16,1,.3,1) both;
+}
+
+@keyframes contactHeroEyebrowIn {
+    from {
+        opacity: 0;
+        transform: translateY(16px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes contactHeroEyebrowLineLeft {
+    from {
+        opacity: 0;
+        transform: scaleX(0);
+    }
+    to {
+        opacity: 1;
+        transform: scaleX(1);
+    }
+}
+
+@keyframes contactHeroEyebrowLineRight {
+    from {
+        opacity: 0;
+        transform: scaleX(0);
+    }
+    to {
+        opacity: 1;
+        transform: scaleX(1);
+    }
+}
+
+@media (max-width: 480px) {
+    .contact-hero .hero-eyebrow {
+        gap: 10px;
+        font-size: 0.58rem !important;
+        letter-spacing: 0.18em !important;
+    }
+
+    .contact-hero .hero-eyebrow::before,
+    .contact-hero .hero-eyebrow::after {
+        width: 24px;
+        flex-basis: 24px;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .contact-hero .hero-eyebrow,
+    .contact-hero .hero-eyebrow::before,
+    .contact-hero .hero-eyebrow::after {
+        animation: none !important;
+        opacity: 1 !important;
+        transform: none !important;
+    }
+}
+/* SEND ENQUIRY BUTTON — MATCH WEBSITE BUTTON STRUCTURE */
+
+.form-bottom .btn {
+    min-width: 130px !important;
+    width: auto !important;
+    min-height: 44px !important;
+    height: 44px !important;
+    padding: 0 18px !important;
+    border-radius: 10px !important;
+    font-size: 11px !important;
+    font-weight: 800 !important;
+    gap: 8px !important;
+}
+
+.form-bottom .btn i {
+    font-size: 11px !important;
+}
+
+
+/* =========================================================
+   FINAL — BEGIN YOUR ENQUIRY BUTTON
+   White background + arrow icon only
+   ========================================================= */
+
+.contact-cta .cta-outline-button,
+.contact-cta-panel .cta-outline-button,
+.contact-cta a.cta-outline-button {
+    background: #ffffff !important;
+    color: var(--secondary, #d49a39) !important;
+    border-color: var(--secondary, #d49a39) !important;
+}
+
+.contact-cta .cta-button-dot,
+.contact-cta-panel .cta-button-dot {
+    width: auto !important;
+    height: auto !important;
+    min-width: 16px !important;
+    min-height: 16px !important;
+    flex: 0 0 16px !important;
+    border-radius: 0 !important;
+    background: transparent !important;
+    position: relative;
+}
+
+.contact-cta .cta-button-dot::before,
+.contact-cta-panel .cta-button-dot::before {
+    content: "\f061";
+    font-family: "Font Awesome 6 Free";
+    font-weight: 900;
+    font-size: 13px;
+    line-height: 1;
+    color: var(--secondary, #d49a39);
+    display: block;
+}
+
+.contact-cta .cta-outline-button:hover,
+.contact-cta-panel .cta-outline-button:hover,
+.contact-cta a.cta-outline-button:hover {
+    background: var(--secondary, #d49a39) !important;
+    color: #ffffff !important;
+    border-color: var(--secondary, #d49a39) !important;
+}
+
+.contact-cta .cta-outline-button:hover .cta-button-dot,
+.contact-cta-panel .cta-outline-button:hover .cta-button-dot {
+    background: transparent !important;
+    transform: none !important;
+}
+
+.contact-cta .cta-outline-button:hover .cta-button-dot::before,
+.contact-cta-panel .cta-outline-button:hover .cta-button-dot::before {
+    color: #ffffff;
+    transform: translateX(3px);
+}
+
+
+/* =========================================================
+   PROJECT TYPE — OPTION TEXT VISIBILITY ONLY
+   Do not change the select field or any other contact styling.
+   ========================================================= */
+
+.form-input select option {
+    color: #542342 !important;
+    background-color: #ffffff !important;
+}
+
+html[data-theme="dark"] .form-input select option {
+    color: #542342 !important;
+    background-color: #ffffff !important;
+}
+
+
+/* CONTACT FORM — ICON ALIGNMENT ONLY */
+.contact-form .form-input > svg,
+.contact-form .form-textarea > svg,
+.contact-form .form-input > i[data-lucide],
+.contact-form .form-textarea > i[data-lucide] {
+    flex: 0 0 18px !important;
+    width: 18px !important;
+    height: 18px !important;
+    margin-inline-start: 15px !important;
+    margin-inline-end: 4px !important;
+    align-self: center !important;
+}
+
+.contact-form .form-textarea > svg,
+.contact-form .form-textarea > i[data-lucide] {
+    align-self: flex-start !important;
+    margin-top: 18px !important;
+}
+
+@media (max-width: 768px) {
+    .contact-form .form-input > svg,
+    .contact-form .form-textarea > svg,
+    .contact-form .form-input > i[data-lucide],
+    .contact-form .form-textarea > i[data-lucide] {
+        margin-inline-start: 15px !important;
+    }
+}
+/* =========================================================
+   CONTACT — FINAL SPACING POLISH
+   Only Get In Touch + CTA spacing
+========================================================= */
+
+/* GET IN TOUCH — slightly more breathing room */
+.contact-touch {
+    padding-top: 125px !important;
+    padding-bottom: 105px !important;
+}
+
+
+/* CTA — keep a clean gap below the CTA panel */
+.contact-cta {
+    padding-top: 0 !important;
+    padding-bottom: 75px !important;
+}
+
+
+/* CTA panel itself — no unwanted extra margins */
+.contact-cta-panel {
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 768px) {
+
+    .contact-touch {
+        padding-top: 90px !important;
+        padding-bottom: 75px !important;
+    }
+
+    .contact-cta {
+        padding-bottom: 60px !important;
+    }
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 480px) {
+
+    .contact-touch {
+        padding-top: 75px !important;
+        padding-bottom: 65px !important;
+    }
+
+    .contact-cta {
+        padding-bottom: 50px !important;
+    }
+}
+/* CTA — INCREASE TOP GAP ONLY */
+
+.contact-cta {
+    padding-top: 70px !important;
+    padding-bottom: 35px !important;
+}
+
+.contact-cta-panel {
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
+}
+
+@media (max-width: 768px) {
+    .contact-cta {
+        padding-top: 55px !important;
+        padding-bottom: 28px !important;
+    }
+}
+
+@media (max-width: 480px) {
+    .contact-cta {
+        padding-top: 45px !important;
+        padding-bottom: 22px !important;
+    }
+}

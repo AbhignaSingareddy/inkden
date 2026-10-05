@@ -1,0 +1,800 @@
+/* =========================================================
+   INKDEN - ENQUIRY PAGE
+   ========================================================= */
+
+
+/* =========================================================
+   PAGE
+   ========================================================= */
+
+.enquiry-body {
+    min-height: 100vh;
+    background: var(--bg);
+    color: var(--text);
+}
+
+.enquiry-page {
+    min-height: 100vh;
+    padding: 34px 20px 60px;
+}
+
+
+/* =========================================================
+   TOP BAR
+   ========================================================= */
+
+.enquiry-topbar {
+    width: min(900px, 100%);
+    margin: 0 auto 14px;
+
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+
+    gap: 8px;
+}
+
+.enquiry-topbar .icon-btn {
+    width: 38px;
+    height: 38px;
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    border: 1px solid var(--border);
+    border-radius: 10px;
+
+    background: var(--surface);
+    color: var(--text);
+
+    cursor: pointer;
+
+    transition:
+        background 0.3s ease,
+        color 0.3s ease,
+        border-color 0.3s ease,
+        transform 0.3s ease;
+}
+
+.enquiry-topbar .icon-btn:hover {
+    background: var(--primary);
+    color: #ffffff;
+    border-color: var(--primary);
+    transform: translateY(-2px);
+}
+
+
+/* =========================================================
+   MAIN CARD
+   ========================================================= */
+
+.enquiry-card {
+    width: min(900px, 100%);
+    margin: 0 auto;
+
+    padding: 34px 42px 42px;
+
+    background: var(--surface);
+
+    border: 1px solid var(--border);
+    border-radius: 24px;
+
+    box-shadow: var(--shadow-lg);
+
+    overflow: hidden;
+}
+
+
+/* =========================================================
+   ENQUIRY BRAND
+   CENTERED GROUP
+   ========================================================= */
+
+.enquiry-brand {
+    display: flex !important;
+
+    align-items: center !important;
+    justify-content: center !important;
+
+    width: fit-content !important;
+
+    margin: 2px auto 26px !important;
+
+    gap: 12px !important;
+    column-gap: 12px !important;
+
+    direction: ltr !important;
+
+    text-decoration: none;
+
+    color: var(--text);
+
+    transition:
+        opacity 0.3s ease,
+        transform 0.3s ease;
+}
+
+.enquiry-brand:hover {
+    opacity: 0.9;
+    transform: translateY(-1px);
+}
+
+
+/* =========================================================
+   LTR
+   Logo → InkDen
+   ========================================================= */
+
+html.ltr-mode .enquiry-brand,
+body.ltr-mode .enquiry-brand {
+    flex-direction: row !important;
+    gap: 12px !important;
+    column-gap: 12px !important;
+}
+
+
+/* =========================================================
+   RTL
+   InkDen → Logo
+   ========================================================= */
+
+html.rtl-mode .enquiry-brand,
+body.rtl-mode .enquiry-brand {
+    flex-direction: row-reverse !important;
+    gap: 12px !important;
+    column-gap: 12px !important;
+}
+
+
+/* =========================================================
+   LOGO
+   SAME AS SHARED.CSS
+   ========================================================= */
+
+.enquiry-brand img {
+    width: 44px !important;
+    height: 44px !important;
+
+    flex: 0 0 44px !important;
+
+    object-fit: contain;
+
+    display: block;
+
+    margin: 0 !important;
+
+    filter: drop-shadow(
+        0 8px 15px rgba(74, 38, 63, 0.15)
+    );
+}
+
+
+/* =========================================================
+   BRAND NAME
+   SAME AS SHARED.CSS
+   ========================================================= */
+
+.enquiry-brand-name {
+    display: inline-flex !important;
+
+    align-items: center;
+
+    flex: 0 0 auto;
+
+    margin: 0 !important;
+    padding: 0 !important;
+
+    white-space: nowrap;
+
+    direction: ltr !important;
+
+    font-family: "Cormorant Garamond", serif;
+
+    font-size: 1.62rem !important;
+
+    font-weight: 700;
+
+    line-height: 1;
+
+    letter-spacing: 0;
+}
+
+
+/* =========================================================
+   BRAND TEXT
+   ========================================================= */
+
+.enquiry-brand-name .brand-ink {
+    display: inline;
+
+    margin: 0 !important;
+    padding: 0 !important;
+
+    color: var(--text);
+}
+
+.enquiry-brand-name .brand-den {
+    display: inline;
+
+    margin: 0 !important;
+    padding: 0 !important;
+
+    color: var(--secondary);
+}
+
+
+/* =========================================================
+   DARK MODE BRAND
+   ========================================================= */
+
+html[data-theme="dark"] .enquiry-brand-name .brand-ink,
+body[data-theme="dark"] .enquiry-brand-name .brand-ink {
+    color: #fff8f2 !important;
+}
+
+html[data-theme="dark"] .enquiry-brand-name .brand-den,
+body[data-theme="dark"] .enquiry-brand-name .brand-den {
+    color: var(--secondary) !important;
+}
+
+
+/* =========================================================
+   SECTION HEADER
+   ========================================================= */
+
+.enquiry-card .section-header {
+    max-width: 720px;
+
+    margin: 0 auto 28px;
+}
+
+.enquiry-card .section-header.center {
+    text-align: center;
+}
+
+
+/* =========================================================
+   EYEBROW
+   ========================================================= */
+
+.enquiry-card .eyebrow {
+    display: inline-flex;
+
+    align-items: center;
+    justify-content: center;
+
+    gap: 10px;
+
+    margin-bottom: 14px;
+
+    color: var(--secondary);
+
+    font-size: 0.68rem;
+
+    font-weight: 800;
+
+    letter-spacing: 0.18em;
+
+    line-height: 1.2;
+
+    text-transform: uppercase;
+}
+
+.enquiry-card .eyebrow::before,
+.enquiry-card .eyebrow::after {
+    content: "";
+
+    width: 24px;
+    height: 1px;
+
+    background: var(--secondary);
+}
+
+
+/* =========================================================
+   MAIN HEADING
+   ========================================================= */
+
+.enquiry-card .section-header h1 {
+    margin: 0;
+
+    color: var(--text);
+
+    font-family: "Cormorant Garamond", serif;
+
+    font-size: clamp(
+        2.6rem,
+        6vw,
+        4.8rem
+    );
+
+    font-weight: 500;
+
+    line-height: 0.95;
+
+    letter-spacing: -0.035em;
+}
+
+
+/* =========================================================
+   LEAD
+   ========================================================= */
+
+.enquiry-card .section-header .lead {
+    max-width: 680px;
+
+    margin: 18px auto 0;
+
+    color: var(--muted);
+
+    font-size: 0.92rem;
+
+    line-height: 1.7;
+}
+
+
+/* =========================================================
+   FORM GRID
+   ========================================================= */
+
+.form-grid {
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 14px;
+}
+
+
+/* =========================================================
+   FORM FIELD
+   ========================================================= */
+
+.form-field {
+    display: grid;
+
+    gap: 7px;
+}
+
+.form-field.full {
+    grid-column: 1 / -1;
+}
+
+.form-field label {
+    color: var(--text);
+
+    font-size: 0.74rem;
+
+    font-weight: 800;
+}
+
+
+/* =========================================================
+   INPUT / SELECT / TEXTAREA
+   ========================================================= */
+
+.form-field input,
+.form-field select,
+.form-field textarea {
+    width: 100%;
+
+    border: 1px solid var(--border);
+
+    border-radius: 10px;
+
+    background: var(--bg);
+
+    color: var(--text);
+
+    padding: 12px 13px;
+
+    outline: none;
+
+    font: inherit;
+
+    transition:
+        border-color 0.3s ease,
+        box-shadow 0.3s ease,
+        background 0.3s ease,
+        color 0.3s ease;
+}
+
+
+/* =========================================================
+   PLACEHOLDER
+   ========================================================= */
+
+.form-field input::placeholder,
+.form-field textarea::placeholder {
+    color: var(--muted);
+
+    opacity: 0.75;
+}
+
+
+/* =========================================================
+   FOCUS
+   ========================================================= */
+
+.form-field input:focus,
+.form-field select:focus,
+.form-field textarea:focus {
+    border-color: var(--secondary);
+
+    box-shadow:
+        0 0 0 3px rgba(
+            154,
+            118,
+            47,
+            0.1
+        );
+}
+
+
+/* =========================================================
+   TEXTAREA
+   ========================================================= */
+
+.form-field textarea {
+    min-height: 125px;
+
+    resize: vertical;
+
+    line-height: 1.6;
+}
+
+
+/* =========================================================
+   SELECT
+   ========================================================= */
+
+.form-field select {
+    cursor: pointer;
+}
+
+
+/* =========================================================
+   SUBMIT BUTTON
+   ========================================================= */
+
+.enquiry-card .btn {
+    min-width: 190px;
+
+    min-height: 46px;
+
+    display: inline-flex;
+
+    align-items: center;
+    justify-content: center;
+
+    gap: 9px;
+
+    border-radius: 8px;
+
+    cursor: pointer;
+
+    transition:
+        transform 0.3s ease,
+        background 0.3s ease,
+        color 0.3s ease,
+        border-color 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+.enquiry-card .btn:hover {
+    transform: translateY(-2px);
+}
+
+.enquiry-card .btn i {
+    font-size: 0.78rem;
+}
+
+
+/* =========================================================
+   FORM MESSAGE
+   ========================================================= */
+
+.form-message {
+    display: none;
+
+    margin-top: 12px;
+
+    color: var(--secondary);
+
+    font-size: 0.8rem;
+
+    line-height: 1.5;
+}
+
+
+/* =========================================================
+   DARK MODE INPUTS
+   ========================================================= */
+
+html[data-theme="dark"] .form-field input,
+html[data-theme="dark"] .form-field select,
+html[data-theme="dark"] .form-field textarea,
+body[data-theme="dark"] .form-field input,
+body[data-theme="dark"] .form-field select,
+body[data-theme="dark"] .form-field textarea {
+    color: #ffffff;
+}
+
+
+/* =========================================================
+   DARK MODE PLACEHOLDER
+   ========================================================= */
+
+html[data-theme="dark"] .form-field input::placeholder,
+html[data-theme="dark"] .form-field textarea::placeholder,
+body[data-theme="dark"] .form-field input::placeholder,
+body[data-theme="dark"] .form-field textarea::placeholder {
+    color: rgba(255, 255, 255, 0.55);
+}
+
+
+/* =========================================================
+   LTR FORM
+   ========================================================= */
+
+html[dir="ltr"] .form-field input,
+html[dir="ltr"] .form-field select,
+html[dir="ltr"] .form-field textarea {
+    text-align: left;
+}
+
+
+/* =========================================================
+   RTL FORM
+   ========================================================= */
+
+html[dir="rtl"] .form-field input,
+html[dir="rtl"] .form-field select,
+html[dir="rtl"] .form-field textarea {
+    text-align: right;
+}
+
+html[dir="rtl"] .form-field select {
+    direction: rtl;
+}
+
+
+/* =========================================================
+   TABLET
+   ========================================================= */
+
+@media (max-width: 850px) {
+
+    .enquiry-page {
+        padding: 28px 18px 50px;
+    }
+
+    .enquiry-card {
+        padding: 34px 32px 38px;
+    }
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 600px) {
+
+    .enquiry-page {
+        padding: 20px 14px;
+    }
+
+    .enquiry-topbar {
+        margin-bottom: 12px;
+    }
+
+    .enquiry-card {
+        padding: 28px 20px 30px;
+
+        border-radius: 18px;
+    }
+
+
+    /* =============================================
+       CENTER BRAND
+       ============================================= */
+
+    .enquiry-brand {
+        display: flex !important;
+
+        align-items: center !important;
+        justify-content: center !important;
+
+        width: fit-content !important;
+
+        margin: 2px auto 20px !important;
+
+        gap: 12px !important;
+        column-gap: 12px !important;
+    }
+
+
+    /* LTR */
+
+    html.ltr-mode .enquiry-brand,
+    body.ltr-mode .enquiry-brand {
+        flex-direction: row !important;
+    }
+
+
+    /* RTL */
+
+    html.rtl-mode .enquiry-brand,
+    body.rtl-mode .enquiry-brand {
+        flex-direction: row-reverse !important;
+    }
+
+
+    /* Mobile logo */
+
+    .enquiry-brand img {
+        width: 39px !important;
+        height: 39px !important;
+
+        flex: 0 0 39px !important;
+    }
+
+
+    /* Mobile name */
+
+    .enquiry-brand-name {
+        font-size: 1.45rem !important;
+    }
+
+
+    /* Heading */
+
+    .enquiry-card .section-header h1 {
+        font-size: clamp(
+            2.45rem,
+            12vw,
+            3.6rem
+        );
+    }
+
+
+    /* Lead */
+
+    .enquiry-card .section-header .lead {
+        font-size: 0.82rem;
+    }
+
+
+    /* Form */
+
+    .form-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .form-field.full {
+        grid-column: auto;
+    }
+
+
+    /* Button */
+
+    .enquiry-card .btn {
+        width: 100%;
+    }
+}
+
+
+/* =========================================================
+   SMALL MOBILE - 360px
+   ========================================================= */
+
+@media (max-width: 360px) {
+
+    .enquiry-page {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    .enquiry-card {
+        padding-left: 16px;
+        padding-right: 16px;
+    }
+
+    .enquiry-brand {
+        gap: 12px !important;
+        column-gap: 12px !important;
+
+        margin-left: auto !important;
+        margin-right: auto !important;
+    }
+
+    .enquiry-brand img {
+        width: 39px !important;
+        height: 39px !important;
+
+        flex-basis: 39px !important;
+    }
+
+    .enquiry-brand-name {
+        font-size: 1.45rem !important;
+    }
+
+    .enquiry-card .section-header h1 {
+        font-size: 2.35rem;
+    }
+}
+
+
+/* =========================================================
+   REDUCED MOTION
+   ========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+    .enquiry-brand,
+    .enquiry-topbar .icon-btn,
+    .enquiry-card .btn,
+    .form-field input,
+    .form-field select,
+    .form-field textarea {
+        transition: none !important;
+    }
+}
+/* =========================================================
+   RTL - REDUCE VISUAL GAP BETWEEN NAME AND LOGO
+   ========================================================= */
+
+html.rtl-mode .enquiry-brand,
+body.rtl-mode .enquiry-brand {
+    flex-direction: row-reverse !important;
+    gap: 6px !important;
+}
+/* =========================================================
+   ENQUIRY TOP BUTTONS — LTR RIGHT / RTL LEFT
+========================================================= */
+
+.enquiry-topbar {
+    width: 100% !important;
+    max-width: none !important;
+    margin: 0 !important;
+
+    display: flex !important;
+    align-items: center !important;
+    justify-content: flex-end !important;
+
+    gap: 8px !important;
+    padding: 0 20px !important;
+
+    direction: ltr !important;
+}
+
+
+/* RTL — move buttons to LEFT corner */
+html[dir="rtl"] .enquiry-topbar,
+html.rtl-mode .enquiry-topbar,
+body.rtl-mode .enquiry-topbar {
+    justify-content: flex-start !important;
+    direction: ltr !important;
+}
+
+
+/* Buttons */
+.enquiry-topbar .icon-btn {
+    width: 38px !important;
+    height: 38px !important;
+    flex: 0 0 38px !important;
+}
+
+
+/* Mobile */
+@media (max-width: 600px) {
+
+    .enquiry-topbar {
+        padding-left: 10px !important;
+        padding-right: 10px !important;
+        gap: 6px !important;
+    }
+
+}

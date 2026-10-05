@@ -1,0 +1,2711 @@
+/* =========================================================
+   INKDEN — HOME 1
+   COMPLETE HOME CSS
+   PREMIUM HERO + SCROLL REVEAL ANIMATIONS
+   ========================================================= */
+
+
+/* =========================================================
+   HERO
+   ========================================================= */
+
+.hero {
+    min-height: calc(100vh - 78px);
+    height: calc(100vh - 78px);
+    box-sizing: border-box;
+    padding: 18px 0 22px;
+    display: flex;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+    isolation: isolate;
+}
+
+.hero::before {
+    content: "";
+    position: absolute;
+    width: 620px;
+    height: 620px;
+    right: -190px;
+    bottom: -320px;
+    border-radius: 50%;
+    background: radial-gradient(
+        circle,
+        rgba(154, 118, 47, .16),
+        transparent 68%
+    );
+    pointer-events: none;
+    z-index: -1;
+    animation: heroGlow 10s ease-in-out infinite alternate;
+}
+
+.hero-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 48px;
+    align-items: stretch;
+    height: 100%;
+}
+
+.hero-copy {
+    position: relative;
+    z-index: 2;
+    min-height: 430px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+
+/* =========================================================
+   HERO TAGLINE
+   ========================================================= */
+
+.hero-copy > .eyebrow {
+    display: inline-flex;
+    align-items: center;
+    gap: 11px;
+    opacity: 0;
+    visibility: hidden;
+    transform: translate3d(0, 24px, 0);
+    animation:
+        heroTextIn .75s cubic-bezier(.22,.61,.36,1) .12s forwards;
+}
+
+.hero-copy > .eyebrow::before {
+    content: "";
+    width: 0;
+    height: 1px;
+    background: var(--secondary);
+    animation:
+        eyebrowLine .65s ease .55s forwards;
+}
+
+
+/* =========================================================
+   HERO HEADING
+   ========================================================= */
+
+.hero-copy h1 {
+    margin: 12px 0 16px;
+    max-width: 620px;
+    font-size: clamp(3.5rem, 5.35vw, 5.45rem);
+    line-height: .9;
+    opacity: 0;
+    visibility: hidden;
+    transform: translate3d(0, 42px, 0);
+    animation:
+        heroHeadingIn .95s cubic-bezier(.22,.61,.36,1) .27s forwards;
+}
+
+
+/* =========================================================
+   HERO PARAGRAPH
+   ========================================================= */
+
+.hero-copy .lead {
+    max-width: 590px;
+    margin: 0 0 22px;
+    opacity: 0;
+    visibility: hidden;
+    transform: translate3d(0, 28px, 0);
+    animation:
+        heroTextIn .8s cubic-bezier(.22,.61,.36,1) .48s forwards;
+}
+
+
+/* =========================================================
+   HERO BUTTONS
+   ========================================================= */
+
+.hero-copy .btn-row {
+    opacity: 0;
+    visibility: hidden;
+    transform: translate3d(0, 25px, 0);
+    animation:
+        heroTextIn .8s cubic-bezier(.22,.61,.36,1) .65s forwards;
+}
+
+.hero-copy .btn-row .btn {
+    opacity: 0;
+    transform: translate3d(0, 18px, 0);
+}
+
+.hero-copy .btn-row .btn:first-child {
+    animation:
+        heroButtonIn .65s cubic-bezier(.22,.61,.36,1) .85s forwards;
+}
+
+.hero-copy .btn-row .btn:last-child {
+    animation:
+        heroButtonIn .65s cubic-bezier(.22,.61,.36,1) 1s forwards;
+}
+
+
+/* =========================================================
+   HERO IMAGE
+   NO FLICKER
+   ========================================================= */
+
+.hero-media {
+    position: relative;
+    min-height: 430px;
+    height: 430px;
+    align-self: center;
+
+    opacity: 0;
+    visibility: hidden;
+
+    transform:
+        translate3d(75px, 0, 0)
+        scale(.96);
+
+    transition:
+        opacity 1s cubic-bezier(.22,.61,.36,1),
+        transform 1.15s cubic-bezier(.22,.61,.36,1);
+
+    will-change:
+        opacity,
+        transform;
+
+    animation: none !important;
+}
+
+.hero-media.is-visible {
+    opacity: 1;
+    visibility: visible;
+
+    transform:
+        translate3d(0, 0, 0)
+        scale(1);
+}
+
+
+/* =========================================================
+   HERO IMAGE
+   ========================================================= */
+
+.hero-image {
+    position: absolute;
+    inset: 0;
+    height: 100%;
+    overflow: hidden;
+
+    border-radius:
+        28px 28px 120px 28px;
+
+    box-shadow: var(--shadow-lg);
+
+    transform: rotate(1deg);
+
+    transition:
+        transform .7s cubic-bezier(.22,.61,.36,1);
+}
+
+.hero-image img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    transform: scale(1.08);
+
+    filter:
+        saturate(.92)
+        contrast(1.02);
+
+    transition:
+        transform 1.5s cubic-bezier(.22,.61,.36,1);
+}
+
+.hero-media.is-visible .hero-image img {
+    transform: scale(1);
+}
+
+.hero-media:hover .hero-image {
+    transform:
+        rotate(0deg)
+        scale(1.012);
+}
+
+.hero-media:hover .hero-image img {
+    transform: scale(1.045);
+}
+
+
+/* =========================================================
+   HERO BADGE
+   ========================================================= */
+
+.hero-badge {
+    position: absolute;
+    left: -28px;
+    bottom: 44px;
+
+    z-index: 3;
+
+    padding: 18px 20px;
+
+    background: var(--surface);
+
+    border:
+        1px solid var(--border);
+
+    border-radius: 14px;
+
+    box-shadow: var(--shadow);
+
+    opacity: 0;
+    visibility: hidden;
+
+    transform:
+        translate3d(0, 30px, 0)
+        scale(.9)
+        rotate(-3deg);
+}
+
+.hero-media.is-visible .hero-badge {
+    opacity: 1;
+    visibility: visible;
+
+    transform:
+        translate3d(0, 0, 0)
+        scale(1)
+        rotate(0deg);
+
+    transition:
+        opacity .7s ease .55s,
+        transform .7s cubic-bezier(.22,.61,.36,1) .55s;
+}
+
+.hero-badge strong {
+    display: block;
+
+    font-family:
+        "Cormorant Garamond",
+        Georgia,
+        serif;
+
+    font-size: 1.7rem;
+
+    color: var(--text);
+}
+
+.hero-badge span {
+    display: block;
+
+    margin-top: 3px;
+
+    font-size: .72rem;
+
+    color: var(--muted);
+}
+
+
+/* =========================================================
+   HERO BUTTONS
+   ========================================================= */
+
+.hero .btn {
+    transition:
+        transform .3s cubic-bezier(.22,.61,.36,1),
+        background-color .3s ease,
+        color .3s ease,
+        border-color .3s ease,
+        box-shadow .3s ease;
+}
+
+.hero .btn:hover {
+    transform: translateY(-4px);
+}
+
+.hero .btn i,
+.hero .btn svg {
+    transition:
+        transform .3s ease;
+}
+
+.hero .btn:hover i,
+.hero .btn:hover svg {
+    transform: translateX(4px);
+}
+
+.hero .btn-outline {
+    background: transparent !important;
+    color: var(--secondary) !important;
+    border-color: var(--secondary) !important;
+}
+
+.hero .btn-outline:hover {
+    background: var(--secondary) !important;
+    color: #fff !important;
+}
+
+
+/* =========================================================
+   GENERAL SCROLL REVEAL
+   ========================================================= */
+
+.reveal,
+.reveal-left,
+.reveal-right {
+    opacity: 0;
+    visibility: hidden;
+
+    transition:
+        opacity .9s cubic-bezier(.22,.61,.36,1),
+        transform .9s cubic-bezier(.22,.61,.36,1);
+
+    will-change:
+        opacity,
+        transform;
+}
+
+.reveal {
+    transform:
+        translate3d(0, 65px, 0);
+}
+
+.reveal-left {
+    transform:
+        translate3d(-75px, 0, 0);
+}
+
+.reveal-right {
+    transform:
+        translate3d(75px, 0, 0);
+}
+
+.reveal.is-visible,
+.reveal-left.is-visible,
+.reveal-right.is-visible {
+    opacity: 1;
+    visibility: visible;
+
+    transform:
+        translate3d(0, 0, 0);
+}
+
+
+/* =========================================================
+   WHAT WE DESIGN
+   ========================================================= */
+
+.section-header.center {
+    opacity: 0;
+    visibility: hidden;
+
+    transform:
+        translate3d(0, 55px, 0);
+
+    transition:
+        opacity .85s cubic-bezier(.22,.61,.36,1),
+        transform .85s cubic-bezier(.22,.61,.36,1);
+}
+
+.section-header.center.is-visible {
+    opacity: 1;
+    visibility: visible;
+
+    transform:
+        translate3d(0, 0, 0);
+}
+
+
+/* ---------------------------------------------------------
+   WHAT WE DESIGN EYEBROW
+--------------------------------------------------------- */
+
+.section-header.center .eyebrow {
+    opacity: 0;
+
+    transform:
+        translate3d(0, 20px, 0);
+
+    transition:
+        opacity .6s ease,
+        transform .6s cubic-bezier(.22,.61,.36,1);
+}
+
+.section-header.center.is-visible .eyebrow {
+    opacity: 1;
+
+    transform:
+        translate3d(0, 0, 0);
+}
+
+
+/* ---------------------------------------------------------
+   WHAT WE DESIGN HEADING
+--------------------------------------------------------- */
+
+.section-header.center h2 {
+    opacity: 0;
+
+    transform:
+        translate3d(0, 30px, 0);
+
+    transition:
+        opacity .75s ease .12s,
+        transform .75s cubic-bezier(.22,.61,.36,1) .12s;
+}
+
+.section-header.center.is-visible h2 {
+    opacity: 1;
+
+    transform:
+        translate3d(0, 0, 0);
+}
+
+
+/* =========================================================
+   FEATURE CARDS
+   ========================================================= */
+
+.feature-grid .feature-card {
+    opacity: 0;
+    visibility: hidden;
+
+    transform:
+        translate3d(0, 75px, 0)
+        scale(.94);
+
+    transition:
+        opacity .8s cubic-bezier(.22,.61,.36,1),
+        transform .8s cubic-bezier(.22,.61,.36,1),
+        box-shadow .35s ease,
+        border-color .35s ease;
+}
+
+.feature-grid
+.feature-card:nth-child(1) {
+    transition-delay: .08s;
+}
+
+.feature-grid
+.feature-card:nth-child(2) {
+    transition-delay: .22s;
+}
+
+.feature-grid
+.feature-card:nth-child(3) {
+    transition-delay: .36s;
+}
+
+.feature-grid
+.feature-card.is-visible {
+    opacity: 1;
+    visibility: visible;
+
+    transform:
+        translate3d(0, 0, 0)
+        scale(1);
+}
+
+
+/* =========================================================
+   FEATURE CARD ICON
+   ========================================================= */
+
+.feature-grid
+.feature-card
+.feature-icon {
+    opacity: 0;
+
+    transform:
+        translate3d(0, 22px, 0)
+        scale(.75)
+        rotate(-8deg);
+
+    transition:
+        opacity .55s ease .25s,
+        transform .65s cubic-bezier(.22,.61,.36,1) .25s;
+}
+
+.feature-grid
+.feature-card.is-visible
+.feature-icon {
+    opacity: 1;
+
+    transform:
+        translate3d(0, 0, 0)
+        scale(1)
+        rotate(0);
+}
+
+
+/* =========================================================
+   FEATURE CARD TITLE
+   ========================================================= */
+
+.feature-grid
+.feature-card
+h3 {
+    opacity: 0;
+
+    transform:
+        translate3d(0, 20px, 0);
+
+    transition:
+        opacity .6s ease .35s,
+        transform .65s cubic-bezier(.22,.61,.36,1) .35s;
+}
+
+.feature-grid
+.feature-card.is-visible
+h3 {
+    opacity: 1;
+
+    transform:
+        translate3d(0, 0, 0);
+}
+
+
+/* =========================================================
+   FEATURE CARD DESCRIPTION
+   ========================================================= */
+
+.feature-grid
+.feature-card
+p {
+    opacity: 0;
+
+    transform:
+        translate3d(0, 20px, 0);
+
+    transition:
+        opacity .65s ease .45s,
+        transform .65s cubic-bezier(.22,.61,.36,1) .45s;
+}
+
+.feature-grid
+.feature-card.is-visible
+p {
+    opacity: 1;
+
+    transform:
+        translate3d(0, 0, 0);
+}
+
+
+/* =========================================================
+   FEATURE CARD HOVER
+   ========================================================= */
+
+.feature-grid
+.feature-card:hover {
+    transform:
+        translate3d(0, -9px, 0)
+        scale(1.01);
+
+    box-shadow:
+        0 22px 45px
+        rgba(74,38,63,.13);
+}
+
+.feature-grid
+.feature-card:hover
+.feature-icon {
+    transform:
+        translate3d(0, -4px, 0)
+        rotate(-5deg)
+        scale(1.05);
+}
+
+
+/* =========================================================
+   STATISTICS
+   ========================================================= */
+
+.statistics-heading {
+    max-width: 760px;
+
+    margin:
+        0 auto 38px;
+
+    text-align: center;
+
+    opacity: 0;
+    visibility: hidden;
+
+    transform:
+        translate3d(0, 50px, 0);
+
+    transition:
+        opacity .85s cubic-bezier(.22,.61,.36,1),
+        transform .85s cubic-bezier(.22,.61,.36,1);
+}
+
+.statistics-heading.is-visible {
+    opacity: 1;
+    visibility: visible;
+
+    transform:
+        translate3d(0, 0, 0);
+}
+
+.statistics-heading .eyebrow {
+    justify-content: center;
+
+    opacity: 0;
+
+    transform:
+        translate3d(0, 18px, 0);
+
+    transition:
+        opacity .6s ease,
+        transform .6s ease;
+}
+
+.statistics-heading.is-visible .eyebrow {
+    opacity: 1;
+
+    transform:
+        translate3d(0, 0, 0);
+}
+
+.statistics-heading h2 {
+    opacity: 0;
+
+    transform:
+        translate3d(0, 25px, 0);
+
+    transition:
+        opacity .75s ease .12s,
+        transform .75s cubic-bezier(.22,.61,.36,1) .12s;
+}
+
+.statistics-heading.is-visible h2 {
+    opacity: 1;
+
+    transform:
+        translate3d(0, 0, 0);
+}
+
+.statistics-heading p {
+    opacity: 0;
+
+    transform:
+        translate3d(0, 20px, 0);
+
+    transition:
+        opacity .7s ease .24s,
+        transform .7s cubic-bezier(.22,.61,.36,1) .24s;
+}
+
+.statistics-heading.is-visible p {
+    opacity: 1;
+
+    transform:
+        translate3d(0, 0, 0);
+}
+
+
+/* =========================================================
+   STAT STRIP
+   ========================================================= */
+
+.stat-strip {
+    opacity: 0;
+    visibility: hidden;
+
+    transform:
+        translate3d(0, 55px, 0);
+
+    transition:
+        opacity .9s cubic-bezier(.22,.61,.36,1),
+        transform .9s cubic-bezier(.22,.61,.36,1);
+}
+
+.stat-strip.is-visible {
+    opacity: 1;
+    visibility: visible;
+
+    transform:
+        translate3d(0, 0, 0);
+}
+
+.stat-strip .stat {
+    opacity: 0;
+
+    transform:
+        translate3d(0, 30px, 0)
+        scale(.95);
+
+    transition:
+        opacity .7s ease,
+        transform .7s cubic-bezier(.22,.61,.36,1);
+}
+
+.stat-strip.is-visible
+.stat:nth-child(1) {
+    opacity: 1;
+
+    transform:
+        translate3d(0,0,0)
+        scale(1);
+
+    transition-delay: .05s;
+}
+
+.stat-strip.is-visible
+.stat:nth-child(2) {
+    opacity: 1;
+
+    transform:
+        translate3d(0,0,0)
+        scale(1);
+
+    transition-delay: .18s;
+}
+
+.stat-strip.is-visible
+.stat:nth-child(3) {
+    opacity: 1;
+
+    transform:
+        translate3d(0,0,0)
+        scale(1);
+
+    transition-delay: .31s;
+}
+
+.stat-strip.is-visible
+.stat:nth-child(4) {
+    opacity: 1;
+
+    transform:
+        translate3d(0,0,0)
+        scale(1);
+
+    transition-delay: .44s;
+}
+
+.stat:hover {
+    transform:
+        translate3d(0,-7px,0)
+        scale(1) !important;
+}
+
+
+/* =========================================================
+   IMAGE / TEXT SPLIT SECTIONS
+   ========================================================= */
+
+.image-card {
+    overflow: hidden;
+}
+
+.image-card img {
+    transition:
+        transform 1.2s cubic-bezier(.22,.61,.36,1);
+}
+
+.image-card.reveal-left img,
+.image-card.reveal-right img {
+    transform: scale(1.08);
+}
+
+.image-card.is-visible img {
+    transform: scale(1);
+}
+
+.image-card:hover img {
+    transform: scale(1.045);
+}
+
+
+/* =========================================================
+   REVIEWS
+   ========================================================= */
+
+.home1-reviews {
+    background: var(--surface-2);
+}
+
+.reviews-heading {
+    max-width: 780px;
+
+    margin:
+        0 auto 38px;
+
+    text-align: center;
+
+    opacity: 0;
+    visibility: hidden;
+
+    transform:
+        translate3d(0, 50px, 0);
+
+    transition:
+        opacity .85s cubic-bezier(.22,.61,.36,1),
+        transform .85s cubic-bezier(.22,.61,.36,1);
+}
+
+.reviews-heading.is-visible {
+    opacity: 1;
+    visibility: visible;
+
+    transform:
+        translate3d(0,0,0);
+}
+
+.reviews-heading .eyebrow {
+    justify-content: center;
+
+    opacity: 0;
+
+    transform:
+        translate3d(0,18px,0);
+
+    transition:
+        opacity .6s ease,
+        transform .6s ease;
+}
+
+.reviews-heading h2 {
+    opacity: 0;
+
+    transform:
+        translate3d(0,28px,0);
+
+    transition:
+        opacity .75s ease .12s,
+        transform .75s cubic-bezier(.22,.61,.36,1) .12s;
+}
+
+.reviews-heading > p {
+    max-width: 650px;
+
+    margin:
+        0 auto;
+
+    opacity: 0;
+
+    transform:
+        translate3d(0,20px,0);
+
+    transition:
+        opacity .7s ease .24s,
+        transform .7s cubic-bezier(.22,.61,.36,1) .24s;
+}
+
+.reviews-heading.is-visible
+.eyebrow,
+.reviews-heading.is-visible
+h2,
+.reviews-heading.is-visible
+> p {
+    opacity: 1;
+
+    transform:
+        translate3d(0,0,0);
+}
+
+
+/* =========================================================
+   REVIEW GRID
+   ========================================================= */
+
+.review-grid-home1 {
+    display: grid;
+
+    grid-template-columns:
+        repeat(3,1fr);
+
+    gap: 16px;
+}
+
+
+/* =========================================================
+   REVIEW CARDS
+   ========================================================= */
+
+.review-grid-home1
+.review-card {
+    min-height: 270px;
+
+    padding: 26px;
+
+    background: #fff;
+
+    border:
+        1px solid var(--border);
+
+    border-radius: 18px;
+
+    box-shadow:
+        0 12px 28px
+        rgba(74,38,63,.06);
+
+    opacity: 0;
+    visibility: hidden;
+
+    transform:
+        translate3d(0,60px,0)
+        scale(.97);
+
+    transition:
+        opacity .8s cubic-bezier(.22,.61,.36,1),
+        transform .8s cubic-bezier(.22,.61,.36,1),
+        box-shadow .35s ease,
+        border-color .35s ease;
+}
+
+.review-grid-home1
+.review-card:nth-child(1) {
+    transition-delay: .05s;
+}
+
+.review-grid-home1
+.review-card:nth-child(2) {
+    transition-delay: .20s;
+}
+
+.review-grid-home1
+.review-card:nth-child(3) {
+    transition-delay: .35s;
+}
+
+.review-grid-home1
+.review-card.is-visible {
+    opacity: 1;
+    visibility: visible;
+
+    transform:
+        translate3d(0,0,0)
+        scale(1);
+}
+
+.review-grid-home1
+.review-card:hover {
+    transform:
+        translate3d(0,-10px,0)
+        scale(1.01);
+
+    border-color: var(--secondary);
+
+    box-shadow:
+        0 20px 40px
+        rgba(74,38,63,.12);
+}
+
+
+/* =========================================================
+   REVIEW CONTENT
+   ========================================================= */
+
+.review-stars {
+    color: var(--secondary);
+
+    font-size: .78rem;
+
+    letter-spacing: .15em;
+
+    margin-bottom: 18px;
+}
+
+.review-grid-home1
+.review-card p {
+    margin: 0;
+
+    font-family:
+        "Manrope",
+        sans-serif;
+
+    font-size: .92rem;
+
+    line-height: 1.65;
+
+    color: var(--text);
+}
+
+.review-person {
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+    margin-top: 18px;
+}
+
+.review-avatar {
+    width: 42px;
+    height: 42px;
+
+    flex: 0 0 42px;
+
+    display: grid;
+
+    place-items: center;
+
+    border-radius: 50%;
+
+    background: var(--secondary);
+
+    color: #fff;
+
+    font-size: .7rem;
+
+    font-weight: 800;
+}
+
+.review-person strong,
+.review-person span {
+    display: block;
+}
+
+.review-person strong {
+    font-size: .82rem;
+
+    color: var(--text);
+}
+
+.review-person div span {
+    margin-top: 2px;
+
+    font-size: .68rem;
+
+    color: var(--muted);
+}
+
+
+/* =========================================================
+   QUOTE
+   ========================================================= */
+
+.quote-panel {
+    opacity: 0;
+    visibility: hidden;
+
+    transform:
+        translate3d(0,55px,0)
+        scale(.97);
+
+    transition:
+        opacity .9s cubic-bezier(.22,.61,.36,1),
+        transform 1s cubic-bezier(.22,.61,.36,1);
+
+    text-align: center !important;
+
+    display: flex !important;
+
+    flex-direction: column !important;
+
+    align-items: center !important;
+
+    justify-content: center !important;
+}
+
+.quote-panel.is-visible {
+    opacity: 1;
+    visibility: visible;
+
+    transform:
+        translate3d(0,0,0)
+        scale(1);
+}
+
+.quote-panel .eyebrow {
+    opacity: 0;
+
+    transform:
+        translate3d(0,18px,0);
+
+    transition:
+        opacity .6s ease,
+        transform .6s ease;
+}
+
+.quote-panel p {
+    width: 100% !important;
+
+    max-width: 850px !important;
+
+    margin: 0 auto !important;
+
+    color: #fff !important;
+
+    text-align: center !important;
+
+    font-family:
+        "Cormorant Garamond",
+        Georgia,
+        serif !important;
+
+    font-size:
+        clamp(2rem,3.4vw,3.2rem) !important;
+
+    line-height: 1.25 !important;
+
+    opacity: 0 !important;
+
+    transform:
+        translate3d(0,28px,0);
+
+    transition:
+        opacity .8s ease .15s,
+        transform .8s cubic-bezier(.22,.61,.36,1) .15s;
+}
+
+.quote-panel.is-visible
+.eyebrow {
+    opacity: 1;
+
+    transform:
+        translate3d(0,0,0);
+}
+
+.quote-panel.is-visible
+p {
+    opacity: 1 !important;
+
+    transform:
+        translate3d(0,0,0);
+}
+
+
+/* =========================================================
+   CTA
+   ========================================================= */
+
+.cta-panel {
+    opacity: 0;
+    visibility: hidden;
+
+    transform:
+        translate3d(0,55px,0);
+
+    transition:
+        opacity .9s cubic-bezier(.22,.61,.36,1),
+        transform .9s cubic-bezier(.22,.61,.36,1);
+}
+
+.cta-panel.is-visible {
+    opacity: 1;
+    visibility: visible;
+
+    transform:
+        translate3d(0,0,0);
+}
+
+.cta-panel h2,
+.cta-panel p,
+.cta-panel .btn {
+    opacity: 0;
+
+    transform:
+        translate3d(0,25px,0);
+
+    transition:
+        opacity .7s ease,
+        transform .7s cubic-bezier(.22,.61,.36,1);
+}
+
+.cta-panel.is-visible h2 {
+    opacity: 1;
+
+    transform:
+        translate3d(0,0,0);
+
+    transition-delay: .1s;
+}
+
+.cta-panel.is-visible p {
+    opacity: 1;
+
+    transform:
+        translate3d(0,0,0);
+
+    transition-delay: .22s;
+}
+
+.cta-panel.is-visible .btn {
+    opacity: 1;
+
+    transform:
+        translate3d(0,0,0);
+
+    transition-delay: .35s;
+}
+
+
+/* =========================================================
+   DARK MODE
+   ========================================================= */
+
+html[data-theme="dark"]
+.home1-reviews {
+    background: var(--primary-dark);
+}
+
+html[data-theme="dark"]
+.review-grid-home1
+.review-card {
+    background: var(--surface);
+
+    border-color: var(--border);
+
+    color: var(--text);
+}
+
+html[data-theme="dark"]
+.review-grid-home1
+.review-card p {
+    color: var(--text);
+}
+
+
+/* =========================================================
+   TABLET
+   ========================================================= */
+
+@media (max-width: 1024px) {
+
+    .hero {
+        min-height: calc(100vh - 78px);
+        height: calc(100vh - 78px);
+        padding: 16px 0 20px;
+    }
+
+    .hero-grid {
+        gap: 38px;
+    }
+
+    .hero-copy {
+        min-height: 410px;
+    }
+
+    .hero-copy h1 {
+        font-size: clamp(3.15rem, 5.1vw, 4.7rem);
+    }
+
+    .hero-media {
+        min-height: 410px;
+        height: 410px;
+    }
+}
+
+
+/* =========================================================
+   850px
+   ========================================================= */
+
+@media (max-width: 850px) {
+
+    .hero {
+        min-height: auto;
+        height: auto;
+        padding: 42px 0 48px;
+    }
+
+    .hero-grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
+        height: auto;
+    }
+
+    .hero-copy {
+        min-height: auto;
+    }
+
+    .hero-copy h1 {
+        font-size: clamp(3rem, 8vw, 4.6rem);
+    }
+
+    .hero-media {
+        min-height: 420px;
+        height: 420px;
+
+        transform:
+            translate3d(0,55px,0)
+            scale(.96);
+    }
+
+    .hero-media.is-visible {
+        transform:
+            translate3d(0,0,0)
+            scale(1);
+    }
+
+    .reveal-left {
+        transform:
+            translate3d(-45px,0,0);
+    }
+
+    .reveal-right {
+        transform:
+            translate3d(45px,0,0);
+    }
+
+    .reveal {
+        transform:
+            translate3d(0,45px,0);
+    }
+
+    .review-grid-home1 {
+        grid-template-columns:
+            repeat(2,1fr);
+    }
+
+    .review-grid-home1
+    .review-card:first-child {
+        grid-column:
+            1 / -1;
+    }
+}
+
+
+/* =========================================================
+   768px
+   ========================================================= */
+
+@media (max-width: 768px) {
+
+    .hero {
+        min-height: auto;
+        height: auto;
+    }
+
+    .hero-copy > .eyebrow {
+        animation-delay: .08s;
+    }
+
+    .hero-copy h1 {
+        animation-delay: .20s;
+    }
+
+    .hero-copy .lead {
+        animation-delay: .38s;
+    }
+
+    .hero-copy .btn-row {
+        animation-delay: .54s;
+    }
+
+    .hero-copy .btn-row .btn:first-child {
+        animation-delay: .72s;
+    }
+
+    .hero-copy .btn-row .btn:last-child {
+        animation-delay: .86s;
+    }
+
+    .hero-media {
+        min-height: 390px;
+        height: 390px;
+    }
+}
+
+
+/* =========================================================
+   600px
+   ========================================================= */
+
+@media (max-width: 600px) {
+
+    .hero {
+        min-height: auto;
+        height: auto;
+        padding:
+            34px 0 40px;
+    }
+
+    .hero-media {
+        min-height: 340px;
+        height: 340px;
+    }
+
+    .hero-badge {
+        left: 10px;
+        bottom: 18px;
+    }
+
+    .hero-badge strong {
+        font-size: 1.45rem;
+    }
+
+    .review-grid-home1 {
+        grid-template-columns: 1fr;
+    }
+
+    .review-grid-home1
+    .review-card:first-child {
+        grid-column: auto;
+    }
+
+    .review-grid-home1
+    .review-card {
+        min-height: 250px;
+        padding: 24px;
+    }
+
+    .quote-panel p {
+        font-size:
+            1.75rem !important;
+    }
+
+    .feature-grid
+    .feature-card {
+        transform:
+            translate3d(0,50px,0)
+            scale(.96);
+    }
+}
+
+
+/* =========================================================
+   360px
+   ========================================================= */
+
+@media (max-width: 360px) {
+
+    .hero {
+        min-height: auto;
+        height: auto;
+        padding:
+            28px 0 34px;
+    }
+
+    .hero-media {
+        min-height: 300px;
+        height: 300px;
+    }
+
+    .hero-badge {
+        padding: 14px 16px;
+    }
+
+    .hero-badge strong {
+        font-size: 1.35rem;
+    }
+
+    .quote-panel p {
+        font-size:
+            1.6rem !important;
+    }
+}
+
+
+/* =========================================================
+   HERO KEYFRAMES
+   ========================================================= */
+
+@keyframes heroTextIn {
+
+    0% {
+        opacity: 0;
+        visibility: hidden;
+
+        transform:
+            translate3d(0,30px,0);
+    }
+
+    100% {
+        opacity: 1;
+        visibility: visible;
+
+        transform:
+            translate3d(0,0,0);
+    }
+}
+
+@keyframes heroHeadingIn {
+
+    0% {
+        opacity: 0;
+        visibility: hidden;
+
+        transform:
+            translate3d(0,42px,0);
+
+        clip-path:
+            inset(100% 0 0 0);
+    }
+
+    100% {
+        opacity: 1;
+        visibility: visible;
+
+        transform:
+            translate3d(0,0,0);
+
+        clip-path:
+            inset(0 0 0 0);
+    }
+}
+
+@keyframes heroButtonIn {
+
+    0% {
+        opacity: 0;
+
+        transform:
+            translate3d(0,18px,0);
+    }
+
+    100% {
+        opacity: 1;
+
+        transform:
+            translate3d(0,0,0);
+    }
+}
+
+@keyframes eyebrowLine {
+
+    0% {
+        width: 0;
+    }
+
+    100% {
+        width: 26px;
+    }
+}
+
+@keyframes heroGlow {
+
+    0% {
+        transform:
+            translate3d(0,0,0)
+            scale(1);
+    }
+
+    50% {
+        transform:
+            translate3d(-55px,35px,0)
+            scale(1.08);
+    }
+
+    100% {
+        transform:
+            translate3d(-20px,70px,0)
+            scale(.96);
+    }
+}
+
+
+/* =========================================================
+   REDUCED MOTION
+   ========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+    *,
+    *::before,
+    *::after {
+        animation-duration:
+            .01ms !important;
+
+        animation-iteration-count:
+            1 !important;
+
+        transition-duration:
+            .01ms !important;
+
+        scroll-behavior:
+            auto !important;
+    }
+
+    .hero-copy > .eyebrow,
+    .hero-copy h1,
+    .hero-copy .lead,
+    .hero-copy .btn-row,
+    .hero-copy .btn-row .btn,
+    .hero-media,
+    .hero-badge,
+    .reveal,
+    .reveal-left,
+    .reveal-right,
+    .section-header.center,
+    .feature-grid .feature-card,
+    .statistics-heading,
+    .stat-strip,
+    .reviews-heading,
+    .review-grid-home1 .review-card,
+    .quote-panel,
+    .cta-panel {
+        opacity: 1 !important;
+        visibility: visible !important;
+        transform: none !important;
+        clip-path: none !important;
+    }
+
+    .quote-panel p {
+        opacity: 1 !important;
+    }
+}
+
+/* =========================================================
+   HOME 1 — REVIEWS ONLY
+   COPIED FROM FILE 2
+   IMPORTANT: No other section is changed.
+   ========================================================= */
+
+.home1-reviews {
+   background: var(--surface-2)
+}
+
+.reviews-heading {
+   display: block;
+   max-width: 780px;
+   margin: 0 auto 38px;
+   text-align: center
+}
+
+.reviews-heading .eyebrow {
+   justify-content: center
+}
+
+.reviews-heading h2 {
+   margin-bottom: 14px
+}
+
+.reviews-heading>p {
+   max-width: 650px;
+   margin: 0 auto
+}
+
+.review-grid-home1 {
+   display: grid;
+   grid-template-columns: repeat(3, 1fr);
+   gap: 16px;
+   align-items: stretch
+}
+
+.review-grid-home1 .review-card,
+.review-card,
+.review-card.review-featured {
+   padding: 26px;
+   background: #fff;
+   color: var(--text);
+   border: 1px solid var(--border);
+   border-color: var(--border);
+   border-radius: 18px;
+   min-height: 270px;
+   height: auto;
+   box-shadow: 0 12px 28px rgba(74, 38, 63, .06);
+}
+
+.review-card:hover,
+.review-grid-home1 .review-card:hover {
+   transform: translateY(-7px);
+   border-color: var(--secondary);
+   box-shadow: var(--shadow)
+}
+
+.review-card.review-featured p,
+.review-card p,
+.review-grid-home1 .review-card p {
+   color: var(--text);
+   font-family: "Manrope", sans-serif;
+   font-size: .92rem;
+   line-height: 1.65;
+   margin: 0
+}
+
+.review-card.review-featured p {
+   font-size: .92rem
+}
+
+.review-stars {
+   letter-spacing: .15em;
+   color: var(--secondary);
+   font-size: .78rem;
+   margin-bottom: 18px
+}
+
+.review-person,
+.review-grid-home1 .review-person {
+   display: flex;
+   align-items: center;
+   gap: 12px;
+   margin-top: 18px;
+   padding-top: 0
+}
+
+.review-avatar,
+.review-grid-home1 .review-avatar {
+   width: 42px;
+   height: 42px;
+   min-width: 42px;
+   flex: 0 0 42px;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   align-content: center;
+   place-items: center;
+   text-align: center;
+   line-height: 1;
+   border-radius: 50%;
+   background: var(--secondary);
+   color: #fff;
+   font-size: .7rem;
+   font-weight: 800
+}
+
+.review-person strong,
+.review-person span {
+   display: block
+}
+
+.review-person strong,
+.review-grid-home1 .review-person strong {
+   font-size: .82rem;
+   color: var(--text)
+}
+
+.review-person div span,
+.review-featured .review-person div span,
+.review-grid-home1 .review-person div span {
+   margin-top: 2px;
+   font-size: .68rem;
+   color: var(--muted)
+}
+
+/* File 2 responsive review layout */
+@media(max-width:850px) {
+   .review-grid-home1 {
+      grid-template-columns: 1fr 1fr
+   }
+
+   .review-card.review-featured {
+      grid-column: 1/-1
+   }
+}
+
+@media(max-width:600px) {
+   .review-grid-home1 {
+      grid-template-columns: 1fr
+   }
+
+   .review-card.review-featured {
+      grid-column: auto
+   }
+
+   .review-grid-home1 .review-card {
+      min-height: 250px;
+      padding: 24px
+   }
+
+   .review-grid-home1 .review-person {
+      margin-top: 16px
+   }
+}
+
+/* File 2 review scroll reveal */
+.reviews-heading {
+   opacity: 0;
+   visibility: hidden;
+   transform: translate3d(0, 45px, 0);
+   transition:
+      opacity .85s cubic-bezier(.22, .61, .36, 1),
+      transform .85s cubic-bezier(.22, .61, .36, 1)
+}
+
+.reviews-heading.is-visible {
+   opacity: 1;
+   visibility: visible;
+   transform: translate3d(0, 0, 0)
+}
+
+.reviews-heading .eyebrow {
+   opacity: 0;
+   transform: translate3d(0, 18px, 0);
+   transition:
+      opacity .6s ease,
+      transform .6s ease
+}
+
+.reviews-heading h2 {
+   opacity: 0;
+   transform: translate3d(0, 28px, 0);
+   transition:
+      opacity .75s ease .12s,
+      transform .75s cubic-bezier(.22, .61, .36, 1) .12s
+}
+
+.reviews-heading>p {
+   opacity: 0;
+   transform: translate3d(0, 20px, 0);
+   transition:
+      opacity .7s ease .24s,
+      transform .7s cubic-bezier(.22, .61, .36, 1) .24s
+}
+
+.reviews-heading.is-visible .eyebrow,
+.reviews-heading.is-visible h2,
+.reviews-heading.is-visible>p {
+   opacity: 1;
+   transform: translate3d(0, 0, 0)
+}
+
+.review-grid-home1 .review-card {
+   opacity: 0;
+   visibility: hidden;
+   transform: translate3d(0, 55px, 0);
+   transition:
+      opacity .8s cubic-bezier(.22, .61, .36, 1),
+      transform .8s cubic-bezier(.22, .61, .36, 1),
+      border-color .35s ease,
+      box-shadow .35s ease
+}
+
+.review-grid-home1 .review-card:nth-child(1) {
+   transition-delay: .05s
+}
+
+.review-grid-home1 .review-card:nth-child(2) {
+   transition-delay: .18s
+}
+
+.review-grid-home1 .review-card:nth-child(3) {
+   transition-delay: .31s
+}
+
+.review-grid-home1 .review-card.is-visible {
+   opacity: 1;
+   visibility: visible;
+   transform: translate3d(0, 0, 0)
+}
+
+/* File 2 dark-mode review styling */
+html[data-theme="dark"] .review-grid-home1 .review-card,
+html[data-theme="dark"] .review-grid-home1 .review-card.review-featured {
+   background: #161616 !important;
+   color: var(--text);
+   border-color: rgba(241, 229, 207, .16)
+}
+
+html[data-theme="dark"] .review-grid-home1 .review-card p,
+html[data-theme="dark"] .review-grid-home1 .review-card.review-featured p {
+   color: var(--secondary-soft)
+}
+
+html[data-theme="dark"] .review-grid-home1 .review-person strong {
+   color: var(--secondary-soft)
+}
+
+html[data-theme="dark"] .review-grid-home1 .review-person div span {
+   color: rgba(241, 229, 207, .68)
+}
+
+
+
+/* FINAL HOME 1 REVIEW BAND */
+.home1-reviews,
+html[data-theme="dark"] .home1-reviews {
+  background: #151117 !important;
+  color: #fff8f2;
+}
+.home1-reviews h2,
+.home1-reviews .eyebrow,
+.home1-reviews > .container > .reviews-heading > p {
+  color: #fff8f2;
+}
+.home1-reviews .review-card,
+.home1-reviews .review-grid-home1 .review-card,
+html[data-theme="dark"] .home1-reviews .review-card {
+  background: #1e1820 !important;
+  border-color: #493b46 !important;
+  color: #fff8f2;
+}
+.home1-reviews .review-card p,
+html[data-theme="dark"] .home1-reviews .review-card p {
+  color: #f5e9df !important;
+}
+
+/* Home 1 — hero top gap only */
+@media (min-width: 1025px) {
+  .hero {
+    height: auto !important;
+    min-height: auto !important;
+    padding-top: 42px !important;
+  }
+
+  .hero-grid {
+    height: auto !important;
+  }
+}
+
+
+/* =========================================================
+   HOME 1 — FINAL SPACING / IMAGE SIZE
+   IMPORTANT:
+   Existing HTML content and ALL existing image paths remain
+   unchanged. These are layout-only overrides.
+   ========================================================= */
+
+main > section {
+    margin-block: 0 !important;
+}
+
+main > .section {
+    padding-block: 54px !important;
+}
+
+main > .section.section-tight {
+    padding-block: 44px !important;
+}
+
+/* Keep the existing collection image, only reduce its display size. */
+.home1-collection-section {
+    padding-block: 56px !important;
+}
+
+.home1-collection-section .split {
+    gap: 52px !important;
+    align-items: center;
+}
+
+.home1-collection-section .image-card {
+    width: min(100%, 560px);
+    margin-inline: auto;
+    overflow: hidden;
+}
+
+.home1-collection-section .image-card img {
+    width: 100%;
+    height: 430px;
+    object-fit: cover;
+    display: block;
+    transition: transform 1.2s cubic-bezier(.22,.61,.36,1);
+}
+
+.home1-collection-section .image-card:hover img {
+    transform: scale(1.045);
+}
+
+.home1-collection-button {
+    margin-top: 56px !important;
+}
+
+/* Keep all scroll reveal animations working. */
+.home1-collection-section .reveal-left,
+.home1-collection-section .reveal-right {
+    will-change: opacity, transform;
+}
+
+/* Balanced review spacing without changing its existing color/design. */
+.home1-reviews {
+    padding-block: 54px !important;
+}
+
+.home1-reviews .reviews-heading {
+    margin-bottom: 30px !important;
+}
+
+/* Consistent CTA / quote spacing. */
+.quote-panel,
+.cta-panel {
+    margin-block: 0 !important;
+}
+
+
+/* =========================================================
+   TABLET
+   ========================================================= */
+
+@media (max-width: 1024px) {
+
+    main > .section {
+        padding-block: 48px !important;
+    }
+
+    main > .section.section-tight {
+        padding-block: 40px !important;
+    }
+
+    .home1-collection-section {
+        padding-block: 48px !important;
+    }
+
+    .home1-collection-section .split {
+        gap: 40px !important;
+    }
+
+    .home1-collection-section .image-card {
+        width: 100%;
+    }
+
+    .home1-collection-section .image-card img {
+        height: 390px;
+    }
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 768px) {
+
+    main > .section {
+        padding-block: 44px !important;
+    }
+
+    main > .section.section-tight {
+        padding-block: 36px !important;
+    }
+
+    .home1-collection-section {
+        padding-block: 44px !important;
+    }
+
+    .home1-collection-section .split {
+        gap: 30px !important;
+    }
+
+    .home1-collection-section .image-card {
+        width: 100%;
+    }
+
+    .home1-collection-section .image-card img {
+        height: auto;
+        aspect-ratio: 1 / .84;
+        object-fit: cover;
+    }
+
+    .home1-collection-button {
+        margin-top: 46px !important;
+    }
+
+    .home1-reviews {
+        padding-block: 44px !important;
+    }
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+   ========================================================= */
+
+@media (max-width: 480px) {
+
+    main > .section {
+        padding-block: 40px !important;
+    }
+
+    main > .section.section-tight {
+        padding-block: 34px !important;
+    }
+
+    .home1-collection-section {
+        padding-block: 40px !important;
+    }
+
+    .home1-collection-section .split {
+        gap: 26px !important;
+    }
+
+    .home1-collection-section .image-card img {
+        aspect-ratio: 1 / .86;
+    }
+}
+
+
+@media (max-width: 360px) {
+
+    main > .section {
+        padding-block: 36px !important;
+    }
+
+    main > .section.section-tight {
+        padding-block: 30px !important;
+    }
+
+    .home1-collection-section {
+        padding-block: 36px !important;
+    }
+
+    .home1-collection-section .image-card img {
+        aspect-ratio: 1 / .9;
+    }
+}
+/* =========================================================
+   READER REVIEWS — THEME COLORS
+   ========================================================= */
+
+/* LIGHT MODE
+   Reviews section uses the site's primary color.
+*/
+.home1-reviews {
+    background: var(--primary) !important;
+    color: #ffffff !important;
+}
+
+.home1-reviews .reviews-heading .eyebrow,
+.home1-reviews .reviews-heading h2,
+.home1-reviews .reviews-heading > p {
+    color: #ffffff !important;
+}
+
+
+/* REVIEW CARDS — LIGHT MODE */
+
+.home1-reviews .review-card,
+.home1-reviews .review-grid-home1 .review-card {
+    background: rgba(255, 255, 255, 0.08) !important;
+    border-color: rgba(255, 255, 255, 0.28) !important;
+    color: #ffffff !important;
+}
+
+.home1-reviews .review-card p,
+.home1-reviews .review-grid-home1 .review-card p {
+    color: #ffffff !important;
+}
+
+.home1-reviews .review-person strong,
+.home1-reviews .review-grid-home1 .review-person strong {
+    color: #ffffff !important;
+}
+
+.home1-reviews .review-person div span,
+.home1-reviews .review-grid-home1 .review-person div span {
+    color: rgba(255, 255, 255, 0.82) !important;
+}
+
+.home1-reviews .review-stars {
+    color: var(--secondary) !important;
+}
+
+
+/* =========================================================
+   DARK MODE
+   ========================================================= */
+
+html[data-theme="dark"] .home1-reviews {
+    background: var(--primary-dark) !important;
+    color: #ffffff !important;
+}
+
+html[data-theme="dark"] .home1-reviews .reviews-heading .eyebrow,
+html[data-theme="dark"] .home1-reviews .reviews-heading h2,
+html[data-theme="dark"] .home1-reviews .reviews-heading > p {
+    color: #ffffff !important;
+}
+
+
+/* DARK REVIEW CARDS */
+
+html[data-theme="dark"] .home1-reviews .review-card,
+html[data-theme="dark"] .home1-reviews .review-grid-home1 .review-card {
+    background: rgba(255, 255, 255, 0.06) !important;
+    border-color: rgba(255, 255, 255, 0.18) !important;
+    color: #ffffff !important;
+}
+
+
+/* REVIEW TEXT */
+
+html[data-theme="dark"] .home1-reviews .review-card p,
+html[data-theme="dark"] .home1-reviews .review-grid-home1 .review-card p {
+    color: #ffffff !important;
+}
+
+
+/* REVIEWER NAME */
+
+html[data-theme="dark"] .home1-reviews .review-person strong,
+html[data-theme="dark"] .home1-reviews .review-grid-home1 .review-person strong {
+    color: #ffffff !important;
+}
+
+
+/* TEXT BELOW REVIEWER NAME */
+
+html[data-theme="dark"] .home1-reviews .review-person div span,
+html[data-theme="dark"] .home1-reviews .review-grid-home1 .review-person div span {
+    color: #ffffff !important;
+}
+
+
+/* STARS */
+
+html[data-theme="dark"] .home1-reviews .review-stars {
+    color: var(--secondary) !important;
+}
+
+
+/* AVATAR */
+
+html[data-theme="dark"] .home1-reviews .review-avatar {
+    background: var(--secondary) !important;
+    color: #ffffff !important;
+}
+
+
+/* HOVER */
+
+.home1-reviews .review-card:hover,
+.home1-reviews .review-grid-home1 .review-card:hover {
+    border-color: var(--secondary) !important;
+}
+/* =========================================
+   READER REVIEWS — DARK MODE FIX
+   ========================================= */
+
+html[data-theme="dark"] .home1-reviews {
+    background: #151117 !important;
+    color: #ffffff !important;
+}
+
+
+/* Heading */
+
+html[data-theme="dark"] .home1-reviews .reviews-heading .eyebrow,
+html[data-theme="dark"] .home1-reviews .reviews-heading h2,
+html[data-theme="dark"] .home1-reviews .reviews-heading > p {
+    color: #ffffff !important;
+}
+
+
+/* Review cards */
+
+html[data-theme="dark"] .home1-reviews .review-card,
+html[data-theme="dark"] .home1-reviews .review-grid-home1 .review-card {
+    background: #1e1820 !important;
+    border-color: #493b46 !important;
+    color: #ffffff !important;
+}
+
+
+/* Review text */
+
+html[data-theme="dark"] .home1-reviews .review-card p,
+html[data-theme="dark"] .home1-reviews .review-grid-home1 .review-card p {
+    color: #ffffff !important;
+}
+
+
+/* Reviewer names */
+
+html[data-theme="dark"] .home1-reviews .review-person strong,
+html[data-theme="dark"] .home1-reviews .review-grid-home1 .review-person strong {
+    color: #ffffff !important;
+}
+
+
+/* Location / designation */
+
+html[data-theme="dark"] .home1-reviews .review-person div span,
+html[data-theme="dark"] .home1-reviews .review-grid-home1 .review-person div span {
+    color: #ffffff !important;
+}
+
+
+/* Stars */
+
+html[data-theme="dark"] .home1-reviews .review-stars {
+    color: var(--secondary) !important;
+}
+
+
+/* Avatar */
+
+html[data-theme="dark"] .home1-reviews .review-avatar {
+    background: var(--secondary) !important;
+    color: #ffffff !important;
+}
+
+
+/* Hover */
+
+html[data-theme="dark"] .home1-reviews .review-card:hover,
+html[data-theme="dark"] .home1-reviews .review-grid-home1 .review-card:hover {
+    background: #241d26 !important;
+    border-color: var(--secondary) !important;
+}
+
+/* =========================================================
+   HOME 1 — FINAL TAGLINE COLORS / STYLE
+   ========================================================= */
+
+/* Reader Reviews tagline — secondary color */
+.home1-reviews .reviews-heading .eyebrow,
+html[data-theme="dark"] .home1-reviews .reviews-heading .eyebrow {
+    color: var(--secondary) !important;
+}
+
+/* InkDen Design Principle — same tagline treatment */
+.quote-panel .eyebrow {
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    gap: 11px !important;
+    color: var(--secondary) !important;
+    margin-bottom: 14px !important;
+}
+
+.quote-panel .eyebrow::before {
+    content: "" !important;
+    display: inline-block !important;
+    width: 26px !important;
+    height: 1px !important;
+    flex: 0 0 26px !important;
+    background: var(--secondary) !important;
+}
+
+html[data-theme="dark"] .quote-panel .eyebrow {
+    color: var(--secondary) !important;
+}
+
+html[data-theme="dark"] .quote-panel .eyebrow::before {
+    background: var(--secondary) !important;
+}
+/* =========================================================
+   HOME 1 — TRUE UNIFORM SECTION SPACING
+   ========================================================= */
+
+/* Remove old section-specific outside spacing */
+main > section:not(.hero) {
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
+}
+
+/* Same vertical breathing space for every section */
+main > section:not(.hero) {
+    padding-top: 64px !important;
+    padding-bottom: 64px !important;
+}
+
+/* Keep section content spacing consistent */
+main > section:not(.hero) .section-header,
+main > section:not(.hero) .statistics-heading,
+main > section:not(.hero) .reviews-heading {
+    margin-top: 0 !important;
+}
+
+/* Collection split should not create extra vertical spacing */
+.home1-collection-section .split {
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
+}
+
+/* Reviews */
+.home1-reviews .reviews-heading {
+    margin-top: 0 !important;
+    margin-bottom: 30px !important;
+}
+
+/* Quote / CTA blocks */
+.quote-panel,
+.cta-panel {
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
+}
+
+
+/* =========================================================
+   TABLET
+   ========================================================= */
+
+@media (max-width: 1024px) {
+    main > section:not(.hero) {
+        padding-top: 54px !important;
+        padding-bottom: 54px !important;
+    }
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 768px) {
+    main > section:not(.hero) {
+        padding-top: 48px !important;
+        padding-bottom: 48px !important;
+    }
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+   ========================================================= */
+
+@media (max-width: 480px) {
+    main > section:not(.hero) {
+        padding-top: 44px !important;
+        padding-bottom: 44px !important;
+    }
+}
+
+
+/* =========================================================
+   VERY SMALL MOBILE
+   ========================================================= */
+
+@media (max-width: 360px) {
+    main > section:not(.hero) {
+        padding-top: 40px !important;
+        padding-bottom: 40px !important;
+    }
+}
+
+/* =========================================================
+   HOME 1 — VISIBLE GAP ABOVE 3 SPECIFIC SECTIONS
+   The gap is created OUTSIDE the section so it is visibly
+   separated from the previous section.
+   ========================================================= */
+
+/* What We Design — gap after Hero */
+main > .hero + .section.section-tight {
+    margin-top: 90px !important;
+    padding-top: 44px !important;
+}
+
+/* Reader Reviews — gap after Collection */
+main > .section.home1-collection-section + .section.home1-reviews {
+    margin-top: 90px !important;
+    padding-top: 54px !important;
+}
+
+/* InkDen Design Principle / Quote — gap after Reviews */
+main > .section.home1-reviews + .section.section-tight {
+    margin-top: 90px !important;
+    padding-top: 44px !important;
+}
+
+@media (max-width: 1024px) {
+    main > .hero + .section.section-tight,
+    main > .section.home1-collection-section + .section.home1-reviews,
+    main > .section.home1-reviews + .section.section-tight {
+        margin-top: 70px !important;
+    }
+}
+
+@media (max-width: 768px) {
+    main > .hero + .section.section-tight,
+    main > .section.home1-collection-section + .section.home1-reviews,
+    main > .section.home1-reviews + .section.section-tight {
+        margin-top: 56px !important;
+    }
+}
+
+@media (max-width: 480px) {
+    main > .hero + .section.section-tight,
+    main > .section.home1-collection-section + .section.home1-reviews,
+    main > .section.home1-reviews + .section.section-tight {
+        margin-top: 46px !important;
+    }
+}
+
+@media (max-width: 360px) {
+    main > .hero + .section.section-tight,
+    main > .section.home1-collection-section + .section.home1-reviews,
+    main > .section.home1-reviews + .section.section-tight {
+        margin-top: 40px !important;
+    }
+}
+
+
+
+/* =========================================================
+   HOME 1 — FINAL UNIFORM VISIBLE SECTION GAP
+   Same gap between every section
+   ========================================================= */
+
+main > section:not(.hero) {
+    margin-top: 90px !important;
+}
+
+main > .hero + section {
+    margin-top: 90px !important;
+}
+
+@media (max-width: 1024px) {
+    main > section:not(.hero),
+    main > .hero + section {
+        margin-top: 70px !important;
+    }
+}
+
+@media (max-width: 768px) {
+    main > section:not(.hero),
+    main > .hero + section {
+        margin-top: 56px !important;
+    }
+}
+
+@media (max-width: 480px) {
+    main > section:not(.hero),
+    main > .hero + section {
+        margin-top: 46px !important;
+    }
+}
+
+@media (max-width: 360px) {
+    main > section:not(.hero),
+    main > .hero + section {
+        margin-top: 40px !important;
+    }
+}
+
+
+/* =========================================================
+   HOME 1 — REDUCE ONLY THE TWO LARGE GAPS
+   What We Design → Statistics
+   Statistics → Collection
+   ========================================================= */
+
+/* What We Design → Statistics */
+main > section.section-tight + section.statistics-section {
+    margin-top: 60px !important;
+}
+
+/* Statistics → Collection */
+main > section.statistics-section + section.home1-collection-section {
+    margin-top: 60px !important;
+}
+/* =========================================================
+   HOME 1 — CTA TO FOOTER SMALLER GAP
+========================================================= */
+
+main > section.section.section-tight:has(.cta-panel) {
+    padding-top: 44px !important;
+    padding-bottom: 24px !important;
+}
+
+/* Keep CTA card itself unchanged */
+main > section.section.section-tight:has(.cta-panel) .cta-panel {
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
+}
+
+
+/* TABLET */
+@media (max-width: 1024px) {
+    main > section.section.section-tight:has(.cta-panel) {
+        padding-top: 40px !important;
+        padding-bottom: 22px !important;
+    }
+}
+
+
+/* MOBILE */
+@media (max-width: 768px) {
+    main > section.section.section-tight:has(.cta-panel) {
+        padding-top: 36px !important;
+        padding-bottom: 20px !important;
+    }
+}
+
+
+/* SMALL MOBILE */
+@media (max-width: 480px) {
+    main > section.section.section-tight:has(.cta-panel) {
+        padding-top: 34px !important;
+        padding-bottom: 18px !important;
+    }
+}
+
+
+/* VERY SMALL MOBILE */
+@media (max-width: 360px) {
+    main > section.section.section-tight:has(.cta-panel) {
+        padding-top: 30px !important;
+        padding-bottom: 16px !important;
+    }
+}
+/* =========================================================
+   HOME 1 — REDUCED SECTION TO SECTION GAP
+========================================================= */
+
+main > section:not(.hero),
+main > .hero + section {
+    margin-top: 55px !important;
+}
+
+
+/* TABLET */
+@media (max-width: 1024px) {
+    main > section:not(.hero),
+    main > .hero + section {
+        margin-top: 45px !important;
+    }
+}
+
+
+/* MOBILE */
+@media (max-width: 768px) {
+    main > section:not(.hero),
+    main > .hero + section {
+        margin-top: 36px !important;
+    }
+}
+
+
+/* SMALL MOBILE */
+@media (max-width: 480px) {
+    main > section:not(.hero),
+    main > .hero + section {
+        margin-top: 30px !important;
+    }
+}
+
+
+/* VERY SMALL MOBILE */
+@media (max-width: 360px) {
+    main > section:not(.hero),
+    main > .hero + section {
+        margin-top: 26px !important;
+    }
+}
+
+/* =========================================================
+   HOME 1 — LIGHTLY REDUCED GAP
+   What We Design → Statistics
+   ========================================================= */
+
+main > section.section-tight + section.statistics-section {
+    margin-top: 75px !important;
+}
+
+@media (max-width: 1024px) {
+    main > section.section-tight + section.statistics-section {
+        margin-top: 60px !important;
+    }
+}
+
+@media (max-width: 768px) {
+    main > section.section-tight + section.statistics-section {
+        margin-top: 50px !important;
+    }
+}
+
+@media (max-width: 480px) {
+    main > section.section-tight + section.statistics-section {
+        margin-top: 42px !important;
+    }
+}
+
+@media (max-width: 360px) {
+    main > section.section-tight + section.statistics-section {
+        margin-top: 38px !important;
+    }
+}
+/* HOME 1 — VERY LIGHT GAP REDUCTION */
+
+main > section.section-tight + section.statistics-section {
+    margin-top: 60px !important;
+}
+
+@media (max-width: 1024px) {
+    main > section.section-tight + section.statistics-section {
+        margin-top: 52px !important;
+    }
+}
+
+@media (max-width: 768px) {
+    main > section.section-tight + section.statistics-section {
+        margin-top: 44px !important;
+    }
+}
+
+@media (max-width: 480px) {
+    main > section.section-tight + section.statistics-section {
+        margin-top: 38px !important;
+    }
+}

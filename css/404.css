@@ -1,0 +1,579 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap');
+
+
+/* =========================================================
+   INKDEN 404 PAGE
+========================================================= */
+
+:root {
+    --primary: #4A263F;
+    --primary-dark: #4A1720;
+
+    --secondary: #9A762F;
+    --secondary-dark: #76591F;
+
+    --secondary-soft: #F1E5CF;
+
+    --bg: #F7F2EA;
+    --surface: #FFFDF8;
+
+    --text: #4A263F;
+    --muted: #756B63;
+    --border: #D9CCBC;
+
+    --ease: 260ms cubic-bezier(.2, .75, .25, 1);
+}
+
+
+/* =========================================================
+   RESET
+========================================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+html {
+    min-height: 100%;
+}
+
+
+body {
+    min-height: 100vh;
+
+    margin: 0;
+
+    background: var(--bg);
+
+    color: var(--text);
+
+    font-family: "Manrope", sans-serif;
+
+    overflow: hidden;
+}
+
+
+/* =========================================================
+   MAIN 404 PAGE
+========================================================= */
+
+.error-page {
+    position: relative;
+
+    width: 100%;
+    min-height: 100vh;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 40px 24px;
+
+    overflow: hidden;
+}
+
+
+/* =========================================================
+   CONTENT
+========================================================= */
+
+.error-content {
+    position: relative;
+
+    z-index: 5;
+
+    width: min(760px, 100%);
+
+    text-align: center;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+/* =========================================================
+   PAGE NOT FOUND
+========================================================= */
+
+.error-eyebrow {
+    display: inline-flex;
+
+    align-items: center;
+    justify-content: center;
+
+    gap: 12px;
+
+    margin-bottom: 18px;
+
+    color: var(--secondary);
+
+    font-size: .72rem;
+
+    font-weight: 800;
+
+    letter-spacing: .22em;
+
+    line-height: 1;
+
+    text-transform: uppercase;
+}
+
+
+.error-eyebrow::before,
+.error-eyebrow::after {
+    content: "";
+
+    width: 28px;
+
+    height: 1px;
+
+    background: var(--secondary);
+}
+
+
+/* =========================================================
+   404 NUMBER
+========================================================= */
+
+.error-number {
+    color: var(--primary);
+
+    font-family: "Cormorant Garamond", serif;
+
+    font-size: clamp(9rem, 20vw, 15rem);
+
+    font-weight: 600;
+
+    line-height: .68;
+
+    letter-spacing: -.07em;
+}
+
+
+/* =========================================================
+   MAIN TITLE
+========================================================= */
+
+.error-content h1 {
+    margin-top: 30px;
+
+    color: var(--text);
+
+    font-family: "Cormorant Garamond", serif;
+
+    font-size: clamp(2.8rem, 5vw, 4.8rem);
+
+    font-weight: 600;
+
+    line-height: .98;
+
+    letter-spacing: -.035em;
+}
+
+
+.error-content h1 em {
+    color: var(--secondary);
+
+    font-style: italic;
+}
+
+
+/* =========================================================
+   DESCRIPTION
+========================================================= */
+
+.error-text {
+    max-width: 570px;
+
+    margin-top: 22px;
+
+    color: var(--muted);
+
+    font-size: .95rem;
+
+    font-weight: 500;
+
+    line-height: 1.85;
+}
+
+
+/* =========================================================
+   BUTTON ROW
+========================================================= */
+
+.error-actions {
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    gap: 10px;
+
+    margin-top: 30px;
+}
+
+
+/* =========================================================
+   INKDEN BUTTON STRUCTURE
+========================================================= */
+
+.btn {
+    min-width: 138px;
+
+    height: 44px;
+
+    display: inline-flex;
+
+    align-items: center;
+    justify-content: center;
+
+    padding: 0 18px;
+
+    border: 1px solid transparent;
+
+    border-radius: 10px;
+
+    font-family: "Manrope", sans-serif;
+
+    font-size: .78rem;
+
+    font-weight: 800;
+
+    letter-spacing: .02em;
+
+    line-height: 1;
+
+    text-decoration: none;
+
+    white-space: nowrap;
+
+    transition:
+        background-color 260ms ease,
+        color 260ms ease,
+        border-color 260ms ease,
+        transform 260ms ease,
+        box-shadow 260ms ease;
+}
+
+
+/* =========================================================
+   BACK TO HOME
+========================================================= */
+
+.btn-primary {
+    background: var(--primary);
+
+    color: #ffffff;
+
+    border-color: var(--primary);
+}
+
+
+/* =========================================================
+   EXPLORE PORTFOLIO
+========================================================= */
+
+.btn-secondary {
+    background: #ffffff;
+
+    color: var(--secondary);
+
+    border-color: var(--secondary);
+}
+
+
+/* =========================================================
+   BOTH BUTTONS HOVER
+========================================================= */
+
+.btn-primary:hover,
+.btn-secondary:hover {
+    background: var(--secondary);
+
+    color: #ffffff;
+
+    border-color: var(--secondary);
+
+    transform: translateY(-3px);
+
+    box-shadow:
+        0 12px 24px rgba(154, 118, 47, .18);
+}
+
+
+/* =========================================================
+   DECORATIVE CIRCLES
+========================================================= */
+
+.error-shape {
+    position: absolute;
+
+    pointer-events: none;
+
+    border-radius: 50%;
+
+    border: 1px solid rgba(154, 118, 47, .16);
+}
+
+
+/* =========================================================
+   TOP LEFT CIRCLE
+========================================================= */
+
+.error-shape-one {
+    width: 230px;
+
+    height: 230px;
+
+    top: -100px;
+
+    left: -70px;
+}
+
+
+/* =========================================================
+   TOP RIGHT CIRCLE
+========================================================= */
+
+.error-shape-two {
+    width: 170px;
+
+    height: 170px;
+
+    top: 90px;
+
+    right: 7%;
+
+    border-color: rgba(74, 38, 63, .10);
+}
+
+
+/* =========================================================
+   BOTTOM LEFT CIRCLE
+========================================================= */
+
+.error-shape-three {
+    width: 130px;
+
+    height: 130px;
+
+    bottom: 45px;
+
+    left: 12%;
+
+    border-color: rgba(154, 118, 47, .12);
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 768px) {
+
+    body {
+        overflow: auto;
+    }
+
+
+    .error-page {
+        min-height: 100svh;
+
+        padding: 45px 20px;
+    }
+
+
+    .error-eyebrow {
+        margin-bottom: 16px;
+
+        font-size: .62rem;
+
+        letter-spacing: .18em;
+    }
+
+
+    .error-eyebrow::before,
+    .error-eyebrow::after {
+        width: 20px;
+    }
+
+
+    .error-number {
+        font-size: clamp(7rem, 30vw, 11rem);
+    }
+
+
+    .error-content h1 {
+        margin-top: 26px;
+
+        font-size: clamp(2.5rem, 9vw, 3.7rem);
+    }
+
+
+    .error-text {
+        max-width: 520px;
+
+        margin-top: 18px;
+
+        font-size: .84rem;
+
+        line-height: 1.8;
+    }
+
+
+    .error-actions {
+        margin-top: 26px;
+    }
+
+
+    .error-shape-one {
+        width: 170px;
+
+        height: 170px;
+
+        top: -70px;
+
+        left: -80px;
+    }
+
+
+    .error-shape-two {
+        width: 120px;
+
+        height: 120px;
+
+        right: -35px;
+
+        top: 80px;
+    }
+
+
+    .error-shape-three {
+        width: 90px;
+
+        height: 90px;
+
+        bottom: 30px;
+
+        left: -25px;
+    }
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 480px) {
+
+    .error-page {
+        padding: 35px 18px;
+    }
+
+
+    .error-eyebrow {
+        margin-bottom: 15px;
+
+        font-size: .56rem;
+
+        letter-spacing: .15em;
+    }
+
+
+    .error-eyebrow::before,
+    .error-eyebrow::after {
+        width: 16px;
+    }
+
+
+    .error-number {
+        font-size: 7.5rem;
+
+        line-height: .72;
+    }
+
+
+    .error-content h1 {
+        margin-top: 25px;
+
+        font-size: 2.5rem;
+
+        line-height: 1;
+    }
+
+
+    .error-text {
+        font-size: .78rem;
+
+        line-height: 1.75;
+    }
+
+
+    .error-actions {
+        width: 100%;
+
+        flex-direction: column;
+
+        gap: 9px;
+
+        margin-top: 25px;
+    }
+
+
+    .btn {
+        width: min(280px, 100%);
+
+        height: 44px;
+    }
+
+
+    .error-shape-one {
+        width: 130px;
+
+        height: 130px;
+
+        top: -65px;
+
+        left: -65px;
+    }
+
+
+    .error-shape-two {
+        width: 90px;
+
+        height: 90px;
+
+        top: 80px;
+
+        right: -45px;
+    }
+
+
+    .error-shape-three {
+        width: 70px;
+
+        height: 70px;
+
+        bottom: 25px;
+
+        left: -35px;
+    }
+}
+
+
+/* =========================================================
+   REDUCED MOTION
+========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+    *,
+    *::before,
+    *::after {
+        transition: none !important;
+    }
+}

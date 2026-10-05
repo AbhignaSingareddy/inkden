@@ -1,0 +1,4158 @@
+/* =========================================================
+   INKDEN
+   MATERIALS & FINISHES
+   COMPLETE PAGE STYLES
+========================================================= */
+
+
+/* =========================================================
+   HERO
+========================================================= */
+
+.mf-hero {
+    position: relative;
+    min-height: 500px;
+    padding: 55px 0;
+    overflow: hidden;
+}
+
+.mf-hero-decoration {
+    position: absolute;
+    top: 10px;
+    right: -100px;
+    width: 280px;
+    height: 280px;
+    border: 1px solid var(--border);
+    border-radius: 50%;
+}
+
+.mf-hero-decoration::before {
+    content: "";
+    position: absolute;
+    inset: 35px;
+    border: 1px solid var(--border);
+    border-radius: 50%;
+}
+
+.mf-hero-decoration::after {
+    content: "";
+    position: absolute;
+    inset: 70px;
+    border: 1px solid var(--border);
+    border-radius: 50%;
+}
+
+.mf-hero-grid {
+    display: grid;
+    grid-template-columns: .9fr 1.1fr;
+    gap: 55px;
+    align-items: center;
+}
+
+.mf-hero-content h1 {
+    max-width: 570px;
+    margin: 16px 0 18px;
+    font-size: clamp(3rem, 5vw, 5rem);
+    line-height: .9;
+    letter-spacing: -.045em;
+}
+
+.mf-hero-content h1 em {
+    display: block;
+    color: var(--secondary);
+}
+
+.mf-hero-content .lead {
+    max-width: 540px;
+    font-size: .95rem;
+    line-height: 1.75;
+}
+
+.mf-hero-meta {
+    display: flex;
+    gap: 38px;
+    margin-top: 28px;
+    padding-top: 18px;
+    border-top: 1px solid var(--border);
+}
+
+.mf-hero-meta div {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+}
+
+.mf-hero-meta span {
+    color: var(--secondary);
+    font-family: "Cormorant Garamond", serif;
+    font-size: 1.1rem;
+}
+
+.mf-hero-meta strong {
+    font-size: .68rem;
+    letter-spacing: .13em;
+    text-transform: uppercase;
+}
+
+.mf-hero-visual {
+    position: relative;
+    height: 400px;
+}
+
+.mf-hero-image {
+    position: absolute;
+    inset: 0;
+    overflow: hidden;
+    border: 1px solid var(--secondary);
+    border-radius: 0 85px 0 85px;
+}
+
+.mf-hero-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border: 0 !important;
+    outline: 0 !important;
+    box-shadow: none !important;
+    transition: transform .8s ease;
+}
+
+.mf-hero-visual:hover .mf-hero-image img {
+    transform: scale(1.04);
+}
+
+.mf-hero-caption {
+    position: absolute;
+    left: -35px;
+    bottom: 25px;
+    z-index: 3;
+    width: 220px;
+    padding: 18px;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    box-shadow: var(--shadow);
+}
+
+.mf-hero-caption span {
+    display: block;
+    margin-bottom: 6px;
+    color: var(--secondary);
+    font-size: .6rem;
+    font-weight: 700;
+    letter-spacing: .15em;
+}
+
+.mf-hero-caption strong {
+    display: block;
+    margin-bottom: 3px;
+    font-family: "Cormorant Garamond", serif;
+    font-size: 1.45rem;
+}
+
+.mf-hero-caption small {
+    color: var(--muted);
+    font-size: .68rem;
+}
+
+.mf-hero-number {
+    position: absolute;
+    top: 20px;
+    right: -15px;
+    z-index: 3;
+    display: grid;
+    place-items: center;
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+    background: var(--primary);
+    color: #fff;
+    border: 4px solid var(--bg);
+    font-family: "Cormorant Garamond", serif;
+}
+
+
+/* =========================================================
+   MATERIAL COLLECTION
+========================================================= */
+
+.mf-collection {
+    padding: 65px 0 70px;
+}
+
+.mf-collection-heading {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 850px;
+    margin: 0 auto 42px;
+    text-align: center;
+}
+
+.mf-collection-heading h2 {
+    max-width: 700px;
+    margin: 8px auto 14px;
+    font-size: clamp(2.7rem, 4.2vw, 4.2rem);
+    line-height: .95;
+}
+
+.mf-collection-heading h2 em {
+    color: var(--secondary);
+}
+
+.mf-collection-heading > p {
+    max-width: 650px;
+    margin: 0 auto;
+    color: var(--muted);
+    line-height: 1.7;
+}
+
+.mf-material-layout {
+    display: grid;
+    grid-template-columns: .9fr 1.1fr;
+    gap: 45px;
+    align-items: stretch;
+}
+
+.mf-material-feature {
+    position: relative;
+    height: 420px;
+}
+
+.mf-material-image {
+    height: 100%;
+    overflow: hidden;
+    border: 1px solid var(--border);
+    border-radius: 70px 0 70px 0;
+}
+
+.mf-material-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border: 0 !important;
+    outline: 0 !important;
+    box-shadow: none !important;
+    transition: transform .8s ease;
+}
+
+.mf-material-feature:hover .mf-material-image img {
+    transform: scale(1.05);
+}
+
+.mf-material-label {
+    position: absolute;
+    right: -22px;
+    bottom: 22px;
+    width: 225px;
+    padding: 18px;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    box-shadow: var(--shadow);
+}
+
+.mf-material-label span {
+    display: block;
+    margin-bottom: 5px;
+    color: var(--secondary);
+    font-size: .58rem;
+    font-weight: 700;
+    letter-spacing: .14em;
+}
+
+.mf-material-label strong {
+    display: block;
+    margin-bottom: 4px;
+    font-family: "Cormorant Garamond", serif;
+    font-size: 1.5rem;
+}
+
+.mf-material-label p {
+    margin: 0;
+    color: var(--muted);
+    font-size: .72rem;
+    line-height: 1.55;
+}
+
+.mf-material-list {
+    height: 420px;
+    border-top: 1px solid var(--border);
+}
+
+.mf-material-item {
+    display: grid;
+    grid-template-columns: 32px 44px 1fr;
+    gap: 16px;
+    align-items: center;
+    height: 25%;
+    padding: 0 5px;
+    border-bottom: 1px solid var(--border);
+    transition: var(--ease);
+}
+
+.mf-material-item:hover {
+    padding-inline: 14px;
+    background: var(--surface-2);
+}
+
+.mf-material-number {
+    color: var(--secondary);
+    font-family: "Cormorant Garamond", serif;
+    font-size: 1rem;
+}
+
+.mf-material-icon {
+    display: grid;
+    place-items: center;
+    width: 40px;
+    height: 40px;
+    border: 1px solid var(--secondary);
+    border-radius: 50%;
+    color: var(--secondary);
+    transition: var(--ease);
+}
+
+.mf-material-item:nth-child(even) .mf-material-icon {
+    background: var(--primary);
+    border-color: var(--primary);
+    color: #fff;
+}
+
+.mf-material-item:hover .mf-material-icon {
+    background: var(--secondary);
+    border-color: var(--secondary);
+    color: #fff;
+    transform: rotate(8deg) scale(1.05);
+}
+
+.mf-material-item h3 {
+    margin-bottom: 3px;
+    font-size: 1.1rem;
+}
+
+.mf-material-item p {
+    max-width: 540px;
+    margin: 0;
+    color: var(--muted);
+    font-size: .75rem;
+    line-height: 1.55;
+}
+
+
+/* =========================================================
+   HARDWARE
+========================================================= */
+
+.mf-hardware {
+    position: relative;
+    padding: 65px 0;
+    background: var(--surface-2);
+    overflow: hidden;
+}
+
+.mf-hardware-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+    align-items: stretch;
+}
+
+.mf-hardware-copy {
+    height: 440px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.mf-hardware-copy h2 {
+    max-width: 570px;
+    margin: 15px 0 16px;
+    color: var(--primary);
+    font-size: clamp(2.7rem, 4.2vw, 4.2rem);
+    line-height: .93;
+}
+
+.mf-hardware-copy h2 em {
+    color: var(--secondary);
+}
+
+.mf-hardware-copy .lead {
+    max-width: 540px;
+    color: var(--muted);
+    line-height: 1.7;
+}
+
+.mf-hardware-points {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 8px;
+    margin-top: 25px;
+}
+
+.mf-hardware-points article {
+    min-height: 125px;
+    padding: 15px;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    transition: var(--ease);
+}
+
+.mf-hardware-points article:hover {
+    transform: translateY(-5px);
+    border-color: var(--secondary);
+    box-shadow: var(--shadow);
+}
+
+.mf-hardware-points article > span {
+    display: block;
+    margin-bottom: 13px;
+    color: var(--secondary);
+    font-family: "Cormorant Garamond", serif;
+}
+
+.mf-hardware-points h3 {
+    margin-bottom: 5px;
+    color: var(--primary);
+    font-family: "Cormorant Garamond", serif;
+    font-size: 1.2rem;
+}
+
+.mf-hardware-points p {
+    margin: 0;
+    color: var(--muted);
+    font-size: .68rem;
+    line-height: 1.5;
+}
+
+.mf-hardware-visual {
+    position: relative;
+    height: 440px;
+}
+
+.mf-hardware-image {
+    height: 100%;
+    overflow: hidden;
+    border-radius: 90px 0 0 0;
+}
+
+.mf-hardware-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border: 0 !important;
+    outline: 0 !important;
+    box-shadow: none !important;
+    transition: transform .8s ease;
+}
+
+.mf-hardware-visual:hover .mf-hardware-image img {
+    transform: scale(1.04);
+}
+
+.mf-hardware-note {
+    position: absolute;
+    left: -25px;
+    bottom: 25px;
+    width: 220px;
+    padding: 18px;
+    background: var(--surface);
+    color: var(--primary);
+    border: 1px solid var(--border);
+    box-shadow: var(--shadow);
+}
+
+.mf-hardware-note span {
+    display: block;
+    margin-bottom: 5px;
+    color: var(--secondary);
+    font-size: .58rem;
+    font-weight: 700;
+    letter-spacing: .14em;
+}
+
+.mf-hardware-note strong {
+    font-family: "Cormorant Garamond", serif;
+    font-size: 1.5rem;
+}
+
+
+/* =========================================================
+   TEXTURE
+   KEEPING YOUR EXISTING DESIGN
+========================================================= */
+
+.material-cards {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+}
+
+.material-card {
+    overflow: hidden;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    transition: var(--ease);
+}
+
+.material-card img {
+    width: 100%;
+    display: block;
+    aspect-ratio: 1.15;
+    object-fit: cover;
+    border: 0 !important;
+    outline: 0 !important;
+    box-shadow: none !important;
+    transition: transform 650ms ease;
+}
+
+.material-card:hover {
+    transform: translateY(-8px);
+    box-shadow: var(--shadow);
+}
+
+.material-card:hover img {
+    transform: scale(1.07);
+}
+
+.material-card-body {
+    padding: 18px;
+}
+
+.material-card-body h3 {
+    font-size: 1.35rem;
+    margin-bottom: 5px;
+}
+
+.material-card-body p {
+    font-size: .82rem;
+}
+
+
+/* =========================================================
+   LIGHTING
+========================================================= */
+
+.mf-lighting-new {
+    padding: 72px 0 55px;
+    background: var(--surface-2);
+    overflow: hidden;
+}
+
+.mf-lighting-heading {
+    max-width: 920px;
+    margin: 0 auto 45px;
+    text-align: center;
+}
+
+.mf-lighting-heading .eyebrow {
+    display: block;
+    margin-bottom: 9px;
+}
+
+.mf-lighting-heading h2 {
+    max-width: 850px;
+    margin: 0 auto 15px;
+    color: var(--primary);
+    font-size: clamp(2.8rem, 4.6vw, 4.6rem);
+    line-height: .92;
+}
+
+.mf-lighting-heading h2 em {
+    color: var(--secondary);
+}
+
+.mf-lighting-heading p {
+    max-width: 700px;
+    margin: 0 auto;
+    color: var(--muted);
+    font-size: .88rem;
+    line-height: 1.7;
+}
+
+.mf-lighting-editorial {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 55px;
+    align-items: stretch;
+}
+
+.mf-lighting-main-image {
+    position: relative;
+    height: 455px;
+    overflow: hidden;
+    border-radius: 75px 0 75px 0;
+    border: 0 !important;
+    outline: 0 !important;
+    box-shadow: none !important;
+}
+
+.mf-lighting-main-image::before,
+.mf-lighting-main-image::after {
+    display: none !important;
+    content: none !important;
+}
+
+.mf-lighting-main-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border: 0 !important;
+    outline: 0 !important;
+    box-shadow: none !important;
+    transition: transform .9s ease;
+}
+
+.mf-lighting-main-image:hover img {
+    transform: scale(1.045);
+}
+
+.mf-lighting-image-caption {
+    position: absolute;
+    left: 22px;
+    bottom: 22px;
+    z-index: 3;
+    min-width: 205px;
+    padding: 17px 20px;
+    background: var(--primary);
+    border-left: 3px solid var(--secondary);
+    color: #fff;
+}
+
+.mf-lighting-image-caption span {
+    display: block;
+    margin-bottom: 5px;
+    color: var(--secondary);
+    font-size: .58rem;
+    font-weight: 700;
+    letter-spacing: .16em;
+}
+
+.mf-lighting-image-caption strong {
+    font-family: "Cormorant Garamond", serif;
+    font-size: 1.45rem;
+}
+
+.mf-lighting-content {
+    height: 455px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0 5px;
+}
+
+.mf-lighting-intro {
+    margin-bottom: 20px;
+}
+
+.mf-lighting-intro > span {
+    display: block;
+    margin-bottom: 7px;
+    color: var(--secondary);
+    font-size: .6rem;
+    font-weight: 700;
+    letter-spacing: .16em;
+}
+
+.mf-lighting-intro h3 {
+    margin: 0;
+    color: var(--primary);
+    font-family: "Cormorant Garamond", serif;
+    font-size: 2rem;
+    line-height: 1;
+}
+
+.mf-lighting-intro h3 em {
+    color: var(--secondary);
+}
+
+.mf-lighting-modes {
+    border-top: 1px solid var(--border);
+}
+
+.mf-light-mode {
+    display: grid;
+    grid-template-columns: 40px 58px 1fr;
+    gap: 18px;
+    align-items: center;
+    min-height: 112px;
+    padding: 16px 0;
+    border-bottom: 1px solid var(--border);
+    transition: var(--ease);
+}
+
+.mf-light-mode:hover {
+    padding-left: 10px;
+}
+
+.mf-light-number {
+    color: var(--secondary);
+    font-family: "Cormorant Garamond", serif;
+    font-size: 1rem;
+}
+
+.mf-light-icon {
+    display: grid;
+    place-items: center;
+    width: 48px;
+    height: 48px;
+    border: 1px solid var(--secondary);
+    border-radius: 50%;
+    color: var(--secondary);
+    transition: var(--ease);
+}
+
+.mf-light-icon.filled {
+    background: var(--primary);
+    border-color: var(--primary);
+    color: #fff;
+}
+
+.mf-light-mode:hover .mf-light-icon {
+    background: var(--secondary);
+    border-color: var(--secondary);
+    color: #fff;
+    transform: scale(1.08);
+}
+
+.mf-light-copy > span {
+    display: block;
+    margin-bottom: 3px;
+    color: var(--secondary);
+    font-size: .58rem;
+    font-weight: 700;
+    letter-spacing: .15em;
+}
+
+.mf-light-copy h4 {
+    margin-bottom: 4px;
+    color: var(--primary);
+    font-family: "Cormorant Garamond", serif;
+    font-size: 1.55rem;
+    line-height: 1;
+}
+
+.mf-light-copy p {
+    max-width: 480px;
+    margin: 0;
+    color: var(--muted);
+    font-size: .75rem;
+    line-height: 1.6;
+}
+
+.mf-lighting-scale {
+    display: grid;
+    grid-template-columns: 75px 1fr 75px;
+    align-items: center;
+    gap: 18px;
+    margin-top: 25px;
+}
+
+.mf-lighting-scale > span {
+    color: var(--secondary);
+    font-size: .56rem;
+    font-weight: 700;
+    letter-spacing: .14em;
+}
+
+.mf-lighting-scale > span:last-child {
+    text-align: right;
+}
+
+.mf-lighting-scale-line {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 5px;
+}
+
+.mf-lighting-scale-line i {
+    display: block;
+    height: 3px;
+    background: var(--secondary);
+    opacity: .22;
+}
+
+.mf-lighting-scale-line i:nth-child(2) {
+    opacity: .4;
+}
+
+.mf-lighting-scale-line i:nth-child(3) {
+    opacity: .58;
+}
+
+.mf-lighting-scale-line i:nth-child(4) {
+    opacity: .78;
+}
+
+.mf-lighting-scale-line i:nth-child(5) {
+    opacity: 1;
+}
+
+
+/* =========================================================
+   MATERIAL LANGUAGE
+   PRIMARY + SECONDARY COLOUR COMBINATION
+========================================================= */
+
+.mf-language {
+    padding: 72px 0 75px;
+    background: var(--bg);
+}
+
+.mf-language-heading {
+    display: grid;
+    grid-template-columns: 1.1fr .9fr;
+    gap: 65px;
+    align-items: end;
+    margin-bottom: 48px;
+}
+
+.mf-language-heading h2 {
+    max-width: 760px;
+    margin-top: 9px;
+    color: var(--primary);
+    font-size: clamp(2.8rem, 4.5vw, 4.5rem);
+    line-height: .93;
+}
+
+.mf-language-heading h2 em {
+    color: var(--secondary);
+}
+
+.mf-language-heading > p {
+    max-width: 500px;
+    margin: 0;
+    color: var(--muted);
+    font-size: .86rem;
+    line-height: 1.75;
+}
+
+.mf-language-editorial {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+    align-items: start;
+}
+
+.mf-language-piece {
+    position: relative;
+}
+
+.mf-language-piece-offset {
+    margin-top: 55px;
+}
+
+
+/* =========================================================
+   IMAGE
+   NO WHITE RECTANGULAR BORDER
+========================================================= */
+
+.mf-language-image {
+    position: relative;
+    height: 320px;
+    overflow: hidden;
+
+    /* absolutely no border */
+    border: 0 !important;
+    outline: 0 !important;
+    box-shadow: none !important;
+
+    background: var(--primary);
+}
+
+
+/* remove every possible inner decoration */
+
+.mf-language-image::before,
+.mf-language-image::after {
+    content: none !important;
+    display: none !important;
+    border: 0 !important;
+    outline: 0 !important;
+    box-shadow: none !important;
+}
+
+
+/* image itself */
+
+.mf-language-image img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+
+    border: 0 !important;
+    outline: 0 !important;
+    box-shadow: none !important;
+
+    transition:
+        transform .8s ease,
+        filter .5s ease;
+}
+
+
+/* =========================================================
+   DIFFERENT SHAPES
+========================================================= */
+
+.mf-language-piece:nth-child(1) .mf-language-image {
+    border-radius: 65px 0 0 0;
+}
+
+.mf-language-piece:nth-child(2) .mf-language-image {
+    border-radius: 0 65px 0 65px;
+}
+
+.mf-language-piece:nth-child(3) .mf-language-image {
+    border-radius: 0 0 65px 0;
+}
+
+.mf-language-piece:hover .mf-language-image img {
+    transform: scale(1.06);
+}
+
+
+/* =========================================================
+   PRIMARY / SECONDARY IMAGE ACCENTS
+========================================================= */
+
+.mf-language-piece:nth-child(1) .mf-language-image {
+    box-shadow:
+        10px 10px 0 var(--secondary) !important;
+}
+
+.mf-language-piece:nth-child(2) .mf-language-image {
+    box-shadow:
+        -10px 10px 0 var(--primary) !important;
+}
+
+.mf-language-piece:nth-child(3) .mf-language-image {
+    box-shadow:
+        10px -10px 0 var(--secondary) !important;
+}
+
+
+/* =========================================================
+   NUMBER BADGES
+========================================================= */
+
+.mf-language-number {
+    position: absolute;
+    left: 17px;
+    top: 17px;
+    z-index: 4;
+
+    display: grid;
+    place-items: center;
+
+    width: 45px;
+    height: 45px;
+
+    border-radius: 50%;
+
+    background: var(--primary);
+    border: 2px solid var(--secondary);
+
+    color: #fff;
+
+    font-family: "Cormorant Garamond", serif;
+    font-size: .95rem;
+
+    transition: var(--ease);
+}
+
+.mf-language-piece:nth-child(2) .mf-language-number {
+    background: var(--secondary);
+    border-color: var(--primary);
+    color: var(--primary);
+}
+
+.mf-language-piece:nth-child(3) .mf-language-number {
+    background: var(--primary);
+    border-color: var(--secondary);
+}
+
+.mf-language-piece:hover .mf-language-number {
+    transform: scale(1.1);
+}
+
+
+/* =========================================================
+   MATERIAL LANGUAGE TEXT
+========================================================= */
+
+.mf-language-copy {
+    padding: 20px 5px 0;
+}
+
+.mf-language-copy > span {
+    display: block;
+    margin-bottom: 5px;
+    color: var(--secondary);
+    font-size: .58rem;
+    font-weight: 700;
+    letter-spacing: .16em;
+}
+
+.mf-language-copy h3 {
+    margin-bottom: 6px;
+    color: var(--primary);
+    font-family: "Cormorant Garamond", serif;
+    font-size: 1.7rem;
+    line-height: 1;
+}
+
+.mf-language-copy p {
+    max-width: 360px;
+    margin: 0;
+    color: var(--muted);
+    font-size: .76rem;
+    line-height: 1.7;
+}
+
+
+/* =========================================================
+   HOVER LINE
+========================================================= */
+
+.mf-language-piece::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -11px;
+
+    width: 0;
+    height: 2px;
+
+    background: var(--secondary);
+
+    transition: width .5s ease;
+}
+
+.mf-language-piece:hover::after {
+    width: 70px;
+}
+
+
+/* =========================================================
+   FINISH GUIDE
+   KEEP YOUR EXISTING DESIGN
+========================================================= */
+
+.materials-faq {
+    background: linear-gradient(
+        180deg,
+        var(--bg),
+        var(--surface-2)
+    );
+}
+
+.materials-faq .section-header {
+    max-width: 720px;
+    margin-inline: auto;
+}
+
+.materials-faq-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+    margin-top: 30px;
+}
+
+.materials-faq-card {
+    position: relative;
+    padding: 30px 30px 28px;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 4px 24px 4px 24px;
+    overflow: hidden;
+    transition: var(--ease);
+}
+
+.materials-faq-card:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background: var(--secondary);
+    transform: scaleX(.18);
+    transform-origin: left;
+    transition: transform var(--ease);
+}
+
+.materials-faq-card:hover {
+    transform: translateY(-6px);
+    box-shadow: var(--shadow);
+    border-color: var(--secondary);
+}
+
+.materials-faq-card:hover:before {
+    transform: scaleX(1);
+}
+
+.materials-faq-card > span {
+    font-family: "Cormorant Garamond", serif;
+    font-size: 1.8rem;
+    color: var(--secondary);
+}
+
+.materials-faq-card h3 {
+    margin: 8px 0;
+    font-size: 1.45rem;
+}
+
+.materials-faq-card p {
+    margin: 0;
+    font-size: .82rem;
+    line-height: 1.8;
+}
+
+
+/* =========================================================
+   CTA
+========================================================= */
+
+.cta-panel {
+    border: 1px solid var(--border);
+}
+
+
+/* =========================================================
+   RTL
+========================================================= */
+
+[dir="rtl"] .mf-hero-caption {
+    left: auto;
+    right: -35px;
+}
+
+[dir="rtl"] .mf-hero-number {
+    right: auto;
+    left: -15px;
+}
+
+[dir="rtl"] .mf-material-label {
+    right: auto;
+    left: -22px;
+}
+
+[dir="rtl"] .mf-hardware-note {
+    left: auto;
+    right: -25px;
+}
+
+[dir="rtl"] .mf-lighting-editorial {
+    direction: rtl;
+}
+
+[dir="rtl"] .mf-light-mode {
+    direction: rtl;
+}
+
+[dir="rtl"] .mf-light-mode:hover {
+    padding-left: 0;
+    padding-right: 10px;
+}
+
+[dir="rtl"] .mf-lighting-image-caption {
+    left: auto;
+    right: 22px;
+    border-left: 0;
+    border-right: 3px solid var(--secondary);
+}
+
+[dir="rtl"] .mf-lighting-scale {
+    direction: rtl;
+}
+
+[dir="rtl"] .mf-lighting-scale > span:last-child {
+    text-align: left;
+}
+
+[dir="rtl"] .mf-language-editorial {
+    direction: rtl;
+}
+
+[dir="rtl"] .mf-language-number {
+    left: auto;
+    right: 17px;
+}
+
+[dir="rtl"] .mf-language-piece::after {
+    left: auto;
+    right: 0;
+}
+
+
+/* =========================================================
+   1024px
+========================================================= */
+
+@media (max-width: 1024px) {
+
+    .mf-hero-grid {
+        gap: 35px;
+    }
+
+    .mf-hero-content h1 {
+        font-size: 4rem;
+    }
+
+    .mf-hero-visual {
+        height: 380px;
+    }
+
+    .mf-material-layout {
+        gap: 30px;
+    }
+
+    .mf-material-feature,
+    .mf-material-list {
+        height: 390px;
+    }
+
+    .mf-hardware-grid {
+        gap: 30px;
+    }
+
+    .mf-hardware-copy,
+    .mf-hardware-visual {
+        height: 410px;
+    }
+
+    .mf-hardware-points {
+        gap: 6px;
+    }
+
+    .material-cards {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .mf-lighting-editorial {
+        gap: 35px;
+    }
+
+    .mf-lighting-main-image,
+    .mf-lighting-content {
+        height: 430px;
+    }
+
+    .mf-lighting-heading h2 {
+        font-size: 4rem;
+    }
+
+    .mf-light-mode {
+        min-height: 100px;
+        grid-template-columns: 35px 50px 1fr;
+        gap: 14px;
+    }
+
+    .mf-light-icon {
+        width: 44px;
+        height: 44px;
+    }
+
+    .mf-language-heading {
+        gap: 40px;
+    }
+
+    .mf-language-editorial {
+        gap: 18px;
+    }
+
+    .mf-language-image {
+        height: 285px;
+    }
+
+}
+
+
+/* =========================================================
+   768px
+========================================================= */
+
+@media (max-width: 768px) {
+
+    .mf-hero {
+        min-height: auto;
+        padding: 45px 0 50px;
+    }
+
+    .mf-hero-decoration {
+        display: none;
+    }
+
+    .mf-hero-grid {
+        grid-template-columns: 1fr;
+        gap: 35px;
+    }
+
+    .mf-hero-content h1 {
+        font-size: clamp(3rem, 9vw, 4rem);
+    }
+
+    .mf-hero-visual {
+        height: 380px;
+    }
+
+    .mf-hero-caption {
+        left: 18px;
+        bottom: 18px;
+    }
+
+    .mf-hero-number {
+        right: 18px;
+        top: 18px;
+    }
+
+
+    /* MATERIAL COLLECTION */
+
+    .mf-collection {
+        padding-top: 55px;
+        padding-bottom: 55px;
+    }
+
+    .mf-material-layout {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    .mf-material-feature,
+    .mf-material-list {
+        height: 390px;
+    }
+
+
+    /* HARDWARE */
+
+    .mf-hardware {
+        padding: 55px 0;
+    }
+
+    .mf-hardware-grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    .mf-hardware-copy {
+        height: auto;
+        min-height: 370px;
+    }
+
+    .mf-hardware-visual {
+        height: 390px;
+    }
+
+
+    /* TEXTURE */
+
+    .material-cards {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+
+    /* LIGHTING */
+
+    .mf-lighting-new {
+        padding: 60px 0 45px;
+    }
+
+    .mf-lighting-heading {
+        margin-bottom: 35px;
+    }
+
+    .mf-lighting-heading h2 {
+        font-size: clamp(2.7rem, 8vw, 4rem);
+    }
+
+    .mf-lighting-editorial {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    .mf-lighting-main-image {
+        height: 390px;
+    }
+
+    .mf-lighting-content {
+        height: auto;
+    }
+
+    .mf-lighting-intro {
+        text-align: center;
+    }
+
+    .mf-lighting-modes {
+        max-width: 650px;
+        margin-inline: auto;
+        width: 100%;
+    }
+
+    .mf-light-mode {
+        min-height: 105px;
+    }
+
+
+    /* MATERIAL LANGUAGE */
+
+    .mf-language {
+        padding: 60px 0;
+    }
+
+    .mf-language-heading {
+        grid-template-columns: 1fr;
+        gap: 18px;
+        text-align: center;
+    }
+
+    .mf-language-heading h2 {
+        margin-inline: auto;
+    }
+
+    .mf-language-heading > p {
+        margin-inline: auto;
+    }
+
+    .mf-language-editorial {
+        grid-template-columns: 1fr;
+        max-width: 560px;
+        margin-inline: auto;
+        gap: 48px;
+    }
+
+    .mf-language-piece-offset {
+        margin-top: 0;
+    }
+
+    .mf-language-image {
+        height: 350px;
+    }
+
+
+    /* FAQ */
+
+    .materials-faq-grid {
+        grid-template-columns: 1fr;
+    }
+
+}
+
+
+/* =========================================================
+   360px
+========================================================= */
+
+@media (max-width: 360px) {
+
+    .mf-hero {
+        padding: 38px 0 45px;
+    }
+
+    .mf-hero-content h1 {
+        font-size: 2.75rem;
+    }
+
+    .mf-hero-meta {
+        gap: 18px;
+    }
+
+    .mf-hero-visual {
+        height: 330px;
+    }
+
+    .mf-hero-image {
+        border-radius: 0 55px 0 55px;
+    }
+
+    .mf-hero-caption {
+        width: 190px;
+        left: 12px;
+        bottom: 12px;
+        padding: 15px;
+    }
+
+    .mf-hero-number {
+        width: 46px;
+        height: 46px;
+        right: 12px;
+        top: 12px;
+    }
+
+
+    /* COLLECTION */
+
+    .mf-collection-heading h2 {
+        font-size: 2.6rem;
+    }
+
+    .mf-material-feature {
+        height: 340px;
+    }
+
+    .mf-material-list {
+        height: auto;
+    }
+
+    .mf-material-item {
+        min-height: 95px;
+        height: auto;
+        grid-template-columns: 25px 38px 1fr;
+        gap: 10px;
+        padding: 16px 0;
+    }
+
+    .mf-material-icon {
+        width: 36px;
+        height: 36px;
+    }
+
+    .mf-material-item h3 {
+        font-size: 1rem;
+    }
+
+    .mf-material-item p {
+        font-size: .68rem;
+    }
+
+    .mf-material-label {
+        position: relative;
+        right: auto;
+        left: auto;
+        bottom: auto;
+        width: 100%;
+        margin-top: -1px;
+    }
+
+
+    /* HARDWARE */
+
+    .mf-hardware {
+        padding: 50px 0;
+    }
+
+    .mf-hardware-copy h2 {
+        font-size: 2.6rem;
+    }
+
+    .mf-hardware-points {
+        grid-template-columns: 1fr;
+    }
+
+    .mf-hardware-visual {
+        height: 340px;
+    }
+
+    .mf-hardware-image {
+        border-radius: 0 55px 0 55px;
+    }
+
+    .mf-hardware-note {
+        left: 12px;
+        bottom: 12px;
+        width: 190px;
+        padding: 15px;
+    }
+
+
+    /* TEXTURE */
+
+    .material-cards {
+        grid-template-columns: 1fr;
+    }
+
+
+    /* LIGHTING */
+
+    .mf-lighting-new {
+        padding: 50px 0 40px;
+    }
+
+    .mf-lighting-heading h2 {
+        font-size: 2.6rem;
+    }
+
+    .mf-lighting-heading p {
+        font-size: .76rem;
+    }
+
+    .mf-lighting-main-image {
+        height: 330px;
+        border-radius: 50px 0 50px 0;
+    }
+
+    .mf-lighting-image-caption {
+        left: 12px;
+        bottom: 12px;
+        min-width: 175px;
+        padding: 13px 15px;
+    }
+
+    .mf-light-mode {
+        grid-template-columns: 28px 42px 1fr;
+        gap: 10px;
+        min-height: 105px;
+        padding: 13px 0;
+    }
+
+    .mf-light-icon {
+        width: 40px;
+        height: 40px;
+    }
+
+    .mf-light-copy > span {
+        font-size: .52rem;
+    }
+
+    .mf-light-copy h4 {
+        font-size: 1.35rem;
+    }
+
+    .mf-light-copy p {
+        font-size: .66rem;
+        line-height: 1.5;
+    }
+
+    .mf-lighting-scale {
+        grid-template-columns: 50px 1fr 50px;
+        gap: 8px;
+    }
+
+
+    /* MATERIAL LANGUAGE */
+
+    .mf-language {
+        padding: 50px 0;
+    }
+
+    .mf-language-heading h2 {
+        font-size: 2.55rem;
+    }
+
+    .mf-language-heading > p {
+        font-size: .74rem;
+    }
+
+    .mf-language-editorial {
+        gap: 40px;
+    }
+
+    .mf-language-image {
+        height: 290px;
+    }
+
+    .mf-language-piece:nth-child(1) .mf-language-image {
+        border-radius: 50px 0 0 0;
+    }
+
+    .mf-language-piece:nth-child(2) .mf-language-image {
+        border-radius: 0 50px 0 50px;
+    }
+
+    .mf-language-piece:nth-child(3) .mf-language-image {
+        border-radius: 0 0 50px 0;
+    }
+
+    .mf-language-copy h3 {
+        font-size: 1.45rem;
+    }
+
+}
+
+
+/* =========================================================
+   DARK MODE IMAGE BORDER PROTECTION
+========================================================= */
+
+[data-theme="dark"] .mf-language-image,
+[data-theme="dark"] .mf-language-image img,
+[data-theme="dark"] .mf-lighting-main-image,
+[data-theme="dark"] .mf-lighting-main-image img {
+    border: 0 !important;
+    outline: 0 !important;
+}
+
+
+/* =========================================================
+   FINAL WHITE-BORDER REMOVAL
+   Prevent shared styles from adding inner rectangles
+========================================================= */
+
+.mf-language-image img,
+.mf-lighting-main-image img,
+.mf-material-image img,
+.mf-hardware-image img,
+.mf-hero-image img,
+.material-card img {
+    border: none !important;
+    outline: none !important;
+    box-shadow: none !important;
+}
+
+.mf-language-image::before,
+.mf-language-image::after,
+.mf-lighting-main-image::before,
+.mf-lighting-main-image::after {
+    display: none !important;
+    content: none !important;
+}
+/* =========================================================
+   FINAL MATERIAL LANGUAGE + HERO OVERRIDES
+   ========================================================= */
+
+/* HERO — premium editorial treatment */
+.mf-hero {
+    position: relative !important;
+    min-height: 555px !important;
+    padding: 25px 0 40px !important;
+    overflow: hidden !important;
+    isolation: isolate;
+    background:
+        radial-gradient(circle at 78% 20%, rgba(154,118,47,.12), transparent 26%),
+        radial-gradient(circle at 12% 75%, rgba(74,38,63,.08), transparent 28%),
+        var(--bg);
+}
+
+.mf-hero::before {
+    content: "";
+    position: absolute;
+    width: 420px;
+    height: 420px;
+    right: -150px;
+    top: 90px;
+    border: 1px solid rgba(154,118,47,.28);
+    border-radius: 50%;
+    animation: heroOrbit 12s linear infinite;
+    z-index: -1;
+}
+
+.mf-hero::after {
+    content: "";
+    position: absolute;
+    width: 260px;
+    height: 260px;
+    left: -120px;
+    bottom: -100px;
+    background: rgba(154,118,47,.08);
+    border-radius: 50%;
+    filter: blur(2px);
+    animation: heroFloat 7s ease-in-out infinite;
+    z-index: -1;
+}
+
+.mf-hero-decoration {
+    top: 30px !important;
+    right: -70px !important;
+    width: 350px !important;
+    height: 350px !important;
+    border-color: rgba(154,118,47,.24) !important;
+    animation: heroRotate 18s linear infinite;
+}
+
+.mf-hero-grid {
+    grid-template-columns: .82fr 1.18fr !important;
+    gap: 65px !important;
+    align-items: stretch !important;
+}
+
+.mf-hero-content {
+    position: relative;
+    z-index: 2;
+    min-height: 475px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    animation: heroContentIn 1s cubic-bezier(.2,.65,.25,1) both;
+}
+
+.mf-hero-content .eyebrow {
+    animation: heroEyebrow 1s ease .1s both;
+}
+
+.mf-hero-content h1 {
+    max-width: 620px !important;
+    font-size: clamp(3.5rem, 5.4vw, 5.8rem) !important;
+    line-height: .88 !important;
+    margin: 18px 0 22px !important;
+}
+
+.mf-hero-content h1 em {
+    position: relative;
+    display: inline-block !important;
+    padding-right: 14px;
+}
+
+.mf-hero-content h1 em::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    width: 75px;
+    height: 3px;
+    background: var(--secondary);
+    transform-origin: left;
+    animation: heroLine 1s ease .8s both;
+}
+
+.mf-hero-content .lead {
+    max-width: 540px !important;
+    font-size: 1rem !important;
+    line-height: 1.85 !important;
+    animation: heroTextIn 1s ease .35s both;
+}
+
+.mf-hero-meta {
+    margin-top: 34px !important;
+    padding-top: 20px !important;
+    gap: 42px !important;
+    animation: heroTextIn 1s ease .5s both;
+}
+
+.mf-hero-meta div {
+    transition: transform .35s ease;
+}
+
+.mf-hero-meta div:hover {
+    transform: translateY(-5px);
+}
+
+.mf-hero-visual {
+    height: 475px !important;
+    animation: heroVisualIn 1.15s cubic-bezier(.2,.65,.25,1) both;
+    animation-delay: .15s;
+}
+
+.mf-hero-image {
+    inset: 12px 18px 12px 0 !important;
+    border: 1px solid var(--secondary) !important;
+    border-radius: 8px 105px 8px 105px !important;
+    box-shadow: 22px 22px 0 rgba(154,118,47,.12), 0 25px 60px rgba(45,39,37,.13) !important;
+}
+
+.mf-hero-image::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg, rgba(255,255,255,.14), transparent 35%, rgba(74,38,63,.18));
+    pointer-events: none;
+    transition: opacity .5s ease;
+}
+
+.mf-hero-image img {
+    transition: transform 1.1s cubic-bezier(.2,.65,.25,1), filter .7s ease !important;
+}
+
+.mf-hero-visual:hover .mf-hero-image img {
+    transform: scale(1.07) rotate(.4deg) !important;
+    filter: saturate(1.08) contrast(1.03);
+}
+
+.mf-hero-visual:hover .mf-hero-image::after {
+    opacity: .45;
+}
+
+.mf-hero-caption {
+    left: -45px !important;
+    bottom: 22px !important;
+    width: 235px !important;
+    padding: 20px !important;
+    border-radius: 0 18px 0 18px;
+    animation: captionFloat 4.5s ease-in-out infinite;
+}
+
+.mf-hero-caption strong {
+    font-size: 1.6rem !important;
+}
+
+.mf-hero-number {
+    right: -22px !important;
+    top: 8px !important;
+    width: 62px !important;
+    height: 62px !important;
+    animation: badgeFloat 4s ease-in-out infinite;
+}
+
+/* MATERIAL LANGUAGE — restore cards and compact the heading */
+.mf-language {
+    position: relative !important;
+    padding: 70px 0 85px !important;
+    overflow: hidden;
+    background: var(--bg);
+}
+
+.mf-language-heading {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+    gap: 0 !important;
+    max-width: 950px !important;
+    margin: 0 auto 30px !important;
+    text-align: center !important;
+}
+
+.mf-language-heading > div {
+    width: 100%;
+}
+
+.mf-language-heading h2 {
+    max-width: 850px !important;
+    margin: 8px auto 0 !important;
+    font-size: clamp(3rem, 5vw, 5rem) !important;
+    line-height: .92 !important;
+}
+
+.mf-language-heading h2 em {
+    display: block;
+}
+
+.mf-language-heading > p {
+    max-width: 720px !important;
+    margin: 14px auto 0 !important;
+    font-size: .98rem !important;
+    line-height: 1.75 !important;
+}
+
+.mf-language-editorial {
+    display: grid !important;
+    grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+    gap: 20px !important;
+    align-items: stretch !important;
+    max-width: 1180px !important;
+    margin: 0 auto !important;
+    direction: ltr;
+}
+
+.mf-language-piece,
+.mf-language-piece-offset {
+    display: block !important;
+    position: relative !important;
+    height: 350px !important;
+    min-height: 350px !important;
+    margin-top: 0 !important;
+    overflow: hidden !important;
+    border: 1px solid rgba(154,118,47,.38) !important;
+    border-radius: 18px !important;
+    background: #2d1b27 !important;
+    box-shadow: 0 12px 32px rgba(74,38,63,.08) !important;
+    transform: translateZ(0);
+    transition: transform .55s cubic-bezier(.2,.65,.25,1), box-shadow .55s ease, border-color .4s ease !important;
+}
+
+.mf-language-piece:hover {
+    transform: translateY(-9px) !important;
+    border-color: var(--secondary) !important;
+    box-shadow: 0 22px 48px rgba(74,38,63,.18) !important;
+}
+
+.mf-language-image {
+    position: absolute !important;
+    inset: 0 !important;
+    height: 100% !important;
+    overflow: hidden !important;
+}
+
+.mf-language-image::after {
+    content: "" !important;
+    position: absolute !important;
+    inset: 0 !important;
+    background: linear-gradient(180deg, rgba(45,27,39,.02) 25%, rgba(45,27,39,.18) 50%, rgba(45,27,39,.94) 100%) !important;
+    pointer-events: none !important;
+    transition: background .5s ease !important;
+}
+
+.mf-language-image img {
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: cover !important;
+    transition: transform 1s cubic-bezier(.2,.65,.25,1), filter .6s ease !important;
+}
+
+.mf-language-piece:hover .mf-language-image img {
+    transform: scale(1.08) !important;
+    filter: saturate(1.1) brightness(1.04) !important;
+}
+
+.mf-language-copy {
+    position: absolute !important;
+    left: 0 !important;
+    right: 0 !important;
+    bottom: 0 !important;
+    z-index: 3 !important;
+    padding: 22px 24px 24px !important;
+    text-align: left !important;
+    color: #fff !important;
+    transform: translateY(4px);
+    transition: transform .5s ease !important;
+}
+
+.mf-language-piece:hover .mf-language-copy {
+    transform: translateY(0);
+}
+
+.mf-language-copy > span {
+    margin-bottom: 5px !important;
+    color: #e0bb72 !important;
+    font-size: .65rem !important;
+    letter-spacing: .18em !important;
+}
+
+.mf-language-copy h3 {
+    margin: 0 0 7px !important;
+    color: #fff !important;
+    font-size: 1.8rem !important;
+    line-height: 1 !important;
+}
+
+.mf-language-copy p {
+    max-width: 500px;
+    margin: 0 !important;
+    color: rgba(255,255,255,.82) !important;
+    font-size: .86rem !important;
+    line-height: 1.55 !important;
+}
+
+/* no numbered circles */
+.mf-language-number {
+    display: none !important;
+}
+
+/* thin hover accent only */
+.mf-language-piece::before {
+    content: "" !important;
+    position: absolute !important;
+    left: 22px !important;
+    right: 22px !important;
+    bottom: 0 !important;
+    width: auto !important;
+    height: 3px !important;
+    background: var(--secondary) !important;
+    transform: scaleX(0) !important;
+    transform-origin: center !important;
+    z-index: 6 !important;
+    transition: transform .45s ease !important;
+}
+
+.mf-language-piece:hover::before {
+    transform: scaleX(1) !important;
+}
+
+/* card entrance */
+.mf-language-piece:nth-child(1) {
+    animation: languageLeft .8s cubic-bezier(.2,.65,.25,1) both;
+}
+
+.mf-language-piece:nth-child(2) {
+    animation: languageUp .85s cubic-bezier(.2,.65,.25,1) .12s both;
+}
+
+.mf-language-piece:nth-child(3) {
+    animation: languageRight .8s cubic-bezier(.2,.65,.25,1) .24s both;
+}
+
+@keyframes heroContentIn {
+    from { opacity: 0; transform: translateX(-35px); }
+    to { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes heroVisualIn {
+    from { opacity: 0; transform: translateX(45px) scale(.96); }
+    to { opacity: 1; transform: translateX(0) scale(1); }
+}
+
+@keyframes heroEyebrow {
+    from { opacity: 0; letter-spacing: .35em; }
+    to { opacity: 1; letter-spacing: .16em; }
+}
+
+@keyframes heroTextIn {
+    from { opacity: 0; transform: translateY(18px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes heroLine {
+    from { transform: scaleX(0); }
+    to { transform: scaleX(1); }
+}
+
+@keyframes heroOrbit {
+    to { transform: rotate(360deg); }
+}
+
+@keyframes heroRotate {
+    to { transform: rotate(-360deg); }
+}
+
+@keyframes heroFloat {
+    0%,100% { transform: translateY(0); }
+    50% { transform: translateY(-20px); }
+}
+
+@keyframes captionFloat {
+    0%,100% { transform: translateY(0); }
+    50% { transform: translateY(-7px); }
+}
+
+@keyframes badgeFloat {
+    0%,100% { transform: translateY(0) rotate(0); }
+    50% { transform: translateY(-8px) rotate(5deg); }
+}
+
+@keyframes languageLeft {
+    from { opacity: 0; transform: translateX(-35px); }
+    to { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes languageUp {
+    from { opacity: 0; transform: translateY(35px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes languageRight {
+    from { opacity: 0; transform: translateX(35px); }
+    to { opacity: 1; transform: translateX(0); }
+}
+
+/* RTL */
+html[dir="rtl"] .mf-hero-content {
+    text-align: right;
+}
+
+html[dir="rtl"] .mf-hero-content h1 em::after {
+    left: auto;
+    right: 0;
+    transform-origin: right;
+}
+
+html[dir="rtl"] .mf-hero-caption {
+    left: auto !important;
+    right: -45px !important;
+}
+
+html[dir="rtl"] .mf-hero-number {
+    right: auto !important;
+    left: -22px !important;
+}
+
+html[dir="rtl"] .mf-language-editorial {
+    direction: rtl;
+}
+
+html[dir="rtl"] .mf-language-copy {
+    text-align: right !important;
+}
+
+/* 1024px */
+@media (max-width: 1024px) {
+    .mf-hero {
+        min-height: 500px !important;
+        padding: 25px 0 35px !important;
+    }
+
+    .mf-hero-grid {
+        gap: 35px !important;
+    }
+
+    .mf-hero-content h1 {
+        font-size: clamp(3rem, 5.5vw, 4.5rem) !important;
+    }
+
+    .mf-hero-visual {
+        height: 415px !important;
+    }
+
+    .mf-hero-content {
+        min-height: 415px;
+    }
+
+    .mf-hero-caption {
+        left: -20px !important;
+    }
+
+    .mf-hero-number {
+        right: -8px !important;
+    }
+
+    .mf-language {
+        padding: 60px 0 70px !important;
+    }
+
+    .mf-language-heading {
+        margin-bottom: 26px !important;
+    }
+
+    .mf-language-editorial {
+        gap: 16px !important;
+    }
+
+    .mf-language-piece,
+    .mf-language-piece-offset {
+        height: 320px !important;
+        min-height: 320px !important;
+    }
+
+    .mf-language-copy {
+        padding: 18px 19px 20px !important;
+    }
+
+    .mf-language-copy h3 {
+        font-size: 1.55rem !important;
+    }
+
+    .mf-language-copy p {
+        font-size: .8rem !important;
+    }
+}
+
+/* 768px */
+@media (max-width: 768px) {
+    .mf-hero {
+        min-height: auto !important;
+        padding: 55px 0 60px !important;
+    }
+
+    .mf-hero-grid {
+        grid-template-columns: 1fr !important;
+        gap: 35px !important;
+    }
+
+    .mf-hero-content {
+        text-align: center;
+        min-height: auto;
+    }
+
+    .mf-hero-content h1 {
+        margin-inline: auto !important;
+        font-size: clamp(3rem, 10vw, 4rem) !important;
+    }
+
+    .mf-hero-content .lead {
+        margin-inline: auto;
+    }
+
+    .mf-hero-meta {
+        justify-content: center;
+    }
+
+    .mf-hero-visual {
+        height: 390px !important;
+    }
+
+    .mf-hero-caption {
+        left: 18px !important;
+        bottom: 15px !important;
+    }
+
+    .mf-hero-number {
+        right: 15px !important;
+        top: 15px !important;
+    }
+
+    .mf-language {
+        padding: 55px 0 65px !important;
+    }
+
+    .mf-language-heading {
+        margin-bottom: 24px !important;
+    }
+
+    .mf-language-heading h2 {
+        font-size: clamp(2.7rem, 9vw, 3.8rem) !important;
+    }
+
+    .mf-language-heading > p {
+        margin-top: 10px !important;
+    }
+
+    .mf-language-editorial {
+        grid-template-columns: 1fr !important;
+        max-width: 560px !important;
+        gap: 18px !important;
+    }
+
+    .mf-language-piece,
+    .mf-language-piece-offset {
+        height: 315px !important;
+        min-height: 315px !important;
+    }
+
+    .mf-language-piece:nth-child(1),
+    .mf-language-piece:nth-child(2),
+    .mf-language-piece:nth-child(3) {
+        animation: languageUp .7s ease both;
+    }
+
+    .mf-language-piece:nth-child(2) {
+        animation-delay: .12s;
+    }
+
+    .mf-language-piece:nth-child(3) {
+        animation-delay: .24s;
+    }
+
+    html[dir="rtl"] .mf-hero-content {
+        text-align: center;
+    }
+
+    html[dir="rtl"] .mf-hero-caption {
+        right: 18px !important;
+        left: auto !important;
+    }
+
+    html[dir="rtl"] .mf-hero-number {
+        left: 15px !important;
+        right: auto !important;
+    }
+}
+
+/* 360px */
+@media (max-width: 360px) {
+    .mf-hero {
+        padding: 45px 0 50px !important;
+    }
+
+    .mf-hero-content h1 {
+        font-size: 2.7rem !important;
+    }
+
+    .mf-hero-content .lead {
+        font-size: .9rem !important;
+    }
+
+    .mf-hero-meta {
+        gap: 18px !important;
+    }
+
+    .mf-hero-visual {
+        height: 315px !important;
+    }
+
+    .mf-hero-image {
+        inset: 8px 8px 8px 0 !important;
+        border-radius: 8px 65px 8px 65px !important;
+    }
+
+    .mf-hero-caption {
+        left: 10px !important;
+        bottom: 10px !important;
+        width: 185px !important;
+        padding: 14px !important;
+    }
+
+    .mf-hero-caption strong {
+        font-size: 1.3rem !important;
+    }
+
+    .mf-hero-number {
+        right: 8px !important;
+        top: 8px !important;
+        width: 48px !important;
+        height: 48px !important;
+    }
+
+    .mf-language {
+        padding: 48px 0 55px !important;
+    }
+
+    .mf-language-heading {
+        margin-bottom: 20px !important;
+    }
+
+    .mf-language-heading h2 {
+        font-size: 2.35rem !important;
+    }
+
+    .mf-language-heading > p {
+        font-size: .86rem !important;
+        line-height: 1.65 !important;
+    }
+
+    .mf-language-editorial {
+        gap: 14px !important;
+    }
+
+    .mf-language-piece,
+    .mf-language-piece-offset {
+        height: 285px !important;
+        min-height: 285px !important;
+        border-radius: 14px !important;
+    }
+
+    .mf-language-copy {
+        padding: 16px 17px 18px !important;
+    }
+
+    .mf-language-copy h3 {
+        font-size: 1.4rem !important;
+    }
+
+    .mf-language-copy p {
+        font-size: .76rem !important;
+    }
+}
+
+
+/* =========================================================
+   FINAL FIX — MATERIAL LANGUAGE CARD SCROLL REVEAL
+   + CARD TEXT VISIBILITY
+   ========================================================= */
+
+/* Keep the cards hidden until main.js adds .is-visible */
+.mf-language-piece {
+    opacity: 0 !important;
+    animation: none !important;
+    will-change: opacity, transform;
+}
+
+/* Starting positions for the three cards */
+.mf-language-piece:nth-child(1) {
+    transform: translateX(-70px) !important;
+}
+
+.mf-language-piece:nth-child(2) {
+    transform: translateY(70px) !important;
+}
+
+.mf-language-piece:nth-child(3) {
+    transform: translateX(70px) !important;
+}
+
+/* Scroll reveal */
+.mf-language-piece.is-visible {
+    opacity: 1 !important;
+    transform: translate3d(0, 0, 0) !important;
+    transition:
+        opacity .85s ease,
+        transform .85s cubic-bezier(.2, .65, .25, 1) !important;
+}
+
+.mf-language-piece:nth-child(1).is-visible {
+    transition-delay: 0s !important;
+}
+
+.mf-language-piece:nth-child(2).is-visible {
+    transition-delay: .14s !important;
+}
+
+.mf-language-piece:nth-child(3).is-visible {
+    transition-delay: .28s !important;
+}
+
+/* =========================================================
+   CARD IMAGE + TEXT OVERLAY
+   ========================================================= */
+
+.mf-language-image {
+    position: absolute !important;
+    inset: 0 !important;
+    width: 100% !important;
+    height: 100% !important;
+    overflow: hidden !important;
+    z-index: 0 !important;
+}
+
+.mf-language-image::after {
+    content: "" !important;
+    display: block !important;
+    position: absolute !important;
+    inset: 0 !important;
+    z-index: 1 !important;
+    background: linear-gradient(
+        to bottom,
+        rgba(18, 12, 18, 0) 22%,
+        rgba(18, 12, 18, .08) 42%,
+        rgba(18, 12, 18, .38) 58%,
+        rgba(18, 12, 18, .88) 82%,
+        rgba(18, 12, 18, .96) 100%
+    ) !important;
+    pointer-events: none !important;
+}
+
+.mf-language-copy {
+    position: absolute !important;
+    left: 0 !important;
+    right: 0 !important;
+    bottom: 0 !important;
+    z-index: 4 !important;
+    padding: 24px 24px 25px !important;
+    color: #fff !important;
+    text-align: left !important;
+    transform: none !important;
+}
+
+.mf-language-copy > span {
+    display: block !important;
+    margin-bottom: 7px !important;
+    color: #f0c873 !important;
+    font-size: .64rem !important;
+    font-weight: 800 !important;
+    letter-spacing: .18em !important;
+    text-transform: uppercase !important;
+    text-shadow: 0 2px 7px rgba(0, 0, 0, .75) !important;
+}
+
+.mf-language-copy h3 {
+    margin: 0 0 8px !important;
+    color: #fff !important;
+    font-family: "Cormorant Garamond", serif !important;
+    font-size: 1.85rem !important;
+    line-height: 1.02 !important;
+    text-shadow:
+        0 2px 8px rgba(0, 0, 0, .78),
+        0 1px 2px rgba(0, 0, 0, .95) !important;
+}
+
+.mf-language-copy p {
+    max-width: 480px !important;
+    margin: 0 !important;
+    color: rgba(255, 255, 255, .95) !important;
+    font-size: .82rem !important;
+    line-height: 1.55 !important;
+    text-shadow:
+        0 2px 7px rgba(0, 0, 0, .85),
+        0 1px 2px rgba(0, 0, 0, .95) !important;
+}
+
+/* Keep card hover smooth without hiding the copy */
+.mf-language-piece:hover .mf-language-copy {
+    transform: translateY(0) !important;
+}
+
+/* =========================================================
+   FINISH GUIDE / FAQ SCROLL REVEAL
+   ========================================================= */
+
+.materials-faq-card {
+    opacity: 0 !important;
+    transform: translateY(55px) !important;
+    will-change: opacity, transform;
+}
+
+.materials-faq-card.is-visible {
+    opacity: 1 !important;
+    transform: translate3d(0, 0, 0) !important;
+    transition:
+        opacity .8s ease,
+        transform .8s cubic-bezier(.2, .65, .25, 1) !important;
+}
+
+.materials-faq-card:nth-child(1).is-visible {
+    transition-delay: 0s !important;
+}
+
+.materials-faq-card:nth-child(2).is-visible {
+    transition-delay: .12s !important;
+}
+
+.materials-faq-card:nth-child(3).is-visible {
+    transition-delay: .24s !important;
+}
+
+.materials-faq-card:nth-child(4).is-visible {
+    transition-delay: .36s !important;
+}
+
+/* =========================================================
+   OTHER MATERIAL SECTIONS — SCROLL REVEAL
+   ========================================================= */
+
+.mf-material-item,
+.mf-hardware-points article,
+.mf-light-mode,
+.material-card {
+    opacity: 0;
+    will-change: opacity, transform;
+}
+
+.mf-material-item {
+    transform: translateX(-30px);
+}
+
+.mf-hardware-points article,
+.mf-light-mode,
+.material-card {
+    transform: translateY(35px);
+}
+
+.mf-material-item.is-visible,
+.mf-hardware-points article.is-visible,
+.mf-light-mode.is-visible,
+.material-card.is-visible {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+    transition:
+        opacity .75s ease,
+        transform .75s cubic-bezier(.2, .65, .25, 1);
+}
+
+.mf-material-item:nth-child(1).is-visible,
+.mf-hardware-points article:nth-child(1).is-visible,
+.mf-light-mode:nth-child(1).is-visible,
+.material-card:nth-child(1).is-visible {
+    transition-delay: 0s;
+}
+
+.mf-material-item:nth-child(2).is-visible,
+.mf-hardware-points article:nth-child(2).is-visible,
+.mf-light-mode:nth-child(2).is-visible,
+.material-card:nth-child(2).is-visible {
+    transition-delay: .12s;
+}
+
+.mf-material-item:nth-child(3).is-visible,
+.mf-hardware-points article:nth-child(3).is-visible,
+.mf-light-mode:nth-child(3).is-visible,
+.material-card:nth-child(3).is-visible {
+    transition-delay: .24s;
+}
+
+.mf-material-item:nth-child(4).is-visible,
+.mf-hardware-points article:nth-child(4).is-visible,
+.mf-light-mode:nth-child(4).is-visible,
+.material-card:nth-child(4).is-visible {
+    transition-delay: .36s;
+}
+
+/* =========================================================
+   RTL
+   ========================================================= */
+
+html[dir="rtl"] .mf-language-piece:nth-child(1) {
+    transform: translateX(70px) !important;
+}
+
+html[dir="rtl"] .mf-language-piece:nth-child(2) {
+    transform: translateY(70px) !important;
+}
+
+html[dir="rtl"] .mf-language-piece:nth-child(3) {
+    transform: translateX(-70px) !important;
+}
+
+html[dir="rtl"] .mf-language-piece.is-visible {
+    transform: translate3d(0, 0, 0) !important;
+}
+
+html[dir="rtl"] .mf-material-item {
+    transform: translateX(30px);
+}
+
+html[dir="rtl"] .mf-material-item.is-visible {
+    transform: translate3d(0, 0, 0);
+}
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 768px) {
+
+    .mf-language-piece,
+    .mf-language-piece:nth-child(1),
+    .mf-language-piece:nth-child(2),
+    .mf-language-piece:nth-child(3) {
+        transform: translateY(55px) !important;
+        animation: none !important;
+    }
+
+    .mf-language-piece.is-visible {
+        transform: translate3d(0, 0, 0) !important;
+    }
+
+    .mf-language-copy {
+        padding: 20px 19px 21px !important;
+    }
+
+    .mf-language-copy h3 {
+        font-size: 1.65rem !important;
+    }
+
+    .mf-language-copy p {
+        font-size: .78rem !important;
+        line-height: 1.5 !important;
+    }
+
+    .mf-language-copy > span {
+        font-size: .58rem !important;
+    }
+}
+
+@media (max-width: 360px) {
+
+    .mf-language-copy {
+        padding: 17px 17px 18px !important;
+    }
+
+    .mf-language-copy h3 {
+        font-size: 1.4rem !important;
+    }
+
+    .mf-language-copy p {
+        font-size: .72rem !important;
+    }
+}
+
+/* =========================================================
+   REDUCED MOTION
+   ========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+    .mf-language-piece,
+    .materials-faq-card,
+    .mf-material-item,
+    .mf-hardware-points article,
+    .mf-light-mode,
+    .material-card {
+        opacity: 1 !important;
+        transform: none !important;
+        animation: none !important;
+        transition: none !important;
+    }
+}
+
+/* =========================================================
+   FINAL FIX — HARDWARE CARDS MUST STAY VISIBLE
+   ========================================================= */
+
+.mf-hardware-points article {
+    opacity: 1 !important;
+    visibility: visible !important;
+    transform: none !important;
+    animation: none !important;
+}
+
+.mf-hardware-points article:hover {
+    transform: translateY(-5px) !important;
+}
+
+/* Keep the hardware section itself visible */
+.mf-hardware-copy,
+.mf-hardware-points {
+    opacity: 1 !important;
+    visibility: visible !important;
+}
+
+
+/* =========================================================
+   FINAL FIX — FINISH GUIDE HEADING SCROLL REVEAL
+   The complete Finish Guide heading/tagline appears when
+   the section enters the viewport.
+   ========================================================= */
+
+.materials-faq .section-header {
+    opacity: 0;
+    transform: translateY(45px);
+    will-change: transform, opacity;
+}
+
+.materials-faq .section-header.is-visible {
+    opacity: 1 !important;
+    transform: translateY(0) !important;
+    transition:
+        opacity .8s ease,
+        transform .8s cubic-bezier(.2,.65,.25,1);
+}
+
+.materials-faq .section-header.is-visible .eyebrow {
+    animation: finishGuideEyebrow .65s ease both;
+}
+
+.materials-faq .section-header.is-visible h2 {
+    animation: finishGuideTitle .8s cubic-bezier(.2,.65,.25,1) .08s both;
+}
+
+.materials-faq .section-header.is-visible .lead {
+    animation: finishGuideText .8s ease .18s both;
+}
+
+@keyframes finishGuideEyebrow {
+    from {
+        opacity: 0;
+        transform: translateY(12px);
+        letter-spacing: .3em;
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+        letter-spacing: .16em;
+    }
+}
+
+@keyframes finishGuideTitle {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes finishGuideText {
+    from {
+        opacity: 0;
+        transform: translateY(15px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Finish Guide cards stay hidden until scroll observer reveals them */
+.materials-faq-card {
+    opacity: 0;
+    transform: translateY(55px);
+    will-change: transform, opacity;
+}
+
+.materials-faq-card.is-visible {
+    opacity: 1 !important;
+    transform: translateY(0) !important;
+    transition:
+        opacity .8s ease,
+        transform .8s cubic-bezier(.2,.65,.25,1);
+}
+
+.materials-faq-card:nth-child(1).is-visible {
+    transition-delay: 0s;
+}
+
+.materials-faq-card:nth-child(2).is-visible {
+    transition-delay: .12s;
+}
+
+.materials-faq-card:nth-child(3).is-visible {
+    transition-delay: .24s;
+}
+
+.materials-faq-card:nth-child(4).is-visible {
+    transition-delay: .36s;
+}
+
+
+/* =========================================================
+   FINAL FIX — MATERIAL LANGUAGE CARD TEXT VISIBILITY
+   ========================================================= */
+
+.mf-language-image::after {
+    content: "" !important;
+    display: block !important;
+    position: absolute !important;
+    inset: 0 !important;
+    z-index: 1 !important;
+    background: linear-gradient(
+        to bottom,
+        rgba(20,10,18,0) 20%,
+        rgba(20,10,18,.12) 42%,
+        rgba(20,10,18,.62) 70%,
+        rgba(20,10,18,.94) 100%
+    ) !important;
+    pointer-events: none !important;
+}
+
+.mf-language-copy {
+    z-index: 4 !important;
+    color: #fff !important;
+    text-shadow: 0 2px 8px rgba(0,0,0,.65) !important;
+}
+
+.mf-language-copy > span {
+    color: #f2cf83 !important;
+    text-shadow: 0 1px 5px rgba(0,0,0,.8) !important;
+}
+
+.mf-language-copy h3 {
+    color: #fff !important;
+    text-shadow:
+        0 2px 8px rgba(0,0,0,.8),
+        0 1px 3px rgba(0,0,0,.9) !important;
+}
+
+.mf-language-copy p {
+    color: rgba(255,255,255,.94) !important;
+    text-shadow: 0 2px 7px rgba(0,0,0,.8) !important;
+}
+
+
+/* =========================================================
+   REDUCED MOTION
+   ========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+    .materials-faq .section-header,
+    .materials-faq-card {
+        opacity: 1 !important;
+        transform: none !important;
+        animation: none !important;
+        transition: none !important;
+    }
+}
+
+/* =========================================================
+   FINAL FIX — KEEP HARDWARE + LIGHTING CARDS VISIBLE
+   Only animate them when the HTML element also has .reveal
+========================================================= */
+
+.mf-hardware-points article,
+.mf-light-mode {
+    opacity: 1 !important;
+    transform: none !important;
+    visibility: visible !important;
+    transition: none;
+}
+
+.mf-hardware-points article.reveal,
+.mf-light-mode.reveal {
+    opacity: 0 !important;
+    transform: translateY(45px) !important;
+    transition:
+        opacity .8s ease,
+        transform .8s cubic-bezier(.2,.65,.25,1) !important;
+}
+
+.mf-hardware-points article.reveal.is-visible,
+.mf-light-mode.reveal.is-visible {
+    opacity: 1 !important;
+    transform: translate3d(0,0,0) !important;
+}
+
+.mf-hardware-points article.reveal:nth-child(1).is-visible,
+.mf-light-mode.reveal:nth-child(1).is-visible {
+    transition-delay: 0s !important;
+}
+
+.mf-hardware-points article.reveal:nth-child(2).is-visible,
+.mf-light-mode.reveal:nth-child(2).is-visible {
+    transition-delay: .12s !important;
+}
+
+.mf-hardware-points article.reveal:nth-child(3).is-visible,
+.mf-light-mode.reveal:nth-child(3).is-visible {
+    transition-delay: .24s !important;
+}
+
+.mf-hardware-points article.reveal:nth-child(4).is-visible,
+.mf-light-mode.reveal:nth-child(4).is-visible {
+    transition-delay: .36s !important;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .mf-hardware-points article,
+    .mf-light-mode {
+        opacity: 1 !important;
+        transform: none !important;
+        transition: none !important;
+    }
+}
+/* =========================================================
+   LIGHTING — FINAL ALIGNMENT FIX
+   ========================================================= */
+
+.mf-lighting-editorial {
+    grid-template-columns: 1fr 1.05fr !important;
+    align-items: start !important;
+    gap: 55px !important;
+}
+
+.mf-lighting-content {
+    height: auto !important;
+    min-height: 455px !important;
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: flex-start !important;
+    padding: 0 5px !important;
+}
+
+.mf-lighting-intro {
+    margin-bottom: 18px !important;
+}
+
+.mf-lighting-modes {
+    width: 100% !important;
+}
+
+.mf-light-mode {
+    display: grid !important;
+    grid-template-columns: 38px 58px minmax(0, 1fr) !important;
+    gap: 16px !important;
+    align-items: center !important;
+    min-height: 112px !important;
+    padding: 14px 0 !important;
+    box-sizing: border-box !important;
+}
+
+.mf-light-copy {
+    min-width: 0 !important;
+    width: 100% !important;
+}
+
+.mf-light-copy h4 {
+    margin-bottom: 4px !important;
+    white-space: normal !important;
+}
+
+.mf-light-copy p {
+    max-width: none !important;
+    width: 100% !important;
+    line-height: 1.55 !important;
+}
+
+.mf-lighting-scale {
+    margin-top: 20px !important;
+}
+
+
+/* =========================================================
+   TABLET
+   ========================================================= */
+
+@media (max-width: 1024px) {
+
+    .mf-lighting-editorial {
+        grid-template-columns: 1fr 1fr !important;
+        gap: 35px !important;
+    }
+
+    .mf-light-mode {
+        grid-template-columns: 32px 50px minmax(0, 1fr) !important;
+        gap: 12px !important;
+    }
+
+    .mf-light-icon {
+        width: 44px !important;
+        height: 44px !important;
+    }
+
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 768px) {
+
+    .mf-lighting-editorial {
+        grid-template-columns: 1fr !important;
+        gap: 30px !important;
+    }
+
+    .mf-lighting-content {
+        min-height: auto !important;
+        height: auto !important;
+    }
+
+    .mf-light-mode {
+        grid-template-columns: 30px 48px minmax(0, 1fr) !important;
+        gap: 12px !important;
+        min-height: 100px !important;
+    }
+
+}
+/* =========================================================
+   MATERIALS HERO — ENTRANCE ANIMATION
+========================================================= */
+
+.mf-hero .eyebrow {
+    opacity: 0;
+    transform: translateX(-35px);
+    animation: heroTextLeft .8s cubic-bezier(.2,.65,.25,1) .1s forwards;
+}
+
+.mf-hero h1 {
+    opacity: 0;
+    transform: translateY(35px);
+    animation: heroTextUp .9s cubic-bezier(.2,.65,.25,1) .2s forwards;
+}
+
+.mf-hero p {
+    opacity: 0;
+    transform: translateY(25px);
+    animation: heroTextUp .8s cubic-bezier(.2,.65,.25,1) .35s forwards;
+}
+
+.mf-hero .hero-actions,
+.mf-hero .hero-buttons {
+    opacity: 0;
+    transform: translateY(25px);
+    animation: heroTextUp .8s cubic-bezier(.2,.65,.25,1) .5s forwards;
+}
+
+.mf-hero .hero-image,
+.mf-hero .hero-visual,
+.mf-hero img {
+    opacity: 0;
+    transform: scale(.96);
+    animation: heroImageIn 1.1s cubic-bezier(.2,.65,.25,1) .15s forwards;
+}
+
+
+/* =========================================================
+   HERO KEYFRAMES
+========================================================= */
+
+@keyframes heroTextLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-35px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes heroTextUp {
+    from {
+        opacity: 0;
+        transform: translateY(35px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes heroImageIn {
+    from {
+        opacity: 0;
+        transform: scale(.96);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+
+/* =========================================================
+   REDUCED MOTION
+========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+    .mf-hero .eyebrow,
+    .mf-hero h1,
+    .mf-hero p,
+    .mf-hero .hero-actions,
+    .mf-hero .hero-buttons,
+    .mf-hero .hero-image,
+    .mf-hero .hero-visual,
+    .mf-hero img {
+        opacity: 1;
+        transform: none;
+        animation: none;
+    }
+
+}
+
+/* =========================================================
+   FINAL MATERIALS & FINISHES FIXES
+========================================================= */
+
+@media (max-width: 768px) {
+  .mf-material-feature {
+    height: auto !important;
+    display: flex !important;
+    flex-direction: column !important;
+  }
+  .mf-material-image {
+    height: 330px !important;
+    flex: 0 0 330px !important;
+  }
+  .mf-material-label {
+    position: relative !important;
+    inset: auto !important;
+    width: 100% !important;
+    margin: 0 !important;
+    padding: 17px 18px !important;
+    box-shadow: none !important;
+    z-index: 2;
+  }
+  .mf-material-list {
+    height: auto !important;
+  }
+  .mf-material-item {
+    min-height: 96px !important;
+    height: auto !important;
+    padding: 15px 0 !important;
+  }
+}
+
+@media (max-width: 360px) {
+  .mf-material-image { height: 285px !important; flex-basis: 285px !important; }
+  .mf-material-label { padding: 15px !important; }
+}
+
+/* Dark mode: primary text becomes white while gold remains the accent. */
+html[data-theme="dark"] .mf-hero-content h1,
+html[data-theme="dark"] .mf-collection-heading h2,
+html[data-theme="dark"] .mf-material-item h3,
+html[data-theme="dark"] .mf-hardware-copy h2,
+html[data-theme="dark"] .mf-hardware-points h3,
+html[data-theme="dark"] .mf-lighting-heading h2,
+html[data-theme="dark"] .mf-lighting-intro h3,
+html[data-theme="dark"] .mf-light-copy h4,
+html[data-theme="dark"] .mf-language-heading h2,
+html[data-theme="dark"] .mf-language-copy h3,
+html[data-theme="dark"] .materials-faq-card h3,
+html[data-theme="dark"] .mf-material-label strong,
+html[data-theme="dark"] .mf-hardware-note strong,
+html[data-theme="dark"] .mf-hero-caption strong,
+html[data-theme="dark"] .mf-hero-content,
+html[data-theme="dark"] .mf-collection,
+html[data-theme="dark"] .mf-language {
+  color: #fff !important;
+}
+html[data-theme="dark"] .mf-hero,
+html[data-theme="dark"] .mf-collection,
+html[data-theme="dark"] .mf-language {
+  background: #171119 !important;
+}
+html[data-theme="dark"] .mf-hardware,
+html[data-theme="dark"] .mf-lighting-new {
+  background: #211922 !important;
+}
+html[data-theme="dark"] .mf-material-item p,
+html[data-theme="dark"] .mf-hardware-copy .lead,
+html[data-theme="dark"] .mf-hardware-points p,
+html[data-theme="dark"] .mf-light-copy p,
+html[data-theme="dark"] .mf-lighting-heading p,
+html[data-theme="dark"] .mf-language-heading > p,
+html[data-theme="dark"] .mf-language-copy p,
+html[data-theme="dark"] .materials-faq-card p,
+html[data-theme="dark"] .mf-material-label p,
+html[data-theme="dark"] .mf-hero-caption small {
+  color: #ddd0ca !important;
+}
+html[data-theme="dark"] .mf-material-icon,
+html[data-theme="dark"] .mf-light-icon {
+  color: #fff !important;
+}
+html[data-theme="dark"] .mf-material-item:nth-child(even) .mf-material-icon,
+html[data-theme="dark"] .mf-light-icon.filled {
+  background: #fff !important;
+  border-color: #fff !important;
+  color: #171119 !important;
+}
+/* =========================================================
+   MATERIAL ITEMS — DARK MODE HOVER ICON FIX
+   02 Refined Metal + 04 Warm Illumination
+========================================================= */
+
+html[data-theme="dark"] .mf-material-item:nth-child(even):hover .mf-material-icon {
+    background: var(--secondary) !important;
+    border-color: var(--secondary) !important;
+    color: #fff !important;
+    transform: rotate(8deg) scale(1.05) !important;
+}
+
+html[data-theme="dark"] .mf-material-item:nth-child(even):hover .mf-material-icon i {
+    color: #fff !important;
+}
+/* Hardware cards */
+.mf-hardware-points article {
+    border-radius: 20px !important;
+    overflow: hidden;
+}
+
+/* Hardware image card */
+.mf-hardware-image {
+    border-radius: 20px !important;
+    overflow: hidden;
+}
+
+/* MATERIALS & FINISHES — ICONS ONLY */
+.mf-material-icon svg,
+.mf-light-icon svg {
+    width: 18px !important;
+    height: 18px !important;
+    display: block !important;
+}
+
+
+/* =========================================================
+   REFINED METAL — ICON ONLY
+   Keep the material row/layout unchanged; remove only the
+   circular icon treatment for Refined Metal.
+   ========================================================= */
+.mf-material-icon.mf-no-circle {
+    border: 0 !important;
+    border-radius: 0 !important;
+    background: transparent !important;
+    width: 40px !important;
+    height: 40px !important;
+    color: var(--secondary) !important;
+}
+
+.mf-material-item:nth-child(even) .mf-material-icon.mf-no-circle {
+    background: transparent !important;
+    border-color: transparent !important;
+    color: var(--secondary) !important;
+}
+
+.mf-material-item:hover .mf-material-icon.mf-no-circle {
+    background: transparent !important;
+    border-color: transparent !important;
+    color: var(--secondary) !important;
+    transform: none !important;
+}
+
+html[data-theme="dark"] .mf-material-item:nth-child(even) .mf-material-icon.mf-no-circle {
+    background: transparent !important;
+    border-color: transparent !important;
+    color: var(--secondary) !important;
+}
+
+html[data-theme="dark"] .mf-material-item:hover .mf-material-icon.mf-no-circle {
+    background: transparent !important;
+    border-color: transparent !important;
+    color: var(--secondary) !important;
+}
+
+.mf-material-icon.mf-no-circle svg {
+    width: 22px !important;
+    height: 22px !important;
+    color: currentColor !important;
+    stroke: currentColor !important;
+}
+/* =========================================================
+   MATERIAL LANGUAGE — ALL 4 ICONS SAME STYLE
+   Light + Dark Mode
+   ========================================================= */
+
+.mf-material-item .mf-material-icon {
+    display: grid !important;
+    place-items: center !important;
+    width: 40px !important;
+    height: 40px !important;
+    min-width: 40px !important;
+    min-height: 40px !important;
+
+    background: transparent !important;
+    border: 1px solid var(--secondary) !important;
+    border-radius: 50% !important;
+
+    color: var(--secondary) !important;
+    box-sizing: border-box !important;
+
+    transition: var(--ease) !important;
+}
+
+/* All icon types */
+.mf-material-item .mf-material-icon i,
+.mf-material-item .mf-material-icon svg {
+    color: var(--secondary) !important;
+    stroke: var(--secondary) !important;
+}
+
+/* ---------------------------------------------------------
+   Remove the old filled style from even items
+   This makes Refined Metal + Warm Illumination match others
+   --------------------------------------------------------- */
+
+.mf-material-item:nth-child(even) .mf-material-icon {
+    background: transparent !important;
+    border-color: var(--secondary) !important;
+    color: var(--secondary) !important;
+}
+
+.mf-material-item:nth-child(even) .mf-material-icon i,
+.mf-material-item:nth-child(even) .mf-material-icon svg {
+    color: var(--secondary) !important;
+    stroke: var(--secondary) !important;
+}
+
+/* ---------------------------------------------------------
+   DARK MODE — EXACTLY SAME AS LIGHT MODE
+   --------------------------------------------------------- */
+
+html[data-theme="dark"] .mf-material-item .mf-material-icon,
+html[data-theme="dark"] .mf-material-item:nth-child(even) .mf-material-icon {
+    background: transparent !important;
+    border: 1px solid var(--secondary) !important;
+    color: var(--secondary) !important;
+}
+
+html[data-theme="dark"] .mf-material-item .mf-material-icon i,
+html[data-theme="dark"] .mf-material-item .mf-material-icon svg,
+html[data-theme="dark"] .mf-material-item:nth-child(even) .mf-material-icon i,
+html[data-theme="dark"] .mf-material-item:nth-child(even) .mf-material-icon svg {
+    color: var(--secondary) !important;
+    stroke: var(--secondary) !important;
+}
+
+/* ---------------------------------------------------------
+   HOVER — SAME FOR ALL FOUR
+   --------------------------------------------------------- */
+
+.mf-material-item:hover .mf-material-icon,
+html[data-theme="dark"] .mf-material-item:hover .mf-material-icon {
+    background: var(--secondary) !important;
+    border-color: var(--secondary) !important;
+    color: #fff !important;
+    transform: rotate(8deg) scale(1.05) !important;
+}
+
+.mf-material-item:hover .mf-material-icon i,
+.mf-material-item:hover .mf-material-icon svg,
+html[data-theme="dark"] .mf-material-item:hover .mf-material-icon i,
+html[data-theme="dark"] .mf-material-item:hover .mf-material-icon svg {
+    color: #fff !important;
+    stroke: #fff !important;
+}
+/* =========================================================
+   INKDEN — MATERIAL LANGUAGE
+   ALL 4 ICONS — SAME CIRCLE FORMAT
+   LIGHT + DARK MODE
+========================================================= */
+
+
+/* =========================================================
+   ALL FOUR ICON CIRCLES
+========================================================= */
+
+.mf-material-item .mf-material-icon,
+.mf-material-item:nth-child(1) .mf-material-icon,
+.mf-material-item:nth-child(2) .mf-material-icon,
+.mf-material-item:nth-child(3) .mf-material-icon,
+.mf-material-item:nth-child(4) .mf-material-icon {
+
+    display: grid !important;
+    place-items: center !important;
+
+    width: 40px !important;
+    height: 40px !important;
+
+    min-width: 40px !important;
+    min-height: 40px !important;
+
+    padding: 0 !important;
+    margin: 0 !important;
+
+    background: transparent !important;
+
+    border: 1px solid var(--secondary) !important;
+    border-radius: 50% !important;
+
+    color: var(--secondary) !important;
+
+    opacity: 1 !important;
+    visibility: visible !important;
+
+    box-sizing: border-box !important;
+
+    transform: none !important;
+
+    transition:
+        background .25s ease,
+        border-color .25s ease,
+        color .25s ease,
+        transform .25s ease !important;
+}
+
+
+/* =========================================================
+   ALL FOUR ICONS — NORMAL STATE
+========================================================= */
+
+.mf-material-item .mf-material-icon i,
+.mf-material-item .mf-material-icon svg,
+.mf-material-item:nth-child(1) .mf-material-icon i,
+.mf-material-item:nth-child(1) .mf-material-icon svg,
+.mf-material-item:nth-child(2) .mf-material-icon i,
+.mf-material-item:nth-child(2) .mf-material-icon svg,
+.mf-material-item:nth-child(3) .mf-material-icon i,
+.mf-material-item:nth-child(3) .mf-material-icon svg,
+.mf-material-item:nth-child(4) .mf-material-icon i,
+.mf-material-item:nth-child(4) .mf-material-icon svg {
+
+    display: block !important;
+
+    width: 18px !important;
+    height: 18px !important;
+
+    max-width: 18px !important;
+    max-height: 18px !important;
+
+    opacity: 1 !important;
+    visibility: visible !important;
+
+    color: var(--secondary) !important;
+    stroke: var(--secondary) !important;
+
+    fill: none !important;
+
+    transform: none !important;
+}
+
+
+/* =========================================================
+   REFINED METAL — FORCE SAME CIRCLE
+   This overrides the old mf-no-circle rules
+========================================================= */
+
+.mf-material-item:nth-child(2) .mf-material-icon,
+.mf-material-item:nth-child(2) .mf-material-icon.mf-no-circle {
+
+    display: grid !important;
+    place-items: center !important;
+
+    width: 40px !important;
+    height: 40px !important;
+
+    min-width: 40px !important;
+    min-height: 40px !important;
+
+    padding: 0 !important;
+    margin: 0 !important;
+
+    background: transparent !important;
+
+    border: 1px solid var(--secondary) !important;
+    border-color: var(--secondary) !important;
+
+    border-radius: 50% !important;
+
+    color: var(--secondary) !important;
+
+    opacity: 1 !important;
+    visibility: visible !important;
+
+    transform: none !important;
+
+    box-sizing: border-box !important;
+}
+
+
+/* =========================================================
+   REFINED METAL — WRENCH ALWAYS VISIBLE
+========================================================= */
+
+.mf-material-item:nth-child(2) .mf-material-icon.mf-no-circle i,
+.mf-material-item:nth-child(2) .mf-material-icon.mf-no-circle svg,
+.mf-material-item:nth-child(2) .mf-material-icon i,
+.mf-material-item:nth-child(2) .mf-material-icon svg {
+
+    display: block !important;
+
+    width: 18px !important;
+    height: 18px !important;
+
+    max-width: 18px !important;
+    max-height: 18px !important;
+
+    opacity: 1 !important;
+    visibility: visible !important;
+
+    color: var(--secondary) !important;
+    stroke: var(--secondary) !important;
+
+    fill: none !important;
+
+    transform: none !important;
+}
+
+
+/* =========================================================
+   DARK MODE — SAME NORMAL FORMAT
+   No white/primary filled circle
+========================================================= */
+
+html[data-theme="dark"] .mf-material-item .mf-material-icon,
+html[data-theme="dark"] .mf-material-item:nth-child(1) .mf-material-icon,
+html[data-theme="dark"] .mf-material-item:nth-child(2) .mf-material-icon,
+html[data-theme="dark"] .mf-material-item:nth-child(2) .mf-material-icon.mf-no-circle,
+html[data-theme="dark"] .mf-material-item:nth-child(3) .mf-material-icon,
+html[data-theme="dark"] .mf-material-item:nth-child(4) .mf-material-icon {
+
+    display: grid !important;
+    place-items: center !important;
+
+    width: 40px !important;
+    height: 40px !important;
+
+    min-width: 40px !important;
+    min-height: 40px !important;
+
+    background: transparent !important;
+
+    border: 1px solid var(--secondary) !important;
+    border-color: var(--secondary) !important;
+
+    border-radius: 50% !important;
+
+    color: var(--secondary) !important;
+
+    opacity: 1 !important;
+    visibility: visible !important;
+
+    transform: none !important;
+}
+
+
+/* =========================================================
+   DARK MODE — ALL ICONS VISIBLE
+========================================================= */
+
+html[data-theme="dark"] .mf-material-item .mf-material-icon i,
+html[data-theme="dark"] .mf-material-item .mf-material-icon svg,
+html[data-theme="dark"] .mf-material-item:nth-child(1) .mf-material-icon i,
+html[data-theme="dark"] .mf-material-item:nth-child(1) .mf-material-icon svg,
+html[data-theme="dark"] .mf-material-item:nth-child(2) .mf-material-icon i,
+html[data-theme="dark"] .mf-material-item:nth-child(2) .mf-material-icon svg,
+html[data-theme="dark"] .mf-material-item:nth-child(3) .mf-material-icon i,
+html[data-theme="dark"] .mf-material-item:nth-child(3) .mf-material-icon svg,
+html[data-theme="dark"] .mf-material-item:nth-child(4) .mf-material-icon i,
+html[data-theme="dark"] .mf-material-item:nth-child(4) .mf-material-icon svg {
+
+    display: block !important;
+
+    opacity: 1 !important;
+    visibility: visible !important;
+
+    color: var(--secondary) !important;
+    stroke: var(--secondary) !important;
+
+    fill: none !important;
+}
+
+
+/* =========================================================
+   HOVER — ALL FOUR SAME
+========================================================= */
+
+.mf-material-item:hover .mf-material-icon,
+.mf-material-item:nth-child(1):hover .mf-material-icon,
+.mf-material-item:nth-child(2):hover .mf-material-icon,
+.mf-material-item:nth-child(2):hover .mf-material-icon.mf-no-circle,
+.mf-material-item:nth-child(3):hover .mf-material-icon,
+.mf-material-item:nth-child(4):hover .mf-material-icon {
+
+    background: var(--secondary) !important;
+
+    border-color: var(--secondary) !important;
+
+    color: #fff !important;
+
+    opacity: 1 !important;
+    visibility: visible !important;
+
+    transform: rotate(8deg) scale(1.05) !important;
+}
+
+
+/* =========================================================
+   HOVER — ALL FOUR ICONS WHITE + VISIBLE
+========================================================= */
+
+.mf-material-item:hover .mf-material-icon i,
+.mf-material-item:hover .mf-material-icon svg,
+.mf-material-item:nth-child(1):hover .mf-material-icon i,
+.mf-material-item:nth-child(1):hover .mf-material-icon svg,
+.mf-material-item:nth-child(2):hover .mf-material-icon i,
+.mf-material-item:nth-child(2):hover .mf-material-icon svg,
+.mf-material-item:nth-child(3):hover .mf-material-icon i,
+.mf-material-item:nth-child(3):hover .mf-material-icon svg,
+.mf-material-item:nth-child(4):hover .mf-material-icon i,
+.mf-material-item:nth-child(4):hover .mf-material-icon svg {
+
+    display: block !important;
+
+    opacity: 1 !important;
+    visibility: visible !important;
+
+    color: #fff !important;
+    stroke: #fff !important;
+
+    fill: none !important;
+
+    transform: none !important;
+}
+
+
+/* =========================================================
+   DARK MODE HOVER — ALL FOUR SAME
+========================================================= */
+
+html[data-theme="dark"] .mf-material-item:hover .mf-material-icon,
+html[data-theme="dark"] .mf-material-item:nth-child(1):hover .mf-material-icon,
+html[data-theme="dark"] .mf-material-item:nth-child(2):hover .mf-material-icon,
+html[data-theme="dark"] .mf-material-item:nth-child(2):hover .mf-material-icon.mf-no-circle,
+html[data-theme="dark"] .mf-material-item:nth-child(3):hover .mf-material-icon,
+html[data-theme="dark"] .mf-material-item:nth-child(4):hover .mf-material-icon {
+
+    background: var(--secondary) !important;
+
+    border-color: var(--secondary) !important;
+
+    color: #fff !important;
+
+    opacity: 1 !important;
+    visibility: visible !important;
+
+    transform: rotate(8deg) scale(1.05) !important;
+}
+
+
+/* =========================================================
+   DARK MODE HOVER — ICONS WHITE
+========================================================= */
+
+html[data-theme="dark"] .mf-material-item:hover .mf-material-icon i,
+html[data-theme="dark"] .mf-material-item:hover .mf-material-icon svg,
+html[data-theme="dark"] .mf-material-item:nth-child(1):hover .mf-material-icon i,
+html[data-theme="dark"] .mf-material-item:nth-child(1):hover .mf-material-icon svg,
+html[data-theme="dark"] .mf-material-item:nth-child(2):hover .mf-material-icon i,
+html[data-theme="dark"] .mf-material-item:nth-child(2):hover .mf-material-icon svg,
+html[data-theme="dark"] .mf-material-item:nth-child(3):hover .mf-material-icon i,
+html[data-theme="dark"] .mf-material-item:nth-child(3):hover .mf-material-icon svg,
+html[data-theme="dark"] .mf-material-item:nth-child(4):hover .mf-material-icon i,
+html[data-theme="dark"] .mf-material-item:nth-child(4):hover .mf-material-icon svg {
+
+    display: block !important;
+
+    opacity: 1 !important;
+    visibility: visible !important;
+
+    color: #fff !important;
+    stroke: #fff !important;
+
+    fill: none !important;
+}
+
+
+/* =========================================================
+   IMPORTANT — REMOVE OLD PRIMARY FILLED STYLE
+========================================================= */
+
+.mf-material-item:nth-child(even) .mf-material-icon,
+html[data-theme="dark"] .mf-material-item:nth-child(even) .mf-material-icon {
+
+    background: transparent !important;
+    border-color: var(--secondary) !important;
+    color: var(--secondary) !important;
+}
+
+
+/* =========================================================
+   REFINED METAL — NEVER REMOVE CIRCLE
+========================================================= */
+
+.mf-material-item:nth-child(2) .mf-material-icon.mf-no-circle,
+.mf-material-item:nth-child(2):hover .mf-material-icon.mf-no-circle {
+
+    border-radius: 50% !important;
+
+    border: 1px solid var(--secondary) !important;
+
+    background: transparent !important;
+
+    color: var(--secondary) !important;
+
+    width: 40px !important;
+    height: 40px !important;
+
+    min-width: 40px !important;
+    min-height: 40px !important;
+
+    opacity: 1 !important;
+    visibility: visible !important;
+}
+
+
+/* Refined Metal hover */
+
+.mf-material-item:nth-child(2):hover .mf-material-icon.mf-no-circle {
+
+    background: var(--secondary) !important;
+
+    border-color: var(--secondary) !important;
+
+    color: #fff !important;
+
+    transform: rotate(8deg) scale(1.05) !important;
+}
+
+
+/* Refined Metal icon hover */
+
+.mf-material-item:nth-child(2):hover .mf-material-icon.mf-no-circle i,
+.mf-material-item:nth-child(2):hover .mf-material-icon.mf-no-circle svg {
+
+    color: #fff !important;
+    stroke: #fff !important;
+
+    opacity: 1 !important;
+    visibility: visible !important;
+}
+
+
+/* =========================================================
+   FINAL — SAME FORMAT FOR ALL 4
+========================================================= */
+
+.mf-material-item:nth-child(1) .mf-material-icon,
+.mf-material-item:nth-child(2) .mf-material-icon,
+.mf-material-item:nth-child(3) .mf-material-icon,
+.mf-material-item:nth-child(4) .mf-material-icon {
+
+    border-radius: 50% !important;
+    border: 1px solid var(--secondary) !important;
+
+    background: transparent !important;
+
+    color: var(--secondary) !important;
+
+    width: 40px !important;
+    height: 40px !important;
+
+    min-width: 40px !important;
+    min-height: 40px !important;
+
+    display: grid !important;
+    place-items: center !important;
+
+    opacity: 1 !important;
+    visibility: visible !important;
+}
+/* =========================================================
+   MATERIALS & FINISHES — CTA SPACING
+   Match Portfolio + Design Process rhythm
+========================================================= */
+
+main > .section.section-tight:has(.cta-panel) {
+    padding-top: 70px !important;
+    padding-bottom: 80px !important;
+}
+
+main > .section.section-tight:has(.cta-panel) .cta-panel {
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
+}
+
+
+/* TABLET */
+@media (max-width: 1024px) {
+    main > .section.section-tight:has(.cta-panel) {
+        padding-top: 60px !important;
+        padding-bottom: 70px !important;
+    }
+}
+
+
+/* MOBILE */
+@media (max-width: 768px) {
+    main > .section.section-tight:has(.cta-panel) {
+        padding-top: 50px !important;
+        padding-bottom: 60px !important;
+    }
+}
+
+
+/* SMALL MOBILE */
+@media (max-width: 480px) {
+    main > .section.section-tight:has(.cta-panel) {
+        padding-top: 42px !important;
+        padding-bottom: 50px !important;
+    }
+}
+/* =========================================================
+   MATERIALS & FINISHES — FINAL SECTION SPACING
+========================================================= */
+
+/* Section to section spacing */
+main > section {
+    margin-bottom: 28px !important;
+}
+
+main > section:last-of-type {
+    margin-bottom: 0 !important;
+}
+
+
+/* CTA — more breathing space */
+main > .section.section-tight:has(.cta-panel) {
+    margin-top: 20px !important;
+    margin-bottom: 0 !important;
+    padding-top: 70px !important;
+    padding-bottom: 100px !important;
+}
+
+main > .section.section-tight:has(.cta-panel) .cta-panel {
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
+}
+
+
+/* TABLET */
+@media (max-width: 1024px) {
+
+    main > section {
+        margin-bottom: 24px !important;
+    }
+
+    main > .section.section-tight:has(.cta-panel) {
+        margin-top: 16px !important;
+        padding-top: 60px !important;
+        padding-bottom: 85px !important;
+    }
+}
+
+
+/* MOBILE */
+@media (max-width: 768px) {
+
+    main > section {
+        margin-bottom: 20px !important;
+    }
+
+    main > .section.section-tight:has(.cta-panel) {
+        margin-top: 14px !important;
+        padding-top: 50px !important;
+        padding-bottom: 70px !important;
+    }
+}
+
+
+/* SMALL MOBILE */
+@media (max-width: 480px) {
+
+    main > section {
+        margin-bottom: 16px !important;
+    }
+
+    main > .section.section-tight:has(.cta-panel) {
+        margin-top: 10px !important;
+        padding-top: 42px !important;
+        padding-bottom: 60px !important;
+    }
+}
+/* =========================================================
+   MATERIALS & FINISHES — FINAL SPACING
+   Match Portfolio + Design Process
+========================================================= */
+
+/* Finish Guide — reduce top empty space */
+main > .materials-faq {
+    margin-top: 55px !important;
+    padding-top: 52px !important;
+    padding-bottom: 52px !important;
+}
+
+/* Finish Guide heading */
+.materials-faq .section-header {
+    margin-top: 0 !important;
+    margin-bottom: 26px !important;
+}
+
+/* FAQ cards */
+.materials-faq-grid {
+    margin-top: 26px !important;
+}
+
+
+/* =========================================================
+   CTA — REDUCE GAP ABOVE + BELOW
+========================================================= */
+
+main > section.section.section-tight:has(.cta-panel) {
+    margin-top: 55px !important;
+    padding-top: 44px !important;
+    padding-bottom: 24px !important;
+}
+
+/* CTA card itself */
+main > section.section.section-tight:has(.cta-panel) .cta-panel {
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
+}
+
+
+/* =========================================================
+   CTA → FOOTER
+   Keep it compact like Portfolio / Design Process
+========================================================= */
+
+main > section.section.section-tight:has(.cta-panel) + footer {
+    margin-top: 0 !important;
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 1024px) {
+
+    main > .materials-faq {
+        margin-top: 45px !important;
+        padding-top: 46px !important;
+        padding-bottom: 46px !important;
+    }
+
+    main > section.section.section-tight:has(.cta-panel) {
+        margin-top: 45px !important;
+        padding-top: 40px !important;
+        padding-bottom: 22px !important;
+    }
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 768px) {
+
+    main > .materials-faq {
+        margin-top: 36px !important;
+        padding-top: 40px !important;
+        padding-bottom: 40px !important;
+    }
+
+    main > section.section.section-tight:has(.cta-panel) {
+        margin-top: 36px !important;
+        padding-top: 36px !important;
+        padding-bottom: 20px !important;
+    }
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 480px) {
+
+    main > .materials-faq {
+        margin-top: 30px !important;
+        padding-top: 34px !important;
+        padding-bottom: 34px !important;
+    }
+
+    main > section.section.section-tight:has(.cta-panel) {
+        margin-top: 30px !important;
+        padding-top: 32px !important;
+        padding-bottom: 18px !important;
+    }
+}
+/* FINISH GUIDE — REDUCE GAP */
+
+main > .materials-faq {
+    margin-top: 20px !important;
+    padding-top: 25px !important;
+}
+
+.materials-faq .section-header {
+    margin-top: 0 !important;
+    margin-bottom: 20px !important;
+}
+
+.materials-faq-grid {
+    margin-top: 18px !important;
+}
+
+@media (max-width: 1024px) {
+    main > .materials-faq {
+        margin-top: 18px !important;
+        padding-top: 24px !important;
+    }
+}
+
+@media (max-width: 768px) {
+    main > .materials-faq {
+        margin-top: 15px !important;
+        padding-top: 22px !important;
+    }
+}
+
+@media (max-width: 480px) {
+    main > .materials-faq {
+        margin-top: 12px !important;
+        padding-top: 20px !important;
+    }
+}
+/* =========================================================
+   MATERIALS & FINISHES — IPAD MINI FIX
+========================================================= */
+
+@media (min-width: 601px) and (max-width: 1024px) {
+
+    /* -------------------------------
+       HERO — CENTER EVERYTHING
+    ------------------------------- */
+
+    .mf-hero-content {
+        text-align: center !important;
+        align-items: center !important;
+    }
+
+    .mf-hero-content .eyebrow {
+        justify-content: center !important;
+        text-align: center !important;
+        width: 100% !important;
+    }
+
+    .mf-hero-content h1,
+    .mf-hero-content .lead {
+        margin-left: auto !important;
+        margin-right: auto !important;
+        text-align: center !important;
+    }
+
+
+    /* -------------------------------
+       MATERIAL COLLECTION
+       IMAGE + CARD
+    ------------------------------- */
+
+    .mf-material-feature {
+        position: relative !important;
+        height: 390px !important;
+    }
+
+    .mf-material-image {
+        height: 100% !important;
+    }
+
+    /* Keep Natural Timber card ON image */
+    .mf-material-label {
+        position: absolute !important;
+
+        right: -22px !important;
+        left: auto !important;
+        bottom: 22px !important;
+
+        width: 225px !important;
+
+        margin: 0 !important;
+        padding: 18px !important;
+
+        background: var(--surface) !important;
+        border: 1px solid var(--border) !important;
+        box-shadow: var(--shadow) !important;
+
+        z-index: 5 !important;
+    }
+
+    .mf-material-label span {
+        display: block !important;
+    }
+
+    .mf-material-label strong {
+        display: block !important;
+    }
+
+    .mf-material-label p {
+        display: block !important;
+    }
+}

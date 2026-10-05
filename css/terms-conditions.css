@@ -1,0 +1,345 @@
+/* =========================================================
+   INKDEN — TERMS & CONDITIONS
+   ========================================================= */
+
+html,
+body,
+main {
+    margin: 0;
+    padding: 0;
+}
+
+/* =========================================================
+   HERO
+   ========================================================= */
+
+.terms-hero {
+    min-height: 470px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 70px 24px;
+    box-sizing: border-box;
+    text-align: center;
+    background: var(--primary);
+    color: #fff;
+}
+
+.terms-hero-content {
+    width: min(850px, 100%);
+    margin: 0 auto;
+}
+
+.terms-eyebrow {
+    display: block;
+    margin-bottom: 20px;
+    color: var(--secondary);
+    font-family: "Manrope", sans-serif;
+    font-size: 0.68rem;
+    font-weight: 800;
+    letter-spacing: 0.28em;
+    text-transform: uppercase;
+}
+
+.terms-hero h1 {
+    margin: 0;
+    color: #fff;
+    font-family: "Cormorant Garamond", serif;
+    font-size: clamp(4rem, 7vw, 6.8rem);
+    font-weight: 600;
+    line-height: 0.88;
+    letter-spacing: -0.05em;
+}
+
+.terms-hero h1 em {
+    display: block;
+    margin-top: 8px;
+    color: var(--secondary);
+    font-style: italic;
+}
+
+.terms-hero p {
+    width: min(580px, 100%);
+    margin: 28px auto 0;
+    color: rgba(255, 255, 255, 0.78);
+    font-family: "Manrope", sans-serif;
+    font-size: 0.88rem;
+    line-height: 1.8;
+}
+
+/* =========================================================
+   CONTENT
+   ========================================================= */
+
+.terms-content {
+    padding: 75px 24px 90px;
+    background: var(--background);
+}
+
+.terms-content .container {
+    width: min(900px, 100%);
+    margin: 0 auto;
+}
+
+/* =========================================================
+   INTRO
+   ========================================================= */
+
+.terms-intro {
+    margin-bottom: 55px;
+    padding: 32px 36px;
+    border: 1px solid
+        color-mix(in srgb, var(--primary) 12%, transparent);
+    border-radius: 14px;
+    background: color-mix(
+        in srgb,
+        var(--primary) 3%,
+        var(--background)
+    );
+}
+
+.terms-intro h2 {
+    margin: 0 0 15px;
+    color: var(--primary);
+    font-family: "Cormorant Garamond", serif;
+    font-size: clamp(2.2rem, 4vw, 3rem);
+    font-weight: 600;
+    line-height: 1;
+}
+
+.terms-intro p {
+    max-width: 820px;
+    margin: 0 0 13px;
+    color: var(--text);
+    font-family: "Manrope", sans-serif;
+    font-size: 0.86rem;
+    line-height: 1.85;
+}
+
+.terms-intro p:last-child {
+    margin-bottom: 0;
+}
+
+/* =========================================================
+   TERMS BLOCKS
+   ========================================================= */
+
+.terms-block {
+    margin-bottom: 42px;
+    padding-bottom: 42px;
+    border-bottom: 1px solid
+        color-mix(in srgb, var(--primary) 10%, transparent);
+}
+
+.terms-block:last-child {
+    margin-bottom: 0;
+    padding-bottom: 0;
+    border-bottom: 0;
+}
+
+/* =========================================================
+   HEADINGS
+   ========================================================= */
+
+.terms-content h3 {
+    display: flex;
+    align-items: center;
+    gap: 13px;
+    margin: 0 0 15px;
+    color: var(--primary);
+    font-family: "Cormorant Garamond", serif;
+    font-size: clamp(1.75rem, 3vw, 2.25rem);
+    font-weight: 600;
+    line-height: 1.1;
+    letter-spacing: -0.02em;
+}
+
+.terms-content h3::before {
+    content: "";
+    width: 8px;
+    height: 8px;
+    flex: 0 0 8px;
+    border-radius: 50%;
+    background: var(--secondary);
+    box-shadow: 0 0 0 5px
+        color-mix(in srgb, var(--secondary) 12%, transparent);
+}
+
+/* =========================================================
+   TEXT
+   ========================================================= */
+
+.terms-content p {
+    max-width: 820px;
+    margin: 0 0 15px;
+    color: var(--text);
+    font-family: "Manrope", sans-serif;
+    font-size: 0.85rem;
+    font-weight: 500;
+    line-height: 1.9;
+}
+
+.terms-content p:last-child {
+    margin-bottom: 0;
+}
+
+/* =========================================================
+   LINKS
+   ========================================================= */
+
+.terms-content a {
+    color: var(--secondary);
+    font-weight: 700;
+    text-decoration: none;
+    transition: color 0.25s ease;
+}
+
+.terms-content a:hover {
+    color: var(--primary);
+}
+
+/* =========================================================
+   DARK MODE
+   ========================================================= */
+
+html[data-theme="dark"] .terms-hero {
+    background: #000;
+}
+
+html[data-theme="dark"] .terms-content {
+    background: var(--primary-dark);
+}
+
+html[data-theme="dark"] .terms-intro {
+    border-color: rgba(255, 255, 255, 0.1);
+    background: rgba(255, 255, 255, 0.025);
+}
+
+html[data-theme="dark"] .terms-intro h2,
+html[data-theme="dark"] .terms-content h3 {
+    color: var(--secondary-soft);
+}
+
+html[data-theme="dark"] .terms-content p,
+html[data-theme="dark"] .terms-intro p {
+    color: var(--secondary-soft);
+    opacity: 0.88;
+}
+
+html[data-theme="dark"] .terms-block {
+    border-color: rgba(255, 255, 255, 0.09);
+}
+
+/* =========================================================
+   RTL
+   ========================================================= */
+
+html[dir="rtl"] .terms-content {
+    text-align: right;
+}
+
+/* =========================================================
+   TABLET
+   ========================================================= */
+
+@media (max-width: 1024px) {
+
+    .terms-hero {
+        min-height: 430px;
+    }
+
+    .terms-content {
+        padding: 65px 22px 80px;
+    }
+}
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 768px) {
+
+    .terms-hero {
+        min-height: 390px;
+        padding: 55px 20px;
+    }
+
+    .terms-eyebrow {
+        margin-bottom: 17px;
+        font-size: 0.61rem;
+        letter-spacing: 0.2em;
+    }
+
+    .terms-hero h1 {
+        font-size: clamp(3.2rem, 14vw, 5rem);
+    }
+
+    .terms-hero p {
+        margin-top: 22px;
+        font-size: 0.8rem;
+    }
+
+    .terms-content {
+        padding: 55px 20px 65px;
+    }
+
+    .terms-intro {
+        margin-bottom: 42px;
+        padding: 26px 24px;
+    }
+
+    .terms-intro h2 {
+        font-size: 2.15rem;
+    }
+
+    .terms-intro p {
+        font-size: 0.81rem;
+    }
+
+    .terms-block {
+        margin-bottom: 34px;
+        padding-bottom: 34px;
+    }
+
+    .terms-content h3 {
+        font-size: 1.65rem;
+        gap: 11px;
+    }
+
+    .terms-content p {
+        font-size: 0.8rem;
+        line-height: 1.8;
+    }
+}
+
+/* =========================================================
+   SMALL MOBILE
+   ========================================================= */
+
+@media (max-width: 480px) {
+
+    .terms-hero {
+        min-height: 350px;
+        padding: 45px 18px;
+    }
+
+    .terms-hero h1 {
+        font-size: clamp(2.8rem, 16vw, 4.2rem);
+    }
+
+    .terms-content {
+        padding: 45px 18px 55px;
+    }
+
+    .terms-intro {
+        padding: 24px 20px;
+    }
+
+    .terms-intro h2 {
+        font-size: 1.95rem;
+    }
+
+    .terms-content h3 {
+        font-size: 1.45rem;
+    }
+}

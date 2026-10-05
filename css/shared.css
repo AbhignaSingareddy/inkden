@@ -1,0 +1,2271 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap');
+
+:root{
+  --primary:#4A263F;
+  --primary-dark:#4A1720;
+  --secondary:#9A762F;
+  --secondary-dark:#76591F;
+  --secondary-soft:#F1E5CF;
+  --bg:#F7F2EA;
+  --surface:#FFFDF8;
+  --surface-2:#EFE8DE;
+  --text:#4A263F;
+  --muted:#756B63;
+  --border:#D9CCBC;
+  --white:#fff;
+  --shadow:0 18px 55px rgba(61,40,47,.13);
+  --shadow-lg:0 28px 80px rgba(61,40,47,.18);
+  --radius:14px;
+  --container:1180px;
+  --ease:260ms cubic-bezier(.2,.75,.25,1);
+}
+html[data-theme="dark"]{
+  --bg:#171119;
+  --surface:#241A22;
+  --surface-2:#30232C;
+  --text:#FFF8F2;
+  --muted:#D1C2BC;
+  --border:#51404B;
+  --shadow:0 18px 60px rgba(0,0,0,.35);
+  --shadow-lg:0 30px 90px rgba(0,0,0,.45);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{min-height:100vh;background:var(--bg);color:var(--text);font-family:"Manrope",sans-serif;line-height:1.7;overflow-x:hidden;transition:background var(--ease),color var(--ease)}
+body.menu-open{overflow:hidden}
+a{color:inherit;text-decoration:none}
+button,input,select,textarea{font:inherit}
+button{cursor:pointer}
+img{display:block;width:100%;max-width:100%;object-fit:cover}
+:focus-visible{outline:3px solid var(--secondary);outline-offset:3px}
+.container{width:min(var(--container),calc(100% - 48px));margin-inline:auto}
+
+/* HEADER */
+.site-header{position:sticky;top:0;z-index:100;background:color-mix(in srgb,var(--bg) 94%,transparent);backdrop-filter:blur(16px);border-bottom:1px solid color-mix(in srgb,var(--border) 72%,transparent)}
+.header-inner{min-height:78px;display:grid;grid-template-columns:1fr auto 1fr;align-items:center;gap:24px}
+.brand-logo{display:inline-flex;align-items:center;gap:12px;justify-self:start}
+.brand-logo img{width:44px;height:44px;object-fit:contain;filter:drop-shadow(0 8px 15px rgba(74,38,63,.15))}
+.brand-name{font-family:"Cormorant Garamond",serif;font-size:1.62rem;font-weight:700;line-height:1;color:var(--text);letter-spacing:0}
+.brand-name .brand-den{color:var(--secondary)}
+.nav-menu{display:flex;align-items:center;justify-content:center;gap:6px;white-space:nowrap}
+.nav-menu a,.nav-trigger{position:relative;padding:9px 12px;border:0;background:none;color:var(--text);font-size:.88rem;font-weight:700;transition:color var(--ease)}
+.nav-menu a::after,.nav-trigger::after{content:"";position:absolute;left:12px;right:12px;bottom:2px;height:2px;background:var(--secondary);transform:scaleX(0);transform-origin:center;transition:transform var(--ease)}
+.nav-menu a:hover,.nav-trigger:hover,.nav-menu a.active{color:var(--secondary)}
+.nav-menu a:hover::after,.nav-menu a.active::after{transform:scaleX(1)}
+.nav-item{position:relative}
+.nav-trigger{display:inline-flex;align-items:center;gap:5px}
+.nav-trigger svg{width:15px;height:15px}
+.dropdown{position:absolute;top:calc(100% + 9px);left:0;min-width:175px;padding:8px;background:var(--surface);border:1px solid var(--border);border-radius:12px;box-shadow:var(--shadow);opacity:0;visibility:hidden;transform:translateY(8px);transition:var(--ease)}
+.nav-item:hover .dropdown{opacity:1;visibility:visible;transform:translateY(0)}
+.dropdown a{display:block;padding:9px 11px;border-radius:8px}
+.dropdown a::after{display:none}
+.dropdown a:hover{background:var(--surface-2)}
+.nav-actions{display:flex;align-items:center;justify-content:flex-end;gap:8px}
+.icon-btn{width:38px;height:38px;display:grid;place-items:center;border:1px solid var(--border);border-radius:10px;background:var(--surface);color:var(--text);transition:var(--ease)}
+.icon-btn:hover{border-color:var(--secondary);color:var(--secondary);transform:translateY(-2px) rotate(-2deg)}
+.icon-btn svg{width:18px;height:18px}
+.header-cta{min-width:auto!important;height:42px!important;padding:0 17px!important;font-size:.78rem!important}
+.menu-toggle{display:none}
+
+/* COMMON */
+.section{padding:92px 0;position:relative}
+.section-tight{padding:68px 0}
+.section-header{max-width:720px;margin-bottom:42px}
+.section-header.center{text-align:center;margin-inline:auto}
+.eyebrow{display:inline-flex;align-items:center;gap:9px;margin-bottom:13px;color:var(--secondary);font-size:.7rem;font-weight:800;letter-spacing:.2em;text-transform:uppercase}
+.eyebrow::before{content:"";width:25px;height:1px;background:currentColor}
+h1,h2,h3,h4{font-family:"Cormorant Garamond",serif;font-weight:600;line-height:1.03;color:var(--text)}
+h1{font-size:clamp(3.2rem,7vw,6.6rem);letter-spacing:-.045em}
+h2{font-size:clamp(2.35rem,4.4vw,4.15rem);letter-spacing:-.035em}
+h3{font-size:1.6rem}
+p{color:var(--muted)}
+.lead{font-size:1.06rem;line-height:1.85;max-width:650px}
+.btn-row{display:flex;flex-wrap:wrap;gap:10px;align-items:center}
+.btn{min-width:138px;height:44px;display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:0 18px;border:1px solid transparent;border-radius:10px;font-size:.78rem;font-weight:800;letter-spacing:.02em;transition:var(--ease)}
+.btn svg{width:16px;height:16px}
+.btn-primary{background:var(--primary);color:#fff;border-color:var(--primary)}
+.btn-primary:hover{background:var(--primary-dark);border-color:var(--primary-dark);transform:translateY(-3px);box-shadow:0 12px 24px rgba(74,38,63,.18)}
+.btn-secondary{background:var(--secondary);color:#fff;border-color:var(--secondary)}
+.btn-secondary:hover{background:var(--secondary-dark);border-color:var(--secondary-dark);transform:translateY(-3px);box-shadow:0 12px 24px rgba(154,118,47,.18)}
+.btn-outline{background:transparent;color:var(--text);border-color:var(--border)}
+.btn-outline:hover{border-color:var(--secondary);color:var(--secondary);transform:translateY(-3px)}
+
+.split{display:grid;grid-template-columns:.9fr 1.1fr;gap:70px;align-items:center}
+.split.reverse{grid-template-columns:1.1fr .9fr}
+.image-card{position:relative;overflow:hidden;border-radius:20px;box-shadow:var(--shadow);background:var(--surface)}
+.image-card img{aspect-ratio:1.12;transition:transform 700ms cubic-bezier(.2,.75,.25,1)}
+.image-card:hover img{transform:scale(1.055)}
+.image-card::after{content:"";position:absolute;inset:14px;border:1px solid rgba(241,229,207,.35);border-radius:14px;pointer-events:none}
+.feature-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.feature-card{position:relative;min-height:250px;padding:25px;background:var(--surface);border:1px solid var(--border);border-radius:16px;overflow:hidden;transition:var(--ease)}
+.feature-card::before{content:"";position:absolute;inset:auto -20px -50px auto;width:130px;height:130px;background:radial-gradient(circle,rgba(154,118,47,.18),transparent 65%);transition:transform var(--ease)}
+.feature-card:hover{transform:translateY(-9px);border-color:var(--secondary);box-shadow:var(--shadow)}
+.feature-card:hover::before{transform:scale(1.35)}
+.feature-icon{width:44px;height:44px;display:grid;place-items:center;margin-bottom:25px;border-radius:12px;background:color-mix(in srgb,var(--secondary) 13%,transparent);color:var(--secondary)}
+.feature-icon svg{width:21px;height:21px}
+.feature-card h3{margin-bottom:9px}
+.stat-strip{display:grid;grid-template-columns:repeat(4,1fr);border-block:1px solid var(--border)}
+.stat{padding:27px 20px;text-align:center;border-inline-end:1px solid var(--border)}
+.stat:last-child{border-inline-end:0}
+.stat strong{display:block;font-family:"Cormorant Garamond",serif;font-size:2.4rem;color:var(--secondary);line-height:1}
+.stat span{font-size:.75rem;color:var(--muted)}
+.quote-panel{padding:48px;border-radius:22px;background:linear-gradient(135deg,var(--primary),var(--primary-dark));color:#fff;box-shadow:var(--shadow-lg);position:relative;overflow:hidden}
+.quote-panel::after{content:"“";position:absolute;right:25px;top:-30px;font-family:Georgia,serif;font-size:12rem;line-height:1;color:rgba(241,229,207,.1)}
+.quote-panel p{color:#F1E5CF;font-family:"Cormorant Garamond",serif;font-size:2rem;line-height:1.15;max-width:800px}
+.quote-panel span{display:block;margin-top:18px;color:#E8D7C8;font-size:.75rem;letter-spacing:.12em;text-transform:uppercase}
+.cta-panel{display:grid;grid-template-columns:1fr auto;align-items:center;gap:30px;padding:40px;border-radius:18px;background:var(--surface-2);border:1px solid var(--border)}
+.cta-panel h2{font-size:2.6rem}
+
+/* FOOTER */
+.site-footer{margin-top:28px;padding:64px 0 20px;background:var(--primary-dark);color:#F1E5CF;border-top:1px solid var(--secondary)}
+.footer-grid{display:grid;grid-template-columns:1.25fr 1fr 1fr 1fr;gap:42px}
+.footer-brand .brand-logo{margin-bottom:19px}.footer-brand .brand-name{color:#F1E5CF}.footer-brand .brand-den{color:var(--secondary)}
+.footer-brand p{max-width:350px;color:#D9C9C0;font-size:.86rem;line-height:1.75;margin-bottom:20px}
+.footer-icons{display:flex;gap:9px;flex-wrap:wrap}.footer-icons a{width:36px;height:36px;display:grid;place-items:center;border:1px solid rgba(241,229,207,.35);border-radius:10px;color:#F1E5CF;transition:var(--ease)}.footer-icons a:hover{color:#fff;background:var(--secondary);border-color:var(--secondary);transform:translateY(-3px) rotate(-2deg)}.footer-icons svg{width:16px}
+.footer-column h3{font-family:"Manrope",sans-serif;font-size:.72rem;font-weight:800;text-transform:uppercase;letter-spacing:.17em;color:#F1E5CF;margin-bottom:18px}.footer-column h3::after{content:"";display:block;width:30px;height:2px;background:var(--secondary);margin-top:8px}
+.footer-links,.footer-contact{display:grid;gap:11px}.footer-links a,.footer-contact a,.footer-contact span{display:flex;align-items:flex-start;gap:9px;color:#D9C9C0;font-size:.82rem;transition:var(--ease)}.footer-links a:hover,.footer-contact a:hover{color:#fff;transform:translateX(4px)}.footer-links svg,.footer-contact svg{width:16px;height:16px;flex:0 0 16px;color:var(--secondary);margin-top:3px}
+.footer-bottom{display:flex;align-items:center;justify-content:space-between;gap:15px;margin-top:38px;padding-top:17px;border-top:1px solid rgba(241,229,207,.16);font-size:.72rem;color:#BFAFA7}.footer-top{width:36px;height:36px;display:grid;place-items:center;border:1px solid var(--secondary);border-radius:10px;color:var(--secondary);transition:var(--ease)}.footer-top:hover{background:var(--secondary);color:#fff;transform:translateY(-3px)}
+
+/* REVEALS / MOTION */
+.reveal{opacity:0;transform:translateY(28px);transition:opacity 700ms var(--ease),transform 700ms var(--ease)}
+.reveal.is-visible{opacity:1;transform:none}
+.reveal-left{opacity:0;transform:translateX(-35px);transition:opacity 800ms var(--ease),transform 800ms var(--ease)}
+.reveal-left.is-visible{opacity:1;transform:none}
+.reveal-right{opacity:0;transform:translateX(35px);transition:opacity 800ms var(--ease),transform 800ms var(--ease)}
+.reveal-right.is-visible{opacity:1;transform:none}
+.float{animation:float 5s ease-in-out infinite}
+@keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-9px)}}
+@keyframes heroIn{from{opacity:0;transform:translateY(25px)}to{opacity:1;transform:none}}
+.hero-copy>*{animation:heroIn .75s var(--ease) both}.hero-copy .eyebrow{animation-delay:.08s}.hero-copy h1{animation-delay:.16s}.hero-copy p{animation-delay:.24s}.hero-copy .btn-row{animation-delay:.32s}
+
+/* RTL */
+[dir="rtl"] .brand-logo{justify-self:end}.header-inner{direction:ltr}.header-inner>*{direction:rtl}.nav-menu{direction:rtl}.nav-menu a::after,.nav-trigger::after{left:12px;right:12px}.footer-links a:hover,.footer-contact a:hover{transform:translateX(-4px)}
+
+/* RESPONSIVE */
+@media(max-width:1050px){.header-inner{grid-template-columns:auto 1fr auto}.nav-menu{gap:0}.nav-menu a,.nav-trigger{padding-inline:8px;font-size:.8rem}.hero-grid{gap:38px}.hero-media{min-height:520px}.footer-grid{grid-template-columns:1.3fr 1fr 1fr}}
+@media(max-width:850px){.header-inner{grid-template-columns:auto auto}.nav-menu{position:fixed;inset:78px 0 auto 0;display:none;flex-direction:column;align-items:stretch;padding:18px 24px 25px;background:var(--surface);border-bottom:1px solid var(--border);box-shadow:var(--shadow);max-height:calc(100vh - 78px);overflow:auto}.nav-menu.open{display:flex}.nav-menu a,.nav-trigger{width:100%;justify-content:space-between;padding:13px 6px;text-align:start}.dropdown{position:static;display:none;opacity:1;visibility:visible;transform:none;box-shadow:none;border:0;background:transparent;padding:0}.nav-item.open .dropdown{display:block}.nav-actions{justify-self:end}.menu-toggle{display:grid}.header-cta{display:none}.hero{min-height:auto;padding:85px 0}.hero-grid,.split,.split.reverse{grid-template-columns:1fr}.hero-media{min-height:520px}.feature-grid,.material-cards{grid-template-columns:repeat(2,1fr)}.stat-strip{grid-template-columns:repeat(2,1fr)}.stat:nth-child(2){border-inline-end:0}.stat:nth-child(-n+2){border-bottom:1px solid var(--border)}.editorial-grid{grid-template-columns:1fr}.portfolio-mosaic{grid-template-columns:1fr 1fr;grid-template-rows:300px 220px}.portfolio-tile:first-child{grid-row:auto;grid-column:1/-1}.project-row{grid-template-columns:1fr}.process-gallery{grid-template-columns:1fr 1fr}.footer-grid{grid-template-columns:1fr 1fr}.footer-brand{grid-column:1/-1}.enquiry-shell{grid-template-columns:1fr}.enquiry-intro{padding:38px}.enquiry-form-wrap{padding:32px}}
+@media(max-width:600px){.container{width:min(var(--container),calc(100% - 32px))}.header-inner{min-height:70px}.brand-logo img{width:39px;height:39px}.brand-name{font-size:1.45rem}.nav-menu{inset:70px 0 auto 0}.section{padding:70px 0}.section-tight{padding:52px 0}.hero{padding:70px 0}.hero-media{min-height:400px}.hero-badge{left:10px;bottom:18px}.feature-grid,.material-cards,.process-gallery{grid-template-columns:1fr}.stat-strip{grid-template-columns:1fr 1fr}.stat{padding:22px 10px}.portfolio-mosaic{grid-template-columns:1fr;grid-template-rows:repeat(3,230px)}.portfolio-tile:first-child{grid-column:auto}.numbered-item{grid-template-columns:45px 1fr}.numbered-item svg{display:none}.cta-panel{grid-template-columns:1fr;padding:28px}.premium-hero{min-height:78vh;padding:65px 0}.premium-copy h1{font-size:clamp(3.2rem,15vw,5.5rem)}.form-grid{grid-template-columns:1fr}.form-field.full{grid-column:auto}.footer-grid{grid-template-columns:1fr}.footer-brand{grid-column:auto}.footer-bottom{flex-direction:column;align-items:flex-start}.enquiry-page{padding:20px 14px}.enquiry-intro h1{font-size:3rem}}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{scroll-behavior:auto!important;animation-duration:.001ms!important;transition-duration:.001ms!important}}
+/* Final alignment refinements */
+html[dir="rtl"] .header-inner{direction:rtl}
+main > section:last-child{padding-bottom:28px}
+.site-footer{margin-top:12px}
+
+/* =========================================================
+   FINAL BRAND / NAV / FOOTER POLISH
+   ========================================================= */
+
+/* Keep the original InkDen palette, but use it consistently. */
+.site-header{
+  background:color-mix(in srgb,var(--bg) 96%,transparent);
+}
+
+.header-inner{
+  grid-template-columns:auto 1fr auto;
+  gap:30px;
+}
+
+.site-header .brand-logo{
+  justify-self:start;
+}
+
+.site-header .nav-menu{
+  justify-self:center;
+}
+
+.nav-menu .nav-trigger.active,
+.nav-menu > a.active{
+  color:var(--secondary);
+}
+
+.nav-menu .nav-trigger.active::after,
+.nav-menu > a.active::after{
+  transform:scaleX(1);
+  transform-origin:center;
+}
+
+/* Font Awesome icon sizing */
+.icon-btn i,
+.nav-trigger i,
+.btn i,
+.footer-icons i,
+.footer-links i,
+.footer-contact i,
+.footer-top i,
+.feature-icon i,
+.meta i{
+  line-height:1;
+}
+
+/* Light premium footer using the same primary + secondary palette */
+.site-footer{
+  margin-top:10px;
+  padding:56px 0 18px;
+  background:var(--secondary-soft);
+  color:var(--primary);
+  border-top:2px solid var(--secondary);
+}
+
+html[data-theme="dark"] .site-footer{
+  background:var(--primary-dark);
+  color:var(--secondary-soft);
+  border-top-color:var(--secondary);
+}
+
+.footer-grid{
+  gap:44px;
+}
+
+.footer-brand .brand-logo{
+  margin-bottom:18px;
+}
+
+.footer-brand .brand-name,
+.footer-brand .brand-name > span:first-child{
+  color:var(--primary);
+}
+
+.footer-brand .brand-den{
+  color:var(--secondary);
+}
+
+html[data-theme="dark"] .footer-brand .brand-name,
+html[data-theme="dark"] .footer-brand .brand-name > span:first-child{
+  color:var(--secondary-soft);
+}
+
+.footer-brand p{
+  color:var(--primary);
+  opacity:.82;
+}
+
+html[data-theme="dark"] .footer-brand p{
+  color:var(--secondary-soft);
+  opacity:.82;
+}
+
+.footer-icons a{
+  border-color:color-mix(in srgb,var(--secondary) 55%,transparent);
+  color:var(--primary);
+  background:rgba(255,255,255,.22);
+}
+
+.footer-icons a:hover{
+  color:#fff;
+  background:var(--secondary);
+  border-color:var(--secondary);
+}
+
+html[data-theme="dark"] .footer-icons a{
+  color:var(--secondary-soft);
+  background:rgba(255,255,255,.04);
+}
+
+.footer-column h3{
+  color:var(--primary);
+}
+
+html[data-theme="dark"] .footer-column h3{
+  color:var(--secondary-soft);
+}
+
+.footer-column h3::after{
+  background:var(--secondary);
+}
+
+.footer-links a,
+.footer-contact a,
+.footer-contact span{
+  color:var(--primary);
+}
+
+.footer-links a:hover,
+.footer-contact a:hover{
+  color:var(--secondary-dark);
+}
+
+.footer-links i,
+.footer-contact i{
+  color:var(--secondary);
+  width:16px;
+  min-width:16px;
+  text-align:center;
+  margin-top:3px;
+}
+
+html[data-theme="dark"] .footer-links a,
+html[data-theme="dark"] .footer-contact a,
+html[data-theme="dark"] .footer-contact span{
+  color:var(--secondary-soft);
+}
+
+html[data-theme="dark"] .footer-links a:hover,
+html[data-theme="dark"] .footer-contact a:hover{
+  color:var(--secondary);
+}
+
+.footer-bottom{
+  border-top-color:color-mix(in srgb,var(--primary) 18%,transparent);
+  color:var(--primary);
+}
+
+html[data-theme="dark"] .footer-bottom{
+  border-top-color:rgba(241,229,207,.16);
+  color:var(--secondary-soft);
+}
+
+.footer-top{
+  color:var(--primary);
+  border-color:var(--secondary);
+}
+
+.footer-top:hover{
+  color:#fff;
+  background:var(--secondary);
+}
+
+/* Better mobile footer contrast */
+@media(max-width:850px){
+  .header-inner{
+    grid-template-columns:auto auto;
+  }
+  .site-header .nav-menu{
+    justify-self:stretch;
+  }
+}
+
+
+/* =========================================================
+   INKDEN FINAL HEADER + FOOTER CORRECTION
+   ========================================================= */
+.header-inner{
+  min-height:78px;
+  display:grid;
+  grid-template-columns:auto minmax(0,1fr) auto;
+  align-items:center;
+  gap:30px;
+  direction:ltr;
+}
+.site-header .brand-logo{
+  justify-self:start;
+  direction:ltr;
+  flex-direction:row;
+  gap:12px;
+}
+.site-header .brand-logo img{width:44px;height:44px;flex:0 0 44px}
+.site-header .brand-name{white-space:nowrap}
+.site-header .brand-ink{color:var(--primary)}
+.site-header .brand-den{color:var(--secondary)}
+.nav-menu{
+  justify-self:center;
+  width:max-content;
+  max-width:100%;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  gap:5px;
+}
+.nav-actions{justify-self:end;display:flex;align-items:center;gap:8px;direction:ltr}
+.nav-actions .icon-btn{flex:0 0 38px}
+.header-cta{height:40px!important;min-height:40px!important;padding:0 16px!important;border-radius:9px!important;font-size:.78rem!important}
+.icon-btn i,.nav-trigger i,.btn i,.footer-icons i,.footer-links i,.footer-contact i,.footer-top i{
+  display:inline-block;
+  line-height:1;
+}
+
+/* Header icons are always Font Awesome after main.js conversion. */
+.icon-btn i{font-size:15px}
+.nav-trigger i{font-size:11px}
+
+/* Light footer: primary text + secondary accents, with strong contrast. */
+.site-footer{
+  margin-top:10px;
+  padding:56px 0 18px;
+  background:var(--secondary-soft);
+  color:var(--primary);
+  border-top:2px solid var(--secondary);
+}
+.footer-grid{grid-template-columns:1.3fr 1fr 1fr 1.05fr;gap:44px}
+.footer-brand .brand-logo{direction:ltr;flex-direction:row;gap:12px;margin-bottom:18px}
+.footer-brand .brand-logo img{width:44px;height:44px;flex:0 0 44px}
+.footer-brand .brand-name{color:var(--primary)}
+.footer-brand .brand-ink{color:var(--primary)}
+.footer-brand .brand-den{color:var(--secondary)}
+.footer-brand p{color:var(--primary);opacity:.82;font-size:.86rem;line-height:1.75}
+.footer-icons{display:flex;gap:9px;flex-wrap:wrap;margin-top:20px}
+.footer-icons a{width:38px;height:38px;display:grid;place-items:center;border:1px solid color-mix(in srgb,var(--secondary) 60%,transparent);border-radius:50%;color:var(--primary);background:rgba(255,255,255,.28);transition:var(--ease)}
+.footer-icons a:hover{color:#fff;background:var(--secondary);border-color:var(--secondary);transform:translateY(-4px) rotate(-2deg)}
+.footer-icons i{font-size:15px}
+.footer-column h3{color:var(--primary);font-size:.72rem;letter-spacing:.17em;margin-bottom:18px}
+.footer-column h3::after{background:var(--secondary)}
+.footer-links,.footer-contact{display:grid;gap:12px}
+.footer-links a,.footer-contact a,.footer-contact>span{display:flex;align-items:flex-start;gap:10px;color:var(--primary);font-size:.82rem;line-height:1.5;transition:var(--ease)}
+.footer-links a:hover,.footer-contact a:hover{color:var(--secondary-dark);transform:translateX(4px)}
+.footer-links i,.footer-contact i{width:17px;min-width:17px;text-align:center;color:var(--secondary);font-size:14px;margin-top:3px}
+.footer-bottom{margin-top:38px;padding-top:17px;border-top:1px solid color-mix(in srgb,var(--primary) 18%,transparent);color:var(--primary);font-size:.72rem}
+.footer-top{color:var(--primary);border-color:var(--secondary)}
+.footer-top:hover{color:#fff;background:var(--secondary)}
+
+/* Dark mode preserves the same brand palette. */
+html[data-theme="dark"] .site-footer{background:var(--primary-dark);color:var(--secondary-soft);border-top-color:var(--secondary)}
+html[data-theme="dark"] .footer-brand .brand-name,
+html[data-theme="dark"] .footer-brand .brand-ink,
+html[data-theme="dark"] .footer-column h3{color:var(--secondary-soft)}
+html[data-theme="dark"] .footer-brand .brand-den{color:var(--secondary)}
+html[data-theme="dark"] .footer-brand p,
+html[data-theme="dark"] .footer-links a,
+html[data-theme="dark"] .footer-contact a,
+html[data-theme="dark"] .footer-contact>span,
+html[data-theme="dark"] .footer-bottom{color:var(--secondary-soft)}
+html[data-theme="dark"] .footer-links a:hover,
+html[data-theme="dark"] .footer-contact a:hover{color:var(--secondary)}
+
+/* RTL mirrors the overall layout but keeps the logo image before its name. */
+html[dir="rtl"] .header-inner{direction:rtl}
+html[dir="rtl"] .site-header .brand-logo{justify-self:end;direction:ltr}
+html[dir="rtl"] .nav-menu{direction:rtl}
+html[dir="rtl"] .nav-actions{direction:ltr;justify-self:start}
+html[dir="rtl"] .footer-brand .brand-logo{direction:ltr}
+html[dir="rtl"] .footer-links a:hover,html[dir="rtl"] .footer-contact a:hover{transform:translateX(-4px)}
+
+/* Make Font Awesome visible on every footer/icon element. */
+.footer-icons i,.footer-links i,.footer-contact i,.footer-top i,.icon-btn i,.btn i,.nav-trigger i{font-family:"Font Awesome 6 Free","Font Awesome 6 Brands";font-style:normal}
+
+@media(max-width:1050px){
+  .header-inner{gap:18px}
+  .nav-menu a,.nav-trigger{padding-inline:8px;font-size:.78rem}
+  .header-cta{padding-inline:13px!important}
+  .footer-grid{grid-template-columns:1.3fr 1fr 1fr}
+  .footer-brand{grid-column:1/-1}
+}
+@media(max-width:850px){
+  .header-inner{grid-template-columns:auto auto;min-height:70px}
+  .site-header .nav-menu{position:fixed;inset:70px 0 auto 0;display:none;width:auto;flex-direction:column;align-items:stretch;justify-self:stretch;padding:18px 24px 25px;background:var(--surface);border-bottom:1px solid var(--border);box-shadow:var(--shadow);max-height:calc(100vh - 70px);overflow:auto}
+  .site-header .nav-menu.open{display:flex}
+  .site-header .nav-menu a,.site-header .nav-trigger{width:100%;justify-content:space-between;padding:13px 6px;text-align:start}
+  .nav-actions{justify-self:end}
+  .header-cta{display:none}
+  .menu-toggle{display:grid}
+}
+@media(max-width:600px){
+  .site-header .brand-logo img,.footer-brand .brand-logo img{width:39px;height:39px;flex-basis:39px}
+  .brand-name{font-size:1.45rem}
+  .footer-grid{grid-template-columns:1fr}
+  .footer-brand{grid-column:auto}
+}
+@media(max-width:1050px){.hero-grid{gap:38px}.hero-media{min-height:520px}}
+@media(max-width:850px){.hero-grid,.split,.split.reverse{grid-template-columns:1fr}.feature-grid{grid-template-columns:repeat(2,1fr)}.stat-strip{grid-template-columns:repeat(2,1fr)}.stat:nth-child(2){border-inline-end:0}.stat:nth-child(-n+2){border-bottom:1px solid var(--border)}}
+@media(max-width:600px){.feature-grid{grid-template-columns:1fr}.stat-strip{grid-template-columns:1fr 1fr}.stat{padding:22px 10px}.cta-panel{grid-template-columns:1fr;padding:28px}}
+
+
+/* =========================================================
+   FINAL BUTTON SYSTEM
+   ========================================================= */
+.btn,
+.btn-primary,
+.btn-secondary,
+.btn-outline{
+  background:var(--primary);
+  color:#fff !important;
+  border:1px solid var(--primary);
+}
+.btn:hover,
+.btn-primary:hover,
+.btn-secondary:hover,
+.btn-outline:hover{
+  background:var(--secondary);
+  border-color:var(--secondary);
+  color:#fff !important;
+  transform:translateY(-3px);
+  box-shadow:0 12px 24px rgba(154,118,47,.18);
+}
+/* Dark mode - InkDen header logo text */
+html[data-theme="dark"] .site-header .brand-name,
+html[data-theme="dark"] .site-header .brand-ink{
+  color:#FFF8F2 !important;
+}
+
+html[data-theme="dark"] .site-header .brand-den{
+  color:var(--secondary) !important;
+}
+/* Dark mode footer background */
+html[data-theme="dark"] .site-footer{
+  background:#000 !important;
+}
+
+/* Keep the same navigation sequence in both LTR and RTL. */
+.nav-menu{direction:ltr}
+html[dir="rtl"] .nav-menu{direction:rtl}
+
+
+
+/* Footer legal navigation */
+.footer-legal{display:flex;align-items:center;justify-content:flex-end;gap:22px}
+.footer-legal a{color:var(--primary);font-size:.72rem;transition:var(--ease)}
+.footer-legal a:hover{color:var(--secondary)}
+html[data-theme="dark"] .footer-legal a{color:var(--secondary-soft)}
+html[data-theme="dark"] .footer-legal a:hover{color:var(--secondary)}
+@media(max-width:600px){.footer-legal{justify-content:flex-start;flex-wrap:wrap;gap:14px}}
+/* =========================================================
+   REMOVE INNER WHITE LINES FROM ALL IMAGES
+   ========================================================= */
+
+.image-card::after,
+.editorial-main-image::after,
+.editorial-detail-image::after,
+.palette-image::after,
+.hero-image::after,
+.premium-hero-media::after,
+.portfolio-tile::after,
+.process-gallery .image-card::after,
+.material-card-image::after{
+  display:none !important;
+  border:none !important;
+  box-shadow:none !important;
+}
+
+
+/* Make image containers clean */
+.image-card,
+.editorial-main-image,
+.editorial-detail-image,
+.palette-image,
+.hero-image,
+.premium-hero-media,
+.portfolio-tile,
+.process-gallery .image-card,
+.material-card-image{
+  outline:none !important;
+}
+
+
+/* Images themselves should have no artificial border */
+.image-card img,
+.editorial-main-image img,
+.editorial-detail-image img,
+.palette-image img,
+.hero-image img,
+.premium-hero-media img,
+.portfolio-tile img,
+.process-gallery .image-card img,
+.material-card-image img{
+  border:none !important;
+  outline:none !important;
+}
+/* =========================================================
+   GLOBAL INKDEN BRAND — NO SPACE
+========================================================= */
+
+.brand-name {
+  display: inline-flex !important;
+  align-items: center;
+  gap: 0 !important;
+  column-gap: 0 !important;
+  word-spacing: 0 !important;
+  letter-spacing: 0 !important;
+  white-space: nowrap;
+}
+
+.brand-name .brand-ink,
+.brand-name .brand-den {
+  display: inline;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+.brand-logo {
+  gap: 12px;
+}
+
+
+/* =========================================================
+   GLOBAL RESPONSIVE BREAKPOINTS
+   1024 / 768 / 360 ONLY
+========================================================= */
+
+@media (max-width: 1024px) {
+
+  .container {
+    width: min(
+      var(--container),
+      calc(100% - 48px)
+    );
+  }
+
+  .header-inner {
+    gap: 18px;
+  }
+
+  .nav-menu a,
+  .nav-trigger {
+    font-size: 0.78rem;
+  }
+
+  .header-cta {
+    padding-inline: 13px !important;
+  }
+
+}
+
+
+@media (max-width: 768px) {
+
+  .container {
+    width: min(
+      var(--container),
+      calc(100% - 36px)
+    );
+  }
+
+  .header-inner {
+    grid-template-columns: auto auto;
+    min-height: 70px;
+  }
+
+  .site-header .nav-menu {
+    position: fixed;
+    inset: 70px 0 auto 0;
+
+    display: none;
+
+    width: auto;
+
+    flex-direction: column;
+    align-items: stretch;
+
+    padding: 18px 24px 25px;
+
+    background: var(--surface);
+
+    border-bottom: 1px solid var(--border);
+
+    box-shadow: var(--shadow);
+
+    max-height: calc(100vh - 70px);
+    overflow: auto;
+  }
+
+  .site-header .nav-menu.open {
+    display: flex;
+  }
+
+  .site-header .nav-menu a,
+  .site-header .nav-trigger {
+    width: 100%;
+    justify-content: space-between;
+    padding: 13px 6px;
+    text-align: start;
+  }
+
+  .nav-actions {
+    justify-self: end;
+  }
+
+  .header-cta {
+    display: none;
+  }
+
+  .menu-toggle {
+    display: grid;
+  }
+
+  .section {
+    padding: 70px 0;
+  }
+
+  .section-tight {
+    padding: 52px 0;
+  }
+
+  /* RTL mobile header */
+
+  html[dir="rtl"] .header-inner {
+    direction: rtl;
+  }
+
+  html[dir="rtl"] .site-header .brand-logo {
+    justify-self: end;
+    direction: ltr;
+  }
+
+  html[dir="rtl"] .nav-actions {
+    justify-self: start;
+    direction: ltr;
+  }
+
+  html[dir="rtl"] .site-header .nav-menu {
+    direction: rtl;
+  }
+
+}
+
+
+@media (max-width: 360px) {
+
+  .container {
+    width: min(
+      var(--container),
+      calc(100% - 28px)
+    );
+  }
+
+  .site-header .brand-logo img,
+  .footer-brand .brand-logo img {
+    width: 39px;
+    height: 39px;
+    flex-basis: 39px;
+  }
+
+  .brand-name {
+    font-size: 1.45rem;
+  }
+
+  .section {
+    padding: 58px 0;
+  }
+
+  .section-tight {
+    padding: 44px 0;
+  }
+
+}
+/* =========================================================
+   FINAL HEADER ALIGNMENT
+   ========================================================= */
+
+.header-inner {
+    min-height: 78px;
+    display: grid;
+    grid-template-columns: auto minmax(0, 1fr) auto;
+    align-items: center;
+    gap: 30px;
+    direction: ltr;
+}
+
+
+/* =========================================================
+   BRAND
+   ========================================================= */
+
+.site-header .brand-logo {
+    justify-self: start;
+    direction: ltr;
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+}
+
+
+/* =========================================================
+   NAVIGATION
+   ========================================================= */
+
+.site-header .nav-menu {
+    justify-self: center;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: max-content;
+    max-width: 100%;
+
+    gap: 5px;
+}
+
+
+/* =========================================================
+   HEADER ACTIONS
+   LTR
+
+   Theme → RTL → Enquire
+   ========================================================= */
+
+.site-header .nav-actions {
+    justify-self: end;
+
+    display: flex;
+    align-items: center;
+
+    gap: 8px;
+
+    direction: ltr;
+    flex-direction: row;
+}
+
+
+/* Fixed icon size */
+.site-header .nav-actions .icon-btn {
+    width: 38px;
+    height: 38px;
+
+    flex: 0 0 38px;
+
+    display: grid;
+    place-items: center;
+}
+
+
+/* Enquire */
+.site-header .header-cta {
+    height: 40px !important;
+    min-height: 40px !important;
+
+    padding: 0 16px !important;
+
+    border-radius: 9px !important;
+
+    font-size: 0.78rem !important;
+
+    white-space: nowrap;
+}
+
+
+/* =========================================================
+   RTL HEADER
+
+   Left side:
+   Enquire → RTL → Theme
+
+   Center:
+   Navigation
+
+   Right:
+   Logo
+   ========================================================= */
+
+html[dir="rtl"] .header-inner {
+    direction: rtl;
+}
+
+
+/* Logo goes to right */
+html[dir="rtl"] .site-header .brand-logo {
+    justify-self: end;
+    direction: ltr;
+}
+
+
+/* Navigation remains centered */
+html[dir="rtl"] .site-header .nav-menu {
+    justify-self: center;
+    direction: rtl;
+}
+
+
+/* Controls go to left */
+html[dir="rtl"] .site-header .nav-actions {
+    justify-self: start;
+
+    direction: ltr;
+
+    /*
+       HTML order is:
+       Theme → RTL → Enquire
+
+       Reverse visually:
+       Enquire → RTL → Theme
+    */
+    flex-direction: row-reverse;
+
+    gap: 8px;
+}
+
+
+/* =========================================================
+   SMOOTH HEADER SPACING
+   ========================================================= */
+
+.site-header .nav-actions,
+.site-header .nav-actions .icon-btn,
+.site-header .header-cta {
+    box-sizing: border-box;
+}
+
+
+/* =========================================================
+   TABLET
+   ========================================================= */
+
+@media (max-width: 1050px) {
+
+    .header-inner {
+        gap: 18px;
+    }
+
+    .site-header .nav-menu a,
+    .site-header .nav-trigger {
+        padding-inline: 8px;
+        font-size: 0.78rem;
+    }
+
+    .site-header .header-cta {
+        padding-inline: 13px !important;
+    }
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 850px) {
+
+    .header-inner {
+        grid-template-columns: auto auto;
+        min-height: 70px;
+    }
+
+    .site-header .nav-menu {
+        position: fixed;
+
+        inset: 70px 0 auto 0;
+
+        display: none;
+
+        width: auto;
+
+        flex-direction: column;
+        align-items: stretch;
+
+        padding: 18px 24px 25px;
+
+        background: var(--surface);
+
+        border-bottom: 1px solid var(--border);
+
+        box-shadow: var(--shadow);
+
+        max-height: calc(100vh - 70px);
+
+        overflow: auto;
+    }
+
+    .site-header .nav-menu.open {
+        display: flex;
+    }
+
+    .site-header .nav-menu a,
+    .site-header .nav-trigger {
+        width: 100%;
+
+        justify-content: space-between;
+
+        padding: 13px 6px;
+
+        text-align: start;
+    }
+
+    .site-header .nav-actions {
+        justify-self: end;
+
+        flex-direction: row;
+    }
+
+    .site-header .header-cta {
+        display: none;
+    }
+
+    .site-header .menu-toggle {
+        display: grid;
+    }
+
+
+    /* RTL mobile */
+
+    html[dir="rtl"] .header-inner {
+        direction: rtl;
+    }
+
+    html[dir="rtl"] .site-header .brand-logo {
+        justify-self: end;
+        direction: ltr;
+    }
+
+    html[dir="rtl"] .site-header .nav-actions {
+        justify-self: start;
+
+        direction: ltr;
+
+        /*
+           Mobile keeps the natural control arrangement.
+        */
+        flex-direction: row;
+    }
+
+    html[dir="rtl"] .site-header .nav-menu {
+        direction: rtl;
+    }
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+   ========================================================= */
+
+@media (max-width: 600px) {
+
+    .site-header .brand-logo img {
+        width: 39px;
+        height: 39px;
+        flex-basis: 39px;
+    }
+
+    .site-header .brand-name {
+        font-size: 1.45rem;
+    }
+}
+/* =========================================================
+   DESKTOP - NO HAMBURGER
+   ========================================================= */
+
+@media (min-width: 851px) {
+    .site-header .menu-toggle {
+        display: none !important;
+    }
+
+    .site-header .nav-menu {
+        display: flex !important;
+    }
+}
+/* =====================================================
+   HEADER ICON SIZE FIX
+   ===================================================== */
+
+.site-header .nav-actions .icon-btn {
+    width: 38px !important;
+    height: 38px !important;
+    min-width: 38px !important;
+    min-height: 38px !important;
+    padding: 0 !important;
+
+    display: grid !important;
+    place-items: center !important;
+}
+
+.site-header .nav-actions .icon-btn i,
+.site-header .nav-actions .icon-btn svg {
+    width: 15px !important;
+    height: 15px !important;
+    min-width: 15px !important;
+    min-height: 15px !important;
+    max-width: 15px !important;
+    max-height: 15px !important;
+
+    font-size: 15px !important;
+    line-height: 1 !important;
+
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+/* RTL icon */
+.site-header .nav-actions [data-rtl-toggle] i,
+.site-header .nav-actions [data-rtl-toggle] svg {
+    width: 15px !important;
+    height: 15px !important;
+    font-size: 15px !important;
+}
+
+/* Dark mode icon */
+.site-header .nav-actions [data-theme-toggle] i,
+.site-header .nav-actions [data-theme-toggle] svg {
+    width: 15px !important;
+    height: 15px !important;
+    font-size: 15px !important;
+}
+/* =====================================================
+   HAMBURGER — RESPONSIVE ONLY
+   ===================================================== */
+
+/* Desktop: hamburger hidden */
+.site-header .menu-toggle {
+    display: none !important;
+}
+
+/* Tablet + Mobile: hamburger visible */
+@media (max-width: 768px) {
+
+    .site-header .menu-toggle {
+        display: grid !important;
+        visibility: visible !important;
+        opacity: 1 !important;
+
+        width: 38px !important;
+        height: 38px !important;
+        min-width: 38px !important;
+        min-height: 38px !important;
+
+        padding: 0 !important;
+        margin: 0 !important;
+
+        place-items: center !important;
+        pointer-events: auto !important;
+    }
+
+    .site-header .menu-toggle i,
+    .site-header .menu-toggle svg {
+        width: 15px !important;
+        height: 15px !important;
+        font-size: 15px !important;
+        line-height: 1 !important;
+    }
+}
+/* =========================================
+   HAMBURGER — RESPONSIVE ONLY
+   ========================================= */
+
+.site-header .menu-toggle {
+    display: none !important;
+}
+
+@media (max-width: 768px) {
+    .site-header .menu-toggle {
+        display: grid !important;
+        visibility: visible !important;
+        opacity: 1 !important;
+        width: 38px !important;
+        height: 38px !important;
+        min-width: 38px !important;
+        min-height: 38px !important;
+        padding: 0 !important;
+        margin: 0 !important;
+        place-items: center !important;
+    }
+
+    .site-header .menu-toggle i,
+    .site-header .menu-toggle svg {
+        width: 15px !important;
+        height: 15px !important;
+        font-size: 15px !important;
+        line-height: 1 !important;
+    }
+}/* =====================================================
+   DESKTOP — HIDE HAMBURGER COMPLETELY
+   ===================================================== */
+
+@media (min-width: 769px) {
+    .site-header .menu-toggle {
+        display: none !important;
+        visibility: hidden !important;
+        opacity: 0 !important;
+        width: 0 !important;
+        min-width: 0 !important;
+        max-width: 0 !important;
+        padding: 0 !important;
+        margin: 0 !important;
+        border: 0 !important;
+        overflow: hidden !important;
+        pointer-events: none !important;
+    }
+}
+
+
+/* =====================================================
+   MOBILE / TABLET — SHOW HAMBURGER
+   ===================================================== */
+
+@media (max-width: 768px) {
+    .site-header .menu-toggle {
+        display: grid !important;
+        visibility: visible !important;
+        opacity: 1 !important;
+
+        width: 38px !important;
+        height: 38px !important;
+        min-width: 38px !important;
+        min-height: 38px !important;
+
+        padding: 0 !important;
+        margin: 0 !important;
+
+        place-items: center !important;
+        overflow: visible !important;
+        pointer-events: auto !important;
+    }
+}
+/* =====================================================
+   HEADER — BALANCED OUTER SPACING
+   ===================================================== */
+
+@media (min-width: 769px) {
+
+    /* LTR: move controls to the right */
+    html[dir="ltr"] .site-header .nav-actions {
+        transform: translateX(35px);
+    }
+
+    /* RTL: move controls to the left */
+    html[dir="rtl"] .site-header .nav-actions {
+        transform: translateX(-35px);
+    }
+
+}
+/* =========================================
+   ADDITIONAL PAGES UNDER CONTACT
+========================================= */
+
+.footer-additional {
+  margin-top: 28px;
+}
+
+/* Additional Pages heading */
+.footer-additional h3 {
+  margin: 0 0 16px;
+  color: var(--primary);
+  font-family: inherit;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 2.5px;
+  text-transform: uppercase;
+  line-height: 1.2;
+  display: block;
+}
+
+
+
+.footer-additional .footer-links {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.footer-additional .footer-links a {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: var(--text);
+  font-size: 13px;
+  text-decoration: none;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.footer-additional .footer-links a:hover {
+  color: var(--secondary);
+  transform: translateX(4px);
+}
+
+.footer-additional .footer-links i {
+  width: 16px;
+  font-size: 12px;
+}
+
+/* =========================================================
+   INKDEN FINAL EXPERIENCE PATCH
+   - consistent spacing
+   - centered Home dropdown
+   - full-width mobile navigation
+   - RTL/LTR hamburger positioning
+   - universal hover states
+   - stronger scroll animation support
+   - consistent footer/social icons
+========================================================= */
+
+/* Consistent section rhythm across the entire website. */
+main > section,
+main > .section,
+.section,
+.section-tight {
+  margin-block: 0 !important;
+}
+
+.section { padding: 68px 0 !important; }
+.section-tight { padding: 52px 0 !important; }
+
+/* Home dropdown: narrower, centered directly below Home. */
+.nav-item { position: relative; }
+.dropdown {
+  left: 50% !important;
+  right: auto !important;
+  min-width: 158px !important;
+  width: 158px !important;
+  padding: 7px !important;
+  transform: translate(-50%, 9px) !important;
+  text-align: center;
+}
+.nav-item:hover .dropdown,
+.nav-item.open .dropdown {
+  transform: translate(-50%, 0) !important;
+}
+.dropdown a {
+  display: flex !important;
+  align-items: center;
+  justify-content: center !important;
+  text-align: center !important;
+  min-height: 38px;
+  padding: 8px 7px !important;
+}
+
+/* Mobile header spans the viewport instead of appearing as a narrow card. */
+@media (max-width: 768px) {
+  .site-header { width: 100%; }
+  .site-header .container.header-inner {
+    width: 100% !important;
+    max-width: none !important;
+    margin: 0 !important;
+    padding-inline: 14px !important;
+    min-height: 68px;
+  }
+
+  .site-header .nav-menu {
+    inset: 68px 0 auto 0 !important;
+    width: 100vw !important;
+    min-width: 100vw !important;
+    margin: 0 !important;
+    padding: 14px 18px 24px !important;
+    border-radius: 0 !important;
+  }
+
+  .dropdown {
+    position: static !important;
+    width: min(170px, 100%) !important;
+    min-width: 170px !important;
+    margin: 6px auto 2px !important;
+    transform: none !important;
+    box-shadow: none !important;
+    opacity: 0;
+    visibility: hidden;
+    max-height: 0;
+    overflow: hidden;
+    transition: opacity var(--ease), max-height var(--ease), padding var(--ease);
+  }
+
+  .nav-item.open .dropdown {
+    opacity: 1;
+    visibility: visible;
+    max-height: 150px;
+    padding: 7px !important;
+  }
+
+  .nav-item.open .dropdown a { min-height: 36px; }
+
+  html[dir="rtl"] .menu-toggle { order: -1; }
+  html[dir="ltr"] .menu-toggle { order: 10; }
+}
+
+/* Global interaction polish. */
+a,
+button,
+.btn,
+.icon-btn,
+.feature-card,
+.review-card,
+.material-card,
+.materials-faq-card,
+.mf-material-item,
+.mf-hardware-points article,
+.mf-light-mode,
+.portfolio-tile,
+.process-gallery .image-card,
+.footer-icons a {
+  -webkit-tap-highlight-color: transparent;
+}
+
+.btn,
+.icon-btn,
+.feature-card,
+.review-card,
+.material-card,
+.materials-faq-card,
+.mf-material-item,
+.mf-hardware-points article,
+.mf-light-mode,
+.portfolio-tile,
+.process-gallery .image-card,
+.footer-icons a,
+.nav-menu a,
+.nav-trigger,
+.footer-links a,
+.footer-contact a {
+  transition: transform var(--ease), color var(--ease), background var(--ease), border-color var(--ease), box-shadow var(--ease), opacity var(--ease);
+}
+
+.btn:hover,
+.icon-btn:hover,
+.feature-card:hover,
+.review-card:hover,
+.material-card:hover,
+.materials-faq-card:hover,
+.mf-hardware-points article:hover,
+.portfolio-tile:hover,
+.process-gallery .image-card:hover {
+  transform: translateY(-4px);
+}
+
+/* Never let a dark theme make branded headings disappear. */
+html[data-theme="dark"] h1,
+html[data-theme="dark"] h2,
+html[data-theme="dark"] h3,
+html[data-theme="dark"] h4 {
+  color: var(--text);
+}
+
+/* Scroll reveal fallback used by every page. */
+.ink-scroll-item {
+  transition: opacity .75s cubic-bezier(.22,1,.36,1), transform .75s cubic-bezier(.22,1,.36,1), filter .75s ease;
+}
+
+main > section.ink-scroll-item:not(.ink-scroll-visible) {
+  opacity: .001;
+}
+
+.ink-scroll-visible {
+  opacity: 1 !important;
+  filter: none !important;
+}
+
+/* Avoid animation dead-zones: once visible, content stays visible. */
+.reveal.is-visible,
+.reveal-left.is-visible,
+.reveal-right.is-visible,
+.reveal-item.is-visible,
+.reveal-card.is-visible,
+.reveal-map.is-visible,
+.reveal-faq.is-visible,
+.portfolio-reveal.is-visible,
+.portfolio-reveal-left.is-visible,
+.portfolio-reveal-right.is-visible,
+.dp-reveal.is-visible,
+.dp-reveal-left.is-visible,
+.dp-reveal-right.is-visible,
+.scroll-revealed {
+  opacity: 1 !important;
+  visibility: visible !important;
+}
+
+/* Footer is identical everywhere: four Font Awesome social icons only. */
+.site-footer {
+  margin-top: 0 !important;
+  padding: 54px 0 18px !important;
+}
+.footer-grid {
+  gap: 34px !important;
+}
+.footer-icons {
+  display: flex !important;
+  align-items: center;
+  gap: 9px !important;
+  margin-top: 18px;
+}
+.footer-icons a {
+  width: 38px !important;
+  height: 38px !important;
+  border-radius: 50% !important;
+}
+.footer-icons i { font-size: 15px; }
+
+html[data-theme="dark"] .site-footer {
+  background: #09070b !important;
+}
+
+/* Dark mode remains readable in every direction. */
+html[data-theme="dark"] .dropdown {
+  background: #241a22;
+  border-color: #51404b;
+}
+html[data-theme="dark"] .dropdown a:hover {
+  background: #30232c;
+  color: var(--secondary);
+}
+
+/* Smaller, consistent hero footprint on large screens. */
+@media (min-width: 1025px) {
+  .hero,
+  .premium-hero {
+    min-height: 640px !important;
+    height: 640px !important;
+  }
+  .hero-grid { height: 100% !important; }
+}
+
+@media (max-width: 1024px) {
+  .section { padding: 62px 0 !important; }
+  .section-tight { padding: 48px 0 !important; }
+}
+
+@media (max-width: 768px) {
+  .section { padding: 54px 0 !important; }
+  .section-tight { padding: 42px 0 !important; }
+  .site-footer { padding: 44px 0 16px !important; }
+  .footer-grid { gap: 28px !important; }
+}
+
+@media (max-width: 360px) {
+  .section { padding: 48px 0 !important; }
+  .section-tight { padding: 38px 0 !important; }
+  .site-header .container.header-inner { padding-inline: 10px !important; }
+}
+/* =========================================================
+   MOBILE FOOTER — 2 x 2 GRID
+   ========================================================= */
+
+@media (max-width: 600px) {
+
+  .site-footer {
+    width: 100% !important;
+    margin: 0 !important;
+    padding: 38px 0 16px !important;
+    box-sizing: border-box !important;
+  }
+
+  .site-footer > .container {
+    width: 100% !important;
+    max-width: none !important;
+    margin: 0 !important;
+    padding-left: 16px !important;
+    padding-right: 16px !important;
+    box-sizing: border-box !important;
+  }
+
+  /* 2 columns × 2 rows */
+  .footer-grid {
+    width: 100% !important;
+    display: grid !important;
+    grid-template-columns: 1fr 1fr !important;
+    gap: 30px 22px !important;
+    box-sizing: border-box !important;
+  }
+
+  /* Brand occupies full first row */
+  .footer-brand {
+    grid-column: 1 / -1 !important;
+    width: 100% !important;
+  }
+
+  .footer-column {
+    width: 100% !important;
+    min-width: 0 !important;
+  }
+
+  .footer-column h3 {
+    font-size: .72rem !important;
+    margin-bottom: 14px !important;
+  }
+
+  .footer-links {
+    display: grid !important;
+    gap: 9px !important;
+  }
+
+  .footer-links a,
+  .footer-contact a,
+  .footer-contact span {
+    font-size: .72rem !important;
+    line-height: 1.45 !important;
+    word-break: normal !important;
+  }
+
+  .footer-links i,
+  .footer-contact i {
+    width: 15px !important;
+    min-width: 15px !important;
+    margin-right: 5px !important;
+  }
+
+  .footer-contact {
+    display: grid !important;
+    gap: 9px !important;
+  }
+
+  .footer-bottom {
+    width: 100% !important;
+    margin-top: 28px !important;
+    padding-top: 16px !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    gap: 10px !important;
+    box-sizing: border-box !important;
+  }
+
+  .footer-legal {
+    display: flex !important;
+    flex-wrap: wrap !important;
+    gap: 14px !important;
+  }
+
+  .footer-bottom span,
+  .footer-legal a {
+    font-size: .65rem !important;
+  }
+}
+
+
+/* Very small screens */
+@media (max-width: 360px) {
+
+  .site-footer > .container {
+    padding-left: 14px !important;
+    padding-right: 14px !important;
+  }
+
+  .footer-grid {
+    column-gap: 16px !important;
+    row-gap: 24px !important;
+  }
+
+  .footer-links a,
+  .footer-contact a,
+  .footer-contact span {
+    font-size: .68rem !important;
+  }
+}
+/* =====================================================
+   RESPONSIVE STICKY HEADER
+   ===================================================== */
+
+.site-header {
+    position: sticky !important;
+    position: -webkit-sticky !important;
+    top: 0 !important;
+    left: 0 !important;
+    right: 0 !important;
+    width: 100% !important;
+    z-index: 99999 !important;
+}
+
+/* Tablet + Mobile */
+@media (max-width: 768px) {
+
+    .site-header {
+        position: sticky !important;
+        position: -webkit-sticky !important;
+        top: 0 !important;
+        width: 100% !important;
+        z-index: 99999 !important;
+    }
+
+    .site-header .container.header-inner {
+        width: 100% !important;
+        min-height: 68px !important;
+    }
+}
+
+/* Small Mobile */
+@media (max-width: 360px) {
+
+    .site-header {
+        position: sticky !important;
+        top: 0 !important;
+        z-index: 99999 !important;
+    }
+}
+/* =====================================================
+   MOBILE HEADER — SHOW ENQUIRE BUTTON
+   ===================================================== */
+
+@media (max-width: 768px) {
+
+    .site-header .nav-actions {
+        display: flex !important;
+        align-items: center !important;
+        gap: 6px !important;
+    }
+
+    .site-header .header-cta {
+        display: inline-flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+
+        height: 38px !important;
+        min-height: 38px !important;
+        padding: 0 12px !important;
+
+        font-size: 0.68rem !important;
+        border-radius: 8px !important;
+
+        white-space: nowrap !important;
+    }
+}
+
+/* Very small mobile */
+@media (max-width: 360px) {
+
+    .site-header .header-cta {
+        height: 36px !important;
+        min-height: 36px !important;
+        padding: 0 9px !important;
+        font-size: 0.62rem !important;
+    }
+
+    .site-header .nav-actions {
+        gap: 5px !important;
+    }
+}
+
+/* RTL — controls remain on left */
+@media (max-width: 768px) {
+
+    html[dir="rtl"] .site-header .nav-actions {
+        justify-self: start !important;
+        direction: ltr !important;
+        flex-direction: row !important;
+    }
+}
+/* =====================================================
+   MOBILE HAMBURGER — ENQUIRE
+   ===================================================== */
+
+.mobile-enquire {
+    display: none !important;
+}
+
+
+/* MOBILE + TABLET ONLY */
+@media (max-width: 768px) {
+
+    /* Header Enquire hidden */
+    .site-header .header-cta {
+        display: none !important;
+    }
+
+    /* Enquire inside hamburger menu */
+    .site-header .nav-menu .mobile-enquire {
+        display: flex !important;
+        align-items: center;
+        justify-content: center;
+
+        width: 100%;
+        min-height: 42px;
+
+        margin-top: 12px;
+        padding: 10px 16px;
+
+        background: var(--primary);
+        color: #fff !important;
+
+        border: 1px solid var(--primary);
+        border-radius: 9px;
+
+        font-size: 0.78rem;
+        font-weight: 800;
+
+        text-decoration: none;
+
+        transition:
+            background var(--ease),
+            border-color var(--ease),
+            transform var(--ease);
+    }
+
+    .site-header .nav-menu .mobile-enquire:hover {
+        background: var(--secondary);
+        border-color: var(--secondary);
+        color: #fff !important;
+        transform: translateY(-2px);
+    }
+}
+
+
+/* DESKTOP — KEEP ORIGINAL ENQUIRE */
+@media (min-width: 769px) {
+
+    .site-header .header-cta {
+        display: inline-flex !important;
+    }
+
+    .mobile-enquire {
+        display: none !important;
+    }
+}
+/* =========================================================
+   INKDEN — FINAL MOBILE STICKY HEADER FIX
+   Fixes sticky header without changing desktop layout.
+   ========================================================= */
+
+/* The previous mobile full-width rule used overflow-x:hidden on
+   body. That can create a scroll container and prevent sticky
+   from behaving correctly. Use clip instead. */
+html,
+body {
+    overflow-x: clip !important;
+}
+
+/* Keep the header genuinely sticky */
+.site-header {
+    position: -webkit-sticky !important;
+    position: sticky !important;
+    top: 0 !important;
+    left: 0 !important;
+    right: 0 !important;
+    width: 100% !important;
+    z-index: 99999 !important;
+}
+
+/* Mobile / tablet */
+@media (max-width: 768px) {
+
+    .site-header {
+        position: -webkit-sticky !important;
+        position: sticky !important;
+        top: 0 !important;
+        width: 100% !important;
+        z-index: 99999 !important;
+    }
+
+    .site-header .container.header-inner {
+        width: 100% !important;
+        max-width: none !important;
+        margin: 0 !important;
+        min-height: 68px !important;
+        box-sizing: border-box !important;
+    }
+}
+
+/* Small mobile */
+@media (max-width: 360px) {
+
+    .site-header {
+        position: -webkit-sticky !important;
+        position: sticky !important;
+        top: 0 !important;
+        width: 100% !important;
+        z-index: 99999 !important;
+    }
+}
+
+
+/* =========================================================
+   INKDEN — FINAL MOBILE HEADER POSITION
+   Desktop header is intentionally untouched.
+
+   LTR MOBILE:
+   InkDen                         Dark  RTL  Hamburger
+
+   RTL MOBILE:
+   Hamburger  Dark  RTL                         InkDen
+
+   The RTL selectors support both:
+   - html[dir="rtl"]
+   - html.rtl-mode
+   - body.rtl-mode
+   ========================================================= */
+
+@media (max-width: 768px) {
+
+    /* ---------- MOBILE HEADER GRID ---------- */
+
+    .site-header .container.header-inner {
+        width: 100% !important;
+        max-width: none !important;
+        min-width: 0 !important;
+        margin: 0 !important;
+        padding-inline: 14px !important;
+        min-height: 70px !important;
+
+        display: grid !important;
+        grid-template-columns: minmax(0, 1fr) auto !important;
+        grid-template-rows: 70px !important;
+        align-items: center !important;
+        gap: 0 !important;
+
+        /* Prevent the global RTL direction rule from moving
+           the grid unexpectedly. Positioning is explicit below. */
+        direction: ltr !important;
+    }
+
+    /* ---------- LTR ---------- */
+
+    html[dir="ltr"] .site-header .brand-logo,
+    html:not([dir="rtl"]) .site-header .brand-logo {
+        grid-column: 1 !important;
+        grid-row: 1 !important;
+        justify-self: start !important;
+        direction: ltr !important;
+        flex-direction: row !important;
+    }
+
+    html[dir="ltr"] .site-header .nav-actions,
+    html:not([dir="rtl"]) .site-header .nav-actions {
+        grid-column: 2 !important;
+        grid-row: 1 !important;
+        justify-self: end !important;
+
+        display: flex !important;
+        align-items: center !important;
+        gap: 6px !important;
+
+        direction: ltr !important;
+        flex-direction: row !important;
+    }
+
+    /* Natural LTR order:
+       Dark → RTL → Hamburger */
+    html[dir="ltr"] .site-header [data-theme-toggle],
+    html:not([dir="rtl"]) .site-header [data-theme-toggle] {
+        order: 1 !important;
+    }
+
+    html[dir="ltr"] .site-header [data-rtl-toggle],
+    html:not([dir="rtl"]) .site-header [data-rtl-toggle] {
+        order: 2 !important;
+    }
+
+    html[dir="ltr"] .site-header .menu-toggle,
+    html:not([dir="rtl"]) .site-header .menu-toggle {
+        order: 3 !important;
+    }
+
+
+    /* ---------- RTL ---------- */
+
+    html[dir="rtl"] .site-header .container.header-inner,
+    html.rtl-mode .site-header .container.header-inner,
+    body.rtl-mode .site-header .container.header-inner {
+        direction: ltr !important;
+    }
+
+    html[dir="rtl"] .site-header .brand-logo,
+    html.rtl-mode .site-header .brand-logo,
+    body.rtl-mode .site-header .brand-logo {
+        grid-column: 2 !important;
+        grid-row: 1 !important;
+        justify-self: end !important;
+        direction: ltr !important;
+        flex-direction: row !important;
+    }
+
+    html[dir="rtl"] .site-header .nav-actions,
+    html.rtl-mode .site-header .nav-actions,
+    body.rtl-mode .site-header .nav-actions {
+        grid-column: 1 !important;
+        grid-row: 1 !important;
+        justify-self: start !important;
+
+        display: flex !important;
+        align-items: center !important;
+        gap: 6px !important;
+
+        direction: ltr !important;
+        flex-direction: row !important;
+    }
+
+    /* Exact RTL order:
+       Hamburger → Dark → RTL */
+    html[dir="rtl"] .site-header .menu-toggle,
+    html.rtl-mode .site-header .menu-toggle,
+    body.rtl-mode .site-header .menu-toggle {
+        order: 1 !important;
+    }
+
+    html[dir="rtl"] .site-header [data-theme-toggle],
+    html.rtl-mode .site-header [data-theme-toggle],
+    body.rtl-mode .site-header [data-theme-toggle] {
+        order: 2 !important;
+    }
+
+    html[dir="rtl"] .site-header [data-rtl-toggle],
+    html.rtl-mode .site-header [data-rtl-toggle],
+    body.rtl-mode .site-header [data-rtl-toggle] {
+        order: 3 !important;
+    }
+
+
+    /* ---------- MOBILE NAV MENU ---------- */
+
+    .site-header .nav-menu {
+        grid-column: 1 / -1 !important;
+        grid-row: 2 !important;
+        width: 100vw !important;
+        max-width: none !important;
+        justify-self: stretch !important;
+    }
+
+    html[dir="rtl"] .site-header .nav-menu,
+    html.rtl-mode .site-header .nav-menu,
+    body.rtl-mode .site-header .nav-menu {
+        direction: rtl !important;
+    }
+
+
+    /* ---------- MOBILE ENQUIRE ----------
+       Header Enquire stays hidden.
+       Existing .mobile-enquire inside hamburger is used.
+       ---------- */
+
+    .site-header .header-cta {
+        display: none !important;
+    }
+
+    .site-header .menu-toggle {
+        display: grid !important;
+        visibility: visible !important;
+        opacity: 1 !important;
+    }
+}
+
+
+/* =========================================================
+   360px AND BELOW
+   ========================================================= */
+
+@media (max-width: 360px) {
+
+    .site-header .container.header-inner {
+        min-height: 64px !important;
+        grid-template-rows: 64px !important;
+        padding-inline: 10px !important;
+    }
+
+    .site-header .nav-menu {
+        inset: 64px 0 auto 0 !important;
+        max-height: calc(100vh - 64px) !important;
+    }
+
+    html[dir="rtl"] .site-header .brand-logo,
+    html.rtl-mode .site-header .brand-logo,
+    body.rtl-mode .site-header .brand-logo {
+        grid-column: 2 !important;
+    }
+
+    html[dir="rtl"] .site-header .nav-actions,
+    html.rtl-mode .site-header .nav-actions,
+    body.rtl-mode .site-header .nav-actions {
+        grid-column: 1 !important;
+    }
+}
+
+
+/* =========================================================
+   STICKY HEADER — KEEP IT STICKY
+   ========================================================= */
+
+html,
+body {
+    overflow-x: clip !important;
+}
+
+.site-header {
+    position: -webkit-sticky !important;
+    position: sticky !important;
+    top: 0 !important;
+    z-index: 99999 !important;
+}
+
+
+/* =========================================================
+   ICON SYSTEM — LUCIDE
+   Interface icons only. Footer social brands remain FA.
+   ========================================================= */
+i[data-lucide],
+.site-header .icon-btn svg,
+.site-header .menu-toggle svg,
+.btn svg,
+button svg,
+.feature-icon svg,
+.transformation-top svg,
+.mf-material-icon svg,
+.mf-light-icon svg,
+.detail-icon svg,
+.discover-icon svg,
+.journey-icon svg,
+.material-icon svg,
+.build-card-icon svg {
+    display: block !important;
+    width: 16px !important;
+    height: 16px !important;
+    flex: 0 0 auto !important;
+}
+
+.site-header .icon-btn svg,
+.site-header .menu-toggle svg {
+    width: 15px !important;
+    height: 15px !important;
+}
+
+.btn svg {
+    width: 15px !important;
+    height: 15px !important;
+}
+
+.transformation-top svg,
+.mf-material-icon svg,
+.mf-light-icon svg,
+.detail-icon svg,
+.discover-icon svg,
+.journey-icon svg,
+.material-icon svg,
+.build-card-icon svg {
+    width: 18px !important;
+    height: 18px !important;
+}
+
+/* MOBILE MENU — stays attached to the sticky header while scrolling */
+@media (max-width: 768px) {
+    .site-header .nav-menu {
+        position: absolute !important;
+        top: 70px !important;
+        left: 0 !important;
+        right: 0 !important;
+        inset-inline: 0 !important;
+        z-index: 9999 !important;
+        width: 100% !important;
+        max-height: calc(100vh - 70px) !important;
+        overflow-y: auto !important;
+    }
+
+    .site-header {
+        z-index: 10000 !important;
+    }
+}
+
+
+/* =========================================================
+   MOBILE HAMBURGER MENU — FINAL SCROLL-SAFE FIX
+   The menu stays attached to the viewport/header and opens
+   from the hamburger at any scroll position.
+   ========================================================= */
+@media (max-width: 768px) {
+    .site-header {
+        position: sticky !important;
+        top: 0 !important;
+        z-index: 100000 !important;
+    }
+
+    .site-header .nav-menu {
+        position: fixed !important;
+        top: 68px !important;
+        left: 0 !important;
+        right: 0 !important;
+        bottom: auto !important;
+        inset-inline: 0 !important;
+        width: 100vw !important;
+        min-width: 100vw !important;
+        max-width: 100vw !important;
+        height: auto !important;
+        max-height: calc(100vh - 68px) !important;
+        display: none !important;
+        z-index: 100001 !important;
+        overflow-y: auto !important;
+        overflow-x: hidden !important;
+        box-sizing: border-box !important;
+    }
+
+    .site-header .nav-menu.open {
+        display: flex !important;
+        visibility: visible !important;
+        opacity: 1 !important;
+    }
+
+    .site-header .menu-toggle {
+        position: relative !important;
+        z-index: 100002 !important;
+        display: grid !important;
+        visibility: visible !important;
+        opacity: 1 !important;
+    }
+}
+
+@media (max-width: 360px) {
+    .site-header .nav-menu {
+        top: 64px !important;
+        max-height: calc(100vh - 64px) !important;
+    }
+}
+/* =========================================================
+   FOOTER — REMOVE TOP LINE
+   ========================================================= */
+
+.site-footer {
+    border-top: none !important;
+    border-top-width: 0 !important;
+    border-top-color: transparent !important;
+}
+
+html[data-theme="dark"] .site-footer {
+    border-top: none !important;
+    border-top-width: 0 !important;
+    border-top-color: transparent !important;
+}
+@media (max-width: 768px) {
+    .site-header {
+        position: fixed !important;
+        top: 0 !important;
+        left: 0 !important;
+        right: 0 !important;
+        width: 100% !important;
+        z-index: 9999 !important;
+    }
+
+    body {
+        padding-top: 70px;
+    }
+}
+/* =========================================
+   MOBILE MENU — BACKGROUND BLUR
+========================================= */
+
+@media (max-width: 768px) {
+
+    /* Background overlay */
+    body.menu-open::before {
+        content: "";
+        position: fixed;
+        inset: 0;
+        background: rgba(20, 12, 18, 0.28);
+        backdrop-filter: blur(7px);
+        -webkit-backdrop-filter: blur(7px);
+        z-index: 9997;
+        pointer-events: auto;
+    }
+
+    /* Keep header above blur */
+    header,
+    .site-header,
+    .main-header {
+        z-index: 9999 !important;
+    }
+
+    /* Keep hamburger menu above blur */
+    .mobile-menu,
+    .nav-menu,
+    .mobile-nav,
+    .menu-panel {
+        z-index: 10000 !important;
+    }
+}
+/* =========================================================
+   PRIVACY + TERMS
+   DARK MODE — BLACK BACKGROUND
+   ========================================================= */
+
+html[data-theme="dark"] body {
+    background: #0b090c !important;
+}
+
+/* Main page background */
+html[data-theme="dark"] main {
+    background: #0b090c !important;
+}
+
+/* Every section inside Privacy / Terms */
+html[data-theme="dark"] main > section {
+    background: #0b090c !important;
+}
+
+/* If legal content has its own wrapper */
+html[data-theme="dark"] main > section > div {
+    background-color: transparent !important;
+}
+
+/* Keep cards slightly lighter than the black page */
+html[data-theme="dark"] .policy-card,
+html[data-theme="dark"] .terms-card,
+html[data-theme="dark"] .legal-card,
+html[data-theme="dark"] .privacy-card {
+    background: #151116 !important;
+}
+
+/* Legal text visibility */
+html[data-theme="dark"] main h1,
+html[data-theme="dark"] main h2,
+html[data-theme="dark"] main h3,
+html[data-theme="dark"] main h4 {
+    color: #fff8f2 !important;
+}
+
+html[data-theme="dark"] main p,
+html[data-theme="dark"] main li,
+html[data-theme="dark"] main span {
+    color: #d8cbc5;
+}
