@@ -3899,3 +3899,106 @@ main > section.section.section-tight:has(.home2-cta) {
         grid-template-columns: repeat(3, 1fr) !important;
     }
 }
+/* =========================================================
+   HOME 2 — FINAL VISIBLE SECTION GAPS
+   HERO TOP UNCHANGED
+   ========================================================= */
+
+/* Hero → Signature Details */
+main > .premium-hero + section {
+    border-top: 60px solid var(--bg) !important;
+}
+
+/* All section → next section */
+main > section:not(.premium-hero) + section {
+    border-top: 60px solid var(--bg) !important;
+}
+
+/* CTA gap slightly smaller */
+main > section:has(.home2-cta) {
+    border-top: 35px solid var(--bg) !important;
+}
+
+
+/* =========================
+   TABLET
+   ========================= */
+@media (max-width: 1024px) {
+
+    main > .premium-hero + section {
+        border-top-width: 50px !important;
+    }
+
+    main > section:not(.premium-hero) + section {
+        border-top-width: 50px !important;
+    }
+
+}
+
+
+/* =========================
+   MOBILE
+   ========================= */
+@media (max-width: 768px) {
+
+    main > .premium-hero + section {
+        border-top-width: 40px !important;
+    }
+
+    main > section:not(.premium-hero) + section {
+        border-top-width: 40px !important;
+    }
+
+}
+
+
+/* =========================
+   SMALL MOBILE
+   ========================= */
+@media (max-width: 480px) {
+
+    main > .premium-hero + section {
+        border-top-width: 32px !important;
+    }
+
+    main > section:not(.premium-hero) + section {
+        border-top-width: 32px !important;
+    }
+
+}
+/* =========================================================
+   HOME 2 — CTA TOP GAP REDUCE
+   ========================================================= */
+
+main > section.section.section-tight:has(.home2-cta) {
+    margin-top: 8px !important;
+    padding-top: 25px !important;
+    padding-bottom: 22px !important;
+}
+
+/* Tablet */
+@media (max-width: 1024px) {
+    main > section.section.section-tight:has(.home2-cta) {
+        margin-top: 8px !important;
+        padding-top: 22px !important;
+        padding-bottom: 20px !important;
+    }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+    main > section.section.section-tight:has(.home2-cta) {
+        margin-top: 8px !important;
+        padding-top: 20px !important;
+        padding-bottom: 18px !important;
+    }
+}
+
+/* Small mobile */
+@media (max-width: 480px) {
+    main > section.section.section-tight:has(.home2-cta) {
+        margin-top: 6px !important;
+        padding-top: 18px !important;
+        padding-bottom: 16px !important;
+    }
+}

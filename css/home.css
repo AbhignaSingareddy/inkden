@@ -3160,3 +3160,58 @@ main > .section.statistics-section {
         padding-top: 22px !important;
     }
 }
+/* =========================================
+   HOME 1 — VISIBLE SECTION GAP
+   HERO TOP POSITION UNCHANGED
+   ========================================= */
+
+/* Hero → first section */
+main > .hero + section {
+    border-top: 60px solid var(--bg) !important;
+}
+
+/* Every section → next section */
+main > section:not(.hero) + section {
+    border-top: 60px solid var(--bg) !important;
+}
+
+/* CTA → Footer: smaller */
+main > section:has(.cta-panel) {
+    border-top: 35px solid var(--bg) !important;
+}
+
+
+/* TABLET */
+@media (max-width: 1024px) {
+    main > .hero + section {
+        border-top-width: 50px !important;
+    }
+
+    main > section:not(.hero) + section {
+        border-top-width: 50px !important;
+    }
+}
+
+
+/* MOBILE */
+@media (max-width: 768px) {
+    main > .hero + section {
+        border-top-width: 40px !important;
+    }
+
+    main > section:not(.hero) + section {
+        border-top-width: 40px !important;
+    }
+}
+
+
+/* SMALL MOBILE */
+@media (max-width: 480px) {
+    main > .hero + section {
+        border-top-width: 32px !important;
+    }
+
+    main > section:not(.hero) + section {
+        border-top-width: 32px !important;
+    }
+}

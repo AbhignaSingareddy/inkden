@@ -3718,3 +3718,64 @@ html[dir="rtl"] .why-item::before {
     }
 
 }
+/* =========================================
+   ABOUT PAGE — SECTION TO SECTION GAP ONLY
+   ========================================= */
+
+/* Hero → Story */
+.about-hero + .about-story {
+    margin-top: 18px !important;
+}
+
+/* Story → Beliefs */
+.about-story + .about-beliefs {
+    margin-top: 18px !important;
+}
+
+/* Beliefs → Services */
+.about-beliefs + .about-services {
+    margin-top: 18px !important;
+}
+
+/* Services → Philosophy */
+.about-services + .about-philosophy {
+    margin-top: 18px !important;
+}
+
+/* Philosophy → Why InkDen */
+.about-philosophy + .about-why {
+    margin-top: 18px !important;
+}
+
+/* Why InkDen → CTA */
+.about-why + .about-cta-section {
+    margin-top: 18px !important;
+}
+
+
+/* TABLET */
+@media (max-width: 768px) {
+
+    .about-hero + .about-story,
+    .about-story + .about-beliefs,
+    .about-beliefs + .about-services,
+    .about-services + .about-philosophy,
+    .about-philosophy + .about-why,
+    .about-why + .about-cta-section {
+        margin-top: 14px !important;
+    }
+}
+
+
+/* MOBILE */
+@media (max-width: 480px) {
+
+    .about-hero + .about-story,
+    .about-story + .about-beliefs,
+    .about-beliefs + .about-services,
+    .about-services + .about-philosophy,
+    .about-philosophy + .about-why,
+    .about-why + .about-cta-section {
+        margin-top: 10px !important;
+    }
+}
