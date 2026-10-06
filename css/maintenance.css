@@ -1,84 +1,890 @@
 /* =========================================================
-   INKDEN MAINTENANCE PAGE
-========================================================= */
+   INKDEN — MAINTENANCE PAGE
+   ========================================================= */
 
-html,body,main{margin:0!important;padding:0!important}
-.maintenance-hero{position:relative;min-height:calc(100vh - 78px);display:flex;align-items:center;justify-content:center;margin:0!important;padding:45px 24px;overflow:hidden;background:#4A263F!important;color:#fff}
-.maintenance-content{width:min(800px,100%);display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center}
-.maintenance-eyebrow{display:block;margin:0 0 18px;color:#9A762F!important;font-size:.68rem;font-weight:800;letter-spacing:.24em;line-height:1.2;text-transform:uppercase}
-.maintenance-content h1{margin:0;color:#fff!important;font-family:"Cormorant Garamond",serif;font-size:clamp(3.8rem,6.5vw,6rem);font-weight:600;line-height:.9;letter-spacing:-.045em}
-.maintenance-content h1 em{display:block;margin-top:7px;color:#9A762F!important;font-style:italic;font-weight:600}
-.maintenance-content p{width:min(590px,100%);margin:23px auto 0;color:rgba(255,255,255,.82)!important;font-family:"Manrope",sans-serif;font-size:.88rem;font-weight:500;line-height:1.75}
-.maintenance-actions{display:flex;align-items:center;justify-content:center;margin-top:26px}
-.maintenance-button{min-width:145px;min-height:44px;display:inline-flex!important;align-items:center;justify-content:center;gap:9px;padding:0 20px;background:#fff!important;border:1px solid #9A762F!important;border-radius:10px;color:#9A762F!important;font-family:"Manrope",sans-serif;font-size:.78rem;font-weight:800;line-height:1;text-decoration:none;transition:background-color .26s ease,color .26s ease,border-color .26s ease,transform .26s ease,box-shadow .26s ease}
-.maintenance-button span{color:#9A762F!important}
-.maintenance-button i{color:#9A762F!important;font-size:13px;transition:transform .26s ease}
-.maintenance-button:hover{background:#9A762F!important;border-color:#9A762F!important;color:#fff!important;transform:translateY(-3px);box-shadow:0 10px 25px rgba(154,118,47,.22)}
-.maintenance-button:hover span{color:#fff!important}
-.maintenance-button:hover i{color:#fff!important;transform:translateX(4px)}
-.site-footer{margin-top:0!important;border-top:0!important}
-.footer-icons{display:flex;align-items:center;gap:10px;margin-top:20px}
-.footer-icons a{width:38px;height:38px;display:inline-flex;align-items:center;justify-content:center;border:1px solid var(--secondary);border-radius:50%;background:transparent;color:var(--primary);text-decoration:none;transition:background-color .26s ease,color .26s ease,border-color .26s ease,transform .26s ease}
-.footer-icons a i{color:inherit;font-size:14px}
-.footer-icons a:hover{background:var(--secondary);border-color:var(--secondary);color:#fff;transform:translateY(-3px)}
-.footer-additional{margin-top:24px;padding-top:18px;border-top:1px solid color-mix(in srgb,var(--primary) 14%,transparent)}
-.footer-additional h3{margin:0 0 14px;color:var(--primary);font-family:inherit;font-size:13px;font-weight:700;letter-spacing:2.5px;line-height:1.2;text-transform:uppercase}
-.footer-additional h3::after{content:none!important;display:none!important}
-.footer-additional .footer-links{gap:9px}
-.footer-additional .footer-links a{display:flex;align-items:center;gap:8px}
-.footer-additional .footer-links i{width:16px;min-width:16px;color:var(--secondary);text-align:center}
-
-html[data-theme="dark"] .maintenance-hero{background:#000!important}
-html[data-theme="dark"] .maintenance-content h1{color:#fff!important}
-html[data-theme="dark"] .maintenance-content h1 em{color:#9A762F!important}
-html[data-theme="dark"] .maintenance-content p{color:rgba(255,255,255,.82)!important}
-html[data-theme="dark"] .maintenance-button{background:#fff!important;border-color:#9A762F!important;color:#9A762F!important}
-html[data-theme="dark"] .maintenance-button span,html[data-theme="dark"] .maintenance-button i{color:#9A762F!important}
-html[data-theme="dark"] .maintenance-button:hover{background:#9A762F!important;border-color:#9A762F!important;color:#fff!important}
-html[data-theme="dark"] .maintenance-button:hover span,html[data-theme="dark"] .maintenance-button:hover i{color:#fff!important}
-html[data-theme="dark"] .footer-additional{border-top-color:rgba(241,229,207,.14)}
-html[data-theme="dark"] .footer-additional h3{color:var(--secondary-soft)}
-html[data-theme="dark"] .footer-icons a{color:var(--secondary-soft)}
-
-html[dir="rtl"] .maintenance-content{direction:rtl}
-html[dir="rtl"] .maintenance-button{flex-direction:row-reverse}
-html[dir="rtl"] .maintenance-button:hover i{transform:rotate(180deg) translateX(4px)}
-
-@media(max-width:1024px){
-.maintenance-hero{min-height:calc(100vh - 78px);padding:40px 22px}
-.maintenance-content h1{font-size:clamp(3.6rem,8vw,5.5rem)}
+html,
+body,
+main {
+    margin: 0;
+    padding: 0;
 }
 
-@media(max-width:768px){
-.maintenance-hero{min-height:calc(100svh - 70px);padding:45px 20px}
-.maintenance-eyebrow{margin-bottom:17px;font-size:.6rem;letter-spacing:.18em}
-.maintenance-content h1{font-size:clamp(3.2rem,12vw,4.8rem);line-height:.93}
-.maintenance-content h1 em{margin-top:6px}
-.maintenance-content p{margin-top:20px;font-size:.8rem;line-height:1.7}
-.maintenance-actions{margin-top:23px}
+
+/* =========================================================
+   MAINTENANCE PAGE CONTROLS
+   ========================================================= */
+
+.maintenance-controls {
+    position: fixed;
+    top: 24px;
+    right: 24px;
+
+    display: flex;
+    align-items: center;
+
+    gap: 8px;
+
+    z-index: 9999;
+
+    direction: ltr;
 }
 
-@media(max-width:480px){
-.maintenance-hero{min-height:calc(100svh - 64px);padding:40px 16px}
-.maintenance-eyebrow{margin-bottom:16px;font-size:.53rem;letter-spacing:.15em}
-.maintenance-content h1{font-size:3rem;line-height:.95}
-.maintenance-content p{width:min(330px,100%);font-size:.74rem;line-height:1.7}
-.maintenance-actions{width:100%;margin-top:22px}
-.maintenance-button{width:220px;min-height:45px}
-.footer-icons{gap:8px}
-.footer-icons a{width:36px;height:36px}
+
+/* =========================================================
+   CONTROL BUTTONS
+   ========================================================= */
+
+.maintenance-icon-btn {
+    width: 40px;
+    height: 40px;
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 0;
+
+    border: 1px solid var(--border);
+
+    border-radius: 10px;
+
+    background: var(--surface);
+
+    color: var(--text);
+
+    cursor: pointer;
+
+    transition:
+        background 0.3s ease,
+        color 0.3s ease,
+        border-color 0.3s ease,
+        transform 0.3s ease;
 }
 
-@media(max-width:360px){
-.maintenance-hero{padding:35px 14px}
-.maintenance-content h1{font-size:2.75rem}
-.maintenance-content p{font-size:.7rem}
+.maintenance-icon-btn:hover {
+    background: var(--primary);
+
+    color: #ffffff;
+
+    border-color: var(--primary);
+
+    transform: translateY(-2px);
 }
 
-@media(prefers-reduced-motion:reduce){
-.maintenance-button,.maintenance-button i,.footer-icons a{transition:none!important}
+.maintenance-icon-btn svg {
+    width: 17px;
+    height: 17px;
+
+    stroke-width: 1.8;
 }
 
-/* FINAL MAINTENANCE PAGE POLISH */
-.maintenance-hero { min-height: 520px !important; display: grid; place-items: center; }
-@media (max-width: 768px) { .maintenance-hero { min-height: 430px !important; padding: 50px 20px !important; } }
+
+/* =========================================================
+   RTL CONTROLS
+   ========================================================= */
+
+html[dir="rtl"] .maintenance-controls,
+html.rtl-mode .maintenance-controls,
+body.rtl-mode .maintenance-controls {
+
+    left: 24px;
+    right: auto;
+
+    direction: ltr;
+}
+
+
+/* =========================================================
+   TOP CENTER LOGO
+   ========================================================= */
+
+.maintenance-top-logo {
+    width: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 28px 20px 12px;
+
+    box-sizing: border-box;
+
+    background: var(--background);
+}
+
+.maintenance-top-logo a {
+    display: inline-flex;
+
+    align-items: center;
+    justify-content: center;
+
+    gap: 10px;
+
+    text-decoration: none;
+
+    direction: ltr;
+}
+
+.maintenance-top-logo img {
+    width: 44px;
+    height: 44px;
+
+    object-fit: contain;
+
+    display: block;
+}
+
+.maintenance-top-logo .brand-name {
+    font-family: "Cormorant Garamond", serif;
+
+    font-size: 1.65rem;
+
+    font-weight: 700;
+
+    line-height: 1;
+
+    letter-spacing: -0.02em;
+}
+
+.maintenance-top-logo .brand-ink {
+    color: var(--primary);
+}
+
+.maintenance-top-logo .brand-den {
+    color: var(--secondary);
+}
+
+
+/* =========================================================
+   HERO
+   ========================================================= */
+
+.maintenance-hero {
+
+    position: relative;
+
+    min-height: 520px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    padding: 70px 24px;
+
+    box-sizing: border-box;
+
+    overflow: hidden;
+
+    background: #4A263F;
+
+    color: #ffffff;
+}
+
+
+/* =========================================================
+   CONTENT
+   ========================================================= */
+
+.maintenance-content {
+
+    width: min(800px, 100%);
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    justify-content: center;
+
+    text-align: center;
+}
+
+
+/* =========================================================
+   EYEBROW
+   ========================================================= */
+
+.maintenance-eyebrow {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 12px;
+
+    margin: 0 0 20px;
+
+    color: #9A762F;
+
+    font-family: "Manrope", sans-serif;
+
+    font-size: 0.68rem;
+
+    font-weight: 800;
+
+    letter-spacing: 0.23em;
+
+    line-height: 1;
+
+    text-transform: uppercase;
+}
+
+.maintenance-eyebrow::before {
+
+    content: "";
+
+    display: block;
+
+    width: 32px;
+
+    height: 1px;
+
+    flex: 0 0 32px;
+
+    background: #9A762F;
+}
+
+
+/* =========================================================
+   HEADING
+   ========================================================= */
+
+.maintenance-content h1 {
+
+    margin: 0;
+
+    color: #ffffff;
+
+    font-family: "Cormorant Garamond", serif;
+
+    font-size: clamp(
+        3.8rem,
+        6.5vw,
+        6rem
+    );
+
+    font-weight: 600;
+
+    line-height: 0.9;
+
+    letter-spacing: -0.045em;
+}
+
+.maintenance-content h1 em {
+
+    display: block;
+
+    margin-top: 8px;
+
+    color: #9A762F;
+
+    font-style: italic;
+
+    font-weight: 600;
+}
+
+
+/* =========================================================
+   DESCRIPTION
+   ========================================================= */
+
+.maintenance-content p {
+
+    width: min(590px, 100%);
+
+    margin: 26px auto 0;
+
+    color: rgba(255, 255, 255, 0.82);
+
+    font-family: "Manrope", sans-serif;
+
+    font-size: 0.88rem;
+
+    font-weight: 500;
+
+    line-height: 1.75;
+}
+
+
+/* =========================================================
+   ACTION
+   ========================================================= */
+
+.maintenance-actions {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    margin-top: 28px;
+}
+
+
+/* =========================================================
+   BACK TO HOME BUTTON
+   ========================================================= */
+
+.maintenance-button {
+
+    min-width: 145px;
+
+    min-height: 44px;
+
+    display: inline-flex !important;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 9px;
+
+    padding: 0 20px;
+
+    background: #ffffff;
+
+    border: 1px solid #9A762F;
+
+    border-radius: 10px;
+
+    color: #9A762F;
+
+    font-family: "Manrope", sans-serif;
+
+    font-size: 0.78rem;
+
+    font-weight: 800;
+
+    line-height: 1;
+
+    text-decoration: none;
+
+    transition:
+        background-color 0.26s ease,
+        color 0.26s ease,
+        border-color 0.26s ease,
+        transform 0.26s ease,
+        box-shadow 0.26s ease;
+}
+
+.maintenance-button span {
+
+    color: #9A762F;
+}
+
+.maintenance-button i {
+
+    color: #9A762F;
+
+    font-size: 13px;
+
+    transition:
+        transform 0.26s ease,
+        color 0.26s ease;
+}
+
+.maintenance-button:hover {
+
+    background: #9A762F;
+
+    border-color: #9A762F;
+
+    color: #ffffff;
+
+    transform: translateY(-3px);
+
+    box-shadow:
+        0 10px 25px
+        rgba(154, 118, 47, 0.22);
+}
+
+.maintenance-button:hover span {
+
+    color: #ffffff;
+}
+
+.maintenance-button:hover i {
+
+    color: #ffffff;
+
+    transform: translateX(4px);
+}
+
+
+/* =========================================================
+   DARK MODE
+   ========================================================= */
+
+html[data-theme="dark"] .maintenance-top-logo {
+
+    background: #000000;
+}
+
+html[data-theme="dark"] .maintenance-top-logo .brand-ink {
+
+    color: var(--secondary-soft);
+}
+
+html[data-theme="dark"] .maintenance-top-logo .brand-den {
+
+    color: var(--secondary);
+}
+
+
+/* HERO */
+
+html[data-theme="dark"] .maintenance-hero {
+
+    background: #000000;
+}
+
+html[data-theme="dark"] .maintenance-content h1 {
+
+    color: #ffffff;
+}
+
+html[data-theme="dark"] .maintenance-content h1 em {
+
+    color: #9A762F;
+}
+
+html[data-theme="dark"] .maintenance-content p {
+
+    color: rgba(255, 255, 255, 0.82);
+}
+
+
+/* BUTTON */
+
+html[data-theme="dark"] .maintenance-button {
+
+    background: #ffffff;
+
+    border-color: #9A762F;
+
+    color: #9A762F;
+}
+
+html[data-theme="dark"] .maintenance-button span,
+html[data-theme="dark"] .maintenance-button i {
+
+    color: #9A762F;
+}
+
+html[data-theme="dark"] .maintenance-button:hover {
+
+    background: #9A762F;
+
+    border-color: #9A762F;
+
+    color: #ffffff;
+}
+
+html[data-theme="dark"] .maintenance-button:hover span,
+html[data-theme="dark"] .maintenance-button:hover i {
+
+    color: #ffffff;
+}
+
+
+/* =========================================================
+   DARK MODE CONTROLS
+   ========================================================= */
+
+html[data-theme="dark"] .maintenance-icon-btn,
+body[data-theme="dark"] .maintenance-icon-btn {
+
+    background: rgba(255, 255, 255, 0.04);
+
+    color: var(--secondary-soft);
+
+    border-color: rgba(255, 255, 255, 0.12);
+}
+
+html[data-theme="dark"] .maintenance-icon-btn:hover,
+body[data-theme="dark"] .maintenance-icon-btn:hover {
+
+    background: var(--secondary);
+
+    color: #000000;
+
+    border-color: var(--secondary);
+}
+
+
+/* =========================================================
+   RTL
+   ========================================================= */
+
+html[dir="rtl"] .maintenance-content,
+html.rtl-mode .maintenance-content,
+body.rtl-mode .maintenance-content {
+
+    direction: rtl;
+}
+
+html[dir="rtl"] .maintenance-button,
+html.rtl-mode .maintenance-button,
+body.rtl-mode .maintenance-button {
+
+    flex-direction: row-reverse;
+}
+
+html[dir="rtl"] .maintenance-button:hover i,
+html.rtl-mode .maintenance-button:hover i,
+body.rtl-mode .maintenance-button:hover i {
+
+    transform:
+        rotate(180deg)
+        translateX(4px);
+}
+
+
+/* =========================================================
+   TABLET
+   ========================================================= */
+
+@media (max-width: 1024px) {
+
+    .maintenance-top-logo {
+
+        padding: 25px 20px 10px;
+    }
+
+    .maintenance-hero {
+
+        min-height: 470px;
+
+        padding: 60px 22px;
+    }
+
+    .maintenance-content h1 {
+
+        font-size: clamp(
+            3.6rem,
+            8vw,
+            5.5rem
+        );
+    }
+
+    .maintenance-controls {
+
+        top: 20px;
+
+        right: 20px;
+    }
+
+    html[dir="rtl"] .maintenance-controls,
+    html.rtl-mode .maintenance-controls,
+    body.rtl-mode .maintenance-controls {
+
+        left: 20px;
+
+        right: auto;
+    }
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 768px) {
+
+    .maintenance-controls {
+
+        top: 16px;
+
+        right: 16px;
+
+        gap: 6px;
+    }
+
+    html[dir="rtl"] .maintenance-controls,
+    html.rtl-mode .maintenance-controls,
+    body.rtl-mode .maintenance-controls {
+
+        left: 16px;
+
+        right: auto;
+    }
+
+    .maintenance-icon-btn {
+
+        width: 38px;
+
+        height: 38px;
+
+        border-radius: 9px;
+    }
+
+    .maintenance-top-logo {
+
+        padding: 22px 18px 9px;
+    }
+
+    .maintenance-top-logo a {
+
+        gap: 9px;
+    }
+
+    .maintenance-top-logo img {
+
+        width: 42px;
+
+        height: 42px;
+    }
+
+    .maintenance-top-logo .brand-name {
+
+        font-size: 1.6rem;
+    }
+
+    .maintenance-hero {
+
+        min-height: 430px;
+
+        padding: 50px 20px;
+    }
+
+    .maintenance-eyebrow {
+
+        margin-bottom: 17px;
+
+        font-size: 0.61rem;
+
+        letter-spacing: 0.2em;
+    }
+
+    .maintenance-eyebrow::before {
+
+        width: 26px;
+
+        flex-basis: 26px;
+    }
+
+    .maintenance-content h1 {
+
+        font-size: clamp(
+            3.2rem,
+            12vw,
+            4.8rem
+        );
+
+        line-height: 0.93;
+    }
+
+    .maintenance-content h1 em {
+
+        margin-top: 7px;
+    }
+
+    .maintenance-content p {
+
+        width: min(500px, 100%);
+
+        margin-top: 22px;
+
+        font-size: 0.8rem;
+
+        line-height: 1.7;
+    }
+
+    .maintenance-actions {
+
+        margin-top: 24px;
+    }
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+   ========================================================= */
+
+@media (max-width: 480px) {
+
+    .maintenance-controls {
+
+        top: 12px;
+
+        right: 12px;
+    }
+
+    html[dir="rtl"] .maintenance-controls,
+    html.rtl-mode .maintenance-controls,
+    body.rtl-mode .maintenance-controls {
+
+        left: 12px;
+
+        right: auto;
+    }
+
+    .maintenance-icon-btn {
+
+        width: 36px;
+
+        height: 36px;
+    }
+
+    .maintenance-icon-btn svg {
+
+        width: 16px;
+
+        height: 16px;
+    }
+
+    .maintenance-top-logo {
+
+        padding: 20px 16px 8px;
+    }
+
+    .maintenance-top-logo img {
+
+        width: 40px;
+
+        height: 40px;
+    }
+
+    .maintenance-top-logo .brand-name {
+
+        font-size: 1.55rem;
+    }
+
+    .maintenance-hero {
+
+        min-height: 380px;
+
+        padding: 45px 18px;
+    }
+
+    .maintenance-eyebrow {
+
+        margin-bottom: 16px;
+
+        font-size: 0.58rem;
+
+        letter-spacing: 0.17em;
+    }
+
+    .maintenance-eyebrow::before {
+
+        width: 22px;
+
+        flex-basis: 22px;
+    }
+
+    .maintenance-content h1 {
+
+        font-size: clamp(
+            2.8rem,
+            16vw,
+            4.2rem
+        );
+
+        line-height: 0.95;
+    }
+
+    .maintenance-content p {
+
+        width: min(330px, 100%);
+
+        margin-top: 20px;
+
+        font-size: 0.74rem;
+
+        line-height: 1.7;
+    }
+
+    .maintenance-actions {
+
+        width: 100%;
+
+        margin-top: 22px;
+    }
+
+    .maintenance-button {
+
+        width: 220px;
+
+        min-height: 45px;
+    }
+}
+
+
+/* =========================================================
+   EXTRA SMALL MOBILE
+   ========================================================= */
+
+@media (max-width: 360px) {
+
+    .maintenance-controls {
+
+        top: 10px;
+
+        right: 10px;
+    }
+
+    html[dir="rtl"] .maintenance-controls,
+    html.rtl-mode .maintenance-controls,
+    body.rtl-mode .maintenance-controls {
+
+        left: 10px;
+
+        right: auto;
+    }
+
+    .maintenance-top-logo {
+
+        padding-top: 18px;
+    }
+
+    .maintenance-top-logo img {
+
+        width: 38px;
+
+        height: 38px;
+    }
+
+    .maintenance-top-logo .brand-name {
+
+        font-size: 1.5rem;
+    }
+
+    .maintenance-hero {
+
+        min-height: 350px;
+
+        padding: 40px 14px;
+    }
+
+    .maintenance-content h1 {
+
+        font-size: 2.75rem;
+    }
+
+    .maintenance-content p {
+
+        font-size: 0.7rem;
+    }
+}
+
+
+/* =========================================================
+   REDUCED MOTION
+   ========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+    .maintenance-button,
+    .maintenance-button i,
+    .maintenance-icon-btn {
+
+        transition: none !important;
+    }
+}

@@ -2551,3 +2551,158 @@ body.rtl-mode .footer-brand .brand-logo img{
     justify-content:center !important;
   }
 }
+/* =========================================================
+   INKDEN BRAND NAME — HEADER + FOOTER
+   SAME SIZE ACROSS RESPONSIVE
+   ========================================================= */
+
+/* Desktop */
+.site-header .brand-name,
+.footer-brand .brand-name{
+    font-size:1.8rem !important;
+    line-height:1 !important;
+    white-space:nowrap !important;
+}
+
+/* Tablet */
+@media (max-width:1050px){
+    .site-header .brand-name,
+    .footer-brand .brand-name{
+        font-size:1.75rem !important;
+    }
+}
+
+/* Mobile */
+@media (max-width:768px){
+    .site-header .brand-name,
+    .footer-brand .brand-name{
+        font-size:1.65rem !important;
+    }
+}
+
+/* Small Mobile */
+@media (max-width:600px){
+    .site-header .brand-name,
+    .footer-brand .brand-name{
+        font-size:1.6rem !important;
+    }
+}
+
+/* Extra Small */
+@media (max-width:360px){
+    .site-header .brand-name,
+    .footer-brand .brand-name{
+        font-size:1.55rem !important;
+    }
+}
+/* =========================================================
+   GLOBAL WEBSITE — SUB-PARAGRAPH TEXT
+   ========================================================= */
+
+p{
+    font-size:.9rem !important;
+    line-height:1.6 !important;
+}
+
+/* Keep special large/hero text unchanged */
+.quote-panel p,
+.hero-quote p,
+.hero-description,
+.hero-subtitle,
+.lead{
+    font-size:inherit !important;
+    line-height:inherit !important;
+}
+
+
+/* TABLET */
+@media(max-width:1024px){
+    p{
+        font-size:.88rem !important;
+        line-height:1.6 !important;
+    }
+
+    .quote-panel p,
+    .hero-quote p,
+    .hero-description,
+    .hero-subtitle,
+    .lead{
+        font-size:inherit !important;
+        line-height:inherit !important;
+    }
+}
+
+
+/* MOBILE */
+@media(max-width:768px){
+    p{
+        font-size:.86rem !important;
+        line-height:1.55 !important;
+    }
+
+    .quote-panel p,
+    .hero-quote p,
+    .hero-description,
+    .hero-subtitle,
+    .lead{
+        font-size:inherit !important;
+        line-height:inherit !important;
+    }
+}
+.quote-panel{
+    padding:70px 60px !important;
+}
+
+.quote-panel .eyebrow{
+    font-size:.75rem !important;
+}
+
+.quote-panel p{
+    font-size:1.15rem !important;
+    line-height:1.7 !important;
+}
+/* CONTACT FOOTER ICON HOVER */
+.footer-contact a,
+.footer-contact span{
+    transition:color .3s ease, transform .3s ease;
+}
+
+.footer-contact a:hover,
+.footer-contact span:hover{
+    color:var(--secondary) !important;
+    transform:translateX(4px);
+}
+
+.footer-contact a:hover i,
+.footer-contact span:hover i{
+    color:var(--secondary) !important;
+    transform:scale(1.15);
+}
+
+.footer-contact i{
+    transition:color .3s ease, transform .3s ease;
+}
+/* =========================================================
+   INKDEN — GLOBAL DARK MODE
+   Applies to the entire website
+========================================================= */
+
+html[data-theme="dark"] {
+    --background: #000000;
+    --bg: #000000;
+
+    --surface: #111111;
+    --surface-soft: #171717;
+
+    --text: #f5f5f5;
+    --text-muted: #b8b8b8;
+    --muted: #b8b8b8;
+
+    --border: rgba(255, 255, 255, 0.12);
+    --border-soft: rgba(255, 255, 255, 0.08);
+
+    --primary-dark: #000000;
+
+    --shadow-sm: 0 4px 18px rgba(0, 0, 0, 0.25);
+    --shadow-md: 0 10px 35px rgba(0, 0, 0, 0.35);
+}

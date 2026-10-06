@@ -2750,3 +2750,413 @@ main > section.section-tight + section.statistics-section {
 .stat > span{
   margin-top:7px;
 }
+/* =========================================================
+   HOME 1 — FINAL SECTION GAP
+   ========================================================= */
+
+main > section:not(.hero),
+main > .hero + section {
+    margin-top: 55px !important;
+}
+
+
+/* TABLET */
+@media (max-width: 1024px) {
+    main > section:not(.hero),
+    main > .hero + section {
+        margin-top: 45px !important;
+    }
+}
+
+
+/* MOBILE */
+@media (max-width: 768px) {
+    main > section:not(.hero),
+    main > .hero + section {
+        margin-top: 36px !important;
+    }
+}
+
+
+/* SMALL MOBILE */
+@media (max-width: 480px) {
+    main > section:not(.hero),
+    main > .hero + section {
+        margin-top: 30px !important;
+    }
+}
+
+
+/* 360px */
+@media (max-width: 360px) {
+    main > section:not(.hero),
+    main > .hero + section {
+        margin-top: 26px !important;
+    }
+}
+
+
+/* =========================================================
+   HOME 1 — CTA TO FOOTER
+   ========================================================= */
+
+main > section.section.section-tight:has(.cta-panel) {
+    margin-top: 35px !important;
+    padding-bottom: 24px !important;
+}
+
+@media (max-width: 1024px) {
+    main > section.section.section-tight:has(.cta-panel) {
+        margin-top: 30px !important;
+        padding-bottom: 22px !important;
+    }
+}
+
+@media (max-width: 768px) {
+    main > section.section.section-tight:has(.cta-panel) {
+        margin-top: 26px !important;
+        padding-bottom: 20px !important;
+    }
+}
+
+@media (max-width: 480px) {
+    main > section.section.section-tight:has(.cta-panel) {
+        margin-top: 22px !important;
+        padding-bottom: 18px !important;
+    }
+}
+
+@media (max-width: 360px) {
+    main > section.section.section-tight:has(.cta-panel) {
+        margin-top: 18px !important;
+        padding-bottom: 16px !important;
+    }
+}
+/* =========================================================
+   HOME 1 — COMPACT SECTION SPACING
+   ========================================================= */
+
+/* Desktop */
+main > section:not(.hero) {
+    margin-top: 22px !important;
+    margin-bottom: 0 !important;
+    padding-top: 32px !important;
+    padding-bottom: 32px !important;
+}
+
+/* Hero → What We Design */
+main > .hero + section {
+    margin-top: 22px !important;
+}
+
+
+/* What We Design → Statistics */
+main > section.section-tight + section.statistics-section {
+    margin-top: 22px !important;
+}
+
+
+/* Statistics → Quote */
+main > section.statistics-section + section.section-tight {
+    margin-top: 22px !important;
+}
+
+
+/* Collection → Reviews */
+main > section.home1-collection-section + section.home1-reviews {
+    margin-top: 22px !important;
+}
+
+
+/* Reviews → Quote */
+main > section.home1-reviews + section.section-tight {
+    margin-top: 22px !important;
+}
+
+
+/* CTA */
+main > section.section.section-tight:has(.cta-panel) {
+    margin-top: 22px !important;
+    padding-top: 32px !important;
+    padding-bottom: 20px !important;
+}
+
+
+/* =========================================================
+   TABLET
+   ========================================================= */
+
+@media (max-width: 1024px) {
+
+    main > section:not(.hero) {
+        margin-top: 18px !important;
+        padding-top: 28px !important;
+        padding-bottom: 28px !important;
+    }
+
+    main > .hero + section,
+    main > section.section-tight + section.statistics-section,
+    main > section.statistics-section + section.section-tight,
+    main > section.home1-collection-section + section.home1-reviews,
+    main > section.home1-reviews + section.section-tight {
+        margin-top: 18px !important;
+    }
+
+    main > section.section.section-tight:has(.cta-panel) {
+        margin-top: 18px !important;
+        padding-top: 28px !important;
+        padding-bottom: 18px !important;
+    }
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 768px) {
+
+    main > section:not(.hero) {
+        margin-top: 15px !important;
+        padding-top: 25px !important;
+        padding-bottom: 25px !important;
+    }
+
+    main > .hero + section,
+    main > section.section-tight + section.statistics-section,
+    main > section.statistics-section + section.section-tight,
+    main > section.home1-collection-section + section.home1-reviews,
+    main > section.home1-reviews + section.section-tight {
+        margin-top: 15px !important;
+    }
+
+    main > section.section.section-tight:has(.cta-panel) {
+        margin-top: 15px !important;
+        padding-top: 25px !important;
+        padding-bottom: 16px !important;
+    }
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+   ========================================================= */
+
+@media (max-width: 480px) {
+
+    main > section:not(.hero) {
+        margin-top: 12px !important;
+        padding-top: 22px !important;
+        padding-bottom: 22px !important;
+    }
+
+    main > .hero + section,
+    main > section.section-tight + section.statistics-section,
+    main > section.statistics-section + section.section-tight,
+    main > section.home1-collection-section + section.home1-reviews,
+    main > section.home1-reviews + section.section-tight {
+        margin-top: 12px !important;
+    }
+}
+
+
+/* =========================================================
+   360px
+   ========================================================= */
+
+@media (max-width: 360px) {
+
+    main > section:not(.hero) {
+        margin-top: 10px !important;
+        padding-top: 20px !important;
+        padding-bottom: 20px !important;
+    }
+
+    main > .hero + section,
+    main > section.section-tight + section.statistics-section,
+    main > section.statistics-section + section.section-tight,
+    main > section.home1-collection-section + section.home1-reviews,
+    main > section.home1-reviews + section.section-tight {
+        margin-top: 10px !important;
+    }
+}
+/* =========================================================
+   HOME 1 — FINAL BALANCED SECTION GAP
+   ========================================================= */
+
+main > .hero + .section.section-tight {
+    margin-top: 50px !important;
+    padding-top: 38px !important;
+}
+
+main > .section.section-tight + .section.statistics-section {
+    margin-top: 50px !important;
+}
+
+main > .section.statistics-section + .section.section-tight {
+    margin-top: 50px !important;
+    padding-top: 38px !important;
+}
+
+main > .section.home1-collection-section + .section.home1-reviews {
+    margin-top: 50px !important;
+}
+
+main > .section.home1-reviews + .section.section-tight {
+    margin-top: 50px !important;
+    padding-top: 38px !important;
+}
+
+
+/* CTA → FOOTER */
+main > .section.section-tight:has(.cta-panel) {
+    margin-top: 35px !important;
+    padding-top: 38px !important;
+    padding-bottom: 22px !important;
+}
+
+
+/* TABLET */
+@media (max-width: 1024px) {
+    main > .hero + .section.section-tight {
+        margin-top: 40px !important;
+        padding-top: 32px !important;
+    }
+
+    main > .section.section-tight + .section.statistics-section,
+    main > .section.statistics-section + .section.section-tight,
+    main > .section.home1-collection-section + .section.home1-reviews,
+    main > .section.home1-reviews + .section.section-tight {
+        margin-top: 40px !important;
+    }
+}
+
+
+/* MOBILE */
+@media (max-width: 768px) {
+    main > .hero + .section.section-tight {
+        margin-top: 32px !important;
+        padding-top: 28px !important;
+    }
+
+    main > .section.section-tight + .section.statistics-section,
+    main > .section.statistics-section + .section.section-tight,
+    main > .section.home1-collection-section + .section.home1-reviews,
+    main > .section.home1-reviews + .section.section-tight {
+        margin-top: 32px !important;
+    }
+}
+/* =========================================================
+   HOME 1 — LATER SECTION SPACING
+   ========================================================= */
+
+/* Design Principle → Collection */
+main > .section.section-tight:has(.quote-panel)
++ .section.home1-collection-section {
+    margin-top: 65px !important;
+}
+
+
+/* Collection → Reader Reviews */
+main > .section.home1-collection-section
++ .section.home1-reviews {
+    margin-top: 65px !important;
+}
+
+
+/* Reader Reviews → Design Principle */
+main > .section.home1-reviews
++ .section.section-tight {
+    margin-top: 95px !important;
+}
+
+
+/* Collection section itself */
+main > .section.home1-collection-section {
+    padding-top: 45px !important;
+    padding-bottom: 45px !important;
+}
+
+
+/* Quote section */
+main > .section.section-tight:has(.quote-panel) {
+    padding-top: 45px !important;
+    padding-bottom: 45px !important;
+}
+
+
+/* TABLET */
+@media (max-width: 1024px) {
+
+    main > .section.section-tight:has(.quote-panel)
+    + .section.home1-collection-section,
+    main > .section.home1-collection-section
+    + .section.home1-reviews,
+    main > .section.home1-reviews
+    + .section.section-tight {
+        margin-top: 50px !important;
+    }
+}
+
+
+/* MOBILE */
+@media (max-width: 768px) {
+
+    main > .section.section-tight:has(.quote-panel)
+    + .section.home1-collection-section,
+    main > .section.home1-collection-section
+    + .section.home1-reviews,
+    main > .section.home1-reviews
+    + .section.section-tight {
+        margin-top: 38px !important;
+    }
+
+    main > .section.home1-collection-section,
+    main > .section.section-tight:has(.quote-panel) {
+        padding-top: 25px !important;
+        padding-bottom: 35px !important;
+    }
+}
+/* =========================================================
+   HOME 1 — WHAT WE DESIGN → NUMBERS SECTION
+   LIGHT GAP REDUCTION
+   ========================================================= */
+
+main > .section.section-tight + .section.statistics-section {
+    margin-top: 35px !important;
+}
+
+
+/* If this is the section heading immediately after
+   the three design cards */
+main > .section.section-tight .feature-grid {
+    margin-bottom: 0 !important;
+}
+
+main > .section.statistics-section {
+    padding-top: 30px !important;
+}
+
+
+/* TABLET */
+@media (max-width: 1024px) {
+    main > .section.section-tight + .section.statistics-section {
+        margin-top: 30px !important;
+    }
+
+    main > .section.statistics-section {
+        padding-top: 26px !important;
+    }
+}
+
+
+/* MOBILE */
+@media (max-width: 768px) {
+    main > .section.section-tight + .section.statistics-section {
+        margin-top: 25px !important;
+    }
+
+    main > .section.statistics-section {
+        padding-top: 22px !important;
+    }
+}

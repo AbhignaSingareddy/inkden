@@ -2219,3 +2219,50 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
 });
+document.querySelectorAll('.footer-contact a, .footer-contact span').forEach(item => {
+    item.addEventListener('mouseenter', () => {
+        const icon = item.querySelector('i');
+        if (icon) {
+            icon.style.transform = 'scale(1.15)';
+        }
+    });
+
+    item.addEventListener('mouseleave', () => {
+        const icon = item.querySelector('i');
+        if (icon) {
+            icon.style.transform = 'scale(1)';
+        }
+    });
+});
+document.addEventListener("DOMContentLoaded", () => {
+
+    const revealElements = document.querySelectorAll(
+        ".reveal-up, .reveal-left, .reveal-right"
+    );
+
+    if (!revealElements.length) return;
+
+    const revealObserver = new IntersectionObserver(
+        (entries, observer) => {
+
+            entries.forEach((entry) => {
+
+                if (!entry.isIntersecting) return;
+
+                entry.target.classList.add("is-visible");
+
+                observer.unobserve(entry.target);
+
+            });
+
+        },
+        {
+            threshold: 0.12
+        }
+    );
+
+    revealElements.forEach((element) => {
+        revealObserver.observe(element);
+    });
+
+});

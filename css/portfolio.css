@@ -3833,3 +3833,147 @@
         justify-content:center!important;
     }
 }
+/* =========================================================
+   PORTFOLIO — COMPACT SECTION SPACING
+   ========================================================= */
+
+.selected-work {
+    padding: 70px 0 80px !important;
+}
+
+.featured-project {
+    padding: 55px 5% 60px !important;
+}
+
+.project-collection {
+    padding: 70px 0 80px !important;
+}
+
+.design-transformation {
+    padding: 55px 0 60px !important;
+    margin-bottom: 35px !important;
+}
+
+.portfolio-details {
+    padding: 75px 0 80px !important;
+}
+
+.portfolio-cta {
+    padding: 50px 5% 55px !important;
+}
+
+
+/* TABLET */
+@media (max-width: 1024px) {
+
+    .selected-work {
+        padding: 60px 0 70px !important;
+    }
+
+    .featured-project {
+        padding: 50px 5% 55px !important;
+    }
+
+    .project-collection {
+        padding: 60px 0 70px !important;
+    }
+
+    .design-transformation {
+        padding: 50px 0 55px !important;
+    }
+
+    .portfolio-details {
+        padding: 65px 0 70px !important;
+    }
+
+    .portfolio-cta {
+        padding: 45px 5% 50px !important;
+    }
+}
+
+
+/* MOBILE */
+@media (max-width: 768px) {
+
+    .selected-work {
+        padding: 55px 0 65px !important;
+    }
+
+    .featured-project {
+        padding: 50px 6% 55px !important;
+    }
+
+    .project-collection {
+        padding: 55px 0 65px !important;
+    }
+
+    .design-transformation {
+        padding: 50px 0 55px !important;
+        margin-bottom: 25px !important;
+    }
+
+    .portfolio-details {
+        padding: 55px 0 65px !important;
+    }
+
+    .portfolio-cta {
+        padding: 45px 0 50px !important;
+    }
+}
+
+
+/* SMALL MOBILE */
+@media (max-width: 480px) {
+
+    .selected-work {
+        padding: 45px 0 55px !important;
+    }
+
+    .featured-project {
+        padding: 45px 5% 50px !important;
+    }
+
+    .project-collection {
+        padding: 45px 0 55px !important;
+    }
+
+    .design-transformation {
+        padding: 45px 0 50px !important;
+    }
+
+    .portfolio-details {
+        padding: 45px 0 55px !important;
+    }
+
+    .portfolio-cta {
+        padding: 40px 0 45px !important;
+    }
+}
+/* =========================================================
+   PORTFOLIO — MATERIALS & DETAILS GAP
+   ========================================================= */
+
+.portfolio-details {
+    padding-top: 55px !important;
+}
+
+/* TABLET */
+@media (max-width: 1024px) {
+    .portfolio-details {
+        padding-top: 50px !important;
+    }
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+    .portfolio-details {
+        padding-top: 45px !important;
+    }
+}
+
+/* SMALL MOBILE */
+@media (max-width: 480px) {
+    .portfolio-details {
+        padding-top: 40px !important;
+    }
+}

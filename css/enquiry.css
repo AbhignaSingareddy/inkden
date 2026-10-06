@@ -798,3 +798,196 @@ body.rtl-mode .enquiry-topbar {
     }
 
 }
+/* =========================================================
+   ENQUIRY BRAND
+   SAME SIZE AS WEBSITE BRAND
+   ========================================================= */
+
+.enquiry-brand {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+
+    width: fit-content !important;
+
+    margin: 2px auto 26px !important;
+
+    gap: 12px !important;
+    column-gap: 12px !important;
+
+    direction: ltr !important;
+
+    text-decoration: none;
+    color: var(--text);
+
+    transition:
+        opacity 0.3s ease,
+        transform 0.3s ease;
+}
+
+
+/* =========================================================
+   LTR
+   ========================================================= */
+
+html.ltr-mode .enquiry-brand,
+body.ltr-mode .enquiry-brand {
+    flex-direction: row !important;
+    gap: 12px !important;
+    column-gap: 12px !important;
+}
+
+
+/* =========================================================
+   RTL
+   ========================================================= */
+
+html.rtl-mode .enquiry-brand,
+body.rtl-mode .enquiry-brand {
+    flex-direction: row-reverse !important;
+    gap: 12px !important;
+    column-gap: 12px !important;
+}
+
+
+/* =========================================================
+   LOGO
+   ========================================================= */
+
+.enquiry-brand img {
+    width: 48px !important;
+    height: 48px !important;
+
+    flex: 0 0 48px !important;
+
+    object-fit: contain;
+    display: block;
+
+    margin: 0 !important;
+
+    filter: drop-shadow(
+        0 8px 15px rgba(74, 38, 63, 0.15)
+    );
+}
+
+
+/* =========================================================
+   BRAND NAME
+   ========================================================= */
+
+.enquiry-brand-name {
+    display: inline-flex !important;
+
+    align-items: center;
+
+    flex: 0 0 auto;
+
+    margin: 0 !important;
+    padding: 0 !important;
+
+    white-space: nowrap;
+
+    direction: ltr !important;
+
+    font-family: "Cormorant Garamond", serif;
+
+    font-size: 1.8rem !important;
+
+    font-weight: 700;
+
+    line-height: 1;
+
+    letter-spacing: -0.02em;
+}
+
+
+/* =========================================================
+   BRAND TEXT
+   ========================================================= */
+
+.enquiry-brand-name .brand-ink {
+    display: inline;
+    margin: 0 !important;
+    padding: 0 !important;
+    color: var(--text);
+}
+
+.enquiry-brand-name .brand-den {
+    display: inline;
+    margin: 0 !important;
+    padding: 0 !important;
+    color: var(--secondary);
+}
+
+
+/* =========================================================
+   DARK MODE
+   ========================================================= */
+
+html[data-theme="dark"] .enquiry-brand-name .brand-ink,
+body[data-theme="dark"] .enquiry-brand-name .brand-ink {
+    color: #fff8f2 !important;
+}
+
+html[data-theme="dark"] .enquiry-brand-name .brand-den,
+body[data-theme="dark"] .enquiry-brand-name .brand-den {
+    color: var(--secondary) !important;
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 600px) {
+
+    .enquiry-brand {
+        margin: 2px auto 20px !important;
+        gap: 10px !important;
+        column-gap: 10px !important;
+    }
+
+    .enquiry-brand img {
+        width: 44px !important;
+        height: 44px !important;
+        flex: 0 0 44px !important;
+    }
+
+    .enquiry-brand-name {
+        font-size: 1.65rem !important;
+    }
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+   ========================================================= */
+
+@media (max-width: 360px) {
+
+    .enquiry-brand {
+        gap: 9px !important;
+        column-gap: 9px !important;
+    }
+
+    .enquiry-brand img {
+        width: 42px !important;
+        height: 42px !important;
+        flex-basis: 42px !important;
+    }
+
+    .enquiry-brand-name {
+        font-size: 1.6rem !important;
+    }
+}
+/* =========================================================
+   RTL BRAND GAP — KEEP ORIGINAL
+   ========================================================= */
+
+html.rtl-mode .enquiry-brand,
+body.rtl-mode .enquiry-brand,
+html[dir="rtl"] .enquiry-brand {
+    flex-direction: row-reverse !important;
+    gap: 6px !important;
+    column-gap: 6px !important;
+}

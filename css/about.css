@@ -1,0 +1,3720 @@
+/* =========================================================
+   INKDEN — ABOUT PAGE
+========================================================= */
+
+
+/* =========================================================
+   01 — HERO
+========================================================= */
+
+.about-hero {
+
+    position: relative;
+
+    /* Increased slightly */
+    height: calc(100vh - 78px);
+
+    min-height: 500px;
+
+    max-height: 570px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    overflow: hidden;
+
+    isolation: isolate;
+
+}
+
+
+.about-hero-image {
+
+    position: absolute;
+
+    inset: 0;
+
+    z-index: -3;
+
+    background-image:
+        url("https://i.pinimg.com/736x/c8/95/a4/c895a49ff0b36cbcf16c0455a5d5e57f.jpg");
+
+    background-size: cover;
+
+    background-position: center;
+
+}
+
+
+.about-hero-overlay {
+
+    position: absolute;
+
+    inset: 0;
+
+    z-index: -2;
+
+    background:
+        linear-gradient(
+            90deg,
+            rgba(48,24,38,.88),
+            rgba(48,24,38,.55),
+            rgba(48,24,38,.20)
+        );
+
+}
+
+
+.about-hero-lines {
+
+    position: absolute;
+
+    width: 450px;
+
+    height: 450px;
+
+    right: -145px;
+
+    top: -175px;
+
+    border:
+        1px solid
+        rgba(214,168,95,.35);
+
+    border-radius: 50%;
+
+    z-index: -1;
+
+}
+
+
+.about-hero-lines::before {
+
+    content: "";
+
+    position: absolute;
+
+    inset: 55px;
+
+    border:
+        1px solid
+        rgba(214,168,95,.22);
+
+    border-radius: 50%;
+
+}
+
+
+.about-hero-lines::after {
+
+    content: "";
+
+    position: absolute;
+
+    inset: 110px;
+
+    border:
+        1px solid
+        rgba(214,168,95,.15);
+
+    border-radius: 50%;
+
+}
+
+
+.about-hero-content {
+
+    position: relative;
+
+    z-index: 2;
+
+    width: 100%;
+
+    max-width: 920px;
+
+    margin: 0 auto;
+
+    padding: 40px 20px;
+
+    text-align: center;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    justify-content: center;
+
+}
+
+
+.about-kicker {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+    margin-bottom: 17px;
+
+    color: #D6A85F;
+
+    font-size: .65rem;
+
+    font-weight: 800;
+
+    letter-spacing: .22em;
+
+}
+
+
+.about-kicker::before {
+
+    content: "";
+
+    width: 30px;
+
+    height: 1px;
+
+    background: #D6A85F;
+
+}
+
+
+.about-hero h1 {
+
+    max-width: 850px;
+
+    margin: 0 auto 20px;
+
+    color: #ffffff;
+
+    font-family:
+        "Cormorant Garamond",
+        serif;
+
+    font-size:
+        clamp(
+            3.4rem,
+            5.5vw,
+            5.3rem
+        );
+
+    font-weight: 500;
+
+    line-height: .9;
+
+    letter-spacing: -.02em;
+
+}
+
+
+.about-hero h1 em {
+
+    display: block;
+
+    color: #D6A85F;
+
+    font-weight: 500;
+
+}
+
+
+.about-hero p {
+
+    max-width: 590px;
+
+    margin: 0 auto 25px;
+
+    color: rgba(255,255,255,.84);
+
+    font-size: .78rem;
+
+    line-height: 1.7;
+
+}
+
+
+.about-hero-btn {
+
+    min-height: 45px;
+
+    padding: 0 22px;
+
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 8px;
+
+}
+
+
+.about-hero-btn svg {
+
+    width: 15px;
+
+    height: 15px;
+
+}
+
+
+/* =========================================================
+   COMMON SECTION SPACING
+========================================================= */
+
+.about-story,
+.about-beliefs,
+.about-services,
+.about-philosophy,
+.about-why {
+
+    padding-top: 78px !important;
+
+    padding-bottom: 78px !important;
+
+}
+
+
+/* =========================================================
+   COMMON HEADINGS
+========================================================= */
+
+.about-section-heading {
+
+    max-width: 850px;
+
+    margin: 0 auto 42px;
+
+    text-align: center;
+
+}
+
+
+.about-section-heading .eyebrow {
+
+    display: inline-block;
+
+    margin-bottom: 11px;
+
+}
+
+
+.about-section-heading h2 {
+
+    margin: 0 auto 15px;
+
+    font-family:
+        "Cormorant Garamond",
+        serif;
+
+    font-size:
+        clamp(
+            2.7rem,
+            4vw,
+            4rem
+        );
+
+    font-weight: 500;
+
+    line-height: .94;
+
+}
+
+
+.about-section-heading h2 em {
+
+    color: var(--secondary);
+
+    font-weight: 500;
+
+}
+
+
+.about-section-heading p {
+
+    max-width: 570px;
+
+    margin: 0 auto;
+
+    font-size: .76rem;
+
+    line-height: 1.7;
+
+    color: var(--text-muted);
+
+}
+
+
+/* =========================================================
+   02 — OUR STORY
+========================================================= */
+
+/* =========================================================
+   OUR STORY — FINAL
+========================================================= */
+
+.about-story {
+    padding: 70px 0;
+}
+
+.about-story-grid {
+    display: grid;
+    grid-template-columns: 0.92fr 1.08fr;
+    gap: 55px;
+    align-items: stretch;
+}
+
+
+/* =========================================================
+   LEFT CONTENT
+========================================================= */
+
+.about-story-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+
+    min-height: 400px;
+}
+
+.about-story-content .eyebrow {
+    margin-bottom: 14px;
+}
+
+.about-story-content h2 {
+    max-width: 570px;
+
+    margin: 0 0 20px;
+
+    font-family: "Cormorant Garamond", serif;
+    font-size: clamp(3rem, 4.4vw, 4.5rem);
+    font-weight: 500;
+    line-height: 0.92;
+    letter-spacing: -0.035em;
+}
+
+.about-story-content h2 em {
+    display: block;
+
+    color: var(--secondary);
+
+    font-style: italic;
+}
+
+.about-story-content .lead {
+    max-width: 570px;
+
+    margin: 0 0 12px;
+
+    font-size: 0.86rem;
+    line-height: 1.7;
+}
+
+.about-story-content > p:not(.lead) {
+    max-width: 550px;
+
+    margin: 0 0 22px;
+
+    color: #5f5550 !important;
+
+    font-size: 0.76rem;
+    line-height: 1.7;
+}
+
+html[data-theme="dark"] .about-story-content > p:not(.lead) {
+    color: #d8d0ca !important;
+}
+
+
+/* =========================================================
+   EXPLORE BUTTON
+========================================================= */
+
+.story-process-btn {
+    display: inline-flex;
+
+    align-items: center;
+    justify-content: center;
+
+    gap: 9px;
+
+    min-width: 175px;
+    height: 44px;
+
+    padding: 0 20px;
+
+    margin-top: 2px;
+
+    border: 1px solid var(--primary);
+    border-radius: 8px;
+
+    background: var(--primary);
+    color: #fff;
+
+    font-size: 0.68rem;
+    font-weight: 800;
+
+    text-decoration: none;
+
+    transition:
+        transform 0.3s ease,
+        background 0.3s ease,
+        color 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+.story-process-btn svg {
+    width: 15px;
+    height: 15px;
+}
+
+.story-process-btn:hover {
+    transform: translateY(-3px);
+
+    background: transparent;
+
+    color: var(--primary);
+
+    box-shadow:
+        0 8px 20px rgba(0, 0, 0, 0.08);
+}
+
+.story-process-btn:hover svg {
+    transform: translate(3px, -3px);
+}
+
+
+/* =========================================================
+   RIGHT IMAGE
+========================================================= */
+
+.about-story-image {
+    position: relative;
+
+    width: 100%;
+    height: 400px;
+    min-height: 400px;
+
+    overflow: hidden;
+
+    border-radius: 20px;
+
+    box-shadow: var(--shadow-lg);
+}
+
+.about-story-image img {
+    display: block;
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    transition: transform 0.7s ease;
+}
+
+.about-story-image:hover img {
+    transform: scale(1.035);
+}
+
+
+/* REMOVE INNER WHITE BORDER */
+
+.about-story-image::after {
+    display: none;
+}
+
+
+/* =========================================================
+   IMAGE CAPTION
+========================================================= */
+
+.about-image-caption {
+    position: absolute;
+
+    left: 18px;
+    right: 18px;
+    bottom: 18px;
+
+    z-index: 3;
+
+    padding: 13px 17px;
+
+    background: rgba(55, 27, 45, 0.94);
+
+    border: 1px solid var(--secondary);
+
+    border-radius: 9px;
+
+    color: #fff;
+}
+
+.about-image-caption span {
+    display: block;
+
+    margin-bottom: 3px;
+
+    color: #D6A85F;
+
+    font-size: 0.5rem;
+    font-weight: 800;
+
+    letter-spacing: 0.14em;
+}
+
+.about-image-caption strong {
+    font-family: "Cormorant Garamond", serif;
+
+    font-size: 1.3rem;
+    font-weight: 500;
+}
+
+
+/* =========================================================
+   RTL
+========================================================= */
+
+html[dir="rtl"] .about-story-content {
+    align-items: flex-end;
+    text-align: right;
+}
+
+html[dir="rtl"] .story-process-btn {
+    direction: rtl;
+}
+
+html[dir="rtl"] .story-process-btn:hover svg {
+    transform: translate(-3px, -3px);
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 768px) {
+
+    .about-story {
+        padding: 60px 0;
+    }
+
+    .about-story-grid {
+        grid-template-columns: 1fr;
+
+        gap: 35px;
+    }
+
+    .about-story-content {
+        min-height: auto;
+    }
+
+    .about-story-image {
+        height: 360px;
+        min-height: 360px;
+    }
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 480px) {
+
+    .about-story {
+        padding: 50px 0;
+    }
+
+    .about-story-content h2 {
+        font-size: 2.8rem;
+    }
+
+    .about-story-image {
+        height: 320px;
+        min-height: 320px;
+    }
+
+    .story-process-btn {
+        width: 100%;
+    }
+}
+/* =========================
+   STORY PROCESS BUTTON
+========================= */
+
+.story-process-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+
+  background: var(--primary);
+  color: #ffffff !important;
+
+  text-decoration: none !important;
+  border: 1px solid var(--primary);
+  border-radius: 8px;
+
+  padding: 13px 20px;
+  font-family: inherit;
+  font-size: 0.78rem;
+  font-weight: 800;
+  line-height: 1;
+
+  transition:
+    background-color 0.3s ease,
+    border-color 0.3s ease,
+    color 0.3s ease,
+    transform 0.3s ease;
+}
+
+.story-process-btn span,
+.story-process-btn i {
+  color: #ffffff !important;
+}
+
+.story-process-btn:hover {
+  background: var(--secondary);
+  border-color: var(--secondary);
+  color: #ffffff !important;
+  text-decoration: none !important;
+
+  transform: translateY(-2px);
+}
+
+.story-process-btn:hover span,
+.story-process-btn:hover i {
+  color: #ffffff !important;
+}
+
+.story-process-btn:visited,
+.story-process-btn:focus,
+.story-process-btn:active {
+  color: #ffffff !important;
+  text-decoration: none !important;
+}
+
+/* =========================================================
+   03 — WHAT WE BELIEVE
+========================================================= */
+
+/* =========================================================
+   03 — WHAT WE BELIEVE
+========================================================= */
+
+.about-beliefs {
+    position: relative;
+
+    padding: 68px 0;
+
+    background: var(--primary);
+
+    color: #fff;
+
+    overflow: hidden;
+}
+
+
+/* DECORATIVE CIRCLES */
+
+.about-beliefs::before {
+    content: "";
+
+    position: absolute;
+
+    width: 430px;
+    height: 430px;
+
+    right: -210px;
+    top: -250px;
+
+    border:
+        1px solid
+        rgba(255,255,255,.08);
+
+    border-radius: 50%;
+}
+
+
+.about-beliefs::after {
+    content: "";
+
+    position: absolute;
+
+    width: 280px;
+    height: 280px;
+
+    left: -170px;
+    bottom: -190px;
+
+    border:
+        1px solid
+        rgba(255,255,255,.07);
+
+    border-radius: 50%;
+}
+
+
+/* MAIN */
+
+.belief-manifesto {
+    position: relative;
+
+    z-index: 2;
+
+    display: grid;
+
+    grid-template-columns:
+        .9fr
+        1.1fr;
+
+    gap: 75px;
+
+    align-items: center;
+}
+
+
+/* =========================================================
+   LEFT
+========================================================= */
+
+.belief-manifesto-intro {
+    padding-right: 55px;
+
+    border-right:
+        1px solid
+        rgba(255,255,255,.17);
+}
+
+
+.belief-manifesto-intro .eyebrow {
+    margin-bottom: 16px;
+
+    color: #D6A85F;
+}
+
+
+.belief-manifesto-intro .eyebrow::before {
+    background: #D6A85F;
+}
+
+
+.belief-manifesto-intro h2 {
+    max-width: 520px;
+
+    margin:
+        0 0 22px;
+
+    color: #fff;
+
+    font-family:
+        "Cormorant Garamond",
+        serif;
+
+    font-size:
+        clamp(
+            3.1rem,
+            4.6vw,
+            5rem
+        );
+
+    font-weight: 500;
+
+    line-height: .92;
+
+    letter-spacing: -.035em;
+}
+
+
+.belief-manifesto-intro h2 em {
+    display: block;
+
+    color: #D6A85F;
+
+    font-style: italic;
+}
+
+
+.belief-manifesto-intro p {
+    max-width: 440px;
+
+    margin: 0;
+
+    color:
+        rgba(255,255,255,.68);
+
+    font-size: .78rem;
+
+    line-height: 1.8;
+}
+
+
+/* =========================================================
+   RIGHT
+========================================================= */
+
+.belief-manifesto-list {
+    width: 100%;
+}
+
+
+.belief-manifesto-item {
+    display: grid;
+
+    grid-template-columns:
+        42px
+        1fr
+        20px;
+
+    gap: 18px;
+
+    align-items: start;
+
+    padding:
+        18px 0;
+
+    border-bottom:
+        1px solid
+        rgba(255,255,255,.14);
+
+    transition:
+        padding .3s ease,
+        background .3s ease;
+}
+
+
+.belief-manifesto-item:first-child {
+    border-top:
+        1px solid
+        rgba(255,255,255,.14);
+}
+
+
+.belief-manifesto-item:hover {
+    padding-left: 12px;
+
+    background:
+        rgba(255,255,255,.025);
+}
+
+
+.belief-item-number {
+    padding-top: 3px;
+
+    color: #D6A85F;
+
+    font-size: .57rem;
+
+    font-weight: 800;
+
+    letter-spacing: .1em;
+}
+
+
+.belief-manifesto-item h3 {
+    margin:
+        0 0 5px;
+
+    color: #fff;
+
+    font-family:
+        "Cormorant Garamond",
+        serif;
+
+    font-size: 1.8rem;
+
+    font-weight: 500;
+
+    line-height: 1;
+}
+
+
+.belief-manifesto-item p {
+    max-width: 480px;
+
+    margin: 0;
+
+    color:
+        rgba(255,255,255,.62);
+
+    font-size: .67rem;
+
+    line-height: 1.65;
+}
+
+
+.belief-manifesto-item > svg {
+    width: 16px;
+    height: 16px;
+
+    margin-top: 4px;
+
+    color: #D6A85F;
+
+    opacity: .55;
+
+    transition:
+        transform .3s ease,
+        opacity .3s ease;
+}
+
+
+.belief-manifesto-item:hover > svg {
+    opacity: 1;
+
+    transform:
+        translate(
+            3px,
+            -3px
+        );
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 768px) {
+
+    .about-beliefs {
+        padding: 58px 0;
+    }
+
+    .belief-manifesto {
+        grid-template-columns: 1fr;
+
+        gap: 42px;
+    }
+
+    .belief-manifesto-intro {
+        padding-right: 0;
+
+        padding-bottom: 32px;
+
+        border-right: none;
+
+        border-bottom:
+            1px solid
+            rgba(255,255,255,.17);
+    }
+
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 480px) {
+
+    .about-beliefs {
+        padding: 50px 0;
+    }
+
+    .belief-manifesto-intro h2 {
+        font-size: 3rem;
+    }
+
+    .belief-manifesto-item {
+        grid-template-columns:
+            34px
+            1fr
+            16px;
+
+        gap: 11px;
+
+        padding: 17px 0;
+    }
+
+    .belief-manifesto-item h3 {
+        font-size: 1.55rem;
+    }
+
+}
+
+/* =========================================================
+   04 — WHAT WE DO
+========================================================= */
+
+/* =========================================
+   WHAT WE DO — CENTER HEADING
+========================================= */
+
+.services-heading {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    width: 100%;
+    max-width: 900px;
+
+    margin: 0 auto 48px;
+
+    text-align: center;
+}
+
+.services-heading .eyebrow {
+    justify-content: center;
+    margin-bottom: 12px;
+}
+
+.services-heading h2 {
+    max-width: 780px;
+
+    margin: 0 auto 16px;
+
+    text-align: center;
+
+    font-family: "Cormorant Garamond", serif;
+    font-size: clamp(3rem, 4.5vw, 4.5rem);
+    font-weight: 500;
+    line-height: .92;
+}
+
+.services-heading h2 em {
+    color: var(--secondary);
+}
+
+.services-heading > p {
+    max-width: 600px;
+
+    margin: 0 auto;
+
+    text-align: center;
+
+    font-size: .78rem;
+    line-height: 1.8;
+
+    color: var(--text-muted);
+}
+
+
+.service-timeline {
+
+    position: relative;
+
+    border-top:
+        1px solid
+        var(--border);
+
+}
+
+
+.service-timeline::before {
+
+    content: "";
+
+    position: absolute;
+
+    left: 32px;
+
+    top: 0;
+
+    bottom: 0;
+
+    width: 1px;
+
+    background: var(--border);
+
+}
+
+
+.service-timeline-item {
+
+    position: relative;
+
+    display: grid;
+
+    grid-template-columns:
+        65px
+        1fr
+        30px;
+
+    gap: 30px;
+
+    align-items: center;
+
+    min-height: 130px;
+
+    padding: 22px 5px;
+
+    border-bottom:
+        1px solid
+        var(--border);
+
+    color: var(--text);
+
+    text-decoration: none;
+
+    transition:
+        padding .35s ease,
+        background .35s ease;
+
+}
+
+
+.service-timeline-item:hover {
+
+    padding-left: 18px;
+
+    background:
+        rgba(176,122,42,.045);
+
+}
+
+
+.service-timeline-number {
+
+    position: relative;
+
+    z-index: 2;
+
+    width: 54px;
+
+    height: 54px;
+
+    display: grid;
+
+    place-items: center;
+
+    border:
+        1px solid
+        var(--secondary);
+
+    border-radius: 50%;
+
+    background: var(--bg);
+
+    color: var(--secondary);
+
+    font-size: .6rem;
+
+    font-weight: 800;
+
+}
+
+
+.service-timeline-content span {
+
+    display: block;
+
+    margin-bottom: 4px;
+
+    color: var(--secondary);
+
+    font-size: .52rem;
+
+    font-weight: 800;
+
+    letter-spacing: .16em;
+
+}
+
+
+.service-timeline-content h3 {
+
+    margin: 0 0 5px;
+
+    font-family:
+        "Cormorant Garamond",
+        serif;
+
+    font-size: 2rem;
+
+    font-weight: 600;
+
+    line-height: 1;
+
+}
+
+
+.service-timeline-content p {
+
+    max-width: 650px;
+
+    margin: 0;
+
+    font-size: .7rem;
+
+    line-height: 1.65;
+
+    color: var(--text-muted);
+
+}
+
+
+.service-timeline-arrow {
+
+    width: 18px;
+
+    height: 18px;
+
+    color: var(--secondary);
+
+    opacity: .55;
+
+    transition:
+        transform .35s ease,
+        opacity .35s ease;
+
+}
+
+
+.service-timeline-item:hover
+.service-timeline-arrow {
+
+    opacity: 1;
+
+    transform:
+        translate(
+            3px,
+            -3px
+        );
+
+}
+
+
+/* =========================================================
+   05 — DESIGN PHILOSOPHY
+========================================================= */
+
+.about-philosophy {
+
+    background: var(--surface-2);
+
+}
+
+
+.philosophy-grid {
+
+    display: grid;
+
+    grid-template-columns:
+        1.02fr
+        .98fr;
+
+    gap: 60px;
+
+    align-items: stretch;
+
+}
+
+
+.philosophy-visual {
+
+    position: relative;
+
+    min-height: 430px;
+
+    height: 100%;
+
+    overflow: hidden;
+
+    padding: 0 !important;
+
+    border-radius: 20px;
+
+    background: none !important;
+
+    box-shadow:
+        var(--shadow-lg);
+
+}
+
+
+.philosophy-visual img {
+
+    display: block;
+
+    width: 100%;
+
+    height: 100%;
+
+    min-height: 430px;
+
+    object-fit: cover;
+
+    object-position: center;
+
+    transition:
+        transform .8s ease;
+
+}
+
+
+.philosophy-visual:hover img {
+
+    transform: scale(1.035);
+
+}
+
+
+.philosophy-image-label {
+
+    position: absolute;
+
+    left: 22px;
+
+    right: 22px;
+
+    bottom: 22px;
+
+    z-index: 3;
+
+    display: flex;
+
+    align-items: flex-end;
+
+    justify-content: space-between;
+
+    gap: 20px;
+
+    padding: 17px 20px;
+
+    background:
+        rgba(48,24,38,.92);
+
+    border:
+        1px solid
+        var(--secondary);
+
+    border-radius: 10px;
+
+    color: #ffffff;
+
+}
+
+
+.philosophy-image-label span {
+
+    color: var(--secondary);
+
+    font-size: .55rem;
+
+    font-weight: 800;
+
+    letter-spacing: .14em;
+
+}
+
+
+.philosophy-image-label strong {
+
+    max-width: 340px;
+
+    font-family:
+        "Cormorant Garamond",
+        serif;
+
+    font-size: 1.45rem;
+
+    line-height: 1;
+
+    font-weight: 500;
+
+}
+
+
+.philosophy-content {
+
+    height: 100%;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+
+}
+
+
+.philosophy-content h2 {
+
+    max-width: 650px;
+
+    margin: 10px 0 18px;
+
+    font-family:
+        "Cormorant Garamond",
+        serif;
+
+    font-size:
+        clamp(
+            3rem,
+            4.5vw,
+            4.6rem
+        );
+
+    font-weight: 500;
+
+    line-height: .94;
+
+}
+
+
+.philosophy-content h2 em {
+
+    color: var(--secondary);
+
+}
+
+
+.philosophy-content .lead {
+
+    max-width: 590px;
+
+    margin: 0 0 22px;
+
+    font-size: .82rem;
+
+    line-height: 1.7;
+
+}
+
+
+.philosophy-points {
+
+    display: flex;
+
+    flex-direction: column;
+
+    margin-top: 5px;
+
+}
+
+
+.philosophy-points div {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+    min-height: 43px;
+
+    padding: 7px 0;
+
+    border-bottom:
+        1px solid
+        var(--border);
+
+    font-size: .68rem;
+
+    font-weight: 700;
+
+}
+
+
+.philosophy-points div:last-child {
+
+    border-bottom: none;
+
+}
+
+
+.philosophy-points i {
+
+    width: 27px;
+
+    height: 27px;
+
+    min-width: 27px;
+
+    display: grid;
+
+    place-items: center;
+
+    padding: 6px;
+
+    border-radius: 50%;
+
+    background: var(--secondary);
+
+    color: #ffffff;
+
+}
+
+
+/* =========================================================
+   06 — WHY INKDEN
+========================================================= */
+
+.about-why {
+
+    background: var(--bg);
+
+}
+
+
+.why-grid {
+
+    display: grid;
+
+    grid-template-columns:
+        1fr
+        1fr;
+
+    column-gap: 60px;
+
+    border-top:
+        1px solid
+        var(--border);
+
+}
+
+
+.why-item {
+
+    position: relative;
+
+    min-height: 180px;
+
+    padding: 28px 5px;
+
+    border-bottom:
+        1px solid
+        var(--border);
+
+    transition:
+        background .35s ease;
+
+}
+
+
+.why-item:nth-child(odd) {
+
+    border-right:
+        1px solid
+        var(--border);
+
+    padding-right: 40px;
+
+}
+
+
+.why-item:nth-child(even) {
+
+    padding-left: 40px;
+
+}
+
+
+.why-item::before {
+
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+
+    top: 0;
+
+    width: 3px;
+
+    height: 100%;
+
+    background: var(--secondary);
+
+    transform: scaleY(0);
+
+    transition:
+        transform .35s ease;
+
+}
+
+
+.why-item:hover {
+
+    background:
+        rgba(176,122,42,.04);
+
+}
+
+
+.why-item:hover::before {
+
+    transform: scaleY(1);
+
+}
+
+
+.why-item > span {
+
+    display: block;
+
+    margin-bottom: 20px;
+
+    color: var(--secondary);
+
+    font-size: .6rem;
+
+    font-weight: 800;
+
+    letter-spacing: .12em;
+
+}
+
+
+.why-item-content {
+
+    display: flex;
+
+    align-items: flex-start;
+
+    gap: 17px;
+
+}
+
+
+.why-item-content > svg {
+
+    width: 29px;
+
+    height: 29px;
+
+    padding: 6px;
+
+    flex-shrink: 0;
+
+    color: var(--secondary);
+
+    border:
+        1px solid
+        rgba(176,122,42,.35);
+
+    border-radius: 50%;
+
+}
+
+
+.why-item h3 {
+
+    margin: 0 0 7px;
+
+    font-family:
+        "Cormorant Garamond",
+        serif;
+
+    font-size: 1.9rem;
+
+    font-weight: 600;
+
+    line-height: 1;
+
+}
+
+
+.why-item p {
+
+    max-width: 410px;
+
+    margin: 0;
+
+    font-size: .7rem;
+
+    line-height: 1.65;
+
+    color: var(--text-muted);
+
+}
+
+
+/* =========================================================
+   07 — CTA
+========================================================= */
+
+.about-cta-section {
+
+    padding-top: 65px !important;
+
+    padding-bottom: 75px !important;
+
+    background: var(--bg);
+
+}
+
+
+.about-cta {
+
+    position: relative;
+
+    display: grid;
+
+    grid-template-columns:
+        1fr
+        auto;
+
+    align-items: center;
+
+    gap: 45px;
+
+    padding: 43px 48px;
+
+    overflow: hidden;
+
+    border:
+        1px solid
+        var(--secondary);
+
+    border-radius: 20px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #f1e5cf,
+            #faf4eb
+        );
+
+}
+
+
+.about-cta-copy {
+
+    position: relative;
+
+    z-index: 2;
+
+}
+
+
+.about-cta-copy h2 {
+
+    margin: 10px 0 12px;
+
+    font-family:
+        "Cormorant Garamond",
+        serif;
+
+    font-size:
+        clamp(
+            2.8rem,
+            4.7vw,
+            4.5rem
+        );
+
+    font-weight: 500;
+
+    line-height: .98;
+
+}
+
+
+.about-cta-copy h2 em {
+
+    color: var(--secondary);
+
+}
+
+
+.about-cta-copy p {
+
+    max-width: 670px;
+
+    margin: 0;
+
+    font-size: .78rem;
+
+    line-height: 1.7;
+
+}
+
+
+.about-cta-button {
+
+    position: relative;
+
+    z-index: 5;
+
+}
+
+
+.about-cta-button .btn {
+
+    min-width: 188px;
+
+    min-height: 46px;
+
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 8px;
+
+}
+
+
+/* =========================================================
+   DARK MODE
+========================================================= */
+
+html[data-theme="dark"] .about-story,
+html[data-theme="dark"] .about-services,
+html[data-theme="dark"] .about-why,
+html[data-theme="dark"] .about-cta-section {
+
+    background: var(--bg);
+
+}
+
+
+html[data-theme="dark"] .about-beliefs,
+html[data-theme="dark"] .about-philosophy {
+
+    background: var(--surface-2);
+
+}
+
+
+html[data-theme="dark"] .about-cta {
+
+    background:
+        linear-gradient(
+            135deg,
+            #35202b,
+            #291a23
+        );
+
+}
+
+
+/* =========================================================
+   RTL
+========================================================= */
+
+html[dir="rtl"] .about-story-content,
+html[dir="rtl"] .philosophy-content {
+
+    text-align: right;
+
+}
+
+
+html[dir="rtl"] .about-story-content .text-link {
+
+    align-self: flex-end;
+
+}
+
+
+html[dir="rtl"] .about-image-caption {
+
+    left: auto;
+
+    right: 22px;
+
+}
+
+
+html[dir="rtl"] .belief-editorial,
+html[dir="rtl"] .services-heading,
+html[dir="rtl"] .service-timeline-item {
+
+    direction: rtl;
+
+}
+
+
+html[dir="rtl"] .belief-statement {
+
+    padding-left: 0;
+
+    padding-right: 45px;
+
+    border-left: none;
+
+    border-right:
+        1px solid
+        var(--border);
+
+}
+
+
+html[dir="rtl"] .service-timeline::before {
+
+    left: auto;
+
+    right: 32px;
+
+}
+
+
+html[dir="rtl"] .why-grid {
+
+    direction: rtl;
+
+}
+
+
+html[dir="rtl"] .why-item:nth-child(odd) {
+
+    border-right: none;
+
+    border-left:
+        1px solid
+        var(--border);
+
+    padding-right: 5px;
+
+    padding-left: 40px;
+
+}
+
+
+html[dir="rtl"] .why-item:nth-child(even) {
+
+    padding-left: 5px;
+
+    padding-right: 40px;
+
+}
+
+
+html[dir="rtl"] .why-item::before {
+
+    left: auto;
+
+    right: 0;
+
+}
+
+
+/* =========================================================
+   1024px
+========================================================= */
+
+@media (max-width: 1024px) {
+
+    .about-hero {
+
+        height: 520px;
+
+        min-height: 520px;
+
+        max-height: 540px;
+
+    }
+
+
+    .about-story-grid,
+    .philosophy-grid {
+
+        gap: 40px;
+
+    }
+
+
+    .about-story-content h2,
+    .philosophy-content h2 {
+
+        font-size: 3.5rem;
+
+    }
+
+
+    .about-story-image,
+    .philosophy-visual {
+
+        min-height: 400px;
+
+    }
+
+
+    .philosophy-visual img {
+
+        min-height: 400px;
+
+    }
+
+
+    .about-cta {
+
+        grid-template-columns: 1fr;
+
+        gap: 25px;
+
+    }
+
+}
+
+
+/* =========================================================
+   850px
+========================================================= */
+
+@media (max-width: 850px) {
+
+    .belief-editorial {
+
+        gap: 50px;
+
+    }
+
+
+    .services-heading {
+
+        gap: 40px;
+
+    }
+
+
+    .why-grid {
+
+        column-gap: 30px;
+
+    }
+
+}
+
+
+/* =========================================================
+   768px
+========================================================= */
+
+@media (max-width: 768px) {
+
+    .about-hero {
+
+        height: 500px;
+
+        min-height: 500px;
+
+        max-height: none;
+
+    }
+
+
+    .about-hero-content {
+
+        padding: 50px 20px;
+
+    }
+
+
+    .about-hero h1 {
+
+        font-size:
+            clamp(
+                3rem,
+                10vw,
+                4.5rem
+            );
+
+    }
+
+
+    .about-story,
+    .about-beliefs,
+    .about-services,
+    .about-philosophy,
+    .about-why {
+
+        padding-top: 65px !important;
+
+        padding-bottom: 65px !important;
+
+    }
+
+
+    .about-story-grid,
+    .philosophy-grid {
+
+        grid-template-columns: 1fr;
+
+        gap: 35px;
+
+    }
+
+
+    .about-story-content,
+    .philosophy-content {
+
+        height: auto;
+
+    }
+
+
+    .about-story-image,
+    .philosophy-visual {
+
+        min-height: 380px;
+
+        height: 380px;
+
+    }
+
+
+    .philosophy-visual img {
+
+        min-height: 380px;
+
+    }
+
+
+    .belief-editorial {
+
+        grid-template-columns: 1fr;
+
+        gap: 45px;
+
+    }
+
+
+    .belief-statement {
+
+        padding-left: 0;
+
+        padding-top: 35px;
+
+        border-left: none;
+
+        border-top:
+            1px solid
+            var(--border);
+
+    }
+
+
+    .services-heading {
+
+        grid-template-columns: 1fr;
+
+        gap: 20px;
+
+    }
+
+
+    .service-timeline::before {
+
+        left: 27px;
+
+    }
+
+
+    .service-timeline-item {
+
+        grid-template-columns:
+            55px
+            1fr
+            25px;
+
+        gap: 18px;
+
+    }
+
+
+    .service-timeline-number {
+
+        width: 48px;
+
+        height: 48px;
+
+    }
+
+
+    .why-grid {
+
+        grid-template-columns: 1fr;
+
+        column-gap: 0;
+
+    }
+
+
+    .why-item:nth-child(odd),
+    .why-item:nth-child(even) {
+
+        border-right: none;
+
+        border-left: none;
+
+        padding-left: 5px;
+
+        padding-right: 5px;
+
+    }
+
+}
+
+
+/* =========================================================
+   600px
+========================================================= */
+
+@media (max-width: 600px) {
+
+    .belief-principles {
+
+        grid-template-columns: 1fr;
+
+    }
+
+
+    .service-timeline-content h3 {
+
+        font-size: 1.7rem;
+
+    }
+
+
+    .service-timeline-content p {
+
+        font-size: .67rem;
+
+    }
+
+}
+
+
+/* =========================================================
+   480px
+========================================================= */
+
+@media (max-width: 480px) {
+
+    .about-hero {
+
+        height: 480px;
+
+        min-height: 480px;
+
+    }
+
+
+    .about-hero-content {
+
+        padding:
+            45px
+            18px;
+
+    }
+
+
+    .about-kicker {
+
+        font-size: .58rem;
+
+    }
+
+
+    .about-hero h1 {
+
+        font-size: 2.9rem;
+
+    }
+
+
+    .about-hero p {
+
+        font-size: .7rem;
+
+    }
+
+
+    .about-story,
+    .about-beliefs,
+    .about-services,
+    .about-philosophy,
+    .about-why {
+
+        padding-top: 56px !important;
+
+        padding-bottom: 56px !important;
+
+    }
+
+
+    .about-section-heading h2 {
+
+        font-size: 2.65rem;
+
+    }
+
+
+    .about-story-content h2,
+    .philosophy-content h2 {
+
+        font-size: 2.65rem;
+
+    }
+
+
+    .about-story-image,
+    .philosophy-visual {
+
+        min-height: 310px;
+
+        height: 310px;
+
+    }
+
+
+    .philosophy-visual img {
+
+        min-height: 310px;
+
+    }
+
+
+    .about-image-caption,
+    .philosophy-image-label {
+
+        left: 14px;
+
+        right: 14px;
+
+        bottom: 14px;
+
+        padding: 12px 14px;
+
+    }
+
+
+    .about-image-caption strong,
+    .philosophy-image-label strong {
+
+        font-size: 1.1rem;
+
+    }
+
+
+    .belief-intro h2,
+    .services-heading h2 {
+
+        font-size: 2.7rem;
+
+    }
+
+
+    .belief-quote {
+
+        font-size: 2rem;
+
+    }
+
+
+    .service-timeline::before {
+
+        left: 22px;
+
+    }
+
+
+    .service-timeline-item {
+
+        grid-template-columns:
+            45px
+            1fr
+            20px;
+
+        gap: 12px;
+
+        min-height: 115px;
+
+    }
+
+
+    .service-timeline-number {
+
+        width: 42px;
+
+        height: 42px;
+
+    }
+
+
+    .service-timeline-content h3 {
+
+        font-size: 1.55rem;
+
+    }
+
+
+    .service-timeline-content p {
+
+        font-size: .64rem;
+
+    }
+
+
+    .about-cta {
+
+        padding:
+            28px
+            20px;
+
+    }
+
+
+    .about-cta-copy h2 {
+
+        font-size: 2.65rem;
+
+    }
+
+
+    .about-cta-button,
+    .about-cta-button .btn {
+
+        width: 100%;
+
+    }
+
+}
+
+
+/* =========================================================
+   360px
+========================================================= */
+
+@media (max-width: 360px) {
+
+    .about-hero {
+
+        height: 460px;
+
+        min-height: 460px;
+
+    }
+
+
+    .about-hero h1 {
+
+        font-size: 2.65rem;
+
+    }
+
+
+    .about-hero p {
+
+        font-size: .66rem;
+
+    }
+
+
+    .about-story,
+    .about-beliefs,
+    .about-services,
+    .about-philosophy,
+    .about-why {
+
+        padding-top: 48px !important;
+
+        padding-bottom: 48px !important;
+
+    }
+
+
+    .about-section-heading h2,
+    .about-story-content h2,
+    .philosophy-content h2,
+    .about-cta-copy h2 {
+
+        font-size: 2.4rem;
+
+    }
+
+
+    .about-story-image,
+    .philosophy-visual {
+
+        min-height: 285px;
+
+        height: 285px;
+
+    }
+
+
+    .philosophy-visual img {
+
+        min-height: 285px;
+
+    }
+
+
+    .belief-quote {
+
+        font-size: 1.8rem;
+
+    }
+
+
+    .service-timeline-content h3 {
+
+        font-size: 1.3rem;
+
+    }
+
+}
+
+
+/* =========================================================
+   REDUCED MOTION
+========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+    .about-hero-image,
+    .about-story-image img,
+    .philosophy-visual img,
+    .belief-editorial,
+    .service-timeline-item {
+
+        transition: none !important;
+
+    }
+
+}
+/* =========================================================
+   INKDEN ABOUT PAGE
+   FULL PAGE SPACING + TYPOGRAPHY
+   DESIGN PROCESS STYLE
+========================================================= */
+
+
+/* =========================================================
+   01 — GLOBAL SECTION SPACING
+========================================================= */
+
+.about-story,
+.about-beliefs,
+.about-services,
+.about-philosophy,
+.about-why,
+.about-cta-section {
+    padding-top: 82px !important;
+    padding-bottom: 82px !important;
+}
+
+
+/* =========================================================
+   COMMON EYEBROW / TAGLINE
+========================================================= */
+
+.about-section-heading .eyebrow,
+.about-story-content .eyebrow,
+.belief-manifesto-intro .eyebrow,
+.services-heading .eyebrow,
+.philosophy-content .eyebrow,
+.about-cta-copy .eyebrow {
+    font-size: .68rem !important;
+    font-weight: 800 !important;
+    letter-spacing: .18em !important;
+    line-height: 1.3 !important;
+}
+
+
+/* =========================================================
+   COMMON MAIN HEADINGS
+========================================================= */
+
+.about-story-content h2,
+.about-section-heading h2,
+.belief-manifesto-intro h2,
+.philosophy-content h2,
+.about-cta-copy h2 {
+    font-family: "Cormorant Garamond", serif !important;
+
+    font-weight: 500 !important;
+
+    letter-spacing: -.025em !important;
+
+    line-height: .96 !important;
+}
+
+
+/* =========================================================
+   02 — OUR STORY
+========================================================= */
+
+.about-story {
+    padding-top: 88px !important;
+    padding-bottom: 88px !important;
+}
+
+.about-story-grid {
+    gap: 62px !important;
+}
+
+.about-story-content {
+    min-height: 410px !important;
+}
+
+.about-story-content h2 {
+    max-width: 590px !important;
+
+    margin: 10px 0 20px !important;
+
+    font-size: clamp(
+        3.3rem,
+        4.8vw,
+        4.8rem
+    ) !important;
+}
+
+.about-story-content .lead {
+    max-width: 590px !important;
+
+    margin-bottom: 15px !important;
+
+    font-size: .98rem !important;
+
+    line-height: 1.75 !important;
+}
+
+.about-story-content > p:not(.lead) {
+    max-width: 570px !important;
+
+    margin-bottom: 0 !important;
+
+    font-size: .88rem !important;
+
+    line-height: 1.75 !important;
+
+    color: var(--text-muted) !important;
+}
+
+.story-process-btn {
+    margin-top: 22px !important;
+}
+
+.about-story-image {
+    min-height: 410px !important;
+}
+
+
+/* =========================================================
+   03 — WHAT WE BELIEVE
+========================================================= */
+
+.about-beliefs {
+    padding-top: 88px !important;
+    padding-bottom: 88px !important;
+}
+
+.belief-manifesto {
+    gap: 70px !important;
+}
+
+.belief-manifesto-intro h2 {
+    max-width: 600px !important;
+
+    margin: 12px 0 18px !important;
+
+    font-size: clamp(
+        3.2rem,
+        4.6vw,
+        4.6rem
+    ) !important;
+}
+
+.belief-manifesto-intro p {
+    max-width: 570px !important;
+
+    font-size: .95rem !important;
+
+    line-height: 1.8 !important;
+
+    color: var(--text-muted) !important;
+}
+
+.belief-manifesto-list {
+    gap: 0 !important;
+}
+
+.belief-manifesto-item {
+    min-height: 92px !important;
+
+    padding: 20px 0 !important;
+}
+
+.belief-manifesto-item strong {
+    font-size: 1.15rem !important;
+}
+
+.belief-manifesto-item p {
+    max-width: 520px !important;
+
+    font-size: .84rem !important;
+
+    line-height: 1.7 !important;
+}
+
+
+/* =========================================================
+   04 — WHAT WE DO
+========================================================= */
+
+.about-services {
+    padding-top: 88px !important;
+    padding-bottom: 88px !important;
+}
+
+
+/* HEADING CENTER */
+
+.about-services .services-heading {
+    display: flex !important;
+
+    flex-direction: column !important;
+
+    align-items: center !important;
+
+    justify-content: center !important;
+
+    width: 100% !important;
+
+    max-width: 900px !important;
+
+    margin: 0 auto 52px !important;
+
+    gap: 0 !important;
+
+    text-align: center !important;
+}
+
+.about-services .services-heading .eyebrow {
+    margin-bottom: 13px !important;
+}
+
+.about-services .services-heading h2 {
+    max-width: 850px !important;
+
+    margin: 0 auto 17px !important;
+
+    text-align: center !important;
+
+    font-size: clamp(
+        3.2rem,
+        5vw,
+        5rem
+    ) !important;
+}
+
+.about-services .services-heading > p {
+    max-width: 680px !important;
+
+    margin: 0 auto !important;
+
+    text-align: center !important;
+
+    font-size: .96rem !important;
+
+    line-height: 1.75 !important;
+
+    color: var(--text-muted) !important;
+}
+
+
+/* SERVICE ROWS */
+
+.service-timeline-item {
+    min-height: 132px !important;
+
+    padding: 25px 5px !important;
+}
+
+.service-timeline-content span {
+    margin-bottom: 6px !important;
+
+    font-size: .56rem !important;
+}
+
+.service-timeline-content h3 {
+    margin-bottom: 7px !important;
+
+    font-size: 2rem !important;
+
+    line-height: 1.05 !important;
+}
+
+.service-timeline-content p {
+    max-width: 680px !important;
+
+    font-size: .84rem !important;
+
+    line-height: 1.7 !important;
+
+    color: var(--text-muted) !important;
+}
+
+
+/* =========================================================
+   05 — DESIGN PHILOSOPHY
+========================================================= */
+
+.about-philosophy {
+    padding-top: 88px !important;
+    padding-bottom: 88px !important;
+}
+
+.philosophy-grid {
+    gap: 65px !important;
+}
+
+.philosophy-content h2 {
+    max-width: 620px !important;
+
+    margin: 11px 0 18px !important;
+
+    font-size: clamp(
+        3.2rem,
+        4.7vw,
+        4.7rem
+    ) !important;
+}
+
+.philosophy-content .lead {
+    max-width: 620px !important;
+
+    font-size: .98rem !important;
+
+    line-height: 1.8 !important;
+}
+
+.philosophy-points {
+    gap: 16px 28px !important;
+
+    margin-top: 30px !important;
+}
+
+.philosophy-points div {
+    font-size: .82rem !important;
+}
+
+
+/* =========================================================
+   06 — WHY INKDEN
+========================================================= */
+
+.about-why {
+    padding-top: 88px !important;
+    padding-bottom: 88px !important;
+}
+
+.about-why .about-section-heading {
+    max-width: 850px !important;
+
+    margin-bottom: 48px !important;
+
+    text-align: center !important;
+}
+
+.about-why .about-section-heading h2 {
+    margin: 10px auto 16px !important;
+
+    font-size: clamp(
+        3.2rem,
+        4.8vw,
+        4.7rem
+    ) !important;
+}
+
+.about-why .about-section-heading p {
+    max-width: 670px !important;
+
+    margin: 0 auto !important;
+
+    font-size: .96rem !important;
+
+    line-height: 1.75 !important;
+}
+
+.why-grid {
+    row-gap: 0 !important;
+}
+
+.why-item {
+    min-height: 170px !important;
+
+    padding-top: 30px !important;
+    padding-bottom: 30px !important;
+}
+
+.why-item-content h3 {
+    margin-bottom: 7px !important;
+
+    font-size: 1.8rem !important;
+}
+
+.why-item-content p {
+    max-width: 450px !important;
+
+    font-size: .84rem !important;
+
+    line-height: 1.7 !important;
+
+    color: var(--text-muted) !important;
+}
+
+
+/* =========================================================
+   07 — FINAL CTA
+========================================================= */
+
+.about-cta-section {
+    padding-top: 92px !important;
+    padding-bottom: 92px !important;
+}
+
+.about-cta {
+    padding: 48px 52px !important;
+}
+
+.about-cta-copy h2 {
+    margin: 10px 0 15px !important;
+
+    font-size: clamp(
+        3.2rem,
+        4.8vw,
+        4.7rem
+    ) !important;
+}
+
+.about-cta-copy p {
+    max-width: 670px !important;
+
+    font-size: .94rem !important;
+
+    line-height: 1.75 !important;
+}
+
+
+/* =========================================================
+   TABLET — 1024px
+========================================================= */
+
+@media (max-width: 1024px) {
+
+    .about-story,
+    .about-beliefs,
+    .about-services,
+    .about-philosophy,
+    .about-why {
+        padding-top: 72px !important;
+        padding-bottom: 72px !important;
+    }
+
+    .about-story-grid,
+    .philosophy-grid {
+        gap: 42px !important;
+    }
+
+    .about-story-content h2,
+    .belief-manifesto-intro h2,
+    .philosophy-content h2 {
+        font-size: 3.6rem !important;
+    }
+
+    .about-story-content .lead,
+    .belief-manifesto-intro p,
+    .philosophy-content .lead {
+        font-size: .9rem !important;
+    }
+
+    .about-cta-section {
+        padding-top: 75px !important;
+        padding-bottom: 75px !important;
+    }
+}
+
+
+/* =========================================================
+   MOBILE — 768px
+========================================================= */
+
+@media (max-width: 768px) {
+
+    .about-story,
+    .about-beliefs,
+    .about-services,
+    .about-philosophy,
+    .about-why {
+        padding-top: 65px !important;
+        padding-bottom: 65px !important;
+    }
+
+    .about-story-grid,
+    .philosophy-grid {
+        gap: 38px !important;
+    }
+
+    .about-story-content {
+        min-height: auto !important;
+    }
+
+    .about-story-content h2,
+    .belief-manifesto-intro h2,
+    .philosophy-content h2,
+    .about-services .services-heading h2,
+    .about-why .about-section-heading h2,
+    .about-cta-copy h2 {
+        font-size: clamp(
+            2.8rem,
+            8vw,
+            4rem
+        ) !important;
+    }
+
+    .about-story-content .lead,
+    .belief-manifesto-intro p,
+    .philosophy-content .lead,
+    .about-services .services-heading > p,
+    .about-why .about-section-heading p {
+        font-size: .88rem !important;
+
+        line-height: 1.7 !important;
+    }
+
+    .service-timeline-item {
+        min-height: 115px !important;
+
+        padding: 22px 5px !important;
+    }
+
+    .service-timeline-content h3 {
+        font-size: 1.7rem !important;
+    }
+
+    .service-timeline-content p {
+        font-size: .76rem !important;
+    }
+
+    .why-item {
+        min-height: auto !important;
+
+        padding-top: 25px !important;
+        padding-bottom: 25px !important;
+    }
+
+    .about-cta {
+        padding: 35px 28px !important;
+    }
+}
+
+
+/* =========================================================
+   MOBILE — 480px
+========================================================= */
+
+@media (max-width: 480px) {
+
+    .about-story,
+    .about-beliefs,
+    .about-services,
+    .about-philosophy,
+    .about-why {
+        padding-top: 55px !important;
+        padding-bottom: 55px !important;
+    }
+
+    .about-cta-section {
+        padding-top: 60px !important;
+        padding-bottom: 60px !important;
+    }
+
+    .about-story-content h2,
+    .belief-manifesto-intro h2,
+    .philosophy-content h2,
+    .about-services .services-heading h2,
+    .about-why .about-section-heading h2,
+    .about-cta-copy h2 {
+        font-size: 2.7rem !important;
+    }
+
+    .about-story-content .lead {
+        font-size: .86rem !important;
+    }
+
+    .about-story-content > p:not(.lead),
+    .belief-manifesto-intro p,
+    .philosophy-content .lead,
+    .about-services .services-heading > p,
+    .about-why .about-section-heading p {
+        font-size: .82rem !important;
+
+        line-height: 1.7 !important;
+    }
+
+    .service-timeline-content h3 {
+        font-size: 1.5rem !important;
+    }
+
+    .service-timeline-content p {
+        font-size: .72rem !important;
+    }
+
+    .about-cta {
+        padding: 30px 20px !important;
+    }
+}
+
+
+/* =========================================================
+   SMALL MOBILE — 360px
+========================================================= */
+
+@media (max-width: 360px) {
+
+    .about-story,
+    .about-beliefs,
+    .about-services,
+    .about-philosophy,
+    .about-why {
+        padding-top: 48px !important;
+        padding-bottom: 48px !important;
+    }
+
+    .about-story-content h2,
+    .belief-manifesto-intro h2,
+    .philosophy-content h2,
+    .about-services .services-heading h2,
+    .about-why .about-section-heading h2,
+    .about-cta-copy h2 {
+        font-size: 2.45rem !important;
+    }
+}
+/* =========================================================
+   INKDEN ABOUT — FINAL PAGE SPACING
+========================================================= */
+
+/* ---------- NORMAL SECTIONS ---------- */
+
+.about-story,
+.about-beliefs,
+.about-services,
+.about-philosophy,
+.about-why {
+    padding-top: 90px !important;
+    padding-bottom: 90px !important;
+}
+
+
+/* ---------- WHAT WE DO ---------- */
+
+.about-services {
+    padding-top: 95px !important;
+    padding-bottom: 95px !important;
+}
+
+.about-services .services-heading {
+    margin-bottom: 60px !important;
+}
+
+
+/* ---------- DESIGN PHILOSOPHY ---------- */
+
+.about-philosophy {
+    padding-top: 95px !important;
+    padding-bottom: 95px !important;
+}
+
+
+/* ---------- WHY INKDEN ---------- */
+
+.about-why {
+    padding-top: 90px !important;
+    padding-bottom: 95px !important;
+}
+
+
+/* =========================================================
+   CTA — EXTRA SPACE ABOVE + BELOW
+========================================================= */
+
+.about-cta-section {
+    padding-top: 95px !important;
+    padding-bottom: 105px !important;
+}
+
+
+/* CTA BOX */
+
+.about-cta {
+    margin: 0 !important;
+}
+
+
+/* =========================================================
+   FOOTER
+========================================================= */
+
+.site-footer {
+    margin-top: 0 !important;
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 768px) {
+
+    .about-story,
+    .about-beliefs,
+    .about-services,
+    .about-philosophy,
+    .about-why {
+        padding-top: 70px !important;
+        padding-bottom: 70px !important;
+    }
+
+    .about-services {
+        padding-top: 75px !important;
+        padding-bottom: 75px !important;
+    }
+
+    .about-services .services-heading {
+        margin-bottom: 45px !important;
+    }
+
+    .about-cta-section {
+        padding-top: 75px !important;
+        padding-bottom: 80px !important;
+    }
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 480px) {
+
+    .about-story,
+    .about-beliefs,
+    .about-services,
+    .about-philosophy,
+    .about-why {
+        padding-top: 58px !important;
+        padding-bottom: 58px !important;
+    }
+
+    .about-services {
+        padding-top: 62px !important;
+        padding-bottom: 62px !important;
+    }
+
+    .about-services .services-heading {
+        margin-bottom: 38px !important;
+    }
+
+    .about-cta-section {
+        padding-top: 62px !important;
+        padding-bottom: 68px !important;
+    }
+}
+/* =========================================
+   EXTRA GAP — STORY & BELIEVE
+========================================= */
+
+/* Hero → Our Story */
+.about-story {
+    padding-top: 120px !important;
+    padding-bottom: 100px !important;
+}
+
+
+/* Our Story → What We Believe */
+.about-beliefs {
+    padding-top: 120px !important;
+    padding-bottom: 100px !important;
+}
+@media (max-width: 768px) {
+
+    .about-story {
+        padding-top: 80px !important;
+        padding-bottom: 75px !important;
+    }
+
+    .about-beliefs {
+        padding-top: 80px !important;
+        padding-bottom: 75px !important;
+    }
+}
+/* =========================================
+   GAP BEFORE WHAT WE BELIEVE
+========================================= */
+
+.about-beliefs {
+    border-top: 60px solid var(--bg) !important;
+    padding-top: 55px !important;
+    padding-bottom: 50px !important;
+}
+/* =========================================================
+   ABOUT HERO — LOAD ANIMATIONS
+========================================================= */
+
+/* HERO IMAGE ZOOM */
+
+.about-hero {
+    overflow: hidden;
+}
+
+.about-hero-image {
+    animation: heroImageZoom 1.8s ease-out both;
+    transform-origin: center center;
+}
+
+@keyframes heroImageZoom {
+    from {
+        opacity: 0;
+        transform: scale(1.08);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+
+/* HERO OVERLAY */
+
+.about-hero-overlay {
+    animation: heroOverlayFade 1.2s ease-out both;
+}
+
+@keyframes heroOverlayFade {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+
+/* DECORATIVE LINES */
+
+.about-hero-lines {
+    animation: heroLinesReveal 1.5s ease-out .2s both;
+}
+
+@keyframes heroLinesReveal {
+    from {
+        opacity: 0;
+        transform: scale(.92);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+
+/* HERO CONTENT */
+
+.about-hero-content {
+    animation: heroContentReveal 1s ease-out .35s both;
+}
+
+@keyframes heroContentReveal {
+    from {
+        opacity: 0;
+        transform: translateY(35px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+/* KICKER */
+
+.about-hero-content .about-kicker {
+    animation: heroKickerReveal .7s ease-out .5s both;
+}
+
+@keyframes heroKickerReveal {
+    from {
+        opacity: 0;
+        transform: translateY(15px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+/* HEADING */
+
+.about-hero-content h1 {
+    animation: heroHeadingReveal 1s ease-out .65s both;
+}
+
+@keyframes heroHeadingReveal {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+/* PARAGRAPH */
+
+.about-hero-content p {
+    animation: heroParagraphReveal .9s ease-out .85s both;
+}
+
+@keyframes heroParagraphReveal {
+    from {
+        opacity: 0;
+        transform: translateY(22px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+/* BUTTON */
+
+.about-hero-content .btn {
+    animation: heroButtonReveal .8s ease-out 1s both;
+}
+
+@keyframes heroButtonReveal {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+/* BUTTON HOVER */
+
+.about-hero-content .btn {
+    transition:
+        transform .3s ease,
+        background-color .3s ease,
+        box-shadow .3s ease;
+}
+
+.about-hero-content .btn:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 28px rgba(0, 0, 0, .18);
+}
+
+
+/* =========================================================
+   ACCESSIBILITY
+========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+    .about-hero-image,
+    .about-hero-overlay,
+    .about-hero-lines,
+    .about-hero-content,
+    .about-hero-content .about-kicker,
+    .about-hero-content h1,
+    .about-hero-content p,
+    .about-hero-content .btn {
+        animation: none !important;
+        transform: none !important;
+        opacity: 1 !important;
+    }
+}
+/* =========================================================
+   ABOUT CTA — MATCH HOME PAGE
+========================================================= */
+
+.about-cta-section {
+    padding-top: 45px !important;
+    padding-bottom: 24px !important;
+}
+
+.about-cta {
+    margin: 0 !important;
+    padding: 42px 48px !important;
+}
+@media (max-width: 768px) {
+
+    .about-cta-section {
+        padding-top: 38px !important;
+        padding-bottom: 20px !important;
+    }
+
+    .about-cta {
+        padding: 32px 26px !important;
+    }
+}
+.about-section-heading .eyebrow {
+    display: inline-flex !important;
+    align-items: center;
+    gap: 12px;
+}
+
+.about-section-heading .eyebrow::before {
+    content: "";
+    width: 34px;
+    height: 1px;
+    background: var(--secondary);
+    opacity: 0.8;
+}
+
+.about-section-heading .eyebrow::after {
+    display: none !important;
+}
+/* =====================================================
+   DESIGN PHILOSOPHY - FINAL IMAGE + CONTENT BALANCE
+===================================================== */
+
+.philosophy-grid {
+    align-items: center !important;
+    gap: 55px !important;
+}
+
+/* LEFT IMAGE */
+
+.philosophy-visual {
+    height: 550px !important;
+    max-height: 550px !important;
+    overflow: hidden !important;
+    border-radius: 20px !important;
+    position: relative !important;
+}
+
+.philosophy-visual img {
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: cover !important;
+    display: block !important;
+}
+
+/* IMAGE LABEL */
+
+.philosophy-image-label {
+    position: absolute !important;
+    left: 22px !important;
+    right: 22px !important;
+    bottom: 20px !important;
+    z-index: 3 !important;
+}
+
+/* RIGHT CONTENT */
+
+.philosophy-content {
+    max-width: 560px !important;
+}
+
+.philosophy-content h2 {
+    margin-bottom: 22px !important;
+}
+
+.philosophy-content .lead {
+    margin-bottom: 38px !important;
+}
+
+.philosophy-points {
+    margin-top: 0 !important;
+}
+
+
+/* =====================================================
+   TABLET
+===================================================== */
+
+@media (max-width: 1024px) {
+
+    .philosophy-grid {
+        gap: 40px !important;
+    }
+
+    .philosophy-visual {
+        height: 500px !important;
+        max-height: 500px !important;
+    }
+
+    .philosophy-content {
+        max-width: 100% !important;
+    }
+
+}
+
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media (max-width: 768px) {
+
+    .philosophy-grid {
+        gap: 35px !important;
+    }
+
+    .philosophy-visual {
+        height: 400px !important;
+        max-height: 400px !important;
+        border-radius: 18px !important;
+    }
+
+    .philosophy-content {
+        max-width: 100% !important;
+    }
+
+    .philosophy-image-label {
+        left: 14px !important;
+        right: 14px !important;
+        bottom: 14px !important;
+    }
+
+}
+
+
+/* =====================================================
+   SMALL MOBILE
+===================================================== */
+
+@media (max-width: 480px) {
+
+    .philosophy-visual {
+        height: 360px !important;
+        max-height: 360px !important;
+    }
+
+}
+
+
+/* =====================================================
+   EXTRA SMALL MOBILE
+===================================================== */
+
+@media (max-width: 360px) {
+
+    .philosophy-visual {
+        height: 330px !important;
+        max-height: 330px !important;
+    }
+
+}
