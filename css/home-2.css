@@ -3031,3 +3031,29 @@ section.section.section-tight:has(.home2-cta) {
     height:190px;
   }
 }
+/* HOME 2 — SIGNATURE TAGLINE */
+.premium-hero .premium-eyebrow{
+    color:#D6A85F !important;
+    display:flex !important;
+    align-items:center !important;
+    justify-content:center !important;
+    gap:10px !important;
+    font-size:13px !important;
+    font-weight:700 !important;
+    letter-spacing:2.5px !important;
+    opacity:1 !important;
+}
+
+.premium-hero .premium-eyebrow::before{
+    content:"" !important;
+    display:block !important;
+    width:28px !important;
+    height:1px !important;
+    background:#D6A85F !important;
+    opacity:1 !important;
+}
+
+.premium-hero .premium-eyebrow::after{
+    content:none !important;
+    display:none !important;
+}

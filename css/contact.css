@@ -4406,3 +4406,53 @@ html[data-theme="dark"] .form-input select option {
         padding-bottom: 22px !important;
     }
 }
+/* =========================================================
+   CONTACT HERO — FINAL TAGLINE STYLE
+   ========================================================= */
+
+.contact-hero .hero-eyebrow{
+    display:inline-flex !important;
+    align-items:center !important;
+    justify-content:center !important;
+    gap:12px !important;
+    margin-bottom:20px !important;
+    color:#D6A85F !important;
+    font-size:.7rem !important;
+    font-weight:800 !important;
+    letter-spacing:.23em !important;
+    line-height:1 !important;
+    text-transform:uppercase !important;
+    opacity:1 !important;
+}
+
+/* ONLY ONE LINE — BEFORE LET'S TALK */
+.contact-hero .hero-eyebrow::before{
+    content:"" !important;
+    display:block !important;
+    width:32px !important;
+    height:1px !important;
+    flex:0 0 32px !important;
+    background:#D6A85F !important;
+    opacity:1 !important;
+}
+
+/* NO LINE AFTER LET'S TALK */
+.contact-hero .hero-eyebrow::after{
+    content:none !important;
+    display:none !important;
+    width:0 !important;
+    height:0 !important;
+}
+
+/* Remove any extra decorative line from the hero content */
+.contact-hero .hero-copy::after,
+.contact-hero .hero-content::after{
+    content:none !important;
+    display:none !important;
+}
+
+.contact-hero .hero-copy > *::after,
+.contact-hero .hero-content > *::after{
+    content:none !important;
+    display:none !important;
+}

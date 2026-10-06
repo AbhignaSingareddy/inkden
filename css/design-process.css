@@ -3715,3 +3715,28 @@ main > .dp-cta-section > .container > .dp-cta {
         line-height: 1.45 !important;
     }
 }
+/* DESIGN PROCESS — HERO KICKER */
+.dp-kicker{
+    display:inline-flex;
+    align-items:center;
+    gap:12px;
+    margin-bottom:20px;
+    color:#D6A85F !important;
+    font-size:.7rem;
+    font-weight:800;
+    letter-spacing:.23em;
+    text-transform:uppercase;
+}
+
+.dp-kicker::before{
+    content:"";
+    display:block;
+    width:32px;
+    height:1px;
+    background:#D6A85F !important;
+}
+
+.dp-kicker::after{
+    content:none !important;
+    display:none !important;
+}
