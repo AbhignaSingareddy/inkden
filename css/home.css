@@ -3215,3 +3215,362 @@ main > section:has(.cta-panel) {
         border-top-width: 32px !important;
     }
 }
+
+/* FIX — READER REVIEWS HEADING VISIBILITY */
+.home1-reviews .reviews-heading h2 {
+    display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    transform: none !important;
+    clip-path: none !important;
+
+    font-family: "Cormorant Garamond", Georgia, serif !important;
+    font-size: clamp(2.6rem, 4vw, 4rem) !important;
+    font-weight: 500 !important;
+    line-height: 1 !important;
+    text-align: center !important;
+
+    color: #FFF8F2 !important;
+    margin: 0 0 18px !important;
+}
+
+.home1-reviews .reviews-heading h2 em {
+    color: var(--secondary-text) !important;
+    font-family: inherit !important;
+    font-style: italic !important;
+}
+
+.home1-reviews .reviews-heading {
+    display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    transform: none !important;
+    text-align: center !important;
+}
+
+/* HOME 1 — MATCH ABOUT / PORTFOLIO HEADING */
+.hero-copy h1,
+.section-header h2,
+.statistics-heading h2,
+.home1-collection-section h2,
+.home1-reviews .reviews-heading h2,
+.cta-panel h2 {
+    font-family: "Cormorant Garamond", Georgia, serif !important;
+    font-weight: 500 !important;
+    letter-spacing: -0.045em !important;
+    color: var(--primary) !important;
+}
+
+.hero-copy h1 em,
+.section-header h2 em,
+.statistics-heading h2 em,
+.home1-collection-section h2 em,
+.home1-reviews .reviews-heading h2 em,
+.cta-panel h2 em {
+    color: var(--secondary-text) !important;
+    font-style: italic !important;
+    font-family: inherit !important;
+}
+
+/* FINAL FIX — HOME 1 HERO HEADING */
+html body#top main section.hero .container.hero-grid .hero-copy h1 {
+    color: var(--primary) !important;
+    font-family: "Cormorant Garamond", Georgia, serif !important;
+}
+
+html body#top main section.hero .container.hero-grid .hero-copy h1 em {
+    color: var(--secondary-text) !important;
+    font-family: inherit !important;
+    font-style: italic !important;
+    display: inline !important;
+}
+
+/* ==========================================
+   INKDEN HOME 1 — READER REVIEWS FINAL FIX
+   Portfolio-style heading + theme colors
+   ========================================== */
+
+/* Keep the existing section background */
+.home1-reviews {
+    background: var(--surface-2) !important;
+    color: var(--text) !important;
+}
+
+/* Make the complete heading visible */
+.home1-reviews .reviews-heading {
+    display: block !important;
+    max-width: 780px;
+    margin: 0 auto 30px !important;
+    text-align: center !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+    transform: none !important;
+}
+
+/* Main heading — same style as Portfolio headings */
+.home1-reviews .reviews-heading h2 {
+    display: block !important;
+    margin: 12px 0 18px !important;
+    font-family: "Cormorant Garamond", Georgia, serif !important;
+    font-size: clamp(2.6rem, 4vw, 4rem) !important;
+    font-weight: 500 !important;
+    line-height: 1.08 !important;
+    letter-spacing: -0.045em !important;
+    color: var(--primary) !important;
+    -webkit-text-fill-color: var(--primary) !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+    transform: none !important;
+    clip-path: none !important;
+}
+
+/* Secondary color for emphasized heading text */
+.home1-reviews .reviews-heading h2 em {
+    color: var(--secondary-text) !important;
+    -webkit-text-fill-color: var(--secondary-text) !important;
+    font-family: inherit !important;
+    font-style: italic !important;
+}
+
+/* Reader Reviews label */
+.home1-reviews .reviews-heading .eyebrow {
+    display: inline-flex !important;
+    justify-content: center !important;
+    color: var(--secondary) !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+    transform: none !important;
+}
+
+/* Description below the heading — visible in light mode */
+.home1-reviews .reviews-heading > p {
+    display: block !important;
+    max-width: 650px;
+    margin: 0 auto !important;
+    color: var(--text) !important;
+    -webkit-text-fill-color: var(--text) !important;
+    font-size: 1rem !important;
+    line-height: 1.7 !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+    transform: none !important;
+}
+
+/* Review cards — light mode */
+html:not([data-theme="dark"]) .home1-reviews .review-card {
+    background: var(--surface) !important;
+    color: var(--text) !important;
+    border: 1px solid var(--border) !important;
+}
+
+html:not([data-theme="dark"]) .home1-reviews .review-card p,
+html:not([data-theme="dark"]) .home1-reviews .review-person strong {
+    color: var(--text) !important;
+}
+
+html:not([data-theme="dark"]) .home1-reviews .review-person div span {
+    color: var(--muted) !important;
+}
+
+/* Dark mode */
+html[data-theme="dark"] .home1-reviews {
+    background: var(--primary-dark) !important;
+    color: #ffffff !important;
+}
+
+html[data-theme="dark"] .home1-reviews .reviews-heading h2,
+html[data-theme="dark"] .home1-reviews .reviews-heading > p {
+    color: #ffffff !important;
+    -webkit-text-fill-color: #ffffff !important;
+}
+
+html[data-theme="dark"] .home1-reviews .reviews-heading h2 em {
+    color: var(--secondary) !important;
+    -webkit-text-fill-color: var(--secondary) !important;
+}
+
+html[data-theme="dark"] .home1-reviews .review-card {
+    background: var(--surface) !important;
+    color: var(--text) !important;
+}
+
+/* Responsive heading */
+@media (max-width: 600px) {
+    .home1-reviews .reviews-heading h2 {
+        font-size: clamp(2.2rem, 8vw, 3rem) !important;
+        line-height: 1.12 !important;
+    }
+
+    .home1-reviews .reviews-heading > p {
+        font-size: 0.95rem !important;
+    }
+}
+
+/* =========================================
+   INKDEN — GLOBAL HEADING COLOR THEME
+   Primary + Secondary colors across website
+   ========================================= */
+
+/* All main headings */
+h1,
+h2,
+h3,
+.section-header h2,
+.statistics-heading h2,
+.reviews-heading h2,
+.hero-copy h1,
+.cta-panel h2 {
+    color: var(--primary);
+}
+
+/* Secondary color for emphasized heading text */
+h1 em,
+h2 em,
+h3 em,
+.section-header h2 em,
+.statistics-heading h2 em,
+.reviews-heading h2 em,
+.hero-copy h1 em,
+.cta-panel h2 em {
+    color: var(--secondary);
+    -webkit-text-fill-color: var(--secondary);
+    font-style: italic;
+}
+
+/* Keep primary color consistent in light mode */
+html:not([data-theme="dark"]) h1,
+html:not([data-theme="dark"]) h2,
+html:not([data-theme="dark"]) h3 {
+    color: var(--primary);
+}
+
+/* Keep secondary heading text consistent in light mode */
+html:not([data-theme="dark"]) h1 em,
+html:not([data-theme="dark"]) h2 em,
+html:not([data-theme="dark"]) h3 em {
+    color: var(--secondary);
+    -webkit-text-fill-color: var(--secondary);
+}
+
+/* Dark mode heading colors */
+html[data-theme="dark"] h1,
+html[data-theme="dark"] h2,
+html[data-theme="dark"] h3 {
+    color: var(--text);
+}
+
+html[data-theme="dark"] h1 em,
+html[data-theme="dark"] h2 em,
+html[data-theme="dark"] h3 em {
+    color: var(--secondary);
+    -webkit-text-fill-color: var(--secondary);
+}
+
+/* GLOBAL HEADING COLORS — INKDEN */
+
+/* Primary color for all main headings */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color: #51243F !important;
+    -webkit-text-fill-color: #51243F !important;
+}
+
+/* Secondary color for emphasized heading words */
+h1 em,
+h2 em,
+h3 em,
+h4 em,
+h5 em,
+h6 em,
+h1 i,
+h2 i,
+h3 i {
+    color: #B17A2C !important;
+    -webkit-text-fill-color: #B17A2C !important;
+    font-style: italic;
+}
+
+/* Reader Reviews heading */
+.home1-reviews .reviews-heading h2 {
+    color: #51243F !important;
+    -webkit-text-fill-color: #51243F !important;
+}
+
+.home1-reviews .reviews-heading h2 em {
+    color: #B17A2C !important;
+    -webkit-text-fill-color: #B17A2C !important;
+}
+
+/* Reader Reviews paragraph — light mode */
+html:not([data-theme="dark"]) .home1-reviews .reviews-heading > p {
+    color: #51243F !important;
+    -webkit-text-fill-color: #51243F !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+}
+
+/* Dark mode heading colors */
+html[data-theme="dark"] h1,
+html[data-theme="dark"] h2,
+html[data-theme="dark"] h3,
+html[data-theme="dark"] h4,
+html[data-theme="dark"] h5,
+html[data-theme="dark"] h6 {
+    color: #FFF5F8 !important;
+    -webkit-text-fill-color: #FFF5F8 !important;
+}
+
+html[data-theme="dark"] h1 em,
+html[data-theme="dark"] h2 em,
+html[data-theme="dark"] h3 em,
+html[data-theme="dark"] h4 em,
+html[data-theme="dark"] h5 em,
+html[data-theme="dark"] h6 em {
+    color: #D9A45B !important;
+    -webkit-text-fill-color: #D9A45B !important;
+}
+/* Preserve existing InkDen brand colors */
+h1 em,
+h2 em,
+h3 em,
+h4 em,
+h5 em,
+h6 em {
+    color: var(--secondary) !important;
+    -webkit-text-fill-color: var(--secondary) !important;
+}
+
+/* Reader Reviews — Use Existing Secondary Theme Color */
+
+.home1-reviews .reviews-heading .eyebrow {
+    color: var(--secondary) !important;
+    -webkit-text-fill-color: var(--secondary) !important;
+}
+
+.home1-reviews .reviews-heading h2 em {
+    color: var(--secondary) !important;
+    -webkit-text-fill-color: var(--secondary) !important;
+}
+
+.home1-reviews .review-stars {
+    color: var(--secondary) !important;
+    -webkit-text-fill-color: var(--secondary) !important;
+}
+
+/* Keep description readable in light mode */
+html:not([data-theme="dark"]) .home1-reviews .reviews-heading > p {
+    color: var(--text) !important;
+    -webkit-text-fill-color: var(--text) !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+}
+
+/* Keep existing secondary color in dark mode too */
+html[data-theme="dark"] .home1-reviews .reviews-heading h2 em {
+    color: var(--secondary) !important;
+    -webkit-text-fill-color: var(--secondary) !important;
+}

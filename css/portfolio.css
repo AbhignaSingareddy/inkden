@@ -3833,3 +3833,155 @@
         justify-content:center!important;
     }
 }
+/* PORTFOLIO — ALL SECONDARY BUTTONS TRANSPARENT */
+.portfolio-hero .portfolio-btn-row .btn-secondary,
+.featured-project .featured-actions .btn-secondary {
+    background: transparent !important;
+    background-color: transparent !important;
+    color: var(--secondary) !important;
+    border: 1px solid var(--secondary) !important;
+    box-shadow: none !important;
+}
+
+/* HOVER — SECONDARY COLOUR */
+.portfolio-hero .portfolio-btn-row .btn-secondary:hover,
+.featured-project .featured-actions .btn-secondary:hover {
+    background: var(--secondary) !important;
+    background-color: var(--secondary) !important;
+    color: var(--primary) !important;
+    border-color: var(--secondary) !important;
+}
+
+/* ICON COLOUR */
+.portfolio-hero .portfolio-btn-row .btn-secondary svg,
+.featured-project .featured-actions .btn-secondary svg {
+    color: inherit !important;
+}
+/* PORTFOLIO — TRANSPARENT SECONDARY BUTTONS */
+main .btn-secondary,
+main a.btn-secondary,
+main button.btn-secondary,
+main .portfolio-cta-btn {
+    background: transparent !important;
+    background-color: transparent !important;
+    color: var(--secondary) !important;
+    border: 1px solid var(--secondary) !important;
+    box-shadow: none !important;
+}
+
+/* HOVER — KEEP SECONDARY COLOUR */
+main .btn-secondary:hover,
+main a.btn-secondary:hover,
+main button.btn-secondary:hover,
+main .portfolio-cta-btn:hover {
+    background: var(--secondary) !important;
+    background-color: var(--secondary) !important;
+    color: var(--primary) !important;
+    border-color: var(--secondary) !important;
+    box-shadow: none !important;
+}
+
+/* BUTTON ICONS */
+main .btn-secondary i,
+main .btn-secondary svg,
+main .portfolio-cta-btn i,
+main .portfolio-cta-btn svg {
+    color: inherit !important;
+}
+/* PORTFOLIO — START AN ENQUIRY BUTTON */
+
+.portfolio-hero .portfolio-btn-row .btn.btn-secondary,
+.featured-project .featured-actions .btn.btn-secondary {
+    background: #ffffff !important;
+    color: var(--secondary) !important;
+    border: 1px solid var(--secondary) !important;
+    box-shadow: none !important;
+    transition: background-color .25s ease,
+                color .25s ease,
+                border-color .25s ease !important;
+}
+
+/* Icon follows button text */
+.portfolio-hero .portfolio-btn-row .btn.btn-secondary *,
+.featured-project .featured-actions .btn.btn-secondary * {
+    color: inherit !important;
+}
+
+/* Hover: secondary background + white text */
+.portfolio-hero .portfolio-btn-row .btn.btn-secondary:hover,
+.portfolio-hero .portfolio-btn-row .btn.btn-secondary:focus-visible,
+.featured-project .featured-actions .btn.btn-secondary:hover,
+.featured-project .featured-actions .btn.btn-secondary:focus-visible {
+    background: var(--secondary) !important;
+    color: #ffffff !important;
+    border-color: var(--secondary) !important;
+}
+
+.portfolio-hero .portfolio-btn-row .btn.btn-secondary:hover *,
+.portfolio-hero .portfolio-btn-row .btn.btn-secondary:focus-visible *,
+.featured-project .featured-actions .btn.btn-secondary:hover *,
+.featured-project .featured-actions .btn.btn-secondary:focus-visible * {
+    color: #ffffff !important;
+}
+/* PORTFOLIO CTA — WHITE TEXT ON HOVER ONLY */
+
+.portfolio-cta a:hover,
+.portfolio-cta a:hover *,
+.portfolio-cta .btn:hover,
+.portfolio-cta .btn:hover * {
+    color: #FFFFFF !important;
+    -webkit-text-fill-color: #FFFFFF !important;
+}
+
+/* Keep icons white on hover */
+.portfolio-cta a:hover svg,
+.portfolio-cta a:hover i,
+.portfolio-cta .btn:hover svg,
+.portfolio-cta .btn:hover i {
+    color: #FFFFFF !important;
+    stroke: #FFFFFF !important;
+}
+/* PORTFOLIO — DARK MODE SECONDARY BUTTON TRANSPARENT */
+
+[data-theme="dark"] .portfolio-hero .portfolio-btn-row .btn.btn-secondary,
+[data-theme="dark"] .featured-project .featured-actions .btn.btn-secondary {
+    background: transparent !important;
+    background-color: transparent !important;
+    color: var(--secondary) !important;
+    border: 1px solid var(--secondary) !important;
+    box-shadow: none !important;
+}
+
+/* Hover — transparent background, white text */
+[data-theme="dark"] .portfolio-hero .portfolio-btn-row .btn.btn-secondary:hover,
+[data-theme="dark"] .featured-project .featured-actions .btn.btn-secondary:hover {
+    background: transparent !important;
+    background-color: transparent !important;
+    color: #ffffff !important;
+    border-color: var(--secondary) !important;
+}
+
+[data-theme="dark"] .portfolio-hero .portfolio-btn-row .btn.btn-secondary:hover *,
+[data-theme="dark"] .featured-project .featured-actions .btn.btn-secondary:hover * {
+    color: #ffffff !important;
+}
+/* PORTFOLIO — DARK MODE SECONDARY BUTTON HOVER FIX */
+
+[data-theme="dark"] .featured-project .featured-actions .btn.btn-secondary:hover,
+[data-theme="dark"] .featured-project .featured-actions .btn.btn-secondary:hover i,
+[data-theme="dark"] .featured-project .featured-actions .btn.btn-secondary:hover svg {
+    background-color: var(--secondary) !important;
+    color: #ffffff !important;
+    -webkit-text-fill-color: #ffffff !important;
+    border-color: var(--secondary) !important;
+}
+
+/* Hero — Start an Enquiry */
+[data-theme="dark"] .portfolio-hero .portfolio-btn-row .btn.btn-secondary:hover,
+[data-theme="dark"] .portfolio-hero .portfolio-btn-row .btn.btn-secondary:hover i,
+[data-theme="dark"] .portfolio-hero .portfolio-btn-row .btn.btn-secondary:hover svg {
+    background-color: var(--secondary) !important;
+    color: #ffffff !important;
+    -webkit-text-fill-color: #ffffff !important;
+    border-color: var(--secondary) !important;
+}

@@ -3779,3 +3779,32 @@ html[dir="rtl"] .why-item::before {
         margin-top: 10px !important;
     }
 }
+/* ABOUT PAGE — START YOUR ENQUIRY BUTTON */
+
+/* Normal state */
+.about-hero .btn-secondary,
+.about-hero a.btn-secondary {
+    background: transparent !important;
+    color: var(--secondary) !important;
+    border: 1px solid var(--secondary) !important;
+    transition: background-color 0.3s ease,
+                color 0.3s ease,
+                border-color 0.3s ease;
+}
+
+/* Hover — secondary background with white text */
+.about-hero .btn-secondary:hover,
+.about-hero a.btn-secondary:hover {
+    background: var(--secondary) !important;
+    border-color: var(--secondary) !important;
+    color: #FFFFFF !important;
+}
+
+/* Keep text and icon white on hover */
+.about-hero .btn-secondary:hover i,
+.about-hero .btn-secondary:hover svg,
+.about-hero a.btn-secondary:hover i,
+.about-hero a.btn-secondary:hover svg {
+    color: #FFFFFF !important;
+    stroke: #FFFFFF !important;
+}

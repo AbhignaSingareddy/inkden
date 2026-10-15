@@ -2706,3 +2706,94 @@ html[data-theme="dark"] {
     --shadow-sm: 0 4px 18px rgba(0, 0, 0, 0.25);
     --shadow-md: 0 10px 35px rgba(0, 0, 0, 0.35);
 }
+/* GLOBAL TAGLINES — DARK MODE ONLY */
+html[data-theme="dark"] main .eyebrow,
+html[data-theme="dark"] main .premium-eyebrow,
+html[data-theme="dark"] main .portfolio-cta-eyebrow,
+html[data-theme="dark"] main .featured-label,
+html[data-theme="dark"] main .featured-label span,
+html[data-theme="dark"] main .featured-project-content .featured-label,
+html[data-theme="dark"] main .portfolio-hero-content > span,
+html[data-theme="dark"] main .section-header > span,
+html[data-theme="dark"] main .reading-room-heading > span,
+html[data-theme="dark"] main .transformation-heading > span,
+html[data-theme="dark"] main .details-heading > span,
+html[data-theme="dark"] main .selected-work-heading > span,
+html[data-theme="dark"] main .collection-heading > span,
+html[data-theme="dark"] main .home2-cta .eyebrow,
+html[data-theme="dark"] main .portfolio-cta-inner > span {
+    color: var(--secondary) !important;
+}
+
+/* Decorative tagline lines */
+html[data-theme="dark"] main .eyebrow::before,
+html[data-theme="dark"] main .eyebrow::after,
+html[data-theme="dark"] main .featured-label-line,
+html[data-theme="dark"] main .portfolio-cta-eyebrow span {
+    background-color: var(--secondary) !important;
+    border-color: var(--secondary) !important;
+}
+/* DARK MODE — SOFT ANTIQUE GOLD */
+
+html[data-theme="dark"] {
+    --secondary: #C49A52;
+    --secondary-text: #C49A52;
+}
+
+/* Heading highlights */
+html[data-theme="dark"] main h1 em,
+html[data-theme="dark"] main h2 em,
+html[data-theme="dark"] main h3 em {
+    color: #C49A52 !important;
+}
+
+/* Taglines */
+html[data-theme="dark"] main .eyebrow,
+html[data-theme="dark"] main .premium-eyebrow,
+html[data-theme="dark"] main .featured-label,
+html[data-theme="dark"] main .portfolio-cta-eyebrow {
+    color: #C49A52 !important;
+}
+
+/* Secondary buttons — keep icons visible */
+html[data-theme="dark"] .btn-secondary,
+html[data-theme="dark"] a.btn-secondary,
+html[data-theme="dark"] button.btn-secondary {
+    color: #C49A52 !important;
+    border-color: #C49A52 !important;
+    background: transparent !important;
+}
+
+html[data-theme="dark"] .btn-secondary i,
+html[data-theme="dark"] .btn-secondary svg,
+html[data-theme="dark"] a.btn-secondary i,
+html[data-theme="dark"] a.btn-secondary svg {
+    color: inherit !important;
+    stroke: currentColor !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+}
+
+/* Hover — preserve the gold effect */
+html[data-theme="dark"] .btn-secondary:hover,
+html[data-theme="dark"] a.btn-secondary:hover,
+html[data-theme="dark"] button.btn-secondary:hover {
+    background: #C49A52 !important;
+    border-color: #C49A52 !important;
+    color: #24151D !important;
+}
+
+/* Keep hover icons visible */
+html[data-theme="dark"] .btn-secondary:hover i,
+html[data-theme="dark"] .btn-secondary:hover svg {
+    color: #24151D !important;
+    stroke: currentColor !important;
+}
+/* DARK MODE — Secondary Button Text Hover */
+html[data-theme="dark"] .btn-secondary:hover,
+html[data-theme="dark"] .button-secondary:hover,
+html[data-theme="dark"] a.btn-secondary:hover,
+html[data-theme="dark"] button.btn-secondary:hover,
+html[data-theme="dark"] .premium-copy .btn-outline:hover {
+    color: #ffffff !important;
+}

@@ -4456,3 +4456,34 @@ html[data-theme="dark"] .form-input select option {
     content:none !important;
     display:none !important;
 }
+/* CONTACT PAGE — CTA BUTTON TRANSPARENT */
+.contact-cta .btn-secondary,
+.contact-cta a.btn-secondary,
+.contact-cta .btn,
+.contact-cta a {
+    background: transparent !important;
+    background-color: transparent !important;
+    color: var(--secondary) !important;
+    border: 1px solid var(--secondary) !important;
+    box-shadow: none !important;
+    transition: background-color 0.3s ease,
+                color 0.3s ease,
+                border-color 0.3s ease;
+}
+
+/* HOVER — SECONDARY COLOUR */
+.contact-cta .btn-secondary:hover,
+.contact-cta a.btn-secondary:hover,
+.contact-cta .btn:hover,
+.contact-cta a:hover {
+    background: var(--secondary) !important;
+    background-color: var(--secondary) !important;
+    color: var(--primary) !important;
+    border-color: var(--secondary) !important;
+}
+
+/* CTA BUTTON ICON */
+.contact-cta .btn svg,
+.contact-cta .btn i {
+    color: inherit !important;
+}

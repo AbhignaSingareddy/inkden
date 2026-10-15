@@ -4002,3 +4002,82 @@ main > section.section.section-tight:has(.home2-cta) {
         padding-bottom: 16px !important;
     }
 }
+/* HOME 2 — VIEW SIGNATURE WORK BUTTON */
+
+.premium-hero .btn-row a.btn-secondary {
+    background: var(--primary) !important;
+    background-color: var(--primary) !important;
+    color: #FFFFFF !important;
+    border: 1px solid var(--primary) !important;
+}
+
+/* Button text and icon */
+.premium-hero .btn-row a.btn-secondary,
+.premium-hero .btn-row a.btn-secondary i,
+.premium-hero .btn-row a.btn-secondary svg {
+    color: #FFFFFF !important;
+    stroke: #FFFFFF !important;
+}
+
+/* Hover — keep white text */
+.premium-hero .btn-row a.btn-secondary:hover {
+    background: var(--primary) !important;
+    border-color: var(--primary) !important;
+    color: #FFFFFF !important;
+}
+/* HOME 2 — VIEW SIGNATURE WORK BUTTON */
+
+/* Normal state */
+.premium-hero .btn-row a.btn-secondary {
+    background: var(--primary) !important;
+    background-color: var(--primary) !important;
+    color: #FFFFFF !important;
+    border: 1px solid var(--primary) !important;
+    transition: background-color 0.3s ease,
+                border-color 0.3s ease,
+                color 0.3s ease;
+}
+
+/* Button icon */
+.premium-hero .btn-row a.btn-secondary i,
+.premium-hero .btn-row a.btn-secondary svg {
+    color: #FFFFFF !important;
+    stroke: #FFFFFF !important;
+}
+
+/* Hover — secondary colour */
+.premium-hero .btn-row a.btn-secondary:hover {
+    background: var(--secondary) !important;
+    background-color: var(--secondary) !important;
+    border-color: var(--secondary) !important;
+    color: #FFFFFF !important;
+}
+
+/* Keep text and icon white on hover */
+.premium-hero .btn-row a.btn-secondary:hover i,
+.premium-hero .btn-row a.btn-secondary:hover svg {
+    color: #FFFFFF !important;
+    stroke: #FFFFFF !important;
+}
+
+/* HOME 2 — HEADINGS: PRIMARY + SECONDARY COLOURS */
+
+main h1,
+main h2,
+main h3 {
+    color: var(--primary);
+}
+
+main h1 em,
+main h2 em,
+main h3 em,
+main h1 .highlight,
+main h2 .highlight,
+main h3 .highlight {
+    color: var(--secondary) !important;
+}
+/* Tagline — Secondary Colour */
+main .eyebrow,
+main .section-tagline {
+    color: var(--secondary) !important;
+}
